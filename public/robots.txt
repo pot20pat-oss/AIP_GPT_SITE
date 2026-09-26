@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://atelier-informatique-potvin.pot20pat.chatgpt.site/sitemap.xml
+Sitemap: https://atelierpotvin.ca/sitemap.xml
