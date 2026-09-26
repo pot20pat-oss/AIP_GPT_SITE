@@ -17,7 +17,7 @@ const localBusiness = {
       url: siteUrl,
       telephone: "+1-819-380-2999",
       image,
-      logo: `${siteUrl}/logo-aip.png`,
+      logo: `${siteUrl}/aip-icon-v7.ico`,
       founder: { "@type": "Person", name: "Patrick Potvin" },
       address: { "@type": "PostalAddress", streetAddress: "462 rue D. N. St-Cyr", addressLocality: "Nicolet", addressRegion: "QC", postalCode: "J3T 1H3", addressCountry: "CA" },
       areaServed: ["Nicolet", "Bécancour", "Trois-Rivières", "Saint-Célestin", "Centre-du-Québec"].map(name => ({ "@type": "Place", name })),
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
   openGraph: { title, description, url: siteUrl, siteName: businessName, images: [{ url: image, alt: "Patrick Potvin, technicien informatique à Nicolet" }], locale: "fr_CA", type: "website" },
   twitter: { card: "summary_large_image", title, description, images: [image] },
-  icons: { icon: "/logo-aip.png", shortcut: "/logo-aip.png" },
+  icons: { icon: "/aip-favicon-v8.ico", shortcut: "/aip-favicon-v8.ico" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

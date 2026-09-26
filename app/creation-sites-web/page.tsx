@@ -5,7 +5,7 @@ import { pageMetadata } from "../seo";
 export const metadata: Metadata = pageMetadata({ title: "Création site web Nicolet et Bécancour | PME et artisans", description: "Création de sites web sur mesure à Nicolet et Bécancour. Design professionnel, référencement local et portfolio réel. Site vitrine dès 1 500 $.", path: "/creation-sites-web", image: "/projet-bois-morphee.webp" });
 
 export default function Page() {
-  return <DetailPage eyebrow="Création de sites web à Nicolet" image="/service-sites-web.webp" imageAlt="Patrick Potvin présente le site web Les Bois Morphée, créé sur mesure" title="Une présence professionnelle." accent="Conçue pour votre entreprise." intro="Un site vitrine rapide, clair et adapté au téléphone qui présente bien vos services et aide les clients de votre région à vous trouver." points={[
+  return <DetailPage eyebrow="Création de sites web à Nicolet" image="/service-sites-web.webp" imageAlt="Patrick Potvin présente le site web Les Bois Morphée, créé sur mesure" title="Création de sites web à Nicolet." accent="Sur mesure pour votre entreprise." intro="Un site vitrine rapide, clair et adapté au téléphone qui présente bien vos services et aide les clients de votre région à vous trouver." points={[
     { title: "Design sur mesure", text: "Une identité visuelle adaptée à votre métier, à vos clients et à ce qui vous distingue réellement." },
     { title: "Référencement local", text: "Des pages structurées autour de vos services et de votre région pour donner à Google un contenu clair à indexer." },
     { title: "Vos réalisations mises en valeur", text: "Photos, services et projets concrets : vos visiteurs voient immédiatement la qualité de votre travail et ce qui vous distingue." },
