@@ -14,9 +14,12 @@ export default function Home() {
   return (
     <main>
       <SiteHeader />
-      <section className="hero shell" id="accueil">
-        <div className="hero-copy"><div className="eyebrow"><span></span> Nicolet · Centre-du-Québec</div><h1>Informatique & Web.<br /><span>Des solutions qui fonctionnent.</span></h1><p>Deux expertises, un seul interlocuteur : dépannage et services informatiques d’un côté, création de sites web et solutions numériques sur mesure de l’autre.</p><div className="hero-actions"><a className="button button-dark" href="tel:+18193802999">Discuter de votre projet <span>↗</span></a><a className="text-link" href="#services">Découvrir les services <span>↓</span></a></div><div className="trust-line"><div className="stars">★★★★★</div><span>5,0 sur Google · 10 avis</span><i></i><span>40 ans d’expérience</span></div></div>
-        <div className="hero-portrait"><img src="/patrick-atelier-hero.webp" alt="Patrick Potvin dans son espace de travail à la maison à Nicolet" /><div className="portrait-note"><span className="note-dot"></span><span>Patrick Potvin<br /><strong>Votre technicien de confiance</strong></span></div></div>
+      <section className="hero-integrated" id="accueil">
+        <img src="/hero-aip-integrated.png" alt="Atelier Informatique Potvin — informatique et création web à Nicolet, Bécancour et Trois-Rivières" />
+        <div className="hero-integrated-links" aria-label="Actions principales">
+          <a className="hero-integrated-project" href="tel:+18193802999" aria-label="Discuter de votre projet"></a>
+          <a className="hero-integrated-services" href="#services" aria-label="Découvrir les services"></a>
+        </div>
       </section>
       <section className="metrics"><div className="shell metrics-grid"><div><strong>40 ans</strong><span>d’expérience sur le terrain</span></div><div><strong>50 km</strong><span>de service à domicile</span></div><div><strong>5,0 <i>★</i></strong><span>sur Google, 10 avis</span></div><div><strong>1 seul</strong><span>interlocuteur, du début à la fin</span></div></div></section>
       <section className="services section shell" id="services"><div className="section-heading"><div><div className="eyebrow"><span></span> Deux expertises, clairement séparées</div><h2>Informatique ou Web.<br /><em>Choisissez votre besoin.</em></h2></div><p>Besoin de régler un problème informatique ou de bâtir une présence web professionnelle? Chaque service a son propre parcours, sans confusion.</p></div><div className="services-grid">{services.map((service) => <article className="service-card" key={service.number}><Link className="service-card-photo" href={service.href} aria-label={service.title}><img src={service.image} alt={service.imageAlt} loading="lazy" /></Link><div className="service-card-content"><div className="card-top"><span>{service.number}</span><span className="service-icon">{service.icon}</span></div><h3>{service.title}</h3><p>{service.description}</p><Link className="service-card-link" href={service.href}>En savoir plus <span>→</span></Link></div></article>)}</div></section>
