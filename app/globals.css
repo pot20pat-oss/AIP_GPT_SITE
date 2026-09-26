@@ -37,10 +37,24 @@
 .web-focus{border-top:1px solid var(--line)}.web-focus-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.web-focus-grid article{min-height:245px;padding:30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column}.web-focus-grid article>span{font-size:10px;color:#438fb7}.web-focus-grid h3{font-size:23px;letter-spacing:-.7px;margin:35px 0 12px}.web-focus-grid p{color:var(--muted);font-size:12px;line-height:1.75;margin:0 0 24px}.web-focus-grid a{margin-top:auto;font-size:11px;font-weight:650}.web-focus-grid a span{color:#438fb7;margin-left:6px}@media(max-width:760px){.web-focus-grid{grid-template-columns:1fr}.web-focus-grid article{min-height:205px}}
 
 
-/* Homepage hero spacing: keep content intact, remove excess empty space. */
+/* Homepage hero spacing: compact portrait while preserving the current crop. */
 @media(min-width:761px){
   .hero{min-height:0;align-items:start;padding-block:22px 64px;column-gap:45px}
   .hero-copy{padding-top:30px}
-  .hero-portrait{height:560px}
+  .hero-portrait{height:440px}
   .hero-portrait>img{height:100%;object-fit:cover;object-position:center top}
+}
+
+
+/* Integrated homepage hero artwork. */
+.hero-integrated{position:relative;width:100%;overflow:hidden;background:#0d2947}
+.hero-integrated>img{display:block;width:100%;height:auto}
+.hero-integrated-links{position:absolute;inset:0;pointer-events:none}
+.hero-integrated-links a{position:absolute;display:block;pointer-events:auto}
+.hero-integrated-project{left:7.3%;top:65%;width:20.8%;height:9.2%}
+.hero-integrated-services{left:29.5%;top:65%;width:12.5%;height:9.2%}
+@media(max-width:760px){
+  .hero-integrated{min-height:470px}
+  .hero-integrated>img{width:auto;height:470px;max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+  .hero-integrated-links{display:none}
 }
