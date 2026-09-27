@@ -115,3 +115,28 @@
  .web-focus.section{padding-top:42px;padding-bottom:55px;border-top:1px solid var(--line);overflow:hidden}
  .creation-web-aip-visual{width:200%;max-width:none;transform:scale(.5);transform-origin:top left;margin-right:-100%;margin-bottom:-50%}
 }
+
+/* Typography refinement: richer hierarchy and more readable supporting text */
+body{font-family:Inter,"Avenir Next",Avenir,"Segoe UI",sans-serif;font-size:16px;line-height:1.55}
+.header nav,.header-phone{font-size:13px;font-weight:560}
+.brand-name{font-size:12px}.brand-name span{font-size:18px;font-weight:760}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.085em}
+.section-heading h2,.contact h2,.approach-copy h2{font-weight:720;letter-spacing:-2.6px}
+.section-heading h2 em,.contact h2 em,.approach-copy h2 em{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-1.5px}
+.hero-copy>p,.section-heading>p,.contact-inner>div>p,.approach-copy>p{font-size:15px;line-height:1.8}
+.metrics-grid span{font-size:12px;line-height:1.45}
+.service-card p,.web-focus-grid p,.local-area-grid p,.price-card>p,.contact-card>p,.approach-steps p{font-size:13px;line-height:1.72}
+.service-card>a,.web-focus-grid a,.local-area-grid a,.portfolio-service-link,.text-link{font-size:12px;font-weight:650}
+.card-top,.service-card-link,.price-card>span,.contact-card>span,.reviews-grid>article>span{font-size:12px}
+.service-card h3,.local-area-grid h3{font-weight:720}
+.portfolio-copy>p{font-size:14px;line-height:1.75}
+.portfolio-tags span{font-size:11px;font-weight:600}
+.reviews-grid blockquote{font-size:14px;line-height:1.72}
+.footer-service-links a,.footer-nap,.footer>p,.footer>a:last-child{font-size:11px}
+@media(max-width:760px){
+ body{font-size:16px}
+ .eyebrow{font-size:11px}
+ .section-heading>p,.hero-copy>p,.approach-copy>p{font-size:15px}
+ .metrics-grid span{font-size:11px}
+ .service-card p,.web-focus-grid p,.local-area-grid p,.price-card>p,.approach-steps p{font-size:13px}
+}
