@@ -88,7 +88,7 @@
 .hero-clean-trust{font-size:16px;margin-top:18px;display:flex;align-items:center;gap:8px}.hero-clean-trust .stars{color:#ffc400;letter-spacing:1px}.hero-clean-trust b{display:inline-block;width:1px;height:22px;background:rgba(255,255,255,.55);margin:0 4px}
 @media(max-width:760px){
  .hero-clean{height:auto;min-height:0;padding-top:56vw}
- .hero-clean-bg{height:56vw;object-fit:cover;object-position:66% 35%}
+ .hero-clean-bg{height:56vw;object-fit:cover;object-position:78% 35%}
  .hero-clean:after{background:linear-gradient(180deg,rgba(4,25,45,.04) 0,rgba(4,25,45,.18) 56vw,#071f37 56vw,#071f37 100%)}
  .hero-clean-overlay{width:calc(100% - 36px);height:auto;margin:0 auto;padding:18px 0 28px;transform:none;justify-content:flex-start}
  .hero-clean-logo{width:108px;margin-bottom:2px}.hero-clean-brand{font-size:13px}.hero-clean-location{font-size:10px;margin:5px 0 10px}
