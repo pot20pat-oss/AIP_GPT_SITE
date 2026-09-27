@@ -197,3 +197,21 @@ html,body{max-width:100%;overflow-x:hidden}
   }
   img{max-width:100%}
 }
+
+
+/* Mobile visual cards: enlarge embedded-text artwork without widening the page */
+@media(max-width:760px){
+  .services.section,.web-focus.section{overflow:hidden}
+  .services-aip-visual{
+    width:200%;
+    max-width:none;
+    transform:translateX(-25%);
+    margin:0;
+  }
+  .creation-web-aip-visual{
+    width:180%;
+    max-width:none;
+    transform:translateX(-22.2%);
+    margin:0;
+  }
+}
