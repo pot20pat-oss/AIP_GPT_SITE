@@ -301,3 +301,10 @@ html,body{max-width:100%;overflow-x:hidden}
   .hero-clean h1{font-size:clamp(40px,3vw,54px)}
   .hero-clean h2{font-size:clamp(36px,2.8vw,47px)}
 }
+
+@media(min-width:901px){
+  .hero-clean-overlay:before{
+    height:72%;
+    top:50%;
+  }
+}
