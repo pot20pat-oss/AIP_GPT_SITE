@@ -71,8 +71,8 @@
 
 
 /* Responsive homepage hero: visual background + real HTML content */
-.hero-clean{position:relative;overflow:hidden;background:#071f37;color:#fff;aspect-ratio:auto;height:auto;min-height:0;max-height:none}
-.hero-clean-bg{position:relative;inset:auto;width:100%;height:auto;display:block;object-fit:contain;object-position:center center}
+.hero-clean{position:relative;overflow:hidden;background:#071f37;color:#fff;height:35vw;min-height:0;max-height:none}
+.hero-clean-bg{position:absolute;inset:0 auto auto 0;width:100%;height:auto;display:block;object-fit:contain;object-position:top center}
 .hero-clean:after{content:none;display:none}
 .hero-clean-overlay{position:relative;z-index:2;width:min(1540px,calc(100% - 80px));height:100%;margin:0 auto;display:flex;position:absolute;inset:0;flex-direction:column;justify-content:center;align-items:flex-start;padding:22px 0;transform:none}
 .hero-clean-logo{width:255px;height:auto;display:block;margin-bottom:4px}
