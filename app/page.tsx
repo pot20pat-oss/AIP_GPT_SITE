@@ -16,6 +16,18 @@ export default function Home() {
       <SiteHeader />
       <section className="hero-clean" id="accueil">
         <img className="hero-clean-bg" src="/hero-aip-clean.png" alt="Atelier Informatique Potvin" />
+        <div className="hero-clean-overlay">
+          <img className="hero-clean-logo" src="/logo-aip-glow.png" alt="AIP" />
+          <div className="hero-clean-brand">ATELIER INFORMATIQUE <strong>POTVIN</strong></div>
+          <div className="hero-clean-location">● &nbsp; NICOLET · BÉCANCOUR · TROIS-RIVIÈRES</div>
+          <h1>Informatique &amp; Web<span>.</span></h1>
+          <h2>Des solutions qui<br />fonctionnent.</h2>
+          <p>Dépannage, services informatiques et création<br className="desktop-only" /> de sites web sur mesure. Un seul interlocuteur,<br className="desktop-only" /> des solutions simples et efficaces.</p>
+          <div className="hero-clean-actions">
+            <a className="hero-clean-primary" href="tel:+18193802999">Discuter de votre projet <span>→</span></a>
+            <a className="hero-clean-secondary" href="#services">Découvrir<br />les services <span>↓</span></a>
+          </div>
+        </div>
       </section>
       <section className="metrics"><div className="shell metrics-grid"><div><strong>40 ans</strong><span>d’expérience sur le terrain</span></div><div><strong>50 km</strong><span>de service à domicile</span></div><div><strong>5,0 <i>★</i></strong><span>sur Google, 10 avis</span></div><div><strong>1 seul</strong><span>interlocuteur, du début à la fin</span></div></div></section>
       <section className="services section shell" id="services"><div className="section-heading"><div><div className="eyebrow"><span></span> Deux expertises, clairement séparées</div><h2>Informatique ou Web.<br /><em>Choisissez votre besoin.</em></h2></div><p>Besoin de régler un problème informatique ou de bâtir une présence web professionnelle? Chaque service a son propre parcours, sans confusion.</p></div><img className="services-aip-visual" src="/services-aip.png" alt="Six services Atelier Informatique Potvin : dépannage et réparation, cybersécurité, assistance à distance, installation et transfert, réseau et sauvegardes, sites web sur mesure" /><div className="services-mobile-grid">{services.map(service => <article className="service-mobile-card" key={service.href}><img src={service.image} alt={service.imageAlt} loading="lazy" /><div className="service-mobile-copy"><span>{service.number}</span><h3>{service.title}</h3><p>{service.description}</p><Link href={service.href}>En savoir plus <b>→</b></Link></div></article>)}</div></section>
