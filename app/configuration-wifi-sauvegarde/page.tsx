@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { DetailPage } from "../components";
 import { pageMetadata } from "../seo";
 
-export const metadata: Metadata = pageMetadata({ title: "Configuration Wi-Fi et sauvegarde informatique | Nicolet", description: "Wi-Fi instable, routeur, imprimante réseau et sauvegarde de fichiers à Nicolet, Bécancour et Trois-Rivières. Appelez Patrick au 819 380-2999.", path: "/configuration-wifi-sauvegarde", image: "/service-reseau-sauvegardes.webp" });
+export const metadata: Metadata = pageMetadata({ title: "Configuration Wi-Fi et sauvegarde informatique | Nicolet", description: "Wi-Fi instable, routeur, imprimante réseau et sauvegarde de fichiers à Nicolet, Bécancour et Trois-Rivières. Appelez Patrick au 819 380-2999.", path: "/configuration-wifi-sauvegarde", image: "/AIP-bureau-informatique.png" });
 
 export default function Page() {
-  return <DetailPage eyebrow="Configuration Wi-Fi et sauvegarde de données" image="/service-reseau-sauvegardes.webp" imageAlt="Patrick Potvin configure un routeur Wi-Fi et une sauvegarde de données à Nicolet" title="Un Wi-Fi qui tient la route." accent="Des fichiers en sécurité." intro="Un réseau instable complique tout : ordinateur, imprimante, courriel et travail à la maison. Patrick vérifie votre Wi-Fi, configure les appareils concernés et vous aide à mettre en place une vraie stratégie de sauvegarde." points={[
+  return <DetailPage eyebrow="Configuration Wi-Fi et sauvegarde de données" image="/AIP-bureau-informatique.png" imageAlt="Patrick Potvin configure un routeur Wi-Fi et une sauvegarde de données à Nicolet" title="Un Wi-Fi qui tient la route." accent="Des fichiers en sécurité." intro="Un réseau instable complique tout : ordinateur, imprimante, courriel et travail à la maison. Patrick vérifie votre Wi-Fi, configure les appareils concernés et vous aide à mettre en place une vraie stratégie de sauvegarde." points={[
     { title: "Diagnostic du routeur et du réseau Wi-Fi", text: "Vérification du routeur, de la connexion Internet, du signal, des appareils touchés et des causes courantes de déconnexion ou de faible couverture." },
     { title: "Connexion des ordinateurs et imprimantes", text: "Association des appareils au bon réseau, vérification des paramètres essentiels et remise en service d’une imprimante réseau quand sa configuration le permet." },
     { title: "Organisation des sauvegardes", text: "Identification des documents, photos et fichiers importants, puis choix d’une méthode de sauvegarde compréhensible selon vos habitudes et votre matériel." },
