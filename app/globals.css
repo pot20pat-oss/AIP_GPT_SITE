@@ -279,3 +279,25 @@ html,body{max-width:100%;overflow-x:hidden}
     -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 82%,rgba(0,0,0,.75) 92%,transparent 100%);
   }
 }
+
+@media(min-width:901px){
+  .hero-clean-overlay{
+    width:410px;
+    left:max(28px,calc((100vw - 1740px)/2));
+    right:auto;
+    transform:none;
+  }
+  .hero-clean-overlay:before{
+    left:-26px;
+    width:465px;
+    height:90%;
+    background:rgba(2,14,27,.76);
+    backdrop-filter:blur(30px);
+    -webkit-backdrop-filter:blur(30px);
+    border-radius:20px;
+    mask-image:linear-gradient(90deg,#000 0%,#000 86%,rgba(0,0,0,.82) 94%,transparent 100%);
+    -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 86%,rgba(0,0,0,.82) 94%,transparent 100%);
+  }
+  .hero-clean h1{font-size:clamp(40px,3vw,54px)}
+  .hero-clean h2{font-size:clamp(36px,2.8vw,47px)}
+}
