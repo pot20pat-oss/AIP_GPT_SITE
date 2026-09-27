@@ -14,11 +14,20 @@ export default function Home() {
   return (
     <main>
       <SiteHeader />
-      <section className="hero-integrated" id="accueil">
-        <img src="/hero-aip-integrated.png" alt="Atelier Informatique Potvin — informatique et création web à Nicolet, Bécancour et Trois-Rivières" />
-        <div className="hero-integrated-links" aria-label="Actions principales">
-          <a className="hero-integrated-project" href="tel:+18193802999" aria-label="Discuter de votre projet"></a>
-          <a className="hero-integrated-services" href="#services" aria-label="Découvrir les services"></a>
+      <section className="hero-clean" id="accueil">
+        <img className="hero-clean-bg" src="/hero-aip-clean.png" alt="" aria-hidden="true" />
+        <div className="hero-clean-overlay">
+          <img className="hero-clean-logo" src="/logo-aip-glow.png" alt="AIP" />
+          <div className="hero-clean-brand">ATELIER INFORMATIQUE <strong>POTVIN</strong></div>
+          <div className="hero-clean-location">● &nbsp; NICOLET · BÉCANCOUR · TROIS-RIVIÈRES</div>
+          <h1>Informatique &amp; Web<span>.</span></h1>
+          <h2>Des solutions qui<br />fonctionnent.</h2>
+          <p>Dépannage, services informatiques et création<br className="desktop-only" /> de sites web sur mesure. Un seul interlocuteur,<br className="desktop-only" /> des solutions simples et efficaces.</p>
+          <div className="hero-clean-actions">
+            <a className="hero-clean-primary" href="tel:+18193802999">Discuter de votre projet <span>→</span></a>
+            <a className="hero-clean-secondary" href="#services">Découvrir<br />les services <span>↓</span></a>
+          </div>
+          <div className="hero-clean-trust"><span className="stars">★★★★★</span> 5,0 sur Google · 10 avis <b></b> <span>👤</span> 40 ans d’expérience</div>
         </div>
       </section>
       <section className="metrics"><div className="shell metrics-grid"><div><strong>40 ans</strong><span>d’expérience sur le terrain</span></div><div><strong>50 km</strong><span>de service à domicile</span></div><div><strong>5,0 <i>★</i></strong><span>sur Google, 10 avis</span></div><div><strong>1 seul</strong><span>interlocuteur, du début à la fin</span></div></div></section>
