@@ -15,9 +15,9 @@ export default function Home() {
     <main>
       <SiteHeader />
       <section className="hero-clean" id="accueil">
-        <img className="hero-clean-bg" src="/images/hero-aip-clean.png" alt="" aria-hidden="true" />
+        <img className="hero-clean-bg" src="/hero-aip-clean.png" alt="" aria-hidden="true" />
         <div className="hero-clean-overlay">
-          <img className="hero-clean-logo" src="/images/logo-aip.png" alt="AIP" />
+          <img className="hero-clean-logo" src="/logo-aip-glow.png" alt="AIP" />
           <div className="hero-clean-brand">ATELIER INFORMATIQUE <strong>POTVIN</strong></div>
           <div className="hero-clean-location">● &nbsp; NICOLET · BÉCANCOUR · TROIS-RIVIÈRES</div>
           <h1>Informatique &amp; Web<span>.</span></h1>
