@@ -47,14 +47,14 @@
 
 
 /* Integrated homepage hero artwork. */
-.hero-integrated{position:relative;width:100%;overflow:hidden;background:#0d2947}
-.hero-integrated>img{display:block;width:100%;height:auto}
+.hero-integrated{position:relative;width:100%;height:min(620px,64vh);overflow:hidden;background:#0d2947}
+.hero-integrated>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 38%}
 .hero-integrated-links{position:absolute;inset:0;pointer-events:none}
 .hero-integrated-links a{position:absolute;display:block;pointer-events:auto}
 .hero-integrated-project{left:7.3%;top:65%;width:20.8%;height:9.2%}
 .hero-integrated-services{left:29.5%;top:65%;width:12.5%;height:9.2%}
 @media(max-width:760px){
-  .hero-integrated{min-height:470px}
-  .hero-integrated>img{width:auto;height:470px;max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+  .hero-integrated{height:470px;min-height:470px}
+  .hero-integrated>img{width:100%;height:470px;max-width:none;object-fit:cover;object-position:center center;position:static;transform:none}
   .hero-integrated-links{display:none}
 }
