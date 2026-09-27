@@ -42,5 +42,15 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="fr-CA"><body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(localBusiness) }} />{children}</body></html>;
+  return <html lang="fr-CA"><body>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0HN0N449R" />
+    <script dangerouslySetInnerHTML={{ __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T0HN0N449R');
+    ` }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(localBusiness) }} />
+    {children}
+  </body></html>;
 }
