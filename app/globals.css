@@ -166,3 +166,19 @@ body{font-family:Inter,"Avenir Next",Avenir,"Segoe UI",sans-serif;font-size:16px
 .trust-box>div strong{font-size:20px;line-height:1.1}
 .trust-box>div span{font-size:11px;line-height:1.35;color:var(--muted)}
 @media(max-width:480px){.trust-box{grid-template-columns:1fr 1fr;gap:8px}.trust-box>div{padding:12px 10px}}
+
+/* Detailed web packages */
+.pricing-page .pricing-group-heading h2{margin:0 0 5px;color:var(--forest);font-size:28px;letter-spacing:-.6px}
+.web-package-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.web-package-card{display:flex;flex-direction:column;min-height:390px;padding:28px;background:#f0f4fa;border:1px solid #e1e8f1}
+.web-package-top{display:flex;gap:15px;align-items:flex-start;padding-bottom:18px;border-bottom:1px solid #d9e2ec}
+.web-package-top>span{font-size:11px;color:#438fb7;font-weight:700}
+.web-package-top h3{margin:0 0 8px;font-size:22px;letter-spacing:-.4px;color:var(--forest)}
+.web-package-top strong{font-size:28px;color:var(--forest)}
+.web-package-card>p{margin:20px 0 15px;font-size:13px;line-height:1.7;color:var(--muted)}
+.web-package-card ul{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:9px}
+.web-package-card li{position:relative;padding-left:19px;font-size:12px;line-height:1.5;color:#40516a}
+.web-package-card li:before{content:"✓";position:absolute;left:0;color:#3189b4;font-weight:800}
+.web-package-card>a{margin-top:auto;padding-top:16px;border-top:1px solid #d9e2ec;font-size:12px;font-weight:700;color:var(--forest);display:flex;justify-content:space-between}
+.package-note{margin:18px 0 0;font-size:11px;line-height:1.7;color:var(--muted)}
+@media(max-width:760px){.web-package-grid{grid-template-columns:1fr}.web-package-card{min-height:auto;padding:22px}.pricing-page .pricing-group-heading h2{font-size:23px}}
