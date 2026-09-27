@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { DetailPage } from "../components";
 import { pageMetadata } from "../seo";
 
-export const metadata: Metadata = pageMetadata({ title: "Installation ordinateur et transfert de données | Nicolet", description: "Nouveau PC, installation Windows, transfert photos et documents, imprimante et courriel à Nicolet et Bécancour. Appelez Patrick au 819 380-2999.", path: "/installation-ordinateur-transfert-donnees", image: "/service-installation-transfert.webp" });
+export const metadata: Metadata = pageMetadata({ title: "Installation ordinateur et transfert de données | Nicolet", description: "Nouveau PC, installation Windows, transfert photos et documents, imprimante et courriel à Nicolet et Bécancour. Appelez Patrick au 819 380-2999.", path: "/installation-ordinateur-transfert-donnees", image: "/AIP-travail-ordinateur.png" });
 
 export default function Page() {
-  return <DetailPage eyebrow="Installation d’ordinateur et transfert de données" image="/service-installation-transfert.webp" imageAlt="Patrick Potvin configure un ordinateur et transfère des données à Nicolet" title="Un nouvel ordinateur." accent="Vos repères retrouvés." intro="Changer de PC ne devrait pas vous faire perdre vos documents, vos photos ou vos habitudes. Patrick configure votre ordinateur, transfère les données accessibles et vérifie avec vous que l’essentiel fonctionne." points={[
+  return <DetailPage eyebrow="Installation d’ordinateur et transfert de données" image="/AIP-travail-ordinateur.png" imageAlt="Patrick Potvin configure un ordinateur et transfère des données à Nicolet" title="Un nouvel ordinateur." accent="Vos repères retrouvés." intro="Changer de PC ne devrait pas vous faire perdre vos documents, vos photos ou vos habitudes. Patrick configure votre ordinateur, transfère les données accessibles et vérifie avec vous que l’essentiel fonctionne." points={[
     { title: "Mise en route et configuration de Windows", text: "Configuration initiale de l’ordinateur, mises à jour, compte utilisateur, navigateur, paramètres utiles et logiciels essentiels selon votre situation." },
     { title: "Transfert de documents, photos et favoris", text: "Vos fichiers importants sont repérés sur l’ancien ordinateur, copiés lorsque leur support reste lisible, puis replacés de façon organisée sur le nouveau." },
     { title: "Courriel, imprimante et accessoires", text: "Connexion de votre imprimante et de vos périphériques, configuration du courriel lorsque les informations nécessaires sont disponibles et vérification du réseau." },
