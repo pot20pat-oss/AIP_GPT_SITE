@@ -97,3 +97,9 @@
  .hero-clean-actions{width:100%;gap:9px}.hero-clean-actions a{padding:11px 12px;font-size:13px}.hero-clean-primary{min-width:0;flex:1}.hero-clean-secondary{min-width:130px}
  .hero-clean-trust{font-size:12px;flex-wrap:wrap;margin-top:13px;gap:5px}.hero-clean-trust b{height:15px}
 }
+
+/* Mobile header final override */
+@media(max-width:760px){
+ .header nav{display:flex!important;grid-area:nav;width:100%;gap:0;justify-content:space-between;border-top:1px solid #e3e8f1;padding:9px 0 10px;margin-top:6px;font-size:10px;color:#45536d}
+ .header{height:auto!important;min-height:68px}
+}
