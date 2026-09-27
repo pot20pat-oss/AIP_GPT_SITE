@@ -261,3 +261,11 @@ html,body{max-width:100%;overflow-x:hidden}
 }
 
 .header-contact{display:flex;align-items:center;gap:22px}.header-service-note{font-size:11px;line-height:1.25;text-align:right;color:#41566d;white-space:nowrap}.header-service-note span{color:#6d7f91}@media(max-width:900px){.header-service-note{display:none}}
+
+@media(min-width:901px){
+  .hero-clean-overlay{width:430px;left:max(70px,calc((100vw - 1540px)/2));right:auto;transform:none;padding:22px 0}
+  .hero-clean-overlay:before{left:-22px;width:475px;height:86%;background:rgba(4,25,45,.38);border-radius:20px}
+  .hero-clean h1{font-size:clamp(42px,3.2vw,58px);white-space:nowrap}
+  .hero-clean h2{font-size:clamp(38px,3vw,50px)}
+  .hero-clean p{font-size:16px}
+}
