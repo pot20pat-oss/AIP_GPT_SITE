@@ -12,8 +12,8 @@ export const metadata: Metadata = pageMetadata({
 export default function Page() {
   return <DetailPage
     eyebrow="Création de sites web · Centre-du-Québec"
-    image="/service-sites-web.webp"
-    imageAlt="Patrick Potvin présente un site web professionnel créé sur mesure"
+    image="/projet-bois-morphee.webp"
+    imageAlt="Aperçu d’un site web professionnel réalisé sur mesure par Atelier Informatique Potvin"
     title="Création de sites web à Nicolet."
     accent="Pour les entreprises d’ici."
     intro="Sites web professionnels pour PME, artisans et travailleurs autonomes de Nicolet, Bécancour, Trois-Rivières et des environs. Site vitrine, boutique en ligne ou CMS sur mesure : chaque projet est conçu pour être clair, rapide et facile à trouver sur Google."
