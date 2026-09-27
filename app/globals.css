@@ -215,3 +215,24 @@ html,body{max-width:100%;overflow-x:hidden}
     margin:0;
   }
 }
+
+
+/* True mobile cards replace embedded-text artwork */
+.services-mobile-grid,.web-mobile-grid{display:none}
+@media(max-width:760px){
+  .services-aip-visual,.creation-web-aip-visual{display:none!important}
+  .services-mobile-grid,.web-mobile-grid{display:grid;grid-template-columns:1fr;gap:16px}
+  .service-mobile-card,.web-mobile-grid article{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:10px}
+  .service-mobile-card>img,.web-mobile-grid article>img{display:block;width:100%;height:210px;object-fit:cover;object-position:center}
+  .service-mobile-copy,.web-mobile-grid article{color:var(--ink)}
+  .service-mobile-copy{padding:20px}
+  .service-mobile-copy>span,.web-mobile-grid article>span{display:inline-block;color:#1687ed;font-size:12px;font-weight:800;margin-bottom:7px}
+  .service-mobile-copy h3,.web-mobile-grid h3{font-size:22px;line-height:1.15;margin:0 0 9px;letter-spacing:-.5px}
+  .service-mobile-copy p,.web-mobile-grid p{font-size:14px;line-height:1.6;color:var(--muted);margin:0 0 16px}
+  .service-mobile-copy a,.web-mobile-grid a{font-size:13px;font-weight:750;color:#167eaa}
+  .service-mobile-copy b,.web-mobile-grid b{margin-left:6px}
+  .web-focus.section{padding-top:42px}
+  .web-mobile-grid article{padding-bottom:20px}
+  .web-mobile-grid article>img{margin-bottom:18px}
+  .web-mobile-grid article>span,.web-mobile-grid article>h3,.web-mobile-grid article>p,.web-mobile-grid article>a{margin-left:20px;margin-right:20px}
+}
