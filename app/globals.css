@@ -269,3 +269,13 @@ html,body{max-width:100%;overflow-x:hidden}
   .hero-clean h2{font-size:clamp(38px,3vw,50px)}
   .hero-clean p{font-size:16px}
 }
+
+@media(min-width:901px){
+  .hero-clean-overlay:before{
+    background:rgba(3,18,32,.62);
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+    mask-image:linear-gradient(90deg,#000 0%,#000 82%,rgba(0,0,0,.75) 92%,transparent 100%);
+    -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 82%,rgba(0,0,0,.75) 92%,transparent 100%);
+  }
+}
