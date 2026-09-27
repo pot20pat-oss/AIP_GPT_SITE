@@ -7,7 +7,7 @@ export function SiteHeader() {
   return <>
     <div className="announcement">Service local à Nicolet, Bécancour et Trois-Rivières <span>·</span> Réponse habituellement dans la journée</div>
     <header className="header shell">
-      <Link className="brand" href="/" aria-label="Atelier Informatique Potvin, accueil"><img className="brand-logo" src="/logo-aip-glow.png" alt="Logo Atelier Informatique Potvin" width="71" height="61" /><span className="brand-name">Atelier informatique<span>Potvin</span></span></Link>
+      <Link className="brand" href="/" aria-label="Atelier Informatique Potvin, accueil"><img className="brand-logo" src="/logo-aip-glow.png" alt="Logo Atelier Informatique Potvin" width="71" height="61" /><span className="brand-name">Atelier informatique<span className="brand-potvin" style={{color:"#1687ed"}}>Potvin</span></span></Link>
       <nav aria-label="Navigation principale"><Link href="/depannage-informatique-nicolet">Dépannage</Link><Link href="/suppression-virus">Virus</Link><Link href="/creation-sites-web">Sites web</Link><Link href="/tarifs">Tarifs</Link><Link href="/faq">FAQ</Link></nav>
       <a className="header-phone" href="tel:+18193802999">{phone} <span>↗</span></a>
     </header>
