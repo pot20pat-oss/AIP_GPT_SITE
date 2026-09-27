@@ -87,12 +87,12 @@
 .hero-clean-secondary{border:1px solid rgba(255,255,255,.85);color:#fff;min-width:175px;line-height:1.05}.hero-clean-secondary span{margin-left:12px}
 .hero-clean-trust{font-size:16px;margin-top:18px;display:flex;align-items:center;gap:8px}.hero-clean-trust .stars{color:#ffc400;letter-spacing:1px}.hero-clean-trust b{display:inline-block;width:1px;height:22px;background:rgba(255,255,255,.55);margin:0 4px}
 @media(max-width:760px){
- .hero-clean{aspect-ratio:auto;min-height:720px}
- .hero-clean-bg{object-position:68% center}
- .hero-clean:after{background:linear-gradient(180deg,rgba(4,25,45,.2) 0%,rgba(4,25,45,.52) 36%,rgba(4,25,45,.96) 62%,#071f37 100%)}
- .hero-clean-overlay{width:calc(100% - 36px);justify-content:flex-end;padding:28px 0 34px;transform:none}
- .hero-clean-logo{width:130px}.hero-clean-brand{font-size:14px}.hero-clean-location{font-size:11px;margin:5px 0 10px}
- .hero-clean h1{font-size:39px;letter-spacing:-1.8px}.hero-clean h2{font-size:34px;letter-spacing:-1px;margin:5px 0 11px}
+ .hero-clean{height:auto;min-height:0;padding-top:56vw}
+ .hero-clean-bg{height:56vw;object-fit:cover;object-position:66% 35%}
+ .hero-clean:after{background:linear-gradient(180deg,rgba(4,25,45,.04) 0,rgba(4,25,45,.18) 56vw,#071f37 56vw,#071f37 100%)}
+ .hero-clean-overlay{width:calc(100% - 36px);height:auto;margin:0 auto;padding:18px 0 28px;transform:none;justify-content:flex-start}
+ .hero-clean-logo{width:108px;margin-bottom:2px}.hero-clean-brand{font-size:13px}.hero-clean-location{font-size:10px;margin:5px 0 10px}
+ .hero-clean h1{font-size:38px;letter-spacing:-1.7px}.hero-clean h2{font-size:32px;letter-spacing:-1px;margin:5px 0 11px}
  .hero-clean p{font-size:14px;line-height:1.35;margin-bottom:14px}.desktop-only{display:none}
  .hero-clean-actions{width:100%;gap:9px}.hero-clean-actions a{padding:11px 12px;font-size:13px}.hero-clean-primary{min-width:0;flex:1}.hero-clean-secondary{min-width:130px}
  .hero-clean-trust{font-size:12px;flex-wrap:wrap;margin-top:13px;gap:5px}.hero-clean-trust b{height:15px}
