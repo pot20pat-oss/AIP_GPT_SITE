@@ -259,3 +259,5 @@ html,body{max-width:100%;overflow-x:hidden}
     aspect-ratio:16/10;
   }
 }
+
+.header-contact{display:flex;align-items:center;gap:22px}.header-service-note{font-size:11px;line-height:1.25;text-align:right;color:#41566d;white-space:nowrap}.header-service-note span{color:#6d7f91}@media(max-width:900px){.header-service-note{display:none}}
