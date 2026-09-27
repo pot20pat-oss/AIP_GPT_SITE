@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { DetailPage } from "../components";
 import { pageMetadata } from "../seo";
 
-export const metadata: Metadata = pageMetadata({ title: "Assistance informatique à distance | Nicolet – Atelier Potvin", description: "Assistance informatique à distance : Windows, courriel, logiciels et imprimante. Séance jusqu’à 45 min : 50 $. Appelez Patrick au 819 380-2999.", path: "/assistance-informatique-a-distance", image: "/service-assistance-distance.webp" });
+export const metadata: Metadata = pageMetadata({ title: "Assistance informatique à distance | Nicolet – Atelier Potvin", description: "Assistance informatique à distance : Windows, courriel, logiciels et imprimante. Séance jusqu’à 45 min : 50 $. Appelez Patrick au 819 380-2999.", path: "/assistance-informatique-a-distance", image: "/AIP-appel-client.png" });
 
 export default function Page() {
-  return <DetailPage eyebrow="Assistance informatique à distance" image="/service-assistance-distance.webp" imageAlt="Patrick Potvin accompagne un client en assistance informatique à distance depuis Nicolet" title="Votre ordinateur vous bloque?" accent="On règle ça à distance." intro="Quand votre ordinateur se connecte encore à Internet, de nombreux problèmes peuvent être réglés sans déplacement. Patrick vous guide au téléphone et intervient avec votre autorisation, directement depuis son bureau à Nicolet." points={[
+  return <DetailPage eyebrow="Assistance informatique à distance" image="/AIP-appel-client.png" imageAlt="Patrick Potvin accompagne un client en assistance informatique à distance depuis Nicolet" title="Votre ordinateur vous bloque?" accent="On règle ça à distance." intro="Quand votre ordinateur se connecte encore à Internet, de nombreux problèmes peuvent être réglés sans déplacement. Patrick vous guide au téléphone et intervient avec votre autorisation, directement depuis son bureau à Nicolet." points={[
     { title: "Une intervention simple et autorisée", text: "Vous autorisez explicitement la connexion pour la séance. Vous voyez les manipulations à l’écran et gardez la possibilité de mettre fin à l’intervention." },
     { title: "Dépannage de logiciels et de Windows", text: "Messages d’erreur, paramètres difficiles à retrouver, mises à jour problématiques, navigateur instable ou programme qui refuse de fonctionner." },
     { title: "Courriel, imprimante et tâches du quotidien", text: "Configuration de boîte courriel, récupération de paramètres, imprimante invisible, favoris disparus et questions sur vos applications habituelles." },
