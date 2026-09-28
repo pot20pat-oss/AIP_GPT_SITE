@@ -2031,3 +2031,36 @@ button:hover .cta-arrow{
     transform:translate(-120px,-50%)!important;
   }
 }
+
+
+/* 2026-09-28 — wide desktop: preserve hero image proportions and show the full mug */
+@media (min-width:1400px){
+  .hero-clean{
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:2048 / 768!important;
+    overflow:hidden!important;
+  }
+  .hero-clean-media{
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+  }
+  .hero-clean-media img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:center 57%!important;
+  }
+  .hero-clean-overlay{
+    top:47%!important;
+    transform:translate(-70px,-50%)!important;
+  }
+}
+@media (min-width:2200px){
+  .hero-clean{aspect-ratio:2048 / 790!important}
+  .hero-clean-media img{object-position:center 59%!important}
+  .hero-clean-overlay{transform:translate(-85px,-50%)!important}
+}
