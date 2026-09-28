@@ -2746,3 +2746,12 @@ button:hover .cta-arrow{
 @media(max-width:760px){
   .footer .footer-brand img{width:64px!important;max-width:64px!important;}
 }
+
+
+/* Footer brand v4 — add optical separation from wide/glowing logo artwork */
+.footer .footer-brand{column-gap:22px!important;}
+.footer .footer-brand>span{margin-left:8px!important;}
+@media(max-width:760px){
+  .footer .footer-brand{column-gap:18px!important;}
+  .footer .footer-brand>span{margin-left:6px!important;}
+}
