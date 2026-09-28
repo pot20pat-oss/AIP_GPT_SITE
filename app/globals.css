@@ -477,3 +477,65 @@ html,body{max-width:100%;overflow-x:hidden}
   .hero-clean-primary{flex:1 1 58%}
   .hero-clean-secondary{display:flex;flex:1 1 42%}
 }
+
+
+/* Mobile hero final layout: use left space efficiently without covering the portrait. */
+@media (max-width:760px){
+  .hero-clean{
+    height:540px;
+    min-height:540px;
+    max-height:540px;
+  }
+  .hero-clean-bg{
+    object-position:61% center;
+  }
+  .hero-clean:after{
+    background:linear-gradient(90deg,rgba(2,14,27,.98) 0%,rgba(2,14,27,.94) 44%,rgba(2,14,27,.66) 59%,rgba(2,14,27,.18) 75%,transparent 90%);
+  }
+  .hero-clean-overlay{
+    left:0;
+    width:59%;
+    max-width:none;
+    padding:24px 8px 24px 18px;
+    justify-content:center;
+  }
+  .hero-clean-brand{
+    font-size:11px;
+    white-space:nowrap;
+  }
+  .hero-clean-location{
+    font-size:8px;
+    white-space:nowrap;
+    margin:7px 0 16px;
+  }
+  .hero-clean h1{
+    font-size:clamp(29px,7.6vw,35px);
+    line-height:.98;
+    letter-spacing:-1.2px;
+    max-width:100%;
+  }
+  .hero-clean h2{
+    font-size:clamp(27px,7vw,33px);
+    line-height:.94;
+    margin-top:7px;
+  }
+  .hero-clean-actions{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:8px;
+    width:min(190px,100%);
+    margin-top:18px;
+  }
+  .hero-clean-actions a{
+    width:100%;
+    min-height:46px;
+    padding:9px 11px;
+    font-size:11px;
+    line-height:1.15;
+    justify-content:space-between;
+  }
+  .hero-clean-primary,.hero-clean-secondary{
+    min-width:0;
+    flex:none;
+  }
+}
