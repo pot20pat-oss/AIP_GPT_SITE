@@ -415,3 +415,65 @@ html,body{max-width:100%;overflow-x:hidden}
   .hero-clean h2{margin:5px 0 16px}
   .hero-clean p{margin-bottom:20px}
 }
+
+
+/* Mobile hero: preserve portrait, contain typography and keep CTAs clear. */
+@media (max-width:760px){
+  .hero-clean{
+    height:525px;
+    min-height:525px;
+    max-height:525px;
+  }
+  .hero-clean-bg{
+    object-fit:cover;
+    object-position:58% center;
+  }
+  .hero-clean:after{
+    background:linear-gradient(90deg,rgba(2,14,27,.97) 0%,rgba(2,14,27,.91) 43%,rgba(2,14,27,.58) 62%,rgba(2,14,27,.10) 82%,rgba(2,14,27,0) 100%);
+  }
+  .hero-clean-overlay{
+    left:0;
+    width:68%;
+    max-width:340px;
+    padding:24px 12px 24px 22px;
+    justify-content:center;
+  }
+  .hero-clean-brand{
+    font-size:12px;
+    line-height:1.15;
+  }
+  .hero-clean-location{
+    font-size:9px;
+    margin:7px 0 18px;
+  }
+  .hero-clean h1{
+    font-size:clamp(31px,8.2vw,39px);
+    line-height:.98;
+    letter-spacing:-1.4px;
+    max-width:100%;
+    padding-right:0;
+  }
+  .hero-clean h1 span{
+    margin-left:0;
+    transform:none;
+  }
+  .hero-clean h2{
+    font-size:clamp(29px,7.5vw,37px);
+    line-height:.94;
+    letter-spacing:-1px;
+    max-width:100%;
+    margin:7px 0 0;
+  }
+  .hero-clean-actions{
+    width:100%;
+    gap:10px;
+    margin-top:20px;
+  }
+  .hero-clean-actions a{
+    min-width:0;
+    padding:11px 9px;
+    font-size:11px;
+  }
+  .hero-clean-primary{flex:1 1 58%}
+  .hero-clean-secondary{display:flex;flex:1 1 42%}
+}
