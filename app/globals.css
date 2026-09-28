@@ -333,3 +333,24 @@ html,body{max-width:100%;overflow-x:hidden}
 /* Hero conversion polish: improve supporting-copy readability */
 .hero-clean p{font-size:clamp(17px,1.15vw,20px);line-height:1.42;max-width:520px}
 @media(max-width:760px){.hero-clean p{font-size:15px;line-height:1.5;max-width:none}}
+
+
+/* Services: use real HTML cards on every viewport; artwork is decorative legacy only */
+.services-aip-visual{display:none!important}
+.services-mobile-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.service-mobile-card{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column;min-width:0}
+.service-mobile-card>img{display:block;width:100%;height:230px;object-fit:cover;object-position:center}
+.service-mobile-copy{padding:22px;display:flex;flex-direction:column;flex:1}
+.service-mobile-copy>span{display:inline-block;color:#1687ed;font-size:12px;font-weight:800;margin-bottom:7px}
+.service-mobile-copy h3{font-size:22px;line-height:1.15;margin:0 0 9px;letter-spacing:-.5px}
+.service-mobile-copy p{font-size:14px;line-height:1.6;color:var(--muted);margin:0 0 16px}
+.service-mobile-copy a{font-size:13px;font-weight:750;color:#167eaa;margin-top:auto}
+.service-mobile-copy b{margin-left:6px}
+@media(max-width:1100px) and (min-width:761px){
+  .services-mobile-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .services-mobile-grid{grid-template-columns:1fr;gap:16px}
+  .service-mobile-card>img{height:210px}
+  .service-mobile-copy{padding:20px}
+}
