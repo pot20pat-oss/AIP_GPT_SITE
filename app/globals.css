@@ -308,3 +308,20 @@ html,body{max-width:100%;overflow-x:hidden}
     top:50%;
   }
 }
+
+
+/* Hero responsive polish: keep title inside card and balance CTAs on narrow screens */
+@media (max-width:1100px){
+  .hero-clean h1{font-size:clamp(34px,5vw,48px);white-space:normal;letter-spacing:-1.8px}
+  .hero-clean-logo{width:clamp(96px,16vw,165px)}
+  .hero-clean-actions{width:100%}
+  .hero-clean-primary{flex:1;min-width:0}
+  .hero-clean-secondary{flex:0 0 42%;min-width:0}
+}
+@media (max-width:760px){
+  .hero-clean h1{font-size:clamp(32px,9vw,38px);white-space:normal;overflow-wrap:normal}
+  .hero-clean-logo{width:96px}
+  .hero-clean-actions a{padding-inline:10px}
+  .hero-clean-primary{flex:1 1 56%}
+  .hero-clean-secondary{flex:1 1 44%;min-width:0}
+}
