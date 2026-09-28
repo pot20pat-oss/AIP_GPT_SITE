@@ -1814,3 +1814,42 @@ a:active > span:last-child{
 @media screen and (min-width:7680px){
   .hero-clean{aspect-ratio:3.2/1!important}
 }
+
+
+/* LARGE-SCREEN HERO — preserve the complete source image: no top/bottom crop. */
+@media screen and (min-width:1920px){
+  .hero-clean{
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    overflow:hidden!important;
+    background:#031c33!important;
+  }
+  .hero-clean-bg{
+    position:relative!important;
+    inset:auto!important;
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    max-width:none!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+    transform:none!important;
+  }
+  .hero-clean-overlay{
+    position:absolute!important;
+    top:50%!important;
+    left:max(24px,calc((100% - 1720px)/2))!important;
+    transform:translateY(-50%)!important;
+  }
+}
+@media screen and (min-width:2560px){
+  .hero-clean-overlay{left:max(32px,calc((100% - 2200px)/2))!important}
+}
+@media screen and (min-width:3840px){
+  .hero-clean-overlay{left:max(48px,calc((100% - 3200px)/2))!important}
+}
+@media screen and (min-width:7680px){
+  .hero-clean-overlay{left:max(80px,calc((100% - 6200px)/2))!important}
+}
