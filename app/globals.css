@@ -1893,3 +1893,35 @@ a:hover .cta-arrow{
 }
 /* Prevent older generic span-arrow CSS from creating a second arrow. */
 a:has(.cta-arrow)::after{display:none!important;content:none!important}
+
+
+/* HERO TEXT PANEL — remove the dark translucent box requested by user. */
+.hero-clean-overlay:before{display:none!important;content:none!important;background:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+
+/* Arrow alignment: CTA text and 3D arrow share the same centered flex row. */
+.hero-clean-actions a,
+.button:has(.cta-arrow),
+.web-mobile-grid a:has(.cta-arrow),
+.service-mobile-card a:has(.cta-arrow),
+.portfolio-service-link:has(.cta-arrow),
+.web-package-card a:has(.cta-arrow),
+.expertise-gateway-card b:has(.cta-arrow){
+  display:flex!important;
+  align-items:center!important;
+}
+.hero-clean-actions a,
+.button:has(.cta-arrow){justify-content:center!important}
+.web-mobile-grid a:has(.cta-arrow),
+.service-mobile-card a:has(.cta-arrow),
+.portfolio-service-link:has(.cta-arrow),
+.web-package-card a:has(.cta-arrow){width:max-content!important}
+.cta-arrow{
+  position:relative!important;
+  top:0!important;
+  right:auto!important;
+  bottom:auto!important;
+  left:auto!important;
+  transform:none!important;
+  margin-top:0!important;
+  margin-bottom:0!important;
+}
