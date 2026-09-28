@@ -1156,3 +1156,50 @@ html,body{max-width:100%;overflow-x:hidden}
     margin-right:auto!important;
   }
 }
+
+
+/* Tablet correction v2: keep the hero compact and side-by-side from 901–1050px. */
+@media (min-width:901px) and (max-width:1050px){
+  .hero-clean{
+    display:block!important;
+    position:relative!important;
+    height:620px!important;
+    min-height:620px!important;
+    max-height:620px!important;
+    overflow:hidden!important;
+  }
+  .hero-clean-bg{
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    aspect-ratio:auto!important;
+    object-fit:cover!important;
+    object-position:64% center!important;
+  }
+  .hero-clean-overlay{
+    position:absolute!important;
+    inset:0 auto 0 0!important;
+    width:47%!important;
+    max-width:470px!important;
+    min-height:0!important;
+    height:100%!important;
+    margin:0!important;
+    padding:30px 18px 30px 34px!important;
+    transform:none!important;
+    justify-content:center!important;
+    align-items:flex-start!important;
+    text-align:left!important;
+    background:linear-gradient(90deg,rgba(2,14,27,.96) 0%,rgba(2,14,27,.88) 76%,rgba(2,14,27,.45) 92%,transparent 100%)!important;
+  }
+  .hero-clean-overlay:before{display:none!important}
+  .hero-clean-logo{display:block!important;width:145px!important;margin-bottom:8px!important}
+  .hero-clean-brand,.hero-clean-location,.hero-clean h1,.hero-clean h2,.hero-clean p{width:auto!important;max-width:410px!important;text-align:left!important}
+  .hero-clean-brand{font-size:13px!important}
+  .hero-clean-location{font-size:10px!important;margin:5px 0 13px!important}
+  .hero-clean h1{font-size:42px!important;line-height:.98!important}
+  .hero-clean h2{font-size:37px!important;line-height:.95!important;margin:6px 0 12px!important}
+  .hero-clean p{font-size:13px!important;line-height:1.45!important}
+  .hero-clean-actions{display:flex!important;width:100%!important;max-width:400px!important;margin:16px 0 0!important;gap:10px!important}
+  .hero-clean-actions a{font-size:11px!important;min-height:46px!important;padding:9px 11px!important}
+}
