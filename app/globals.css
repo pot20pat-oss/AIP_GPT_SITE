@@ -360,23 +360,58 @@ html,body{max-width:100%;overflow-x:hidden}
 .hero-clean h1{padding-right:.12em}
 .hero-clean h1 span{display:inline-block;margin-left:-.02em;transform:translateX(-.03em)}
 
-/* Hero desktop: deliberately use the empty left side and keep copy away from the portrait. */
-@media (min-width:761px){
+/* Hero desktop: large, balanced copy panel using the full available left zone. */
+@media (min-width:1101px){
   .hero-clean-overlay{
-    left:max(26px,calc((100vw - 1760px)/2));
-    width:620px;
-    padding:34px 0 38px;
+    left:max(34px,calc((100vw - 1840px)/2));
+    width:700px;
+    padding:48px 0 52px;
+    justify-content:center;
   }
   .hero-clean-overlay:before{
-    left:-34px;
-    width:675px;
-    height:94%;
+    left:-38px;
+    width:760px;
+    height:92%;
+    border-radius:28px;
   }
-  .hero-clean-logo{margin-bottom:16px}
-  .hero-clean-brand{margin-bottom:10px}
-  .hero-clean-location{margin:10px 0 24px}
-  .hero-clean h1{margin-bottom:12px;max-width:600px}
-  .hero-clean h2{margin:6px 0 26px;line-height:1.02;max-width:590px}
-  .hero-clean p{margin-bottom:30px;line-height:1.58;max-width:560px}
-  .hero-clean-actions{gap:20px}
+  .hero-clean-logo{width:285px;margin-bottom:14px}
+  .hero-clean-brand{font-size:25px;margin-bottom:8px}
+  .hero-clean-location{font-size:17px;margin:8px 0 22px}
+  .hero-clean h1{
+    font-size:clamp(54px,3.65vw,70px);
+    line-height:.98;
+    margin:0 0 10px;
+    max-width:680px;
+    white-space:nowrap;
+  }
+  .hero-clean h2{
+    font-size:clamp(50px,3.45vw,66px);
+    line-height:.96;
+    margin:0 0 24px;
+    max-width:660px;
+  }
+  .hero-clean p{
+    font-size:20px;
+    line-height:1.48;
+    max-width:610px;
+    margin:0 0 28px;
+  }
+  .hero-clean-actions{gap:18px}
+  .hero-clean-actions a{padding:16px 26px;font-size:16px}
+  .hero-clean-primary{min-width:300px}
+  .hero-clean-secondary{min-width:190px}
+}
+
+/* Medium desktop/tablet keeps the portrait clear without shrinking the card excessively. */
+@media (min-width:761px) and (max-width:1100px){
+  .hero-clean-overlay{
+    left:32px;
+    width:500px;
+    padding:30px 0;
+  }
+  .hero-clean-overlay:before{left:-24px;width:545px;height:90%}
+  .hero-clean-brand{margin-bottom:6px}
+  .hero-clean-location{margin:7px 0 14px}
+  .hero-clean h2{margin:5px 0 16px}
+  .hero-clean p{margin-bottom:20px}
 }
