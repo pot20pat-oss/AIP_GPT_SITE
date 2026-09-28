@@ -18,14 +18,14 @@ export default function Home() {
         <img className="hero-clean-bg" src="/hero-aip-clean.png" alt="Atelier Informatique Potvin" />
         <div className="hero-clean-overlay">
           <img className="hero-clean-logo" src="/logo-aip-glow.png" alt="AIP" />
-          <div className="hero-clean-brand">ATELIER INFORMATIQUE <strong>POTVIN</strong></div>
+          <div className="hero-clean-brand">ATELIER INFORMATIQUE{" "}<strong>POTVIN</strong></div>
           <div className="hero-clean-location">● &nbsp; NICOLET · BÉCANCOUR · TROIS-RIVIÈRES</div>
           <h1>Informatique &amp; Web<span>.</span></h1>
           <h2>Des solutions qui<br />fonctionnent.</h2>
           <p>Dépannage, services informatiques et création<br className="desktop-only" /> de sites web sur mesure. Un seul interlocuteur,<br className="desktop-only" /> des solutions simples et efficaces.</p>
           <div className="hero-clean-actions">
             <a className="hero-clean-primary" href="tel:+18193802999">Demander un dépannage <span>→</span></a>
-            <a className="hero-clean-secondary" href="#services">Découvrir<br />les services <span>↓</span></a>
+            <a className="hero-clean-secondary" href="#services">Découvrir les services <span>↓</span></a>
           </div>
         </div>
       </section>
