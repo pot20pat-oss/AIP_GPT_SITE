@@ -2192,3 +2192,16 @@ a:hover .cta-arrow{transform:translateX(2px)!important}
     object-position:center 42%!important;
   }
 }
+
+
+/* Slight zoom-out on very wide hero: show more of the original photo while preserving the hero box. */
+@media (min-width:1400px){
+  .hero-clean-bg{
+    width:96%!important;
+    height:96%!important;
+    inset:2%!important;
+    object-fit:cover!important;
+    object-position:center 42%!important;
+  }
+  .hero-clean{background:#063565!important;}
+}
