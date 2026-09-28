@@ -627,3 +627,58 @@ html,body{max-width:100%;overflow-x:hidden}
     font-size:10px!important;
   }
 }
+
+
+/* Mobile hero v3 — keep portrait clear and move it away from the copy */
+@media (max-width:760px){
+  .hero-clean{
+    height:610px!important;
+    min-height:610px!important;
+    max-height:610px!important;
+    background:#061b30!important;
+  }
+  .hero-clean-bg{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:47% center!important;
+  }
+  .hero-clean:after{
+    content:""!important;
+    display:block!important;
+    position:absolute!important;
+    inset:0!important;
+    z-index:1!important;
+    pointer-events:none!important;
+    background:linear-gradient(90deg,
+      rgba(2,14,27,.92) 0%,
+      rgba(2,14,27,.86) 34%,
+      rgba(2,14,27,.62) 44%,
+      rgba(2,14,27,.20) 52%,
+      rgba(2,14,27,0) 60%)!important;
+  }
+  .hero-clean-overlay{
+    z-index:2!important;
+    left:0!important;
+    right:auto!important;
+    width:54%!important;
+    max-width:278px!important;
+    padding:22px 8px 22px 18px!important;
+  }
+  .hero-clean-brand{font-size:10px!important;white-space:nowrap!important}
+  .hero-clean-location{font-size:7px!important;white-space:nowrap!important;margin:5px 0 14px!important}
+  .hero-clean h1{font-size:clamp(28px,7.3vw,34px)!important;line-height:.98!important}
+  .hero-clean h2{font-size:clamp(26px,6.8vw,32px)!important;line-height:.95!important}
+  .hero-clean p{
+    display:block!important;
+    max-width:205px!important;
+    margin:14px 0 0!important;
+    font-size:11px!important;
+    line-height:1.4!important;
+  }
+  .hero-clean-actions{
+    width:165px!important;
+    max-width:100%!important;
+    margin-top:15px!important;
+  }
+}
