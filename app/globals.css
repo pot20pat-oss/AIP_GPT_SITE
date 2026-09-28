@@ -570,3 +570,55 @@ html,body{max-width:100%;overflow-x:hidden}
   }
   .hero-clean-actions .hero-clean-secondary br{display:none}
 }
+
+
+/* Mobile hero v2 — visible layout change */
+@media (max-width:760px){
+  .hero-clean{
+    height:610px!important;
+    min-height:610px!important;
+    max-height:610px!important;
+  }
+  .hero-clean-bg{
+    object-position:64% center!important;
+  }
+  .hero-clean-overlay{
+    width:56%!important;
+    padding:22px 8px 22px 14px!important;
+  }
+  .hero-clean-logo{
+    width:112px!important;
+    margin-bottom:8px!important;
+  }
+  .hero-clean-brand{font-size:10px!important}
+  .hero-clean-location{font-size:7px!important;margin:5px 0 14px!important}
+  .hero-clean h1{
+    font-size:clamp(28px,7.3vw,34px)!important;
+    line-height:.98!important;
+  }
+  .hero-clean h2{
+    font-size:clamp(26px,6.8vw,32px)!important;
+    line-height:.95!important;
+  }
+  .hero-clean p{
+    display:block!important;
+    font-size:11px!important;
+    line-height:1.4!important;
+    margin:14px 0 0!important;
+    max-width:210px!important;
+  }
+  .hero-clean p .desktop-only{display:none!important}
+  .hero-clean-actions{
+    display:flex!important;
+    flex-direction:column!important;
+    width:165px!important;
+    gap:9px!important;
+    margin-top:15px!important;
+  }
+  .hero-clean-actions a{
+    width:165px!important;
+    min-height:43px!important;
+    padding:9px 10px!important;
+    font-size:10px!important;
+  }
+}
