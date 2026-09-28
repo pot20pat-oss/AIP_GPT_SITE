@@ -2008,3 +2008,26 @@ button:hover .cta-arrow{
   .hero-clean{height:clamp(620px,29vw,760px)!important;max-height:760px!important}
   .hero-clean-overlay{top:44%!important;transform:translate(-260px,-50%)!important}
 }
+
+
+/* 2026-09-28 — wide desktop fine tune: hero slightly taller, copy back on-screen */
+@media (min-width:1400px){
+  .hero-clean{
+    height:clamp(620px,36vw,820px)!important;
+    max-height:820px!important;
+  }
+  .hero-clean-overlay{
+    top:46%!important;
+    transform:translate(-100px,-50%)!important;
+  }
+}
+@media (min-width:2200px){
+  .hero-clean{
+    height:clamp(680px,33vw,880px)!important;
+    max-height:880px!important;
+  }
+  .hero-clean-overlay{
+    top:45%!important;
+    transform:translate(-120px,-50%)!important;
+  }
+}
