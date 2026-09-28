@@ -2594,3 +2594,39 @@ button:hover .cta-arrow{
 }
 .cta-arrow::after,
 .web-focus .web-mobile-grid article > a.arrow-link > .cta-arrow::after{content:none!important;display:none!important;}
+
+
+/* CTA arrows v12 — hard reset all legacy orb effects */
+.cta-arrow,
+.web-focus .web-mobile-grid article > a.arrow-link > .cta-arrow{
+  all:unset!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:24px!important;
+  height:24px!important;
+  margin-left:10px!important;
+  color:#fff!important;
+  font:900 0/1 Arial,sans-serif!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  filter:none!important;
+  text-shadow:none!important;
+  transform:none!important;
+}
+.cta-arrow::before,
+.web-focus .web-mobile-grid article > a.arrow-link > .cta-arrow::before{
+  content:"→"!important;
+  all:unset!important;
+  display:block!important;
+  color:#fff!important;
+  font:900 22px/1 Arial,sans-serif!important;
+  text-shadow:0 1px 1px rgba(0,0,0,.22)!important;
+}
+.cta-arrow::after,
+.web-focus .web-mobile-grid article > a.arrow-link > .cta-arrow::after{
+  content:none!important;
+  display:none!important;
+}
