@@ -2284,3 +2284,53 @@ a:hover .cta-arrow{transform:translateX(2px)!important}
   letter-spacing:.02em!important;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 5px 14px rgba(0,0,0,.16)!important;
 }
+
+
+/* Unified CTA arrows v3 — identical, bold and optically centered everywhere. */
+.cta-arrow{
+  box-sizing:border-box!important;
+  flex:0 0 34px!important;
+  width:34px!important;
+  height:34px!important;
+  margin:0!important;
+  padding:0!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  vertical-align:middle!important;
+  border-radius:999px!important;
+  border:1px solid rgba(255,255,255,.82)!important;
+  background:linear-gradient(145deg,#56d7ff 0%,#079bd9 48%,#05699f 100%)!important;
+  color:transparent!important;
+  font-size:0!important;
+  line-height:0!important;
+  box-shadow:inset 0 2px 2px rgba(255,255,255,.68),inset 0 -3px 4px rgba(0,31,66,.34),0 4px 10px rgba(0,73,122,.30)!important;
+  position:relative!important;
+  transform:none!important;
+}
+.cta-arrow::after{
+  content:"➜"!important;
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  transform:translate(-50%,-52%)!important;
+  color:#fff!important;
+  font-family:Arial,sans-serif!important;
+  font-size:19px!important;
+  line-height:1!important;
+  font-weight:900!important;
+  text-shadow:0 1px 1px rgba(0,24,48,.65)!important;
+}
+a:has(>.cta-arrow),
+button:has(>.cta-arrow),
+.button:has(.cta-arrow),
+.hero-clean-actions a{
+  display:inline-flex!important;
+  align-items:center!important;
+}
+a:has(>.cta-arrow)>.cta-arrow,
+button:has(>.cta-arrow)>.cta-arrow,
+.button:has(.cta-arrow)>.cta-arrow,
+.hero-clean-actions a .cta-arrow{
+  margin-left:14px!important;
+}
