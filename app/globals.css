@@ -1448,3 +1448,49 @@ html,body{max-width:100%;overflow-x:hidden}
   .hero-clean-bg{height:390px!important;object-position:62% 42%!important}
   .hero-clean-overlay{padding:22px 18px 24px!important}
 }
+
+
+/* FINAL PHONE OVERRIDE — real devices. Keep this last in the stylesheet. */
+@media screen and (max-width:760px){
+  .hero-clean{
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow:hidden!important;
+  }
+  .hero-clean:after,.hero-clean::after{display:none!important;content:none!important}
+  .hero-clean-bg{
+    position:relative!important;
+    inset:auto!important;
+    left:auto!important;
+    width:100%!important;
+    height:280px!important;
+    min-height:0!important;
+    max-height:280px!important;
+    object-fit:cover!important;
+    object-position:62% 40%!important;
+    transform:none!important;
+  }
+  .hero-clean-overlay{
+    position:relative!important;
+    inset:auto!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    padding:18px 18px 20px!important;
+  }
+  .hero-clean-overlay:before,.hero-clean-overlay::before{display:none!important;content:none!important}
+  .hero-clean-brand{font-size:11px!important;margin:0 0 5px!important}
+  .hero-clean-location{font-size:9px!important;margin:0 0 12px!important}
+  .hero-clean h1{font-size:32px!important;line-height:1!important;margin:0 0 5px!important}
+  .hero-clean h1:after,.hero-clean h1::after,
+  .hero-clean h2:before,.hero-clean h2::before{display:none!important;content:none!important}
+  .hero-clean h2{font-size:29px!important;line-height:.98!important;margin:0 0 11px!important}
+  .hero-clean p{font-size:11px!important;line-height:1.4!important;margin:0 0 13px!important}
+  .hero-clean-actions{gap:8px!important}
+  .hero-clean-actions a{min-height:44px!important;font-size:11px!important}
+}
+@media screen and (max-width:430px){
+  .hero-clean-bg{height:270px!important;max-height:270px!important;object-position:62% 40%!important}
+}
