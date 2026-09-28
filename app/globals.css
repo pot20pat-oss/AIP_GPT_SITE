@@ -355,3 +355,7 @@ html,body{max-width:100%;overflow-x:hidden}
   .service-mobile-card>img{height:210px}
   .service-mobile-copy{padding:20px}
 }
+
+/* Keep the blue punctuation inside the hero title bounds. */
+.hero-clean h1{padding-right:.12em}
+.hero-clean h1 span{display:inline-block;margin-left:-.02em;transform:translateX(-.03em)}
