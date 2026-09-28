@@ -1352,3 +1352,9 @@ html,body{max-width:100%;overflow-x:hidden}
 @media (min-width:761px) and (max-width:900px){
   .hero-clean-bg{left:-20.5%!important}
 }
+
+
+/* iPad portrait: cover the last right-edge sliver without changing the crop. */
+@media (min-width:761px) and (max-width:900px){
+  .hero-clean-bg{width:121%!important}
+}
