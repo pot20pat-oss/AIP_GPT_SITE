@@ -1322,3 +1322,14 @@ html,body{max-width:100%;overflow-x:hidden}
 @media (min-width:761px) and (max-width:900px){
   .hero-clean-bg{object-position:68% 42%!important}
 }
+
+
+/* iPad portrait photo crop: reduce the empty blue wall while keeping the portrait centered. */
+@media (min-width:761px) and (max-width:900px){
+  .hero-clean-bg{
+    object-fit:cover!important;
+    object-position:76% 42%!important;
+    transform:scale(1.08)!important;
+    transform-origin:center center!important;
+  }
+}
