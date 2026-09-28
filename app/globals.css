@@ -539,3 +539,34 @@ html,body{max-width:100%;overflow-x:hidden}
     flex:none;
   }
 }
+
+
+/* Mobile hero hard override */
+@media (max-width:760px){
+  .hero-clean-overlay{
+    width:62%!important;
+    padding-left:18px!important;
+    padding-right:8px!important;
+  }
+  .hero-clean-bg{
+    object-position:60% center!important;
+  }
+  .hero-clean-actions{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:8px!important;
+    width:178px!important;
+    max-width:100%!important;
+  }
+  .hero-clean-actions .hero-clean-primary,
+  .hero-clean-actions .hero-clean-secondary{
+    display:flex!important;
+    width:100%!important;
+    min-width:0!important;
+    flex:none!important;
+    min-height:42px!important;
+    padding:9px 11px!important;
+  }
+  .hero-clean-actions .hero-clean-secondary br{display:none}
+}
