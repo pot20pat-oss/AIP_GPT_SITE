@@ -2418,3 +2418,24 @@ a:has(.cta-arrow),button:has(.cta-arrow),b:has(.cta-arrow){
 .related-links a,.button,.header-phone{
   display:inline-flex!important;align-items:center!important;
 }
+
+
+/* CTA arrows v6 — all arrow links use the same centered 3D badge. */
+.arrow-link,
+.web-mobile-grid article > a,
+.service-mobile-copy > a,
+.expertise-gateway-card > b,
+.portfolio-service-link{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:10px!important;
+}
+.arrow-link .cta-arrow,
+.web-mobile-grid article > a .cta-arrow,
+.service-mobile-copy > a .cta-arrow,
+.expertise-gateway-card > b .cta-arrow,
+.portfolio-service-link .cta-arrow{
+  width:28px!important;height:28px!important;min-width:28px!important;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  margin:0!important;vertical-align:middle!important;
+}
