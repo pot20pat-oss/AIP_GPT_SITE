@@ -3,7 +3,7 @@ import { SiteFooter, SiteHeader } from "../components";
 import { pageMetadata } from "../seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Tarifs informatique et création de sites web | Nicolet",
+  title: "Tarifs création de sites web et informatique | Nicolet",
   description: "Tarifs Atelier Informatique Potvin : site vitrine de base dès 900 $, projets web sur mesure selon les besoins, diagnostic et service informatique à 60 $.",
   path: "/tarifs",
   image: "/projet-bois-morphee.webp",
@@ -26,14 +26,14 @@ export default function Page() {
       <figure className="detail-photo"><img src="/projet-bois-morphee.webp" alt="Exemple de site web professionnel réalisé par Atelier Informatique Potvin" /></figure>
     </section>
     <section className="section shell pricing-page">
-      <div className="pricing-group">
-        <div className="pricing-group-heading"><span>01</span><div><h2>Services informatiques</h2><p>Des tarifs simples pour le dépannage et l’accompagnement informatique.</p></div></div>
-        <div className="pricing-grid pricing-grid-two">{itPrices.map(p => <article className="price-card" key={p.name}><span>{p.name}</span><strong>{p.price}</strong><p>{p.text}</p></article>)}</div>
-      </div>
       <div className="pricing-group pricing-group-web">
         <div className="pricing-group-heading"><span>02</span><div><h2>Forfaits création Web</h2><p>Un site vitrine de base commence à 900 $. Le prix évolue ensuite selon la portée et les besoins réels de votre projet.</p></div></div>
         <div className="web-package-grid">{webPackages.map((p, index) => <article className="web-package-card" key={p.name}><div className="web-package-top"><span>0{index + 1}</span><div><h3>{p.name}</h3><strong>{p.price}</strong></div></div><p>{p.text}</p><ul>{p.includes.map(item => <li key={item}>{item}</li>)}</ul><a href="tel:+18193802999">Discuter du projet <span>→</span></a></article>)}</div>
         <p className="package-note">Les forfaits servent de repère. Le nombre de pages, le contenu, les intégrations et les fonctions particulières peuvent modifier le prix final.</p>
+      </div>
+      <div className="pricing-group">
+        <div className="pricing-group-heading"><span>01</span><div><h2>Services informatiques</h2><p>Des tarifs simples pour le dépannage et l’accompagnement informatique.</p></div></div>
+        <div className="pricing-grid pricing-grid-two">{itPrices.map(p => <article className="price-card" key={p.name}><span>{p.name}</span><strong>{p.price}</strong><p>{p.text}</p></article>)}</div>
       </div>
       <div className="price-note"><h2>Vous ne savez pas quel forfait choisir?</h2><p>Décrivez-moi votre entreprise et ce que vous voulez accomplir. Je vous dirai quelle portée de projet correspond le mieux à votre besoin avant de préparer une soumission.</p><a className="button button-dark" href="tel:+18193802999">819 380-2999 <span>↗</span></a></div>
     </section>
