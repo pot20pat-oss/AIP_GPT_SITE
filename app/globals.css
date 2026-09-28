@@ -2205,3 +2205,19 @@ a:hover .cta-arrow{transform:translateX(2px)!important}
   }
   .hero-clean{background:#063565!important;}
 }
+
+
+/* Wide hero final framing: edge-to-edge, no artificial blue frame. */
+@media (min-width:1400px){
+  .hero-clean{
+    overflow:hidden!important;
+    background:#063565!important;
+  }
+  .hero-clean-bg{
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:center 45%!important;
+  }
+}
