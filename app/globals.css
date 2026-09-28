@@ -580,7 +580,12 @@ html,body{max-width:100%;overflow-x:hidden}
     max-height:610px!important;
   }
   .hero-clean-bg{
-    object-position:64% center!important;
+    object-position:28% center!important;
+  }
+  .hero-clean:after{
+    content:none!important;
+    display:none!important;
+    background:none!important;
   }
   .hero-clean-overlay{
     width:56%!important;
