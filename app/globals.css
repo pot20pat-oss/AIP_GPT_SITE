@@ -1316,3 +1316,9 @@ html,body{max-width:100%;overflow-x:hidden}
   .hero-clean-primary,.hero-clean-secondary{flex:1!important;min-width:0!important}
   .metrics-grid{min-height:88px!important;padding-block:11px!important}
 }
+
+
+/* iPad portrait: visually center the portrait in the photo panel. */
+@media (min-width:761px) and (max-width:900px){
+  .hero-clean-bg{object-position:68% 42%!important}
+}
