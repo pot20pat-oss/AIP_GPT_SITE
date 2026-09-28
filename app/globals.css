@@ -1333,3 +1333,16 @@ html,body{max-width:100%;overflow-x:hidden}
     transform-origin:center center!important;
   }
 }
+
+
+/* iPad portrait final crop: prioritize portrait + monitor, remove excess left wall. */
+@media (min-width:761px) and (max-width:900px){
+  .hero-clean-bg{
+    width:118%!important;
+    max-width:none!important;
+    left:-18%!important;
+    transform:none!important;
+    object-fit:cover!important;
+    object-position:88% 42%!important;
+  }
+}
