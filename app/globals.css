@@ -2118,3 +2118,32 @@ a:hover .cta-arrow{transform:translateX(2px)!important}
   .hero-clean-overlay{left:clamp(70px,10vw,280px)!important;top:47%!important;transform:translateY(-50%)!important}
   .hero-clean-bg,.hero-clean-media img{object-position:center 60%!important}
 }
+
+
+/* === WIDE HERO VISIBILITY FIX 2026-09-28 ===
+   Screenshot diagnosis: top of source photo is cropped because cover + fixed hero height.
+   Use contain-sized image geometry on wide screens while keeping the hero full width. */
+@media (min-width:1400px){
+  .hero-clean{
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:2048 / 768!important;
+    background:#063565!important;
+    overflow:hidden!important;
+  }
+  .hero-clean-bg{
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+    transform:none!important;
+  }
+  .hero-clean-overlay{
+    left:clamp(40px,9vw,190px)!important;
+    top:50%!important;
+    transform:translateY(-50%)!important;
+  }
+}
