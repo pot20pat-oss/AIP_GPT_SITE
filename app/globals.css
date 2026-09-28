@@ -301,7 +301,7 @@ html,body{max-width:100%;overflow-x:hidden}
   .hero-clean-logo{width:230px}
   .hero-clean-brand{font-size:21px}
   .hero-clean-location{font-size:16px}
-  .hero-clean h1{font-size:clamp(46px,3.4vw,64px)}
+  .hero-clean h1{font-size:clamp(42px,3vw,56px);white-space:nowrap}
   .hero-clean h2{font-size:clamp(42px,3.2vw,56px)}
 }
 
