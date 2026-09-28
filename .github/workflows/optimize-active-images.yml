@@ -3,14 +3,13 @@ name: Optimize active website images
 on:
   push:
     branches: [main]
-    paths:
-      - ".github/workflows/optimize-active-images.yml"
 
 permissions:
   contents: write
 
 jobs:
   optimize:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
