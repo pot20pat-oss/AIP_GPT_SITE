@@ -2517,3 +2517,26 @@ button:hover .cta-arrow{
   text-shadow:0 1px 1px rgba(0,25,50,.45)!important;
 }
 .cta-arrow::after{content:none!important;display:none!important;}
+
+
+/* CTA arrows v9 — final clean badge: short bold chevron, no long shaft */
+.cta-arrow{
+  width:28px!important;height:28px!important;min-width:28px!important;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  overflow:hidden!important;border-radius:50%!important;
+  font-size:0!important;color:transparent!important;
+  border:1px solid rgba(255,255,255,.68)!important;
+  background:linear-gradient(180deg,#28b9e8 0%,#087eae 56%,#055b82 100%)!important;
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.5),inset 0 -1px 2px rgba(0,30,55,.38),0 2px 3px rgba(0,20,40,.25)!important;
+}
+.cta-arrow::before{
+  content:"›"!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  width:100%!important;height:100%!important;
+  font-family:Arial,sans-serif!important;
+  font-size:27px!important;font-weight:900!important;line-height:1!important;
+  letter-spacing:0!important;color:#fff!important;
+  transform:translate(0,-2px)!important;
+  text-shadow:0 1px 1px rgba(0,30,55,.45)!important;
+}
+.cta-arrow::after{content:none!important;display:none!important;}
