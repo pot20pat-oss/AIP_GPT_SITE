@@ -1127,3 +1127,32 @@ html,body{max-width:100%;overflow-x:hidden}
   .hero-clean-actions{display:flex!important;max-width:540px!important;gap:12px!important}
   .hero-clean-actions a{white-space:normal!important;min-height:50px!important}
 }
+
+
+/* Tablet hero alignment: center the photo subject and the content panel. */
+@media (min-width:761px) and (max-width:1050px){
+  .hero-clean-bg{
+    object-position:58% 42%!important;
+  }
+  .hero-clean-overlay{
+    align-items:center!important;
+    text-align:center!important;
+    padding-left:40px!important;
+    padding-right:40px!important;
+  }
+  .hero-clean-brand,
+  .hero-clean-location,
+  .hero-clean h1,
+  .hero-clean h2,
+  .hero-clean p{
+    width:100%!important;
+    max-width:720px!important;
+  }
+  .hero-clean-location{justify-content:center!important}
+  .hero-clean-actions{
+    width:min(100%,600px)!important;
+    max-width:600px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+}
