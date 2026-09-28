@@ -2064,3 +2064,57 @@ button:hover .cta-arrow{
   .hero-clean-media img{object-position:center 59%!important}
   .hero-clean-overlay{transform:translate(-85px,-50%)!important}
 }
+
+
+/* === FINAL HERO + ARROW RESET 2026-09-28 ===
+   Overrides the earlier experimental wide-screen rules. */
+
+/* Do NOT turn arbitrary last spans into arrows. */
+.header-phone > span:last-child,
+.brand > span:last-child{width:auto!important;height:auto!important;min-width:0!important;margin-left:0!important;border:0!important;border-radius:0!important;background:none!important;box-shadow:none!important;color:inherit!important;text-shadow:none!important}
+
+/* Every explicit CTA arrow: same centered 3D control. */
+a .cta-arrow, button .cta-arrow{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  box-sizing:border-box!important;position:static!important;
+  width:28px!important;height:28px!important;min-width:28px!important;flex:0 0 28px!important;
+  margin:0 0 0 10px!important;padding:0!important;
+  border-radius:50%!important;border:1px solid rgba(255,255,255,.78)!important;
+  background:linear-gradient(145deg,#63d8ff 0%,#18a7e4 45%,#0877b2 100%)!important;
+  color:#fff!important;font:900 15px/28px Arial,sans-serif!important;text-align:center!important;
+  box-shadow:inset 1px 2px 3px rgba(255,255,255,.65),inset -2px -3px 4px rgba(0,38,76,.35),0 3px 7px rgba(0,61,105,.3)!important;
+  text-shadow:0 1px 2px rgba(0,0,0,.4)!important;transform:none!important;
+}
+a:has(.cta-arrow){align-items:center!important}
+a:hover .cta-arrow{transform:translateX(2px)!important}
+
+/* Wide desktop: stable hero geometry. No negative X transforms. */
+@media (min-width:1400px){
+  .hero-clean{
+    position:relative!important;
+    height:clamp(600px,34vw,760px)!important;
+    min-height:600px!important;max-height:760px!important;
+    aspect-ratio:auto!important;overflow:hidden!important;
+  }
+  .hero-clean-bg{
+    position:absolute!important;inset:0!important;
+    width:100%!important;height:100%!important;max-width:none!important;
+    object-fit:cover!important;object-position:center 58%!important;transform:none!important;
+  }
+  .hero-clean-media{position:absolute!important;inset:0!important;width:100%!important;height:100%!important}
+  .hero-clean-media img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 58%!important}
+  .hero-clean-overlay{
+    position:absolute!important;
+    left:clamp(36px,10vw,220px)!important;right:auto!important;
+    top:47%!important;bottom:auto!important;
+    width:600px!important;max-width:calc(100% - 72px)!important;
+    padding:0!important;
+    transform:translateY(-50%)!important;
+    align-items:flex-start!important;justify-content:center!important;
+  }
+}
+@media (min-width:2200px){
+  .hero-clean{height:clamp(680px,31vw,820px)!important;min-height:680px!important;max-height:820px!important}
+  .hero-clean-overlay{left:clamp(70px,10vw,280px)!important;top:47%!important;transform:translateY(-50%)!important}
+  .hero-clean-bg,.hero-clean-media img{object-position:center 60%!important}
+}
