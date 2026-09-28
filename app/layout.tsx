@@ -4,7 +4,7 @@ import "./globals.css";
 
 const title = "Création de sites web à Nicolet | Atelier Informatique Potvin";
 const description = "Création de sites web professionnels à Nicolet : sites vitrines dès 900 $, e-commerce et CMS sur mesure. Dépannage informatique également disponible."
-const image = `${siteUrl}/patrick-atelier-hero.webp`;
+const image = `${siteUrl}/aip-travail-13.webp`;
 
 const localBusiness = {
   "@context": "https://schema.org",
