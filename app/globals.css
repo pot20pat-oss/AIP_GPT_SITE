@@ -955,3 +955,72 @@ html,body{max-width:100%;overflow-x:hidden}
   .expertise-gateway-card h2{font-size:23px;margin-top:14px}
   .expertise-gateway-card p{font-size:11px}
 }
+
+
+/* 2026-09-28 — Global viewport-responsive layout.
+   Heroes grow with their content and scale down on short screens instead of clipping. */
+@media (min-width:761px){
+  .hero-clean{
+    height:auto!important;
+    min-height:clamp(520px,calc(100svh - 90px),760px)!important;
+    max-height:none!important;
+  }
+  .hero-clean-bg{
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:center center!important;
+  }
+  .hero-clean-overlay{
+    min-height:inherit!important;
+    height:auto!important;
+    box-sizing:border-box!important;
+  }
+  .detail-hero{
+    min-height:0!important;
+    height:auto!important;
+  }
+  .detail-hero-photo{
+    align-items:center!important;
+  }
+  .detail-hero-copy{
+    min-width:0!important;
+  }
+  .detail-photo{
+    min-width:0!important;
+    max-width:100%!important;
+  }
+}
+@media (min-width:761px) and (max-height:820px){
+  .hero-clean{
+    min-height:clamp(500px,calc(100svh - 90px),620px)!important;
+  }
+  .hero-clean-overlay{
+    padding-top:22px!important;
+    padding-bottom:22px!important;
+  }
+  .hero-clean-logo{width:clamp(150px,14vh,220px)!important;margin-bottom:4px!important}
+  .hero-clean-brand{font-size:clamp(16px,2.4vh,21px)!important}
+  .hero-clean-location{font-size:clamp(12px,2vh,15px)!important;margin:5px 0 10px!important}
+  .hero-clean h1{font-size:clamp(40px,6.5vh,58px)!important;line-height:.98!important}
+  .hero-clean h2{font-size:clamp(36px,5.8vh,52px)!important;line-height:.94!important;margin:5px 0 12px!important}
+  .hero-clean p{font-size:clamp(14px,2vh,17px)!important;line-height:1.38!important;margin-bottom:16px!important}
+  .hero-clean-actions{gap:12px!important}
+  .hero-clean-actions a{padding:11px 18px!important;font-size:13px!important}
+}
+@media (min-width:761px) and (max-width:1200px){
+  .shell{width:min(100% - 40px,1200px)}
+  .detail-hero{gap:36px!important}
+  .detail-hero h1{font-size:clamp(40px,5vw,58px)!important}
+}
+@media (max-width:760px){
+  .shell{width:calc(100% - 32px)}
+  .detail-hero,
+  .detail-hero-photo{
+    height:auto!important;
+    min-height:0!important;
+  }
+  .detail-hero-copy{min-width:0!important}
+  .detail-photo{max-width:100%!important}
+}
