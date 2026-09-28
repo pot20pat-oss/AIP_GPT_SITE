@@ -2540,3 +2540,30 @@ button:hover .cta-arrow{
   text-shadow:0 1px 1px rgba(0,30,55,.45)!important;
 }
 .cta-arrow::after{content:none!important;display:none!important;}
+
+
+/* CTA arrows v10 — ensure web-focus card arrows render as badges */
+.web-focus .web-mobile-grid article > a.arrow-link{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:12px!important;
+}
+.web-focus .web-mobile-grid article > a.arrow-link > .cta-arrow{
+  width:28px!important;height:28px!important;min-width:28px!important;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  position:relative!important;
+  overflow:hidden!important;
+  border-radius:999px!important;
+  font-size:0!important;color:transparent!important;
+  border:1px solid rgba(255,255,255,.72)!important;
+  background:linear-gradient(180deg,#32c7f4 0%,#0785b9 58%,#04577f 100%)!important;
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.55),inset 0 -2px 2px rgba(0,30,55,.38),0 2px 4px rgba(0,35,65,.3)!important;
+}
+.web-focus .web-mobile-grid article > a.arrow-link > .cta-arrow::before{
+  content:"›"!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  position:absolute!important;inset:0!important;
+  font:900 27px/1 Arial,sans-serif!important;
+  color:#fff!important;
+  transform:translateY(-2px)!important;
+}
