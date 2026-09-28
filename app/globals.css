@@ -1346,3 +1346,9 @@ html,body{max-width:100%;overflow-x:hidden}
     object-position:88% 42%!important;
   }
 }
+
+
+/* Fine tablet crop adjustment: shift the image slightly left. */
+@media (min-width:761px) and (max-width:900px){
+  .hero-clean-bg{left:-20.5%!important}
+}
