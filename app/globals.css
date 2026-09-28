@@ -2184,3 +2184,11 @@ a:hover .cta-arrow{transform:translateX(2px)!important}
     object-fit:cover!important;object-position:center center!important;
   }
 }
+
+
+/* Keep Patrick's head visible on wide/3K/4K displays without changing hero proportions. */
+@media (min-width:1400px){
+  .hero-clean-bg{
+    object-position:center 42%!important;
+  }
+}
