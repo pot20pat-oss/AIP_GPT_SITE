@@ -4,7 +4,7 @@ import { pageMetadata } from "../seo";
 
 export const metadata: Metadata = pageMetadata({
   title: "Tarifs informatique et création de sites web | Nicolet",
-  description: "Tarifs Atelier Informatique Potvin : diagnostic et service informatique à 60 $, sites web dès 2 500 $, forfaits professionnels, e-commerce et CMS sur mesure.",
+  description: "Tarifs Atelier Informatique Potvin : site vitrine de base dès 900 $, projets web sur mesure selon les besoins, diagnostic et service informatique à 60 $.",
   path: "/tarifs",
   image: "/projet-bois-morphee.webp",
 });
@@ -15,10 +15,8 @@ const itPrices = [
 ];
 
 const webPackages = [
-  { name: "Présence essentielle", price: "Dès 2 500 $", text: "Pour une petite entreprise qui veut une présence professionnelle claire.", includes: ["Site vitrine jusqu’à 5 pages", "Design adapté à votre entreprise", "Version mobile", "Formulaire et coordonnées", "SEO local de base", "Mise en ligne"] },
-  { name: "Site professionnel", price: "Dès 4 500 $", text: "Pour une entreprise qui veut mieux présenter ses services et générer des demandes.", includes: ["Structure et design sur mesure", "Pages de services détaillées", "SEO local renforcé", "Portfolio ou réalisations", "Contenu et appels à l’action", "Suivi analytique"] },
-  { name: "Site signature", price: "Dès 6 500 $", text: "Pour une présence web plus complète avec contenu, stratégie et image de marque.", includes: ["Conception visuelle poussée", "Architecture de contenu", "Visuels personnalisés", "Réalisations et preuves sociales", "SEO technique et local", "Accompagnement complet"] },
-  { name: "Commerce / CMS / outil web", price: "Dès 8 000 $", text: "Pour vendre, administrer un catalogue ou automatiser des opérations.", includes: ["E-commerce ou catalogue", "CMS / administration sur mesure", "Gestion de produits et contenu", "Fonctionnalités métier", "Automatisations selon le projet", "Formation à l’utilisation"] },
+  { name: "Site vitrine de base", price: "Dès 900 $", text: "Une présence web professionnelle simple pour présenter clairement votre entreprise.", includes: ["Site vitrine essentiel", "Design adapté à votre entreprise", "Version mobile", "Coordonnées et appels à l’action", "SEO local de base", "Mise en ligne"] },
+  { name: "Projet sur mesure", price: "Sur estimation", text: "Le prix évolue selon les besoins réels du projet.", includes: ["Pages et contenu supplémentaires", "Design et fonctionnalités sur mesure", "E-commerce ou catalogue", "CMS / administration personnalisée", "Automatisations et intégrations", "Accompagnement selon le projet"] },
 ];
 
 export default function Page() {
@@ -33,7 +31,7 @@ export default function Page() {
         <div className="pricing-grid pricing-grid-two">{itPrices.map(p => <article className="price-card" key={p.name}><span>{p.name}</span><strong>{p.price}</strong><p>{p.text}</p></article>)}</div>
       </div>
       <div className="pricing-group pricing-group-web">
-        <div className="pricing-group-heading"><span>02</span><div><h2>Forfaits création Web</h2><p>Des points de départ concrets pour comparer la portée d’un projet. Chaque forfait est ajusté à votre entreprise.</p></div></div>
+        <div className="pricing-group-heading"><span>02</span><div><h2>Forfaits création Web</h2><p>Un site vitrine de base commence à 900 $. Le prix évolue ensuite selon la portée et les besoins réels de votre projet.</p></div></div>
         <div className="web-package-grid">{webPackages.map((p, index) => <article className="web-package-card" key={p.name}><div className="web-package-top"><span>0{index + 1}</span><div><h3>{p.name}</h3><strong>{p.price}</strong></div></div><p>{p.text}</p><ul>{p.includes.map(item => <li key={item}>{item}</li>)}</ul><a href="tel:+18193802999">Discuter du projet <span>→</span></a></article>)}</div>
         <p className="package-note">Les forfaits servent de repère. Le nombre de pages, le contenu, les intégrations et les fonctions particulières peuvent modifier le prix final.</p>
       </div>
