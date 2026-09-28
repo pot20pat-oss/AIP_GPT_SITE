@@ -862,3 +862,96 @@ html,body{max-width:100%;overflow-x:hidden}
     flex:none!important;
   }
 }
+
+
+/* Homepage expertise gateway — web first, IT visible immediately */
+.expertise-gateway{
+  display:grid;
+  grid-template-columns:.78fr 1fr 1fr;
+  gap:0;
+  padding-top:34px;
+  padding-bottom:34px;
+}
+.expertise-gateway-intro,
+.expertise-gateway-card{
+  min-height:190px;
+  padding:26px 28px;
+  border:1px solid var(--line);
+}
+.expertise-gateway-intro{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  border-right:0;
+  background:#f7f9fc;
+}
+.expertise-gateway-intro span,
+.expertise-gateway-card>span{
+  font-size:9px;
+  font-weight:750;
+  letter-spacing:1.15px;
+  color:#438fb7;
+}
+.expertise-gateway-intro strong{
+  max-width:250px;
+  margin-top:13px;
+  font-size:20px;
+  line-height:1.18;
+  letter-spacing:-.5px;
+}
+.expertise-gateway-card{
+  display:flex;
+  flex-direction:column;
+  text-decoration:none;
+  color:inherit;
+  transition:transform .18s ease,background .18s ease;
+}
+.expertise-gateway-card+ .expertise-gateway-card{border-left:0}
+.expertise-gateway-card h2{
+  margin:20px 0 8px;
+  font-size:25px;
+  line-height:1.05;
+  letter-spacing:-.8px;
+}
+.expertise-gateway-card p{
+  max-width:360px;
+  margin:0 0 18px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.6;
+}
+.expertise-gateway-card b{
+  margin-top:auto;
+  font-size:10px;
+  font-weight:750;
+}
+.expertise-gateway-web{background:#fff}
+.expertise-gateway-it{background:#071f37;color:#fff}
+.expertise-gateway-it p{color:#d7e1ec}
+.expertise-gateway-it>span,.expertise-gateway-it b{color:#54c7ff}
+@media(hover:hover){
+  .expertise-gateway-card:hover{transform:translateY(-3px)}
+}
+@media(max-width:760px){
+  .expertise-gateway{
+    grid-template-columns:1fr;
+    padding-top:18px;
+    padding-bottom:18px;
+  }
+  .expertise-gateway-intro,
+  .expertise-gateway-card{
+    min-height:0;
+    padding:20px;
+  }
+  .expertise-gateway-intro{
+    border-right:1px solid var(--line);
+    border-bottom:0;
+  }
+  .expertise-gateway-card+ .expertise-gateway-card{
+    border-left:1px solid var(--line);
+    border-top:0;
+  }
+  .expertise-gateway-intro strong{font-size:18px}
+  .expertise-gateway-card h2{font-size:23px;margin-top:14px}
+  .expertise-gateway-card p{font-size:11px}
+}
