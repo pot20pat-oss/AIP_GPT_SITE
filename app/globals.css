@@ -359,3 +359,24 @@ html,body{max-width:100%;overflow-x:hidden}
 /* Keep the blue punctuation inside the hero title bounds. */
 .hero-clean h1{padding-right:.12em}
 .hero-clean h1 span{display:inline-block;margin-left:-.02em;transform:translateX(-.03em)}
+
+/* Hero desktop: move copy left and use the available vertical space. */
+@media (min-width:761px){
+  .hero-clean-overlay{
+    left:max(42px,calc((100vw - 1540px)/2));
+    width:540px;
+    padding:28px 0;
+  }
+  .hero-clean-overlay:before{
+    left:-26px;
+    width:585px;
+    height:90%;
+  }
+  .hero-clean-logo{margin-bottom:10px}
+  .hero-clean-brand{margin-bottom:6px}
+  .hero-clean-location{margin:8px 0 18px}
+  .hero-clean h1{margin-bottom:8px}
+  .hero-clean h2{margin:4px 0 20px;line-height:.98}
+  .hero-clean p{margin-bottom:24px;line-height:1.48}
+  .hero-clean-actions{gap:18px}
+}
