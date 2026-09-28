@@ -1516,3 +1516,12 @@ html,body{max-width:100%;overflow-x:hidden}
 @media screen and (max-width:430px){
   .hero-clean-bg{object-position:72% 40%!important}
 }
+
+
+/* PHONE HERO CROP — nudge portrait further left */
+@media screen and (max-width:760px){
+  .hero-clean-bg{object-position:77% 40%!important}
+}
+@media screen and (max-width:430px){
+  .hero-clean-bg{object-position:77% 40%!important}
+}
