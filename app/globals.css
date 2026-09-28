@@ -1789,3 +1789,28 @@ a:active > span:last-child{
   margin-left:8px!important;
   font-size:14px!important;
 }
+
+
+/* LARGE-SCREEN HERO CROP FIX — show more of the source image instead of cropping top/bottom. */
+@media screen and (min-width:1920px){
+  .hero-clean{height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:3/1!important}
+  .hero-clean-bg{
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    max-width:none!important;
+    object-fit:cover!important;
+    object-position:center 48%!important;
+    transform:none!important;
+  }
+}
+@media screen and (min-width:2560px){
+  .hero-clean{aspect-ratio:3.15/1!important}
+}
+@media screen and (min-width:3840px){
+  .hero-clean{aspect-ratio:3.2/1!important}
+}
+@media screen and (min-width:7680px){
+  .hero-clean{aspect-ratio:3.2/1!important}
+}
