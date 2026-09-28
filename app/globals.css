@@ -1099,3 +1099,31 @@ html,body{max-width:100%;overflow-x:hidden}
   .hero-clean-primary{flex:1.15!important}
   .hero-clean-secondary{flex:1!important}
 }
+
+
+/* Tablet / portrait laptop: stacked hero and compact header through 1050px. */
+@media (min-width:761px) and (max-width:1050px){
+  .header{height:auto!important;min-height:86px!important;display:grid!important;grid-template-columns:auto 1fr auto!important;gap:18px!important;padding-block:12px!important}
+  .header nav{gap:22px!important;justify-content:center!important;font-size:12px!important}
+  .header-service-note{display:none!important}
+  .header-phone{white-space:nowrap!important}
+
+  .hero-clean{
+    display:flex!important;flex-direction:column!important;height:auto!important;min-height:0!important;max-height:none!important;background:#061b30!important;
+  }
+  .hero-clean-bg{
+    position:relative!important;inset:auto!important;order:1!important;width:100%!important;height:auto!important;aspect-ratio:16/9!important;object-fit:cover!important;object-position:66% 42%!important;
+  }
+  .hero-clean-overlay{
+    position:relative!important;inset:auto!important;order:2!important;width:100%!important;max-width:none!important;min-height:0!important;height:auto!important;margin:0!important;padding:28px 34px 30px!important;transform:none!important;background:#061b30!important;
+  }
+  .hero-clean-overlay:before{display:none!important}
+  .hero-clean-logo{display:none!important}
+  .hero-clean-brand{font-size:14px!important}
+  .hero-clean-location{font-size:11px!important;margin:6px 0 14px!important}
+  .hero-clean h1{max-width:none!important;font-size:46px!important;white-space:normal!important}
+  .hero-clean h2{max-width:none!important;font-size:40px!important;margin:6px 0 12px!important}
+  .hero-clean p{max-width:650px!important;font-size:14px!important;line-height:1.5!important}
+  .hero-clean-actions{display:flex!important;max-width:540px!important;gap:12px!important}
+  .hero-clean-actions a{white-space:normal!important;min-height:50px!important}
+}
