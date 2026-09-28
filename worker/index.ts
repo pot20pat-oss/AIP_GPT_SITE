@@ -29,6 +29,15 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
+    // Keep one public origin for SEO. Requests that reach this Worker through
+    // the legacy domain or www are permanently redirected to the canonical .ca host.
+    if (url.hostname === "www.atelierpotvin.ca" || url.hostname === "atelierpotvin.tech" || url.hostname === "www.atelierpotvin.tech") {
+      url.protocol = "https:";
+      url.hostname = "atelierpotvin.ca";
+      url.port = "";
+      return Response.redirect(url.toString(), 301);
+    }
+
     if (url.pathname === "/_vinext/image") {
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
       return handleImageOptimization(request, {
