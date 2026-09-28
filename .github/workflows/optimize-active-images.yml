@@ -76,6 +76,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add app public
+          rm .github/workflows/optimize-active-images.yml
+          git add app public .github/workflows/optimize-active-images.yml
           git commit -m "Optimize active homepage images to WebP"
           git push
