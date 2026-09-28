@@ -37,6 +37,10 @@ if ($matches) {
   throw "Une ancienne reference PNG existe encore."
 }
 
+Write-Host "Build final sans les anciens PNG..." -ForegroundColor Cyan
+npm run build
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
 # One-shot helper: remove it from the final repository after a successful run.
 Remove-Item ".\scripts\optimize-active-images.mjs" -Force
 Remove-Item ".\scripts\optimize-active-images.ps1" -Force
