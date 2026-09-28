@@ -2389,3 +2389,32 @@ a:has(.cta-arrow),button:has(.cta-arrow),b:has(.cta-arrow){
   justify-content:center!important;
 }
 .gateway-card .cta-arrow{margin-left:10px!important;}
+
+
+/* CTA arrows v5 — identical visual treatment everywhere, including text links. */
+.cta-arrow{
+  width:28px!important;height:28px!important;flex:0 0 28px!important;
+  margin-left:10px!important;display:inline-flex!important;
+  align-items:center!important;justify-content:center!important;
+  border-radius:50%!important;border:1px solid rgba(255,255,255,.85)!important;
+  background:linear-gradient(145deg,#5cddff 0%,#10a6df 46%,#086c9e 100%)!important;
+  box-shadow:inset 0 2px 2px rgba(255,255,255,.72),inset 0 -2px 3px rgba(0,42,76,.38),0 3px 8px rgba(0,92,145,.30)!important;
+  color:transparent!important;font-size:0!important;line-height:0!important;
+  position:relative!important;top:auto!important;left:auto!important;transform:none!important;
+}
+.cta-arrow::after{
+  content:"➜"!important;position:absolute!important;left:50%!important;top:50%!important;
+  transform:translate(-50%,-51%)!important;color:#fff!important;
+  font:900 16px/1 Arial,sans-serif!important;text-shadow:0 1px 1px rgba(0,28,52,.6)!important;
+}
+/* Override legacy rules that hide/shrink arrows on text links. */
+.text-link .cta-arrow,.portfolio-service-link .cta-arrow,.gateway-card .cta-arrow,
+.services-grid .cta-arrow,.projects-grid .cta-arrow,.related-links .cta-arrow,
+.button .cta-arrow,.header-phone .cta-arrow{
+  width:28px!important;height:28px!important;flex-basis:28px!important;
+  display:inline-flex!important;opacity:1!important;visibility:visible!important;
+}
+.text-link,.portfolio-service-link,.gateway-card b,.services-grid a,.projects-grid a,
+.related-links a,.button,.header-phone{
+  display:inline-flex!important;align-items:center!important;
+}
