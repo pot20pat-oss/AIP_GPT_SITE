@@ -2147,3 +2147,40 @@ a:hover .cta-arrow{transform:translateX(2px)!important}
     transform:translateY(-50%)!important;
   }
 }
+
+
+/* === HEADER + WIDE HERO CLEANUP 2026-09-28 === */
+.header .brand{
+  display:flex!important;align-items:center!important;gap:12px!important;
+  flex:0 0 auto!important;min-width:max-content!important;
+}
+.header .brand-logo{
+  display:block!important;width:92px!important;height:auto!important;
+  max-width:92px!important;flex:0 0 92px!important;object-fit:contain!important;
+}
+.header .brand-name{
+  display:flex!important;flex-direction:column!important;align-items:flex-start!important;
+  width:auto!important;height:auto!important;margin:0!important;padding:0!important;
+  background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+  color:#53647b!important;font-size:13px!important;line-height:1.05!important;white-space:nowrap!important;
+  text-shadow:none!important;
+}
+.header .brand-name > span{
+  display:block!important;width:auto!important;height:auto!important;margin:4px 0 0!important;padding:0!important;
+  background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+  color:#087be8!important;font-size:20px!important;font-weight:800!important;line-height:1!important;text-shadow:none!important;
+}
+
+/* The hero itself follows the source image ratio: no side bands, no top/bottom crop. */
+@media (min-width:1400px){
+  .hero-clean{
+    width:100%!important;
+    aspect-ratio:2048 / 676!important;
+    height:auto!important;min-height:0!important;max-height:none!important;
+    background:#063565!important;
+  }
+  .hero-clean-bg{
+    inset:0!important;width:100%!important;height:100%!important;
+    object-fit:cover!important;object-position:center center!important;
+  }
+}
