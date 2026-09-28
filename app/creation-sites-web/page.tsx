@@ -6,13 +6,13 @@ export const metadata: Metadata = pageMetadata({
   title: "Création de sites web à Nicolet, Bécancour et Trois-Rivières",
   description: "Création de sites web professionnels pour PME et travailleurs autonomes à Nicolet, Bécancour et Trois-Rivières. Sites vitrines, e-commerce et CMS sur mesure.",
   path: "/creation-sites-web",
-  image: "/projet-bois-morphee.webp",
+  image: "/aip-travail-13.webp",
 });
 
 export default function Page() {
   return <DetailPage
     eyebrow="Création de sites web · Centre-du-Québec"
-    image="/projet-bois-morphee.webp"
+    image="/aip-travail-13.webp"
     imageAlt="Aperçu d’un site web professionnel réalisé sur mesure par Atelier Informatique Potvin"
     title="Création de sites web à Nicolet."
     accent="Pour les entreprises d’ici."
