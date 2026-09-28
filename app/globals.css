@@ -1974,3 +1974,37 @@ button:hover .cta-arrow{
   transform:translateX(2px)!important;
   filter:brightness(1.08)!important;
 }
+
+
+/* 2026-09-28 — wide desktop hero: shorter + copy upper/left */
+@media (min-width:1400px){
+  .hero-clean{
+    height:clamp(560px,32vw,720px)!important;
+    min-height:0!important;
+    max-height:720px!important;
+    overflow:hidden!important;
+  }
+  .hero-clean-media,
+  .hero-clean-media img{
+    width:100%!important;
+    height:100%!important;
+  }
+  .hero-clean-media img{
+    object-fit:cover!important;
+    object-position:center 46%!important;
+  }
+  .hero-clean-overlay{
+    width:min(1640px,calc(100% - 48px))!important;
+    left:0!important;
+    right:auto!important;
+    top:46%!important;
+    bottom:auto!important;
+    transform:translate(-205px,-50%)!important;
+    align-items:flex-start!important;
+    justify-content:center!important;
+  }
+}
+@media (min-width:2200px){
+  .hero-clean{height:clamp(620px,29vw,760px)!important;max-height:760px!important}
+  .hero-clean-overlay{top:44%!important;transform:translate(-260px,-50%)!important}
+}
