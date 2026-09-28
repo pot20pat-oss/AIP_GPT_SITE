@@ -1494,3 +1494,16 @@ html,body{max-width:100%;overflow-x:hidden}
 @media screen and (max-width:430px){
   .hero-clean-bg{height:270px!important;max-height:270px!important;object-position:62% 40%!important}
 }
+
+
+/* PHONE HERO CROP — shift photo left to center Patrick */
+@media screen and (max-width:760px){
+  .hero-clean-bg{
+    object-position:68% 40%!important;
+  }
+}
+@media screen and (max-width:430px){
+  .hero-clean-bg{
+    object-position:68% 40%!important;
+  }
+}
