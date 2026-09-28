@@ -704,3 +704,45 @@ html,body{max-width:100%;overflow-x:hidden}
     line-height:1.1!important;
   }
 }
+
+
+/* Mobile hero v5 — keep all copy inside the dark left column */
+@media (max-width:760px){
+  .hero-clean-overlay{
+    width:44%!important;
+    max-width:225px!important;
+    padding-left:18px!important;
+    padding-right:4px!important;
+  }
+  .hero-clean h1{
+    max-width:205px!important;
+    font-size:clamp(26px,6.4vw,30px)!important;
+    line-height:.98!important;
+  }
+  .hero-clean h2{
+    max-width:205px!important;
+    font-size:clamp(23px,5.8vw,27px)!important;
+    line-height:.96!important;
+    letter-spacing:-.6px!important;
+  }
+  .hero-clean p{
+    max-width:190px!important;
+    font-size:10px!important;
+    line-height:1.38!important;
+  }
+  .hero-clean-brand{
+    font-size:9px!important;
+  }
+  .hero-clean-location{
+    font-size:6px!important;
+  }
+  .hero-clean-actions{
+    width:158px!important;
+  }
+  .hero-clean-actions a{
+    width:158px!important;
+  }
+  .hero-clean-actions .hero-clean-secondary br{
+    display:initial!important;
+  }
+}
