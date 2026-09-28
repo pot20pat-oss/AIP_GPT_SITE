@@ -21,15 +21,20 @@ export default function Home() {
           <div className="hero-clean-brand">ATELIER INFORMATIQUE{" "}<strong>POTVIN</strong></div>
           <div className="hero-clean-location">● &nbsp; NICOLET · BÉCANCOUR · TROIS-RIVIÈRES</div>
           <h1>Création de sites Web<span>.</span></h1>
-          <h2>Pour votre entreprise.<br />Pour vos clients.</h2>
-          <p>Sites vitrines, e-commerce et CMS sur mesure pour PME et travailleurs autonomes. Site vitrine de base à partir de 900 $.</p>
+          <h2>Et dépannage informatique.</h2>
+          <p>Sites vitrines, e-commerce et CMS sur mesure dès 900 $. Et quand l’informatique bloque : dépannage, virus, Wi-Fi et assistance à distance.</p>
           <div className="hero-clean-actions">
-            <Link className="hero-clean-primary" href="/creation-sites-web">Discuter de mon projet <span>→</span></Link>
-            <a className="hero-clean-secondary" href="#realisations">Voir mes réalisations <span>↓</span></a>
+            <Link className="hero-clean-primary" href="/creation-sites-web">Créer mon site <span>→</span></Link>
+            <Link className="hero-clean-secondary" href="/depannage-informatique-nicolet">Besoin d’un dépannage <span>→</span></Link>
           </div>
         </div>
       </section>
       <section className="metrics"><div className="shell metrics-grid"><div><strong>40 ans</strong><span>d’expérience sur le terrain</span></div><div><strong>50 km</strong><span>de service à domicile</span></div><div><strong>5,0 <i>★</i></strong><span>sur Google, 10 avis</span></div><div><strong>1 seul</strong><span>interlocuteur, du début à la fin</span></div></div></section>
+      <section className="expertise-gateway shell" aria-label="Choisir un service">
+        <div className="expertise-gateway-intro"><span>DEUX EXPERTISES · UN SEUL INTERLOCUTEUR</span><strong>Web ou informatique, vous êtes au bon endroit.</strong></div>
+        <Link className="expertise-gateway-card expertise-gateway-web" href="/creation-sites-web"><span>01 · CRÉATION WEB</span><h2>Un site pour votre entreprise.</h2><p>Site vitrine dès 900 $, e-commerce, CMS et solutions sur mesure.</p><b>Découvrir la création Web →</b></Link>
+        <Link className="expertise-gateway-card expertise-gateway-it" href="/depannage-informatique-nicolet"><span>02 · DÉPANNAGE INFORMATIQUE</span><h2>Un problème à régler?</h2><p>PC lent, virus, Windows, Wi-Fi, installation ou assistance à distance.</p><b>Voir les services informatiques →</b></Link>
+      </section>
       <section className="web-focus section shell" id="web"><img className="creation-web-aip-visual" src="/creation-web-aip.png" alt="Création Web AIP : sites professionnels, e-commerce et CMS, solutions sur mesure" /><div className="web-mobile-grid"><article><img src="/aip-travail-13.webp" alt="Création d’un site web professionnel" /><span>01</span><h3>Sites professionnels</h3><p>Sites vitrines rapides et adaptés au mobile pour présenter votre entreprise et générer des contacts.</p><Link href="/creation-sites-web">Découvrir <b>→</b></Link></article><article><img src="/projet-envol-enfants.png" alt="Boutique e-commerce et CMS sur mesure" /><span>02</span><h3>E-commerce &amp; CMS</h3><p>Boutiques en ligne et interfaces de gestion adaptées aux opérations réelles de votre entreprise.</p><Link href="/creation-sites-web">Parler de votre projet <b>→</b></Link></article><article><img src="/projet-bois-morphee.webp" alt="Solution web conçue sur mesure" /><span>03</span><h3>Solutions sur mesure</h3><p>Automatisation, outils internes et fonctionnalités développées autour de vos besoins.</p><Link href="/creation-sites-web">Découvrir les possibilités <b>→</b></Link></article></div></section>
       <ProjectShowcase />
       <section className="services section shell" id="services"><div className="section-heading"><div><div className="eyebrow"><span></span> Services informatiques</div><h2>Le dépannage reste là.<br /><em>Quand vous en avez besoin.</em></h2></div><p>Réparation, virus, assistance à distance, installation, Wi-Fi et sauvegardes : les services informatiques demeurent disponibles à Nicolet et dans les environs.</p></div><img className="services-aip-visual" src="/services-aip.png" alt="Six services Atelier Informatique Potvin : dépannage et réparation, cybersécurité, assistance à distance, installation et transfert, réseau et sauvegardes, sites web sur mesure" /><div className="services-mobile-grid">{services.map(service => <article className="service-mobile-card" key={service.href}><img src={service.image} alt={service.imageAlt} loading="lazy" /><div className="service-mobile-copy"><span>{service.number}</span><h3>{service.title}</h3><p>{service.description}</p><Link href={service.href}>En savoir plus <b>→</b></Link></div></article>)}</div></section>
