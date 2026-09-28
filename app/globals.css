@@ -2748,10 +2748,11 @@ button:hover .cta-arrow{
 }
 
 
-/* Footer brand v4 — add optical separation from wide/glowing logo artwork */
-.footer .footer-brand{column-gap:22px!important;}
-.footer .footer-brand>span{margin-left:8px!important;}
+
+/* Footer brand fix — actual markup uses .footer .brand */
+.footer>.brand{display:flex!important;align-items:center!important;gap:24px!important;flex:0 0 auto!important;}
+.footer>.brand .brand-logo{display:block!important;width:71px!important;height:61px!important;object-fit:contain!important;flex:0 0 71px!important;}
+.footer>.brand .brand-name{display:block!important;margin:0!important;padding:0!important;position:relative!important;left:0!important;transform:none!important;white-space:nowrap!important;}
 @media(max-width:760px){
-  .footer .footer-brand{column-gap:18px!important;}
-  .footer .footer-brand>span{margin-left:6px!important;}
+  .footer>.brand{gap:20px!important;}
 }
