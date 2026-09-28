@@ -1,0 +1,82 @@
+name: Optimize active website images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/optimize-active-images.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install image encoder
+        run: npm install --no-save --ignore-scripts sharp@0.34.4
+
+      - name: Convert active PNG assets to WebP
+        run: |
+          node <<'NODE'
+          const sharp = require("sharp");
+          const fs = require("fs");
+
+          const jobs = [
+            ["public/hero-aip-clean.png", "public/hero-aip-clean.webp", 80],
+            ["public/logo-aip-glow.png", "public/logo-aip-glow.webp", 90],
+            ["public/creation-web-aip.png", "public/creation-web-aip.webp", 86],
+            ["public/projet-envol-enfants.png", "public/projet-envol-enfants.webp", 84],
+          ];
+
+          (async () => {
+            for (const [src, dest, quality] of jobs) {
+              if (!fs.existsSync(src)) throw new Error(`Missing source: ${src}`);
+              await sharp(src).webp({ quality, effort: 6 }).toFile(dest);
+              const before = fs.statSync(src).size;
+              const after = fs.statSync(dest).size;
+              if (after >= before) throw new Error(`No size improvement for ${src}`);
+              console.log(`${src}: ${before} -> ${after} bytes (${Math.round((1-after/before)*100)}% smaller)`);
+            }
+
+            const files = ["app/page.tsx", "app/components.tsx"];
+            const replacements = new Map([
+              ["/hero-aip-clean.png", "/hero-aip-clean.webp"],
+              ["/logo-aip-glow.png", "/logo-aip-glow.webp"],
+              ["/creation-web-aip.png", "/creation-web-aip.webp"],
+              ["/projet-envol-enfants.png", "/projet-envol-enfants.webp"],
+            ]);
+
+            for (const file of files) {
+              let text = fs.readFileSync(file, "utf8");
+              for (const [from, to] of replacements) text = text.split(from).join(to);
+              fs.writeFileSync(file, text);
+            }
+
+            for (const [src] of jobs) fs.unlinkSync(src);
+          })().catch(err => { console.error(err); process.exit(1); });
+          NODE
+
+      - name: Verify references and build
+        run: |
+          if grep -R -E 'hero-aip-clean\.png|logo-aip-glow\.png|creation-web-aip\.png|projet-envol-enfants\.png' app; then
+            echo "Old PNG reference remains"
+            exit 1
+          fi
+          npm run build
+
+      - name: Commit optimized assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app public
+          git commit -m "Optimize active homepage images to WebP"
+          git push
