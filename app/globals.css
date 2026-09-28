@@ -325,3 +325,8 @@ html,body{max-width:100%;overflow-x:hidden}
   .hero-clean-primary{flex:1 1 56%}
   .hero-clean-secondary{flex:1 1 44%;min-width:0}
 }
+
+
+/* Hero conversion polish: improve supporting-copy readability */
+.hero-clean p{font-size:clamp(17px,1.15vw,20px);line-height:1.42;max-width:520px}
+@media(max-width:760px){.hero-clean p{font-size:15px;line-height:1.5;max-width:none}}
