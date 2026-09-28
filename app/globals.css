@@ -1052,3 +1052,50 @@ html,body{max-width:100%;overflow-x:hidden}
 @media (min-width:761px) and (max-height:820px){
   .metrics-grid{min-height:96px!important;padding-block:13px!important}
 }
+
+
+/* Tablet hero: switch to a clean stacked layout before the portrait gets covered. */
+@media (min-width:761px) and (max-width:900px){
+  .hero-clean{
+    display:flex!important;
+    flex-direction:column!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    background:#061b30!important;
+  }
+  .hero-clean-bg{
+    position:relative!important;
+    inset:auto!important;
+    order:1!important;
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:16/10!important;
+    object-fit:cover!important;
+    object-position:66% 42%!important;
+  }
+  .hero-clean-overlay{
+    position:relative!important;
+    inset:auto!important;
+    order:2!important;
+    width:100%!important;
+    max-width:none!important;
+    min-height:0!important;
+    height:auto!important;
+    margin:0!important;
+    padding:26px 32px 28px!important;
+    transform:none!important;
+    background:#061b30!important;
+  }
+  .hero-clean-overlay:before{display:none!important}
+  .hero-clean-logo{display:none!important}
+  .hero-clean-brand{font-size:14px!important}
+  .hero-clean-location{font-size:11px!important;margin:6px 0 14px!important}
+  .hero-clean h1{max-width:none!important;font-size:44px!important;white-space:normal!important}
+  .hero-clean h2{max-width:none!important;font-size:39px!important;margin:6px 0 12px!important}
+  .hero-clean p{max-width:600px!important;font-size:14px!important;line-height:1.5!important}
+  .hero-clean-actions{display:flex!important;max-width:520px!important;gap:12px!important}
+  .hero-clean-actions a{white-space:normal!important;min-height:48px!important}
+  .hero-clean-primary{flex:1.15!important}
+  .hero-clean-secondary{flex:1!important}
+}
