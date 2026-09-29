@@ -2784,3 +2784,37 @@ button:hover .cta-arrow{
 }
 .hero-clean-actions .cta-arrow::before,
 .hero-clean-actions .cta-arrow::after{content:none!important;display:none!important;}
+
+
+/* Web cards CTA FINAL — force real buttons despite legacy rules */
+.web-focus .web-mobile-grid article > a.web-card-button.hero-clean-primary{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  width:calc(100% - 48px)!important;
+  min-width:0!important;
+  min-height:58px!important;
+  margin:20px 24px 24px!important;
+  padding:0 18px 0 22px!important;
+  box-sizing:border-box!important;
+  border:1px solid #0b86d4!important;
+  border-radius:7px!important;
+  background:#18abe7!important;
+  color:#fff!important;
+  font-weight:800!important;
+  text-decoration:none!important;
+  box-shadow:0 5px 14px rgba(7,76,126,.14)!important;
+}
+.web-focus .web-mobile-grid article > a.web-card-button.hero-clean-primary .cta-arrow{
+  display:inline-block!important;
+  margin-left:14px!important;
+  color:#fff!important;
+  background:none!important;
+  border:0!important;
+  box-shadow:none!important;
+  font:900 22px/1 Arial,sans-serif!important;
+}
+.web-focus .web-mobile-grid article > a.web-card-button.hero-clean-primary .cta-arrow::before,
+.web-focus .web-mobile-grid article > a.web-card-button.hero-clean-primary .cta-arrow::after{
+  content:none!important;display:none!important;
+}
