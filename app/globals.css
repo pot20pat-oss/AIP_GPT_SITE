@@ -2925,3 +2925,16 @@ button:hover .cta-arrow{
   border-color:#17284f!important;
   color:#fff!important;
 }
+
+
+/* Global CTA arrows — gold 3D, CSS only */
+.cta-arrow{
+  border-color:#fff0ad!important;
+  background:linear-gradient(180deg,#fff2a8 0%,#f4c542 32%,#d99a12 67%,#9b6500 100%)!important;
+  color:#fff!important;
+  text-shadow:0 1px 1px rgba(92,55,0,.75)!important;
+  box-shadow:
+    inset 0 2px 2px rgba(255,255,255,.85),
+    inset 0 -3px 4px rgba(102,61,0,.48),
+    0 4px 9px rgba(104,67,0,.30)!important;
+}
