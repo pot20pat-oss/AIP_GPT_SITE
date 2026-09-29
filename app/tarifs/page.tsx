@@ -28,7 +28,7 @@ export default function Page() {
     <section className="section shell pricing-page">
       <div className="pricing-group pricing-group-web">
         <div className="pricing-group-heading"><span>02</span><div><h2>Forfaits création Web</h2><p>Un site vitrine de base commence à 900 $. Le prix évolue ensuite selon la portée et les besoins réels de votre projet.</p></div></div>
-        <div className="web-package-grid">{webPackages.map((p, index) => <article className="web-package-card" key={p.name}><div className="web-package-top"><span>0{index + 1}</span><div><h3>{p.name}</h3><strong>{p.price}</strong></div></div><p>{p.text}</p><ul>{p.includes.map(item => <li key={item}>{item}</li>)}</ul><a href="tel:+18193802999">Discuter du projet <span className="gold-arrow">→</span></a></article>)}</div>
+        <div className="web-package-grid">{webPackages.map((p, index) => <article className="web-package-card" key={p.name}><div className="web-package-top"><span>0{index + 1}</span><div><h3>{p.name}</h3><strong>{p.price}</strong></div></div><p>{p.text}</p><ul>{p.includes.map(item => <li key={item}>{item}</li>)}</ul><a href="tel:+18193802999">Discuter du projet</a></article>)}</div>
         <p className="package-note">Les forfaits servent de repère. Le nombre de pages, le contenu, les intégrations et les fonctions particulières peuvent modifier le prix final.</p>
       </div>
       <div className="pricing-group">
