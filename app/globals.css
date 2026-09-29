@@ -2540,6 +2540,18 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
  .portfolio-project-envol .envol-cms-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 }
 
+/* Envol layout — keep the project card compact instead of stretching to CMS content height */
+.portfolio-project-envol{align-items:start}
+.portfolio-project-envol .portfolio-image{min-height:0;aspect-ratio:1.15/0.85;align-self:start}
+.portfolio-project-envol .portfolio-copy{justify-content:flex-start;padding-top:38px;padding-bottom:38px}
+.portfolio-project-envol .portfolio-proof{margin-bottom:14px}
+.portfolio-project-envol .envol-cms-showcase{margin:12px 0 14px}
+.portfolio-project-envol .portfolio-tags{margin:14px 0 18px}
+@media(max-width:760px){
+ .portfolio-project-envol .portfolio-image{aspect-ratio:1.46}
+ .portfolio-project-envol .portfolio-copy{padding-top:28px;padding-bottom:28px}
+}
+
 /* Envol CMS clickable previews + lightbox */
 .envol-cms-preview{display:block;width:100%;margin:0;padding:0;border:0;background:transparent;text-align:left;cursor:zoom-in;font:inherit;color:inherit}
 .envol-cms-preview span{display:block;padding:8px 2px 0;color:#526987;font-size:14px;line-height:1.45}
