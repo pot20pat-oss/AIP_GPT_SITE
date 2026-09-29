@@ -2865,11 +2865,20 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
 }
 
 
-/* 2026-09-29 — cap split hero image height on large/3K/4K displays */
+/* 2026-09-29 — large-display split hero: show the whole image, never crop it */
 @media (min-width:1200px){
-  .hero-split-media{aspect-ratio:auto!important;height:clamp(430px,24vw,620px)!important}
-  .hero-split-media .hero-clean-bg{object-position:center 44%!important}
-}
-@media (min-width:2560px){
-  .hero-split-media{height:560px!important}
+  .hero-split-media{
+    aspect-ratio:auto!important;
+    height:auto!important;
+    max-height:none!important;
+    overflow:visible!important;
+  }
+  .hero-split-media .hero-clean-bg{
+    position:relative!important;
+    inset:auto!important;
+    width:100%!important;
+    height:auto!important;
+    object-fit:contain!important;
+    object-position:center!important;
+  }
 }
