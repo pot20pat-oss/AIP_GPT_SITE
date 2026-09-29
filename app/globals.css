@@ -2938,3 +2938,19 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
     transform:none!important;
   }
 }
+
+
+/* 2026-09-29 — web cards use the exact same CTA component as the rest of the site */
+.web-focus .web-mobile-grid article>a.button.button-dark{
+  margin-top:auto!important;
+  margin-left:24px!important;
+  margin-right:24px!important;
+  margin-bottom:24px!important;
+}
+@media(max-width:520px){
+  .web-focus .web-mobile-grid article>a.button.button-dark{
+    width:calc(100% - 48px)!important;
+    min-width:0!important;
+    max-width:none!important;
+  }
+}
