@@ -2756,3 +2756,13 @@ button:hover .cta-arrow{
 @media(max-width:760px){
   .footer>.brand{gap:20px!important;}
 }
+
+
+/* Footer brand v5 — move the text clear of the logo's transparent/glow canvas */
+.footer>.brand{gap:0!important;}
+.footer>.brand .brand-logo{width:92px!important;height:64px!important;flex:0 0 92px!important;}
+.footer>.brand .brand-name{margin-left:28px!important;}
+@media(max-width:760px){
+  .footer>.brand .brand-logo{width:78px!important;height:54px!important;flex-basis:78px!important;}
+  .footer>.brand .brand-name{margin-left:24px!important;}
+}
