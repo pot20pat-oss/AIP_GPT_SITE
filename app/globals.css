@@ -2683,3 +2683,11 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
 @media(max-width:760px){
   .button,.button-outline,.web-card-button.hero-clean-primary{min-height:46px!important;height:46px}
 }
+
+
+/* 2026-09-29 — hero copy tighter to the left on desktop */
+@media (min-width:1200px){
+  .hero-clean-overlay{
+    left:clamp(24px,5vw,105px)!important;
+  }
+}
