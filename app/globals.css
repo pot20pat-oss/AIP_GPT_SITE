@@ -2954,3 +2954,19 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
     max-width:none!important;
   }
 }
+
+
+/* 2026-09-29 — six IT service CTAs use the same standard navy button */
+.service-mobile-copy>a.button.button-dark{
+  margin-top:auto!important;
+  background:#172445!important;
+  color:#fff!important;
+  border-color:#172445!important;
+}
+@media(max-width:520px){
+  .service-mobile-copy>a.button.button-dark{
+    width:100%!important;
+    min-width:0!important;
+    max-width:none!important;
+  }
+}
