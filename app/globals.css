@@ -2912,38 +2912,29 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
 }
 
 
-/* 2026-09-29 — desktop hero size correction: reduce visual height without enlarging portrait */
+/* 2026-09-29 — desktop hero: preserve the complete image at every resolution */
 @media (min-width:761px){
   .hero-clean.hero-split .hero-split-media{
     position:relative!important;
     width:100%!important;
-    height:clamp(360px,35vw,620px)!important;
+    height:auto!important;
     min-height:0!important;
-    max-height:620px!important;
-    overflow:hidden!important;
+    max-height:none!important;
+    overflow:visible!important;
     background:#061b30!important;
   }
   .hero-clean.hero-split .hero-split-media .hero-clean-bg{
-    position:absolute!important;
-    top:0!important;
-    left:50%!important;
-    right:auto!important;
-    bottom:auto!important;
-    width:min(100%,1800px)!important;
+    position:relative!important;
+    inset:auto!important;
+    display:block!important;
+    width:min(100%,2560px)!important;
     height:auto!important;
-    max-width:none!important;
+    min-height:0!important;
+    max-width:2560px!important;
     max-height:none!important;
+    margin:0 auto!important;
     object-fit:contain!important;
-    object-position:top center!important;
-    transform:translateX(-50%)!important;
-  }
-}
-@media (min-width:2560px){
-  .hero-clean.hero-split .hero-split-media{
-    height:720px!important;
-    max-height:720px!important;
-  }
-  .hero-clean.hero-split .hero-split-media .hero-clean-bg{
-    width:min(100%,2200px)!important;
+    object-position:center!important;
+    transform:none!important;
   }
 }
