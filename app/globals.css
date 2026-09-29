@@ -2863,3 +2863,13 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   .hero-clean.hero-split .hero-clean-actions{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}
   .hero-clean.hero-split .hero-clean-actions a{width:100%!important;min-width:0!important;max-width:none!important}
 }
+
+
+/* 2026-09-29 — cap split hero image height on large/3K/4K displays */
+@media (min-width:1200px){
+  .hero-split-media{aspect-ratio:auto!important;height:clamp(430px,24vw,620px)!important}
+  .hero-split-media .hero-clean-bg{object-position:center 44%!important}
+}
+@media (min-width:2560px){
+  .hero-split-media{height:560px!important}
+}
