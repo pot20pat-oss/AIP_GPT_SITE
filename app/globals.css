@@ -2735,3 +2735,48 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
     min-height:46px!important;height:46px!important;padding:0 20px!important;font-size:12px!important;
   }
 }
+
+
+/* 2026-09-29 — FINAL CTA dimensions: same physical button size */
+:root{--cta-width:240px;--cta-height:48px}
+.button,
+.button-outline,
+.hero-clean-actions a,
+.web-focus .web-mobile-grid article>a.web-card-button,
+.portfolio-copy>a.button,
+.portfolio-copy>a.button-outline,
+.related-links a.button-outline,
+.price-note .button,
+.approach-copy .button{
+  width:var(--cta-width)!important;
+  min-width:var(--cta-width)!important;
+  max-width:var(--cta-width)!important;
+  height:var(--cta-height)!important;
+  min-height:var(--cta-height)!important;
+  padding:0 18px!important;
+  margin-left:0!important;
+  margin-right:0!important;
+  border-radius:9px 2px 9px 2px!important;
+  display:inline-flex!important;
+  flex:none!important;
+  align-items:center!important;
+  justify-content:center!important;
+  box-sizing:border-box!important;
+  font-size:12px!important;
+  font-weight:650!important;
+  line-height:1!important;
+  text-align:center!important;
+}
+.web-focus .web-mobile-grid article>a.web-card-button{margin-top:auto!important;margin-bottom:24px!important}
+.portfolio-copy>a.button,.portfolio-copy>a.button-outline{display:flex!important}
+.related-links a.button-outline{width:var(--cta-width)!important}
+.contact-mini-form .button{width:100%!important;max-width:none!important;min-width:0!important;height:var(--cta-height)!important}
+@media(max-width:520px){
+  :root{--cta-width:100%}
+  .button,.button-outline,.hero-clean-actions a,
+  .web-focus .web-mobile-grid article>a.web-card-button,
+  .portfolio-copy>a.button,.portfolio-copy>a.button-outline,
+  .related-links a.button-outline,.price-note .button,.approach-copy .button{
+    width:100%!important;min-width:0!important;max-width:none!important;
+  }
+}
