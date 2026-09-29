@@ -2631,3 +2631,24 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
 
 /* Yellow CTA arrows removed */
 .gold-arrow{display:none!important}
+
+
+/* CTA hierarchy — arrows removed; actionable links render as real buttons */
+.button-outline{
+  min-height:46px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 20px;
+  border:1px solid #17284f;
+  background:#fff;
+  color:#17284f;
+  font-size:12px;
+  font-weight:700;
+  line-height:1;
+  transition:background .18s ease,color .18s ease,transform .18s ease;
+}
+.button-outline:hover{background:#17284f;color:#fff;transform:translateY(-1px)}
+.portfolio-copy .button-outline{margin-top:10px}
+.related-links a.button-outline{justify-content:center;border:1px solid #17284f;padding:0 18px}
+@media(max-width:760px){.button-outline{min-height:44px;width:100%}.hero-actions .button-outline{width:auto}}
