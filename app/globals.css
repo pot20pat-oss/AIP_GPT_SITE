@@ -2527,3 +2527,42 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
 .envol-cms-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}
 .envol-cms-grid img{aspect-ratio:16/9;object-fit:cover;object-position:top}
 @media(max-width:760px){.envol-cms-grid{grid-template-columns:1fr;gap:16px}.envol-cms-grid img{aspect-ratio:auto}}
+
+
+/* Envol case study — use the available width so CMS screenshots stay readable */
+.portfolio-project-envol{
+  grid-template-columns:minmax(360px,.72fr) minmax(0,1.28fr);
+  align-items:start;
+}
+.portfolio-project-envol .portfolio-copy{padding:42px 48px}
+.portfolio-project-envol .envol-cms-showcase{
+  width:min(1120px,calc(100vw - 120px));
+  max-width:none;
+  margin-left:0;
+}
+.portfolio-project-envol .envol-cms-main img{
+  width:100%;
+  aspect-ratio:auto;
+  object-fit:contain;
+}
+.portfolio-project-envol .envol-cms-grid{
+  grid-template-columns:repeat(2,minmax(320px,1fr));
+}
+.portfolio-project-envol .envol-cms-grid img{
+  width:100%;
+  aspect-ratio:auto;
+  object-fit:contain;
+}
+.portfolio-project-envol .envol-cms-showcase figcaption{
+  font-size:14px;
+  line-height:1.45;
+}
+@media(max-width:1100px){
+  .portfolio-project-envol{grid-template-columns:1fr}
+  .portfolio-project-envol .envol-cms-showcase{width:100%}
+}
+@media(max-width:760px){
+  .portfolio-project-envol .portfolio-copy{padding:28px 22px}
+  .portfolio-project-envol .envol-cms-grid{grid-template-columns:1fr}
+  .portfolio-project-envol .envol-cms-showcase figcaption{font-size:12px}
+}
