@@ -28,10 +28,12 @@ export default function Page() {
     asideTitle="Un site conçu pour générer des contacts."
     asideText="Un bon site ne sert pas seulement à être présent sur Internet. Il doit expliquer rapidement ce que vous faites, rassurer vos futurs clients et leur donner une raison claire de vous contacter."
     links={[
-      { href: "/tarifs", label: "Tarifs de création de sites web" },
-      { href: "/depannage-informatique-becancour", label: "Services à Bécancour" },
-      { href: "/depannage-informatique-trois-rivieres", label: "Services à Trois-Rivières" },
-      { href: "/faq", label: "Questions fréquentes" },
+      { href: "/creation-site-web-nicolet", label: "Création Web à Nicolet" },
+      { href: "/creation-site-web-becancour", label: "Création Web à Bécancour" },
+      { href: "/creation-site-web-trois-rivieres", label: "Création Web à Trois-Rivières" },
+      { href: "/site-web-pme", label: "Sites Web pour PME" },
+      { href: "/creation-boutique-en-ligne", label: "Boutiques en ligne" },
+      { href: "/developpement-cms-sur-mesure", label: "CMS sur mesure" },
     ]}
     showcaseProject
     servicePath="/creation-sites-web"
