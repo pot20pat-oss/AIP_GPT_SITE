@@ -1856,7 +1856,7 @@ a:active > span:last-child{
 
 
 /* CTA ARROWS — one centered 3D treatment everywhere. */
-.cta-arrow{
+.gold-arrow{
   display:inline-flex!important;
   align-items:center!important;
   justify-content:center!important;
@@ -1878,21 +1878,21 @@ a:active > span:last-child{
   transform:translateY(0)!important;
   transition:transform .16s ease,filter .16s ease,box-shadow .16s ease!important;
 }
-a:hover .cta-arrow{
+a:hover .gold-arrow{
   transform:translateX(3px) scale(1.08)!important;
   filter:brightness(1.1)!important;
 }
-.button-dark .cta-arrow,.hero-clean-secondary .cta-arrow{
+.button-dark .gold-arrow,.hero-clean-secondary .gold-arrow{
   background:linear-gradient(145deg,#d8e0e6 0%,#8b9aa7 45%,#596875 72%,#35424d 100%)!important;
 }
-.portfolio-service-link .cta-arrow,
-.web-package-card .cta-arrow,
-.web-mobile-grid .cta-arrow,
-.service-mobile-card .cta-arrow{
+.portfolio-service-link .gold-arrow,
+.web-package-card .gold-arrow,
+.web-mobile-grid .gold-arrow,
+.service-mobile-card .gold-arrow{
   width:25px!important;height:25px!important;min-width:25px!important;flex-basis:25px!important;font-size:14px!important;margin-left:8px!important;
 }
 /* Prevent older generic span-arrow CSS from creating a second arrow. */
-a:has(.cta-arrow)::after{display:none!important;content:none!important}
+a:has(.gold-arrow)::after{display:none!important;content:none!important}
 
 
 /* HERO TEXT PANEL — remove the dark translucent box requested by user. */
@@ -1900,22 +1900,22 @@ a:has(.cta-arrow)::after{display:none!important;content:none!important}
 
 /* Arrow alignment: CTA text and 3D arrow share the same centered flex row. */
 .hero-clean-actions a,
-.button:has(.cta-arrow),
-.web-mobile-grid a:has(.cta-arrow),
-.service-mobile-card a:has(.cta-arrow),
-.portfolio-service-link:has(.cta-arrow),
-.web-package-card a:has(.cta-arrow),
-.expertise-gateway-card b:has(.cta-arrow){
+.button:has(.gold-arrow),
+.web-mobile-grid a:has(.gold-arrow),
+.service-mobile-card a:has(.gold-arrow),
+.portfolio-service-link:has(.gold-arrow),
+.web-package-card a:has(.gold-arrow),
+.expertise-gateway-card b:has(.gold-arrow){
   display:flex!important;
   align-items:center!important;
 }
 .hero-clean-actions a,
-.button:has(.cta-arrow){justify-content:center!important}
-.web-mobile-grid a:has(.cta-arrow),
-.service-mobile-card a:has(.cta-arrow),
-.portfolio-service-link:has(.cta-arrow),
-.web-package-card a:has(.cta-arrow){width:max-content!important}
-.cta-arrow{
+.button:has(.gold-arrow){justify-content:center!important}
+.web-mobile-grid a:has(.gold-arrow),
+.service-mobile-card a:has(.gold-arrow),
+.portfolio-service-link:has(.gold-arrow),
+.web-package-card a:has(.gold-arrow){width:max-content!important}
+.gold-arrow{
   position:relative!important;
   top:0!important;
   right:auto!important;
@@ -1939,10 +1939,10 @@ a:has(.cta-arrow)::after{display:none!important;content:none!important}
 }
 
 /* Unified 3D CTA arrows — CSS only, no generated image */
-.cta-arrow,
-.hero-clean-actions a .cta-arrow,
-a .cta-arrow,
-button .cta-arrow{
+.gold-arrow,
+.hero-clean-actions a .gold-arrow,
+a .gold-arrow,
+button .gold-arrow{
   flex:0 0 auto!important;
   display:inline-flex!important;
   align-items:center!important;
@@ -1969,8 +1969,8 @@ button .cta-arrow{
   text-shadow:0 1px 1px rgba(0,35,70,.55)!important;
   vertical-align:middle!important;
 }
-a:hover .cta-arrow,
-button:hover .cta-arrow{
+a:hover .gold-arrow,
+button:hover .gold-arrow{
   transform:translateX(2px)!important;
   filter:brightness(1.08)!important;
 }
@@ -2074,7 +2074,7 @@ button:hover .cta-arrow{
 .brand > span:last-child{width:auto!important;height:auto!important;min-width:0!important;margin-left:0!important;border:0!important;border-radius:0!important;background:none!important;box-shadow:none!important;color:inherit!important;text-shadow:none!important}
 
 /* Every explicit CTA arrow: same centered 3D control. */
-a .cta-arrow, button .cta-arrow{
+a .gold-arrow, button .gold-arrow{
   display:inline-flex!important;align-items:center!important;justify-content:center!important;
   box-sizing:border-box!important;position:static!important;
   width:28px!important;height:28px!important;min-width:28px!important;flex:0 0 28px!important;
@@ -2085,8 +2085,8 @@ a .cta-arrow, button .cta-arrow{
   box-shadow:inset 1px 2px 3px rgba(255,255,255,.65),inset -2px -3px 4px rgba(0,38,76,.35),0 3px 7px rgba(0,61,105,.3)!important;
   text-shadow:0 1px 2px rgba(0,0,0,.4)!important;transform:none!important;
 }
-a:has(.cta-arrow){align-items:center!important}
-a:hover .cta-arrow{transform:translateX(2px)!important}
+a:has(.gold-arrow){align-items:center!important}
+a:hover .gold-arrow{transform:translateX(2px)!important}
 
 /* Wide desktop: stable hero geometry. No negative X transforms. */
 @media (min-width:1400px){
@@ -2226,7 +2226,7 @@ a:hover .cta-arrow{transform:translateX(2px)!important}
 /* CTA arrows: true vertical centering + stronger 3D volume */
 .hero-clean .arrow-3d,
 .hero-clean .arrow-orb,
-.hero-clean .cta-arrow,
+.hero-clean .gold-arrow,
 .hero-clean a [class*="arrow"]{
   display:inline-flex!important;
   align-items:center!important;
@@ -2287,7 +2287,7 @@ a:hover .cta-arrow{transform:translateX(2px)!important}
 
 
 /* Unified CTA arrows v3 — identical, bold and optically centered everywhere. */
-.cta-arrow{
+.gold-arrow{
   box-sizing:border-box!important;
   flex:0 0 34px!important;
   width:34px!important;
@@ -2308,7 +2308,7 @@ a:hover .cta-arrow{transform:translateX(2px)!important}
   position:relative!important;
   transform:none!important;
 }
-.cta-arrow::after{
+.gold-arrow::after{
   content:"➜"!important;
   position:absolute!important;
   left:50%!important;
@@ -2321,23 +2321,23 @@ a:hover .cta-arrow{transform:translateX(2px)!important}
   font-weight:900!important;
   text-shadow:0 1px 1px rgba(0,24,48,.65)!important;
 }
-a:has(>.cta-arrow),
-button:has(>.cta-arrow),
-.button:has(.cta-arrow),
+a:has(>.gold-arrow),
+button:has(>.gold-arrow),
+.button:has(.gold-arrow),
 .hero-clean-actions a{
   display:inline-flex!important;
   align-items:center!important;
 }
-a:has(>.cta-arrow)>.cta-arrow,
-button:has(>.cta-arrow)>.cta-arrow,
-.button:has(.cta-arrow)>.cta-arrow,
-.hero-clean-actions a .cta-arrow{
+a:has(>.gold-arrow)>.gold-arrow,
+button:has(>.gold-arrow)>.gold-arrow,
+.button:has(.gold-arrow)>.gold-arrow,
+.hero-clean-actions a .gold-arrow{
   margin-left:14px!important;
 }
 
 
 /* CTA normalization v4 — one compact arrow treatment for every CTA. */
-.cta-arrow{
+.gold-arrow{
   box-sizing:border-box!important;
   width:26px!important;
   height:26px!important;
@@ -2360,7 +2360,7 @@ button:has(>.cta-arrow)>.cta-arrow,
   line-height:0!important;
   vertical-align:middle!important;
 }
-.cta-arrow::after{
+.gold-arrow::after{
   content:"➜"!important;
   display:block!important;
   position:absolute!important;
@@ -2376,7 +2376,7 @@ button:has(>.cta-arrow)>.cta-arrow,
   font-weight:900!important;
   text-shadow:0 1px 1px rgba(0,35,60,.5)!important;
 }
-a:has(.cta-arrow),button:has(.cta-arrow),b:has(.cta-arrow){
+a:has(.gold-arrow),button:has(.gold-arrow),b:has(.gold-arrow){
   align-items:center!important;
 }
 .hero-clean-actions a{
@@ -2388,11 +2388,11 @@ a:has(.cta-arrow),button:has(.cta-arrow),b:has(.cta-arrow){
   align-items:center!important;
   justify-content:center!important;
 }
-.gateway-card .cta-arrow{margin-left:10px!important;}
+.gateway-card .gold-arrow{margin-left:10px!important;}
 
 
 /* CTA arrows v5 — identical visual treatment everywhere, including text links. */
-.cta-arrow{
+.gold-arrow{
   width:28px!important;height:28px!important;flex:0 0 28px!important;
   margin-left:10px!important;display:inline-flex!important;
   align-items:center!important;justify-content:center!important;
@@ -2402,15 +2402,15 @@ a:has(.cta-arrow),button:has(.cta-arrow),b:has(.cta-arrow){
   color:transparent!important;font-size:0!important;line-height:0!important;
   position:relative!important;top:auto!important;left:auto!important;transform:none!important;
 }
-.cta-arrow::after{
+.gold-arrow::after{
   content:"➜"!important;position:absolute!important;left:50%!important;top:50%!important;
   transform:translate(-50%,-51%)!important;color:#fff!important;
   font:900 16px/1 Arial,sans-serif!important;text-shadow:0 1px 1px rgba(0,28,52,.6)!important;
 }
 /* Override legacy rules that hide/shrink arrows on text links. */
-.text-link .cta-arrow,.portfolio-service-link .cta-arrow,.gateway-card .cta-arrow,
-.services-grid .cta-arrow,.projects-grid .cta-arrow,.related-links .cta-arrow,
-.button .cta-arrow,.header-phone .cta-arrow{
+.text-link .gold-arrow,.portfolio-service-link .gold-arrow,.gateway-card .gold-arrow,
+.services-grid .gold-arrow,.projects-grid .gold-arrow,.related-links .gold-arrow,
+.button .gold-arrow,.header-phone .gold-arrow{
   width:28px!important;height:28px!important;flex-basis:28px!important;
   display:inline-flex!important;opacity:1!important;visibility:visible!important;
 }
@@ -2430,11 +2430,11 @@ a:has(.cta-arrow),button:has(.cta-arrow),b:has(.cta-arrow){
   align-items:center!important;
   gap:10px!important;
 }
-.arrow-link .cta-arrow,
-.web-mobile-grid article > a .cta-arrow,
-.service-mobile-copy > a .cta-arrow,
-.expertise-gateway-card > b .cta-arrow,
-.portfolio-service-link .cta-arrow{
+.arrow-link .gold-arrow,
+.web-mobile-grid article > a .gold-arrow,
+.service-mobile-copy > a .gold-arrow,
+.expertise-gateway-card > b .gold-arrow,
+.portfolio-service-link .gold-arrow{
   width:28px!important;height:28px!important;min-width:28px!important;
   display:inline-flex!important;align-items:center!important;justify-content:center!important;
   margin:0!important;vertical-align:middle!important;
@@ -2442,7 +2442,7 @@ a:has(.cta-arrow),button:has(.cta-arrow),b:has(.cta-arrow){
 
 
 /* CTA arrows v7 — compact metallic 3D, thicker arrow, restrained glow */
-.cta-arrow{
+.gold-arrow{
   width:26px!important;
   height:26px!important;
   min-width:26px!important;
@@ -2466,7 +2466,7 @@ a:has(.cta-arrow),button:has(.cta-arrow),b:has(.cta-arrow){
   text-shadow:none!important;
   transform:none!important;
 }
-.cta-arrow::before{
+.gold-arrow::before{
   content:"➜"!important;
   display:block!important;
   font-family:Arial,sans-serif!important;
@@ -2477,9 +2477,9 @@ a:has(.cta-arrow),button:has(.cta-arrow),b:has(.cta-arrow){
   transform:translateY(-.5px)!important;
   text-shadow:0 1px 1px rgba(0,35,70,.5)!important;
 }
-.cta-arrow:hover,
-a:hover .cta-arrow,
-button:hover .cta-arrow{
+.gold-arrow:hover,
+a:hover .gold-arrow,
+button:hover .gold-arrow{
   transform:translateY(-1px)!important;
   box-shadow:
     inset 0 1px 1px rgba(255,255,255,.65),
@@ -2489,7 +2489,7 @@ button:hover .cta-arrow{
 
 
 /* CTA arrows v8 — clean single arrow, no duplicated glyph/effects */
-.cta-arrow{
+.gold-arrow{
   width:30px!important;height:30px!important;min-width:30px!important;
   display:inline-flex!important;align-items:center!important;justify-content:center!important;
   overflow:hidden!important;
@@ -2501,7 +2501,7 @@ button:hover .cta-arrow{
   box-shadow:inset 0 1px 1px rgba(255,255,255,.55),inset 0 -2px 2px rgba(0,32,60,.38),0 2px 3px rgba(0,20,45,.28)!important;
   text-shadow:none!important;
 }
-.cta-arrow::before{
+.gold-arrow::before{
   content:"→"!important;
   display:flex!important;
   align-items:center!important;
@@ -2516,11 +2516,11 @@ button:hover .cta-arrow{
   transform:translate(-1px,-1px)!important;
   text-shadow:0 1px 1px rgba(0,25,50,.45)!important;
 }
-.cta-arrow::after{content:none!important;display:none!important;}
+.gold-arrow::after{content:none!important;display:none!important;}
 
 
 /* CTA arrows v9 — final clean badge: short bold chevron, no long shaft */
-.cta-arrow{
+.gold-arrow{
   width:28px!important;height:28px!important;min-width:28px!important;
   display:inline-flex!important;align-items:center!important;justify-content:center!important;
   overflow:hidden!important;border-radius:50%!important;
@@ -2529,7 +2529,7 @@ button:hover .cta-arrow{
   background:linear-gradient(180deg,#28b9e8 0%,#087eae 56%,#055b82 100%)!important;
   box-shadow:inset 0 1px 1px rgba(255,255,255,.5),inset 0 -1px 2px rgba(0,30,55,.38),0 2px 3px rgba(0,20,40,.25)!important;
 }
-.cta-arrow::before{
+.gold-arrow::before{
   content:"›"!important;
   display:flex!important;align-items:center!important;justify-content:center!important;
   width:100%!important;height:100%!important;
@@ -2539,7 +2539,7 @@ button:hover .cta-arrow{
   transform:translate(0,-2px)!important;
   text-shadow:0 1px 1px rgba(0,30,55,.45)!important;
 }
-.cta-arrow::after{content:none!important;display:none!important;}
+.gold-arrow::after{content:none!important;display:none!important;}
 
 
 /* CTA arrows v10 — ensure web-focus card arrows render as badges */
@@ -2548,7 +2548,7 @@ button:hover .cta-arrow{
   align-items:center!important;
   gap:12px!important;
 }
-.web-focus .web-mobile-grid article > a.arrow-link > .cta-arrow{
+.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow{
   width:28px!important;height:28px!important;min-width:28px!important;
   display:inline-flex!important;align-items:center!important;justify-content:center!important;
   position:relative!important;
@@ -2559,7 +2559,7 @@ button:hover .cta-arrow{
   background:linear-gradient(180deg,#32c7f4 0%,#0785b9 58%,#04577f 100%)!important;
   box-shadow:inset 0 1px 1px rgba(255,255,255,.55),inset 0 -2px 2px rgba(0,30,55,.38),0 2px 4px rgba(0,35,65,.3)!important;
 }
-.web-focus .web-mobile-grid article > a.arrow-link > .cta-arrow::before{
+.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow::before{
   content:"›"!important;
   display:flex!important;align-items:center!important;justify-content:center!important;
   position:absolute!important;inset:0!important;
@@ -2570,8 +2570,8 @@ button:hover .cta-arrow{
 
 
 /* CTA arrows v11 — minimal premium treatment, no orb */
-.cta-arrow,
-.web-focus .web-mobile-grid article > a.arrow-link > .cta-arrow{
+.gold-arrow,
+.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow{
   width:auto!important;height:auto!important;min-width:0!important;
   display:inline-flex!important;align-items:center!important;justify-content:center!important;
   position:static!important;overflow:visible!important;
@@ -2580,8 +2580,8 @@ button:hover .cta-arrow{
   color:transparent!important;font-size:0!important;
   margin-left:8px!important;
 }
-.cta-arrow::before,
-.web-focus .web-mobile-grid article > a.arrow-link > .cta-arrow::before{
+.gold-arrow::before,
+.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow::before{
   content:"➜"!important;
   position:static!important;inset:auto!important;
   display:inline-block!important;
@@ -2592,13 +2592,13 @@ button:hover .cta-arrow{
   transform:none!important;
   text-shadow:0 1px 0 rgba(255,255,255,.3),0 2px 2px rgba(0,49,82,.2)!important;
 }
-.cta-arrow::after,
-.web-focus .web-mobile-grid article > a.arrow-link > .cta-arrow::after{content:none!important;display:none!important;}
+.gold-arrow::after,
+.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow::after{content:none!important;display:none!important;}
 
 
 /* CTA arrows v12 — hard reset all legacy orb effects */
-.cta-arrow,
-.web-focus .web-mobile-grid article > a.arrow-link > .cta-arrow{
+.gold-arrow,
+.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow{
   all:unset!important;
   display:inline-flex!important;
   align-items:center!important;
@@ -2616,8 +2616,8 @@ button:hover .cta-arrow{
   text-shadow:none!important;
   transform:none!important;
 }
-.cta-arrow::before,
-.web-focus .web-mobile-grid article > a.arrow-link > .cta-arrow::before{
+.gold-arrow::before,
+.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow::before{
   content:"→"!important;
   all:unset!important;
   display:block!important;
@@ -2625,8 +2625,8 @@ button:hover .cta-arrow{
   font:900 22px/1 Arial,sans-serif!important;
   text-shadow:0 1px 1px rgba(0,0,0,.22)!important;
 }
-.cta-arrow::after,
-.web-focus .web-mobile-grid article > a.arrow-link > .cta-arrow::after{
+.gold-arrow::after,
+.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow::after{
   content:none!important;
   display:none!important;
 }
@@ -2771,7 +2771,7 @@ button:hover .cta-arrow{
 
 
 /* Hero CTA arrows: one glyph only, no generated duplicate */
-.hero-clean-actions .cta-arrow{
+.hero-clean-actions .gold-arrow{
   display:inline-block!important;
   margin-left:12px!important;
   width:auto!important;height:auto!important;
@@ -2782,8 +2782,8 @@ button:hover .cta-arrow{
   font:900 22px/1 Arial,sans-serif!important;
   line-height:1!important;
 }
-.hero-clean-actions .cta-arrow::before,
-.hero-clean-actions .cta-arrow::after{content:none!important;display:none!important;}
+.hero-clean-actions .gold-arrow::before,
+.hero-clean-actions .gold-arrow::after{content:none!important;display:none!important;}
 
 
 /* Web cards CTA FINAL — force real buttons despite legacy rules */
@@ -2805,7 +2805,7 @@ button:hover .cta-arrow{
   text-decoration:none!important;
   box-shadow:0 5px 14px rgba(7,76,126,.14)!important;
 }
-.web-focus .web-mobile-grid article > a.web-card-button.hero-clean-primary .cta-arrow{
+.web-focus .web-mobile-grid article > a.web-card-button.hero-clean-primary .gold-arrow{
   display:inline-block!important;
   margin-left:14px!important;
   color:#fff!important;
@@ -2814,8 +2814,8 @@ button:hover .cta-arrow{
   box-shadow:none!important;
   font:900 22px/1 Arial,sans-serif!important;
 }
-.web-focus .web-mobile-grid article > a.web-card-button.hero-clean-primary .cta-arrow::before,
-.web-focus .web-mobile-grid article > a.web-card-button.hero-clean-primary .cta-arrow::after{
+.web-focus .web-mobile-grid article > a.web-card-button.hero-clean-primary .gold-arrow::before,
+.web-focus .web-mobile-grid article > a.web-card-button.hero-clean-primary .gold-arrow::after{
   content:none!important;display:none!important;
 }
 
@@ -2888,8 +2888,8 @@ button:hover .cta-arrow{
 }
 
 
-/* FIX: page.tsx uses .cta-arrow in web cards; restore the established circular 3D arrow */
-.web-focus .web-mobile-grid article>a.web-card-button.hero-clean-primary .cta-arrow{
+/* FIX: page.tsx uses .gold-arrow in web cards; restore the established circular 3D arrow */
+.web-focus .web-mobile-grid article>a.web-card-button.hero-clean-primary .gold-arrow{
   box-sizing:border-box!important;
   display:inline-flex!important;
   align-items:center!important;
@@ -2906,8 +2906,8 @@ button:hover .cta-arrow{
   text-shadow:0 1px 1px rgba(0,43,73,.45)!important;
   box-shadow:inset 0 2px 2px rgba(255,255,255,.72),inset 0 -3px 4px rgba(0,54,86,.38),0 4px 9px rgba(0,77,120,.32)!important;
 }
-.web-focus .web-mobile-grid article>a.web-card-button.hero-clean-primary .cta-arrow::before,
-.web-focus .web-mobile-grid article>a.web-card-button.hero-clean-primary .cta-arrow::after{
+.web-focus .web-mobile-grid article>a.web-card-button.hero-clean-primary .gold-arrow::before,
+.web-focus .web-mobile-grid article>a.web-card-button.hero-clean-primary .gold-arrow::after{
   content:none!important;
   display:none!important;
 }
@@ -2928,7 +2928,7 @@ button:hover .cta-arrow{
 
 
 /* Global CTA arrows — gold 3D, CSS only */
-.cta-arrow{
+.gold-arrow{
   border-color:#fff0ad!important;
   background:linear-gradient(180deg,#fff2a8 0%,#f4c542 32%,#d99a12 67%,#9b6500 100%)!important;
   color:#fff!important;
@@ -2946,7 +2946,7 @@ button:hover .cta-arrow{
   border-color:#17284f!important;
   color:#fff!important;
 }
-.cta-arrow{
+.gold-arrow{
   border:1px solid #fff1a3!important;
   background:linear-gradient(180deg,#fff8bf 0%,#ffd84d 24%,#f2b51d 52%,#c98200 78%,#8d5700 100%)!important;
   color:#fff!important;
@@ -2960,7 +2960,7 @@ button:hover .cta-arrow{
 
 
 /* Gold CTA arrows — unified */
-.cta-arrow{
+.gold-arrow{
   background:linear-gradient(145deg,#fff7b0 0%,#ffd84a 22%,#e9a900 50%,#b87300 76%,#704000 100%)!important;
   border:1px solid #ffe783!important;
   color:#fff!important;
@@ -2973,16 +2973,20 @@ button:hover .cta-arrow{
 }
 
 
-/* GOLD ARROW — isolated from legacy .cta-arrow rules */
-.gold-arrow{
+/* GOLD ARROWS FINAL — all CTA arrows, one visual treatment */
+.gold-arrow,
+.hero-clean-actions .gold-arrow,
+.web-focus .web-mobile-grid article>a.web-card-button.hero-clean-primary .gold-arrow,
+.button-dark .gold-arrow,
+.hero-clean-secondary .gold-arrow{
   box-sizing:border-box!important;
   display:inline-flex!important;
   align-items:center!important;
   justify-content:center!important;
-  vertical-align:middle!important;
   width:30px!important;
   height:30px!important;
   min-width:30px!important;
+  min-height:30px!important;
   flex:0 0 30px!important;
   margin-left:10px!important;
   padding:0!important;
@@ -2991,9 +2995,8 @@ button:hover .cta-arrow{
   background:linear-gradient(145deg,#fff9bf 0%,#ffe25a 20%,#f5bd22 48%,#cf8700 76%,#8b5200 100%)!important;
   color:#fff!important;
   font:900 18px/1 Arial,sans-serif!important;
-  text-align:center!important;
   text-shadow:0 1px 2px rgba(92,52,0,.9)!important;
   box-shadow:inset 2px 2px 3px rgba(255,255,255,.9),inset -2px -3px 4px rgba(92,50,0,.5),0 0 8px rgba(255,190,20,.68),0 3px 7px rgba(73,45,0,.3)!important;
 }
 .gold-arrow::before,.gold-arrow::after{content:none!important;display:none!important;}
-a:hover .gold-arrow{filter:brightness(1.08)!important;transform:translateX(2px)!important;}
+a:hover .gold-arrow{filter:brightness(1.08)!important;}
