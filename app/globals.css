@@ -2473,3 +2473,46 @@ a > span:last-child.gold-arrow,
   transform:none!important;
 }
 a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;display:none!important;}
+
+
+/* Envol case-study proof */
+.portfolio-proof{
+  margin:22px 0 20px;
+  padding:18px 20px;
+  border-left:3px solid #d99a12;
+  background:#f7f9fc;
+}
+.portfolio-proof strong{
+  display:block;
+  margin-bottom:10px;
+  color:#10234d;
+  font-size:14px;
+}
+.portfolio-proof ul{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:7px 22px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.portfolio-proof li{
+  position:relative;
+  padding-left:16px;
+  color:#526987;
+  font-size:13px;
+  line-height:1.45;
+}
+.portfolio-proof li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.58em;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#d99a12;
+}
+@media(max-width:760px){
+  .portfolio-proof ul{grid-template-columns:1fr;}
+}
