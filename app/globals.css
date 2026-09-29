@@ -2628,3 +2628,6 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
 .thank-you h1 em{font-family:Georgia,serif;font-weight:400;color:#357ea5}
 .thank-you>p{max-width:620px;color:#526987;font-size:15px;line-height:1.8}
 .thank-you .hero-actions{margin-top:30px}
+
+/* Yellow CTA arrows removed */
+.gold-arrow{display:none!important}
