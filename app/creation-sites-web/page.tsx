@@ -3,29 +3,29 @@ import { DetailPage } from "../components";
 import { pageMetadata } from "../seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Création de sites web à Nicolet, Bécancour et Trois-Rivières",
-  description: "Création de sites web professionnels pour PME et travailleurs autonomes à Nicolet, Bécancour et Trois-Rivières. Sites vitrines, e-commerce et CMS sur mesure.",
+  title: "Création et conception de sites web à Nicolet | AIP",
+  description: "Créateur et concepteur de sites web à Nicolet : création Web, conception et développement de sites sur mesure pour PME, boutiques en ligne et CMS.",
   path: "/creation-sites-web",
   image: "/aip-travail-13.webp",
 });
 
 export default function Page() {
   return <DetailPage
-    eyebrow="Création de sites web · Centre-du-Québec"
+    eyebrow="Création · Conception · Développement Web"
     image="/aip-travail-13.webp"
     imageAlt="Aperçu d’un site web professionnel réalisé sur mesure par Atelier Informatique Potvin"
-    title="Création de sites web à Nicolet."
-    accent="Pour les entreprises d’ici."
-    intro="Sites web professionnels pour PME, artisans et travailleurs autonomes de Nicolet, Bécancour, Trois-Rivières et des environs. Site vitrine, boutique en ligne ou CMS sur mesure : chaque projet est conçu pour être clair, rapide et facile à trouver sur Google."
+    title="Création et conception de sites web à Nicolet."
+    accent="Un créateur Web local pour les entreprises d’ici."
+    intro="AIP est un créateur et concepteur de sites Web à Nicolet pour les PME, artisans et travailleurs autonomes. Création Web, conception et développement de sites sur mesure, site vitrine, boutique en ligne ou CMS : chaque projet est pensé pour être clair, rapide et facile à trouver sur Google."
     points={[
-      { title: "Design professionnel sur mesure", text: "Une identité visuelle adaptée à votre entreprise, à vos clients et à votre marché. Pas de modèle générique : le site est construit autour de vos services et de votre image." },
+      { title: "Conception Web professionnelle sur mesure", text: "Un site Web sur mesure avec une identité visuelle adaptée à votre entreprise, à vos clients et à votre marché. Pas de modèle générique : la conception Web est construite autour de vos services et de votre image." },
       { title: "Référencement local", text: "Structure, titres, contenu et pages pensés pour aider Google à comprendre vos services et les secteurs que vous desservez, notamment Nicolet, Bécancour et Trois-Rivières." },
       { title: "Sites vitrines pour PME", text: "Une présence web claire pour présenter votre entreprise, vos services, vos réalisations, vos coordonnées et convertir davantage de visiteurs en appels ou demandes de soumission." },
       { title: "E-commerce et CMS sur mesure", text: "Besoin de vendre en ligne ou de gérer votre contenu? Je peux développer une boutique, un catalogue, une administration personnalisée ou des fonctionnalités adaptées à votre fonctionnement." },
       { title: "Rapide et adapté au mobile", text: "Navigation claire, textes lisibles et affichage conçu pour téléphone, tablette et ordinateur. La performance et l’expérience utilisateur font partie du projet dès le départ." },
-      { title: "Conception et accompagnement local", text: "Vous échangez directement avec Patrick Potvin, à Nicolet, de la première discussion jusqu’à la mise en ligne. Un seul interlocuteur pour la conception, les ajustements et le suivi." },
+      { title: "Un créateur de site Web local", text: "Vous échangez directement avec Patrick Potvin, à Nicolet, de la première discussion jusqu’à la mise en ligne. Un seul interlocuteur pour la conception, le développement Web, les ajustements et le suivi." },
     ]}
-    asideTitle="Un site conçu pour générer des contacts."
+    asideTitle="Un site Web sur mesure conçu pour générer des contacts."
     asideText="Un bon site ne sert pas seulement à être présent sur Internet. Il doit expliquer rapidement ce que vous faites, rassurer vos futurs clients et leur donner une raison claire de vous contacter."
     links={[
       { href: "/creation-site-web-nicolet", label: "Création Web à Nicolet" },
@@ -44,7 +44,7 @@ export default function Page() {
     ]}
     priceLabel="Site vitrine de base à partir de 900 $"
     priceText="Un site vitrine de base débute à 900 $. Le prix varie ensuite selon le nombre de pages, le contenu, les intégrations et les fonctionnalités dont votre entreprise a réellement besoin."
-    areaText="Création de sites web pour les entreprises de Nicolet, Bécancour, Trois-Rivières, Saint-Célestin et des environs. Les projets web peuvent aussi être réalisés entièrement à distance."
+    areaText="Création, conception et développement de sites Web pour les entreprises de Nicolet, Bécancour, Trois-Rivières, Saint-Célestin et des environs. Les projets Web peuvent aussi être réalisés entièrement à distance."
     faqs={[
       { question: "Combien coûte la création d’un site web?", answer: "Un site vitrine de base débute à 900 $. Le prix varie ensuite selon le nombre de pages, le contenu, les intégrations et les fonctionnalités nécessaires. Une estimation est préparée selon votre projet." },
       { question: "Est-ce que mon site sera visible sur Google?", answer: "Le site est construit avec une structure technique et un contenu adaptés au référencement. Le positionnement dépend ensuite de la concurrence, de la pertinence du contenu et de l’autorité acquise avec le temps." },
