@@ -2863,3 +2863,26 @@ button:hover .cta-arrow{
   .web-focus .web-mobile-grid{grid-template-columns:1fr!important}
   .web-focus .web-mobile-grid article>img{height:210px!important}
 }
+
+
+/* Web cards CTA — restore the established circular arrow-button language */
+.web-focus .web-mobile-grid article>a.web-card-button{
+  justify-content:space-between!important;
+}
+.web-focus .web-mobile-grid article>a.web-card-button .web-card-arrow{
+  all:unset!important;
+  box-sizing:border-box!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:38px!important;
+  height:38px!important;
+  flex:0 0 38px!important;
+  margin-left:16px!important;
+  border-radius:50%!important;
+  border:1px solid rgba(255,255,255,.92)!important;
+  background:linear-gradient(180deg,#39c8f3 0%,#0b91c8 55%,#05638d 100%)!important;
+  color:#fff!important;
+  font:900 22px/1 Arial,sans-serif!important;
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.7),inset 0 -2px 2px rgba(0,43,73,.32),0 3px 7px rgba(0,55,90,.28)!important;
+}
