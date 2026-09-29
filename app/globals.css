@@ -2554,9 +2554,11 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
 
 /* Envol CMS row — second grid row spanning the complete project */
 .portfolio-project-envol .portfolio-envol-cms-row{grid-column:1/-1;border-top:1px solid var(--line);padding:22px 48px 26px}
-.portfolio-project-envol .portfolio-envol-cms-row .envol-cms-showcase{display:grid;grid-template-columns:240px minmax(0,1fr);gap:14px;align-items:start;margin:0;max-width:none}
+.portfolio-project-envol .portfolio-envol-cms-row .envol-cms-showcase{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start;margin:0;max-width:none}
 .portfolio-project-envol .portfolio-envol-cms-row .envol-cms-main{max-width:none}
-.portfolio-project-envol .portfolio-envol-cms-row .envol-cms-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0}
+.portfolio-project-envol .portfolio-envol-cms-row .envol-cms-main img{width:100%;aspect-ratio:auto;object-fit:contain}
+.portfolio-project-envol .portfolio-envol-cms-row .envol-cms-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0}
+.portfolio-project-envol .portfolio-envol-cms-row .envol-cms-grid img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
 @media(max-width:760px){
  .portfolio-project-envol .portfolio-envol-cms-row{grid-column:1;padding:18px 22px 22px}
  .portfolio-project-envol .portfolio-envol-cms-row .envol-cms-showcase{grid-template-columns:1fr}
