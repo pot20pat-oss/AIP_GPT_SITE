@@ -14,10 +14,11 @@ export default function Home() {
   return (
     <main>
       <SiteHeader />
-      <section className="hero-clean" id="accueil">
-        <img className="hero-clean-bg" src="/hero-aip-clean.png" alt="Atelier Informatique Potvin" fetchPriority="high" decoding="async" />
-        <div className="hero-clean-overlay">
-          <img className="hero-clean-logo" src="/logo-aip-glow.png" alt="AIP" decoding="async" />
+      <section className="hero-clean hero-split" id="accueil">
+        <div className="hero-split-media">
+          <img className="hero-clean-bg" src="/hero-aip-clean.png" alt="Atelier Informatique Potvin" fetchPriority="high" decoding="async" />
+        </div>
+        <div className="hero-clean-overlay hero-split-copy">
           <div className="hero-clean-brand">ATELIER INFORMATIQUE{" "}<strong>POTVIN</strong></div>
           <div className="hero-clean-location">● &nbsp; NICOLET · BÉCANCOUR · TROIS-RIVIÈRES</div>
           <h1>Création de sites Web<span>.</span></h1>
