@@ -2439,3 +2439,37 @@ a:active > span:last-child{
 }
 .gold-arrow::before,.gold-arrow::after{content:none!important;display:none!important;}
 a:hover .gold-arrow{filter:brightness(1.08)!important;}
+
+
+/* FINAL CTA ARROW OVERRIDE — actual rendered spans, beats legacy generic span rules */
+a > span.gold-arrow,
+a > span:last-child.gold-arrow,
+.hero-clean-actions a > span.gold-arrow,
+.web-focus .web-mobile-grid article > a.web-card-button > span.gold-arrow,
+.service-mobile-copy > a > span.gold-arrow,
+.portfolio-copy a > span.gold-arrow,
+.local-area-grid a > span.gold-arrow,
+.related-links a > span.gold-arrow,
+.header-phone > span.gold-arrow{
+  all:unset!important;
+  box-sizing:border-box!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:30px!important;height:30px!important;
+  min-width:30px!important;min-height:30px!important;
+  flex:0 0 30px!important;
+  margin-left:10px!important;
+  border:1px solid #fff0a0!important;
+  border-radius:999px!important;
+  background:#e7aa00!important;
+  background-image:linear-gradient(145deg,#fff6a0 0%,#ffd126 28%,#e5a400 58%,#9c6000 100%)!important;
+  color:#fff!important;
+  font:900 18px/30px Arial,sans-serif!important;
+  text-align:center!important;
+  text-shadow:0 1px 2px #5f3500!important;
+  box-shadow:inset 2px 2px 3px rgba(255,255,255,.92),inset -2px -3px 4px rgba(91,50,0,.48),0 0 10px rgba(235,174,0,.72),0 3px 7px rgba(73,45,0,.28)!important;
+  filter:none!important;
+  transform:none!important;
+}
+a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;display:none!important;}
