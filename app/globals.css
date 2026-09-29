@@ -1855,76 +1855,8 @@ a:active > span:last-child{
 }
 
 
-/* CTA ARROWS — one centered 3D treatment everywhere. */
-.gold-arrow{
-  display:inline-flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  vertical-align:middle!important;
-  width:30px!important;
-  height:30px!important;
-  min-width:30px!important;
-  flex:0 0 30px!important;
-  margin-left:10px!important;
-  padding:0!important;
-  border-radius:50%!important;
-  color:#fff!important;
-  font:900 17px/1 Arial,sans-serif!important;
-  text-align:center!important;
-  background:linear-gradient(145deg,#6bd8ff 0%,#1aaeea 42%,#087bb9 72%,#07547f 100%)!important;
-  border:1px solid rgba(255,255,255,.72)!important;
-  box-shadow:inset 2px 2px 4px rgba(255,255,255,.65),inset -3px -3px 5px rgba(0,35,68,.38),0 3px 7px rgba(0,40,75,.35)!important;
-  text-shadow:0 1px 2px rgba(0,0,0,.45)!important;
-  transform:translateY(0)!important;
-  transition:transform .16s ease,filter .16s ease,box-shadow .16s ease!important;
-}
-a:hover .gold-arrow{
-  transform:translateX(3px) scale(1.08)!important;
-  filter:brightness(1.1)!important;
-}
-.button-dark .gold-arrow,.hero-clean-secondary .gold-arrow{
-  background:linear-gradient(145deg,#d8e0e6 0%,#8b9aa7 45%,#596875 72%,#35424d 100%)!important;
-}
-.portfolio-service-link .gold-arrow,
-.web-package-card .gold-arrow,
-.web-mobile-grid .gold-arrow,
-.service-mobile-card .gold-arrow{
-  width:25px!important;height:25px!important;min-width:25px!important;flex-basis:25px!important;font-size:14px!important;margin-left:8px!important;
-}
-/* Prevent older generic span-arrow CSS from creating a second arrow. */
-a:has(.gold-arrow)::after{display:none!important;content:none!important}
-
-
 /* HERO TEXT PANEL — remove the dark translucent box requested by user. */
 .hero-clean-overlay:before{display:none!important;content:none!important;background:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
-
-/* Arrow alignment: CTA text and 3D arrow share the same centered flex row. */
-.hero-clean-actions a,
-.button:has(.gold-arrow),
-.web-mobile-grid a:has(.gold-arrow),
-.service-mobile-card a:has(.gold-arrow),
-.portfolio-service-link:has(.gold-arrow),
-.web-package-card a:has(.gold-arrow),
-.expertise-gateway-card b:has(.gold-arrow){
-  display:flex!important;
-  align-items:center!important;
-}
-.hero-clean-actions a,
-.button:has(.gold-arrow){justify-content:center!important}
-.web-mobile-grid a:has(.gold-arrow),
-.service-mobile-card a:has(.gold-arrow),
-.portfolio-service-link:has(.gold-arrow),
-.web-package-card a:has(.gold-arrow){width:max-content!important}
-.gold-arrow{
-  position:relative!important;
-  top:0!important;
-  right:auto!important;
-  bottom:auto!important;
-  left:auto!important;
-  transform:none!important;
-  margin-top:0!important;
-  margin-bottom:0!important;
-}
 
 
 /* 2026-09-28 — hero copy farther left on wide screens */
@@ -1936,43 +1868,6 @@ a:has(.gold-arrow)::after{display:none!important;content:none!important}
 }
 @media (min-width:1800px){
   .hero-clean-overlay{transform:translateX(-155px)!important}
-}
-
-/* Unified 3D CTA arrows — CSS only, no generated image */
-.gold-arrow,
-.hero-clean-actions a .gold-arrow,
-a .gold-arrow,
-button .gold-arrow{
-  flex:0 0 auto!important;
-  display:inline-flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  width:28px!important;
-  height:28px!important;
-  min-width:28px!important;
-  min-height:28px!important;
-  margin-left:12px!important;
-  padding:0!important;
-  border-radius:999px!important;
-  border:1px solid rgba(255,255,255,.78)!important;
-  background:linear-gradient(145deg,#42c8ff 0%,#159bd7 48%,#0876ad 100%)!important;
-  color:#fff!important;
-  font-size:16px!important;
-  font-family:Arial,sans-serif!important;
-  font-weight:900!important;
-  line-height:1!important;
-  text-decoration:none!important;
-  box-shadow:
-    inset 0 2px 2px rgba(255,255,255,.58),
-    inset 0 -3px 5px rgba(0,43,78,.38),
-    0 3px 7px rgba(0,79,130,.30)!important;
-  text-shadow:0 1px 1px rgba(0,35,70,.55)!important;
-  vertical-align:middle!important;
-}
-a:hover .gold-arrow,
-button:hover .gold-arrow{
-  transform:translateX(2px)!important;
-  filter:brightness(1.08)!important;
 }
 
 
@@ -2072,21 +1967,6 @@ button:hover .gold-arrow{
 /* Do NOT turn arbitrary last spans into arrows. */
 .header-phone > span:last-child,
 .brand > span:last-child{width:auto!important;height:auto!important;min-width:0!important;margin-left:0!important;border:0!important;border-radius:0!important;background:none!important;box-shadow:none!important;color:inherit!important;text-shadow:none!important}
-
-/* Every explicit CTA arrow: same centered 3D control. */
-a .gold-arrow, button .gold-arrow{
-  display:inline-flex!important;align-items:center!important;justify-content:center!important;
-  box-sizing:border-box!important;position:static!important;
-  width:28px!important;height:28px!important;min-width:28px!important;flex:0 0 28px!important;
-  margin:0 0 0 10px!important;padding:0!important;
-  border-radius:50%!important;border:1px solid rgba(255,255,255,.78)!important;
-  background:linear-gradient(145deg,#63d8ff 0%,#18a7e4 45%,#0877b2 100%)!important;
-  color:#fff!important;font:900 15px/28px Arial,sans-serif!important;text-align:center!important;
-  box-shadow:inset 1px 2px 3px rgba(255,255,255,.65),inset -2px -3px 4px rgba(0,38,76,.35),0 3px 7px rgba(0,61,105,.3)!important;
-  text-shadow:0 1px 2px rgba(0,0,0,.4)!important;transform:none!important;
-}
-a:has(.gold-arrow){align-items:center!important}
-a:hover .gold-arrow{transform:translateX(2px)!important}
 
 /* Wide desktop: stable hero geometry. No negative X transforms. */
 @media (min-width:1400px){
@@ -2221,40 +2101,6 @@ a:hover .gold-arrow{transform:translateX(2px)!important}
     object-position:center 45%!important;
   }
 }
-
-
-/* CTA arrows: true vertical centering + stronger 3D volume */
-.hero-clean .arrow-3d,
-.hero-clean .arrow-orb,
-.hero-clean .gold-arrow,
-.hero-clean a [class*="arrow"]{
-  display:inline-flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  vertical-align:middle!important;
-  flex:0 0 auto!important;
-  width:34px!important;
-  height:34px!important;
-  margin:0 0 0 16px!important;
-  padding:0!important;
-  border-radius:50%!important;
-  border:1px solid rgba(255,255,255,.85)!important;
-  background:
-    radial-gradient(circle at 32% 24%,rgba(255,255,255,.95) 0 5%,rgba(255,255,255,.28) 18%,transparent 36%),
-    linear-gradient(145deg,#59d5ff 0%,#12aeea 38%,#0877ae 68%,#03496e 100%)!important;
-  box-shadow:
-    inset 0 2px 2px rgba(255,255,255,.75),
-    inset 0 -5px 8px rgba(0,35,68,.55),
-    0 3px 0 #033d60,
-    0 6px 12px rgba(0,25,55,.42),
-    0 0 10px rgba(25,190,255,.4)!important;
-  color:#fff!important;
-  font-size:19px!important;
-  font-weight:900!important;
-  line-height:1!important;
-  text-shadow:0 1px 1px rgba(0,0,0,.45)!important;
-  transform:translateY(-1px)!important;
-}
 .hero-clean a{
   align-items:center!important;
 }
@@ -2284,101 +2130,6 @@ a:hover .gold-arrow{transform:translateX(2px)!important}
   letter-spacing:.02em!important;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 5px 14px rgba(0,0,0,.16)!important;
 }
-
-
-/* Unified CTA arrows v3 — identical, bold and optically centered everywhere. */
-.gold-arrow{
-  box-sizing:border-box!important;
-  flex:0 0 34px!important;
-  width:34px!important;
-  height:34px!important;
-  margin:0!important;
-  padding:0!important;
-  display:inline-flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  vertical-align:middle!important;
-  border-radius:999px!important;
-  border:1px solid rgba(255,255,255,.82)!important;
-  background:linear-gradient(145deg,#56d7ff 0%,#079bd9 48%,#05699f 100%)!important;
-  color:transparent!important;
-  font-size:0!important;
-  line-height:0!important;
-  box-shadow:inset 0 2px 2px rgba(255,255,255,.68),inset 0 -3px 4px rgba(0,31,66,.34),0 4px 10px rgba(0,73,122,.30)!important;
-  position:relative!important;
-  transform:none!important;
-}
-.gold-arrow::after{
-  content:"➜"!important;
-  position:absolute!important;
-  left:50%!important;
-  top:50%!important;
-  transform:translate(-50%,-52%)!important;
-  color:#fff!important;
-  font-family:Arial,sans-serif!important;
-  font-size:19px!important;
-  line-height:1!important;
-  font-weight:900!important;
-  text-shadow:0 1px 1px rgba(0,24,48,.65)!important;
-}
-a:has(>.gold-arrow),
-button:has(>.gold-arrow),
-.button:has(.gold-arrow),
-.hero-clean-actions a{
-  display:inline-flex!important;
-  align-items:center!important;
-}
-a:has(>.gold-arrow)>.gold-arrow,
-button:has(>.gold-arrow)>.gold-arrow,
-.button:has(.gold-arrow)>.gold-arrow,
-.hero-clean-actions a .gold-arrow{
-  margin-left:14px!important;
-}
-
-
-/* CTA normalization v4 — one compact arrow treatment for every CTA. */
-.gold-arrow{
-  box-sizing:border-box!important;
-  width:26px!important;
-  height:26px!important;
-  flex:0 0 26px!important;
-  margin-left:10px!important;
-  padding:0!important;
-  display:inline-flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  position:relative!important;
-  top:0!important;
-  left:0!important;
-  transform:none!important;
-  border-radius:50%!important;
-  border:1px solid rgba(255,255,255,.72)!important;
-  background:linear-gradient(145deg,#52d8ff 0%,#109fd9 48%,#0871a8 100%)!important;
-  box-shadow:inset 0 1px 1px rgba(255,255,255,.72),inset 0 -2px 3px rgba(0,45,82,.32),0 3px 7px rgba(0,92,145,.24)!important;
-  color:transparent!important;
-  font-size:0!important;
-  line-height:0!important;
-  vertical-align:middle!important;
-}
-.gold-arrow::after{
-  content:"➜"!important;
-  display:block!important;
-  position:absolute!important;
-  left:50%!important;
-  top:50%!important;
-  transform:translate(-50%,-50%)!important;
-  width:auto!important;
-  height:auto!important;
-  color:#fff!important;
-  font-family:Arial,sans-serif!important;
-  font-size:15px!important;
-  line-height:1!important;
-  font-weight:900!important;
-  text-shadow:0 1px 1px rgba(0,35,60,.5)!important;
-}
-a:has(.gold-arrow),button:has(.gold-arrow),b:has(.gold-arrow){
-  align-items:center!important;
-}
 .hero-clean-actions a{
   justify-content:center!important;
   gap:0!important;
@@ -2387,32 +2138,6 @@ a:has(.gold-arrow),button:has(.gold-arrow),b:has(.gold-arrow){
   display:inline-flex!important;
   align-items:center!important;
   justify-content:center!important;
-}
-.gateway-card .gold-arrow{margin-left:10px!important;}
-
-
-/* CTA arrows v5 — identical visual treatment everywhere, including text links. */
-.gold-arrow{
-  width:28px!important;height:28px!important;flex:0 0 28px!important;
-  margin-left:10px!important;display:inline-flex!important;
-  align-items:center!important;justify-content:center!important;
-  border-radius:50%!important;border:1px solid rgba(255,255,255,.85)!important;
-  background:linear-gradient(145deg,#5cddff 0%,#10a6df 46%,#086c9e 100%)!important;
-  box-shadow:inset 0 2px 2px rgba(255,255,255,.72),inset 0 -2px 3px rgba(0,42,76,.38),0 3px 8px rgba(0,92,145,.30)!important;
-  color:transparent!important;font-size:0!important;line-height:0!important;
-  position:relative!important;top:auto!important;left:auto!important;transform:none!important;
-}
-.gold-arrow::after{
-  content:"➜"!important;position:absolute!important;left:50%!important;top:50%!important;
-  transform:translate(-50%,-51%)!important;color:#fff!important;
-  font:900 16px/1 Arial,sans-serif!important;text-shadow:0 1px 1px rgba(0,28,52,.6)!important;
-}
-/* Override legacy rules that hide/shrink arrows on text links. */
-.text-link .gold-arrow,.portfolio-service-link .gold-arrow,.gateway-card .gold-arrow,
-.services-grid .gold-arrow,.projects-grid .gold-arrow,.related-links .gold-arrow,
-.button .gold-arrow,.header-phone .gold-arrow{
-  width:28px!important;height:28px!important;flex-basis:28px!important;
-  display:inline-flex!important;opacity:1!important;visibility:visible!important;
 }
 .text-link,.portfolio-service-link,.gateway-card b,.services-grid a,.projects-grid a,
 .related-links a,.button,.header-phone{
@@ -2430,116 +2155,6 @@ a:has(.gold-arrow),button:has(.gold-arrow),b:has(.gold-arrow){
   align-items:center!important;
   gap:10px!important;
 }
-.arrow-link .gold-arrow,
-.web-mobile-grid article > a .gold-arrow,
-.service-mobile-copy > a .gold-arrow,
-.expertise-gateway-card > b .gold-arrow,
-.portfolio-service-link .gold-arrow{
-  width:28px!important;height:28px!important;min-width:28px!important;
-  display:inline-flex!important;align-items:center!important;justify-content:center!important;
-  margin:0!important;vertical-align:middle!important;
-}
-
-
-/* CTA arrows v7 — compact metallic 3D, thicker arrow, restrained glow */
-.gold-arrow{
-  width:26px!important;
-  height:26px!important;
-  min-width:26px!important;
-  border-radius:50%!important;
-  display:inline-flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  box-sizing:border-box!important;
-  margin:0!important;
-  color:#fff!important;
-  font-size:0!important;
-  line-height:1!important;
-  border:1px solid rgba(255,255,255,.72)!important;
-  background:
-    radial-gradient(circle at 34% 25%,rgba(255,255,255,.72) 0 8%,rgba(255,255,255,.18) 20%,transparent 38%),
-    linear-gradient(145deg,#38c8f3 0%,#078ec7 48%,#035b8f 100%)!important;
-  box-shadow:
-    inset 0 1px 1px rgba(255,255,255,.58),
-    inset 0 -2px 3px rgba(0,31,65,.48),
-    0 2px 4px rgba(0,26,55,.32)!important;
-  text-shadow:none!important;
-  transform:none!important;
-}
-.gold-arrow::before{
-  content:"➜"!important;
-  display:block!important;
-  font-family:Arial,sans-serif!important;
-  font-size:17px!important;
-  font-weight:900!important;
-  line-height:1!important;
-  color:#fff!important;
-  transform:translateY(-.5px)!important;
-  text-shadow:0 1px 1px rgba(0,35,70,.5)!important;
-}
-.gold-arrow:hover,
-a:hover .gold-arrow,
-button:hover .gold-arrow{
-  transform:translateY(-1px)!important;
-  box-shadow:
-    inset 0 1px 1px rgba(255,255,255,.65),
-    inset 0 -2px 3px rgba(0,31,65,.42),
-    0 3px 6px rgba(0,26,55,.36)!important;
-}
-
-
-/* CTA arrows v8 — clean single arrow, no duplicated glyph/effects */
-.gold-arrow{
-  width:30px!important;height:30px!important;min-width:30px!important;
-  display:inline-flex!important;align-items:center!important;justify-content:center!important;
-  overflow:hidden!important;
-  border-radius:50%!important;
-  font-size:0!important;
-  color:transparent!important;
-  border:1px solid rgba(255,255,255,.8)!important;
-  background:linear-gradient(180deg,#35c7f2 0%,#087eaf 58%,#04577e 100%)!important;
-  box-shadow:inset 0 1px 1px rgba(255,255,255,.55),inset 0 -2px 2px rgba(0,32,60,.38),0 2px 3px rgba(0,20,45,.28)!important;
-  text-shadow:none!important;
-}
-.gold-arrow::before{
-  content:"→"!important;
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  width:100%!important;height:100%!important;
-  font-family:Arial,sans-serif!important;
-  font-size:20px!important;
-  font-weight:900!important;
-  line-height:1!important;
-  letter-spacing:-2px!important;
-  color:#fff!important;
-  transform:translate(-1px,-1px)!important;
-  text-shadow:0 1px 1px rgba(0,25,50,.45)!important;
-}
-.gold-arrow::after{content:none!important;display:none!important;}
-
-
-/* CTA arrows v9 — final clean badge: short bold chevron, no long shaft */
-.gold-arrow{
-  width:28px!important;height:28px!important;min-width:28px!important;
-  display:inline-flex!important;align-items:center!important;justify-content:center!important;
-  overflow:hidden!important;border-radius:50%!important;
-  font-size:0!important;color:transparent!important;
-  border:1px solid rgba(255,255,255,.68)!important;
-  background:linear-gradient(180deg,#28b9e8 0%,#087eae 56%,#055b82 100%)!important;
-  box-shadow:inset 0 1px 1px rgba(255,255,255,.5),inset 0 -1px 2px rgba(0,30,55,.38),0 2px 3px rgba(0,20,40,.25)!important;
-}
-.gold-arrow::before{
-  content:"›"!important;
-  display:flex!important;align-items:center!important;justify-content:center!important;
-  width:100%!important;height:100%!important;
-  font-family:Arial,sans-serif!important;
-  font-size:27px!important;font-weight:900!important;line-height:1!important;
-  letter-spacing:0!important;color:#fff!important;
-  transform:translate(0,-2px)!important;
-  text-shadow:0 1px 1px rgba(0,30,55,.45)!important;
-}
-.gold-arrow::after{content:none!important;display:none!important;}
 
 
 /* CTA arrows v10 — ensure web-focus card arrows render as badges */
@@ -2547,88 +2162,6 @@ button:hover .gold-arrow{
   display:inline-flex!important;
   align-items:center!important;
   gap:12px!important;
-}
-.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow{
-  width:28px!important;height:28px!important;min-width:28px!important;
-  display:inline-flex!important;align-items:center!important;justify-content:center!important;
-  position:relative!important;
-  overflow:hidden!important;
-  border-radius:999px!important;
-  font-size:0!important;color:transparent!important;
-  border:1px solid rgba(255,255,255,.72)!important;
-  background:linear-gradient(180deg,#32c7f4 0%,#0785b9 58%,#04577f 100%)!important;
-  box-shadow:inset 0 1px 1px rgba(255,255,255,.55),inset 0 -2px 2px rgba(0,30,55,.38),0 2px 4px rgba(0,35,65,.3)!important;
-}
-.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow::before{
-  content:"›"!important;
-  display:flex!important;align-items:center!important;justify-content:center!important;
-  position:absolute!important;inset:0!important;
-  font:900 27px/1 Arial,sans-serif!important;
-  color:#fff!important;
-  transform:translateY(-2px)!important;
-}
-
-
-/* CTA arrows v11 — minimal premium treatment, no orb */
-.gold-arrow,
-.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow{
-  width:auto!important;height:auto!important;min-width:0!important;
-  display:inline-flex!important;align-items:center!important;justify-content:center!important;
-  position:static!important;overflow:visible!important;
-  border:0!important;border-radius:0!important;
-  background:none!important;box-shadow:none!important;
-  color:transparent!important;font-size:0!important;
-  margin-left:8px!important;
-}
-.gold-arrow::before,
-.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow::before{
-  content:"➜"!important;
-  position:static!important;inset:auto!important;
-  display:inline-block!important;
-  width:auto!important;height:auto!important;
-  font-family:Arial,sans-serif!important;
-  font-size:21px!important;font-weight:900!important;line-height:1!important;
-  color:#25baf0!important;
-  transform:none!important;
-  text-shadow:0 1px 0 rgba(255,255,255,.3),0 2px 2px rgba(0,49,82,.2)!important;
-}
-.gold-arrow::after,
-.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow::after{content:none!important;display:none!important;}
-
-
-/* CTA arrows v12 — hard reset all legacy orb effects */
-.gold-arrow,
-.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow{
-  all:unset!important;
-  display:inline-flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  width:24px!important;
-  height:24px!important;
-  margin-left:10px!important;
-  color:#fff!important;
-  font:900 0/1 Arial,sans-serif!important;
-  background:transparent!important;
-  border:0!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-  filter:none!important;
-  text-shadow:none!important;
-  transform:none!important;
-}
-.gold-arrow::before,
-.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow::before{
-  content:"→"!important;
-  all:unset!important;
-  display:block!important;
-  color:#fff!important;
-  font:900 22px/1 Arial,sans-serif!important;
-  text-shadow:0 1px 1px rgba(0,0,0,.22)!important;
-}
-.gold-arrow::after,
-.web-focus .web-mobile-grid article > a.arrow-link > .gold-arrow::after{
-  content:none!important;
-  display:none!important;
 }
 
 
@@ -2768,24 +2301,6 @@ button:hover .gold-arrow{
 }
 
 
-
-
-/* Hero CTA arrows: one glyph only, no generated duplicate */
-.hero-clean-actions .gold-arrow{
-  display:inline-block!important;
-  margin-left:12px!important;
-  width:auto!important;height:auto!important;
-  color:#fff!important;
-  background:none!important;
-  border:0!important;border-radius:0!important;
-  box-shadow:none!important;filter:none!important;text-shadow:none!important;
-  font:900 22px/1 Arial,sans-serif!important;
-  line-height:1!important;
-}
-.hero-clean-actions .gold-arrow::before,
-.hero-clean-actions .gold-arrow::after{content:none!important;display:none!important;}
-
-
 /* Web cards CTA FINAL — force real buttons despite legacy rules */
 .web-focus .web-mobile-grid article > a.web-card-button.hero-clean-primary{
   display:flex!important;
@@ -2804,19 +2319,6 @@ button:hover .gold-arrow{
   font-weight:800!important;
   text-decoration:none!important;
   box-shadow:0 5px 14px rgba(7,76,126,.14)!important;
-}
-.web-focus .web-mobile-grid article > a.web-card-button.hero-clean-primary .gold-arrow{
-  display:inline-block!important;
-  margin-left:14px!important;
-  color:#fff!important;
-  background:none!important;
-  border:0!important;
-  box-shadow:none!important;
-  font:900 22px/1 Arial,sans-serif!important;
-}
-.web-focus .web-mobile-grid article > a.web-card-button.hero-clean-primary .gold-arrow::before,
-.web-focus .web-mobile-grid article > a.web-card-button.hero-clean-primary .gold-arrow::after{
-  content:none!important;display:none!important;
 }
 
 
@@ -2888,29 +2390,7 @@ button:hover .gold-arrow{
 }
 
 
-/* FIX: page.tsx uses .gold-arrow in web cards; restore the established circular 3D arrow */
-.web-focus .web-mobile-grid article>a.web-card-button.hero-clean-primary .gold-arrow{
-  box-sizing:border-box!important;
-  display:inline-flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  width:38px!important;
-  height:38px!important;
-  flex:0 0 38px!important;
-  margin-left:16px!important;
-  border-radius:50%!important;
-  border:1px solid rgba(255,255,255,.95)!important;
-  background:linear-gradient(180deg,#55d6fa 0%,#13a7dc 45%,#0877a5 100%)!important;
-  color:#fff!important;
-  font:900 21px/1 Arial,sans-serif!important;
-  text-shadow:0 1px 1px rgba(0,43,73,.45)!important;
-  box-shadow:inset 0 2px 2px rgba(255,255,255,.72),inset 0 -3px 4px rgba(0,54,86,.38),0 4px 9px rgba(0,77,120,.32)!important;
-}
-.web-focus .web-mobile-grid article>a.web-card-button.hero-clean-primary .gold-arrow::before,
-.web-focus .web-mobile-grid article>a.web-card-button.hero-clean-primary .gold-arrow::after{
-  content:none!important;
-  display:none!important;
-}
+/* FIX: page.tsx uses .gold-arrow in web cards;
 
 
 /* Web card CTA: navy like the established "Voir la maquette en ligne" button */
@@ -2927,76 +2407,38 @@ button:hover .gold-arrow{
 }
 
 
-/* Global CTA arrows — gold 3D, CSS only */
-.gold-arrow{
-  border-color:#fff0ad!important;
-  background:linear-gradient(180deg,#fff2a8 0%,#f4c542 32%,#d99a12 67%,#9b6500 100%)!important;
-  color:#fff!important;
-  text-shadow:0 1px 1px rgba(92,55,0,.75)!important;
-  box-shadow:
-    inset 0 2px 2px rgba(255,255,255,.85),
-    inset 0 -3px 4px rgba(102,61,0,.48),
-    0 4px 9px rgba(104,67,0,.30)!important;
-}
-
-
 /* Contact CTA — navy; all circular CTA arrows — bright metallic gold */
 .button.button-lime{
   background:#17284f!important;
   border-color:#17284f!important;
   color:#fff!important;
 }
+
+/* CTA ARROWS — single source of truth: metallic gold */
 .gold-arrow{
-  border:1px solid #fff1a3!important;
-  background:linear-gradient(180deg,#fff8bf 0%,#ffd84d 24%,#f2b51d 52%,#c98200 78%,#8d5700 100%)!important;
-  color:#fff!important;
-  text-shadow:0 1px 2px rgba(91,52,0,.9)!important;
-  box-shadow:
-    inset 0 2px 2px rgba(255,255,255,.95),
-    inset 0 -3px 5px rgba(111,62,0,.52),
-    0 0 8px rgba(255,190,28,.72),
-    0 4px 10px rgba(104,67,0,.38)!important;
-}
-
-
-/* Gold CTA arrows — unified */
-.gold-arrow{
-  background:linear-gradient(145deg,#fff7b0 0%,#ffd84a 22%,#e9a900 50%,#b87300 76%,#704000 100%)!important;
-  border:1px solid #ffe783!important;
-  color:#fff!important;
-  text-shadow:0 1px 2px #704000!important;
-  box-shadow:
-    inset 2px 2px 3px rgba(255,255,255,.9),
-    inset -2px -3px 4px rgba(92,50,0,.55),
-    0 0 9px rgba(255,190,20,.85),
-    0 4px 8px rgba(73,45,0,.35)!important;
-}
-
-
-/* GOLD ARROWS FINAL — all CTA arrows, one visual treatment */
-.gold-arrow,
-.hero-clean-actions .gold-arrow,
-.web-focus .web-mobile-grid article>a.web-card-button.hero-clean-primary .gold-arrow,
-.button-dark .gold-arrow,
-.hero-clean-secondary .gold-arrow{
   box-sizing:border-box!important;
   display:inline-flex!important;
   align-items:center!important;
   justify-content:center!important;
+  position:static!important;
   width:30px!important;
   height:30px!important;
   min-width:30px!important;
   min-height:30px!important;
   flex:0 0 30px!important;
-  margin-left:10px!important;
+  margin:0 0 0 10px!important;
   padding:0!important;
+  overflow:hidden!important;
+  border:1px solid #ffe98a!important;
   border-radius:50%!important;
-  border:1px solid #fff0a3!important;
-  background:linear-gradient(145deg,#fff9bf 0%,#ffe25a 20%,#f5bd22 48%,#cf8700 76%,#8b5200 100%)!important;
+  background:linear-gradient(145deg,#fffbd0 0%,#ffe66b 20%,#ffc72c 45%,#d89500 72%,#8d5700 100%)!important;
   color:#fff!important;
   font:900 18px/1 Arial,sans-serif!important;
-  text-shadow:0 1px 2px rgba(92,52,0,.9)!important;
-  box-shadow:inset 2px 2px 3px rgba(255,255,255,.9),inset -2px -3px 4px rgba(92,50,0,.5),0 0 8px rgba(255,190,20,.68),0 3px 7px rgba(73,45,0,.3)!important;
+  text-align:center!important;
+  text-shadow:0 1px 2px rgba(82,48,0,.9)!important;
+  box-shadow:inset 2px 2px 3px rgba(255,255,255,.95),inset -2px -3px 4px rgba(92,50,0,.5),0 0 9px rgba(255,193,24,.72),0 3px 7px rgba(73,45,0,.3)!important;
+  filter:none!important;
+  transform:none!important;
 }
 .gold-arrow::before,.gold-arrow::after{content:none!important;display:none!important;}
-a:hover .gold-arrow{filter:brightness(1.08)!important;}
+a:hover .gold-arrow{filter:brightness(1.1)!important;}
