@@ -2620,3 +2620,11 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
 .contact-honey{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}
 .contact-form-card .response-note{margin-top:14px}
 @media(max-width:760px){.contact-inline-phone{font-size:21px}.contact-form-card{margin-top:8px}}
+
+
+/* Contact confirmation */
+.thank-you{min-height:62vh;padding-top:120px;padding-bottom:110px}
+.thank-you h1{max-width:760px;margin:20px 0;font-size:clamp(42px,6vw,76px);line-height:1.02;letter-spacing:-2.5px;color:#17284f}
+.thank-you h1 em{font-family:Georgia,serif;font-weight:400;color:#357ea5}
+.thank-you>p{max-width:620px;color:#526987;font-size:15px;line-height:1.8}
+.thank-you .hero-actions{margin-top:30px}
