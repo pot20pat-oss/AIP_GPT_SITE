@@ -35,7 +35,7 @@ export default function Page() {
         <div className="pricing-group-heading"><span>01</span><div><h2>Services informatiques</h2><p>Des tarifs simples pour le dépannage et l’accompagnement informatique.</p></div></div>
         <div className="pricing-grid pricing-grid-two">{itPrices.map(p => <article className="price-card" key={p.name}><span>{p.name}</span><strong>{p.price}</strong><p>{p.text}</p></article>)}</div>
       </div>
-      <div className="price-note"><h2>Vous ne savez pas quel forfait choisir?</h2><p>Décrivez-moi votre entreprise et ce que vous voulez accomplir. Je vous dirai quelle portée de projet correspond le mieux à votre besoin avant de préparer une soumission.</p><a className="button button-dark" href="tel:+18193802999">819 380-2999 <span className="gold-arrow">↗</span></a></div>
+      <div className="price-note"><h2>Vous ne savez pas quel forfait choisir?</h2><p>Décrivez-moi votre entreprise et ce que vous voulez accomplir. Je vous dirai quelle portée de projet correspond le mieux à votre besoin avant de préparer une soumission.</p><a className="button button-dark" href="tel:+18193802999">819 380-2999</a></div>
     </section>
     <SiteFooter />
   </main>;
