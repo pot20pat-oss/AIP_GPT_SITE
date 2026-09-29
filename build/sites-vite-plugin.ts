@@ -28,6 +28,8 @@ export function sites(): Plugin {
       const outputDirectory = resolve(root, "dist", ".openai");
       const hostingConfig = resolve(root, ".openai", "hosting.json");
       const drizzleSource = resolve(root, "drizzle");
+      const publicSource = resolve(root, "public");
+      const clientOutput = resolve(root, "dist", "client");
 
       await rm(outputDirectory, { recursive: true, force: true });
       await mkdir(outputDirectory, { recursive: true });
@@ -39,6 +41,13 @@ export function sites(): Plugin {
         await cp(drizzleSource, resolve(outputDirectory, "drizzle"), {
           recursive: true,
         });
+      }
+
+      // Cloudflare serves public files from dist/client through the ASSETS binding.
+      // Copy them explicitly so newly-added images cannot be omitted from a deployment.
+      if (await exists(publicSource)) {
+        await mkdir(clientOutput, { recursive: true });
+        await cp(publicSource, clientOutput, { recursive: true });
       }
     },
   };
