@@ -2691,3 +2691,47 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
     left:clamp(24px,5vw,105px)!important;
   }
 }
+
+
+/* 2026-09-29 — single CTA system */
+.button,
+.button-outline,
+.hero-clean-actions a,
+.web-focus .web-mobile-grid article>a.web-card-button,
+.portfolio-copy>a.button,
+.portfolio-copy>a.button-outline,
+.related-links a.button-outline,
+.contact-mini-form .button,
+.price-note .button,
+.approach-copy .button{
+  box-sizing:border-box!important;
+  min-height:46px!important;
+  height:46px!important;
+  padding:0 20px!important;
+  border-radius:9px 2px 9px 2px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:0!important;
+  font-size:12px!important;
+  font-weight:650!important;
+  line-height:1!important;
+  text-align:center!important;
+  box-shadow:0 3px 10px rgba(23,40,79,.09)!important;
+}
+.hero-clean-actions a{margin:0!important}
+.web-focus .web-mobile-grid article>a.web-card-button{
+  width:calc(100% - 48px)!important;
+  margin:auto 24px 24px!important;
+}
+.related-links a.button-outline{width:100%!important}
+.contact-mini-form .button{width:100%!important}
+@media(max-width:760px){
+  .button,.button-outline,.hero-clean-actions a,
+  .web-focus .web-mobile-grid article>a.web-card-button,
+  .portfolio-copy>a.button,.portfolio-copy>a.button-outline,
+  .related-links a.button-outline,.contact-mini-form .button,
+  .price-note .button,.approach-copy .button{
+    min-height:46px!important;height:46px!important;padding:0 20px!important;font-size:12px!important;
+  }
+}
