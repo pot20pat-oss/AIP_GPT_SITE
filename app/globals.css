@@ -2957,3 +2957,17 @@ button:hover .cta-arrow{
     0 0 8px rgba(255,190,28,.72),
     0 4px 10px rgba(104,67,0,.38)!important;
 }
+
+
+/* Gold CTA arrows — unified */
+.cta-arrow{
+  background:linear-gradient(145deg,#fff7b0 0%,#ffd84a 22%,#e9a900 50%,#b87300 76%,#704000 100%)!important;
+  border:1px solid #ffe783!important;
+  color:#fff!important;
+  text-shadow:0 1px 2px #704000!important;
+  box-shadow:
+    inset 2px 2px 3px rgba(255,255,255,.9),
+    inset -2px -3px 4px rgba(92,50,0,.55),
+    0 0 9px rgba(255,190,20,.85),
+    0 4px 8px rgba(73,45,0,.35)!important;
+}
