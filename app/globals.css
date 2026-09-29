@@ -2768,29 +2768,19 @@ button:hover .cta-arrow{
 }
 
 
-/* Hero CTAs — same arrow treatment as all standard CTA buttons */
-.hero-clean-actions>a{
-  display:inline-flex!important;
-  align-items:center!important;
-}
-.hero-clean-actions>a .cta-arrow{
-  all:unset!important;
-  display:inline-flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  width:24px!important;height:24px!important;
+
+
+/* Hero CTA arrows: one glyph only, no generated duplicate */
+.hero-clean-actions .cta-arrow{
+  display:inline-block!important;
   margin-left:12px!important;
+  width:auto!important;height:auto!important;
   color:#fff!important;
-  font:900 22px/1 Arial,sans-serif!important;
-  background:transparent!important;
+  background:none!important;
   border:0!important;border-radius:0!important;
   box-shadow:none!important;filter:none!important;text-shadow:none!important;
-}
-.hero-clean-actions>a .cta-arrow::before{
-  content:"→"!important;
-  display:block!important;
-  color:#fff!important;
   font:900 22px/1 Arial,sans-serif!important;
   line-height:1!important;
 }
-.hero-clean-actions>a .cta-arrow::after{content:none!important;display:none!important;}
+.hero-clean-actions .cta-arrow::before,
+.hero-clean-actions .cta-arrow::after{content:none!important;display:none!important;}
