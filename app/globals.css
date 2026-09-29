@@ -2911,3 +2911,17 @@ button:hover .cta-arrow{
   content:none!important;
   display:none!important;
 }
+
+
+/* Web card CTA: navy like the established "Voir la maquette en ligne" button */
+.web-focus .web-mobile-grid article>a.web-card-button.hero-clean-primary{
+  background:#17284f!important;
+  border-color:#17284f!important;
+  color:#fff!important;
+}
+.web-focus .web-mobile-grid article:nth-child(2)>a.web-card-button.hero-clean-primary,
+.web-focus .web-mobile-grid article:nth-child(3)>a.web-card-button.hero-clean-primary{
+  background:#17284f!important;
+  border-color:#17284f!important;
+  color:#fff!important;
+}
