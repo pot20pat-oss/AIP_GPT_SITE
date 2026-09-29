@@ -2971,3 +2971,29 @@ button:hover .cta-arrow{
     0 0 9px rgba(255,190,20,.85),
     0 4px 8px rgba(73,45,0,.35)!important;
 }
+
+
+/* GOLD ARROW — isolated from legacy .cta-arrow rules */
+.gold-arrow{
+  box-sizing:border-box!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  vertical-align:middle!important;
+  width:30px!important;
+  height:30px!important;
+  min-width:30px!important;
+  flex:0 0 30px!important;
+  margin-left:10px!important;
+  padding:0!important;
+  border-radius:50%!important;
+  border:1px solid #fff0a3!important;
+  background:linear-gradient(145deg,#fff9bf 0%,#ffe25a 20%,#f5bd22 48%,#cf8700 76%,#8b5200 100%)!important;
+  color:#fff!important;
+  font:900 18px/1 Arial,sans-serif!important;
+  text-align:center!important;
+  text-shadow:0 1px 2px rgba(92,52,0,.9)!important;
+  box-shadow:inset 2px 2px 3px rgba(255,255,255,.9),inset -2px -3px 4px rgba(92,50,0,.5),0 0 8px rgba(255,190,20,.68),0 3px 7px rgba(73,45,0,.3)!important;
+}
+.gold-arrow::before,.gold-arrow::after{content:none!important;display:none!important;}
+a:hover .gold-arrow{filter:brightness(1.08)!important;transform:translateX(2px)!important;}
