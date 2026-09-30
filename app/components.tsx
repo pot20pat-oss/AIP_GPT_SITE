@@ -38,7 +38,7 @@ function EnvolCmsGallery() {
 export function SiteHeader() {
   return <>
     <header className="header shell">
-      <Link className="brand" href="/" aria-label="AIP Atelier Informatique Potvin, accueil"><img className="brand-logo" src="/logo-aip-glow.png" alt="Logo AIP Atelier Informatique Potvin" width="71" height="61" /><span className="brand-name">AIP<span>Designer Web et Informaticien</span></span></Link>
+      <Link className="brand" href="/" aria-label="AIP Atelier Informatique Potvin, accueil"><img className="brand-logo" src="/logo-aip-glow.png" alt="Logo AIP Atelier Informatique Potvin" width="71" height="61" /><span className="brand-name">AIP<span>Designer Web &amp; Informaticien</span></span></Link>
       <nav aria-label="Navigation principale"><Link href="/creation-sites-web">Sites web</Link><Link href="/#realisations">Réalisations</Link><Link href="/tarifs">Tarifs</Link><Link href="/depannage-informatique-nicolet">Dépannage</Link><Link href="/faq">FAQ</Link></nav>
       <div className="header-contact"><div className="header-service-note">Service local à Nicolet, Bécancour et Trois-Rivières<br /><span>Réponse habituellement dans la journée</span></div><a className="header-phone" href="tel:+18193802999">{phone}</a></div>
     </header>
