@@ -2951,6 +2951,7 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   align-items:center;
   column-gap:24px;
   padding-block:12px;
+  padding-inline:12px;
 }
 .header .brand{
   min-width:0;
@@ -3038,6 +3039,7 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
     column-gap:24px;
     row-gap:0;
     padding-block:6px 0;
+    padding-inline:12px;
   }
   .header .brand{
     grid-area:brand;
