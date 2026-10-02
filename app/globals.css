@@ -2942,16 +2942,15 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
 
 /* === HEADER ARCHITECTURE — single source of truth === */
 .header{
-  width:min(1200px,calc(100% - 80px))!important;
-  max-width:1200px!important;
+  width:min(1400px,calc(100% - 80px))!important;
+  max-width:1400px!important;
   min-height:112px;
   margin-inline:auto;
   display:grid;
-  grid-template-columns:minmax(330px,360px) minmax(0,1fr) minmax(300px,330px);
+  grid-template-columns:430px minmax(0,1fr) 520px;
   align-items:center;
-  column-gap:24px;
-  padding-block:12px;
-  padding-inline:12px;
+  column-gap:28px;
+  padding:14px 16px;
 }
 .header .brand{
   min-width:0;
@@ -2959,7 +2958,7 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   display:grid;
   grid-template-columns:92px minmax(0,1fr);
   align-items:center;
-  column-gap:12px;
+  column-gap:14px;
 }
 .header .brand-logo{
   display:block;
@@ -2976,9 +2975,6 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   padding:0;
   display:block;
   white-space:nowrap;
-  color:#53647b;
-  font-size:13px;
-  line-height:1.05;
 }
 .header .brand-name > span{
   display:block;
@@ -2995,7 +2991,7 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:24px;
+  gap:28px;
   white-space:nowrap;
   font-size:13px;
   font-weight:560;
@@ -3025,8 +3021,8 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   font-weight:650;
 }
 
-/* Compact desktop/tablet: brand and contact on row 1, navigation on row 2. */
-@media (min-width:761px) and (max-width:1399px){
+/* Desktop/tablet: deliberately use two rows before the full-width layout has enough room. */
+@media (min-width:761px) and (max-width:1499px){
   .header{
     width:min(1200px,calc(100% - 80px))!important;
     max-width:1200px!important;
@@ -3038,8 +3034,7 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
     grid-template-rows:88px 52px;
     column-gap:24px;
     row-gap:0;
-    padding-block:6px 0;
-    padding-inline:12px;
+    padding:6px 12px 0;
   }
   .header .brand{
     grid-area:brand;
@@ -3070,7 +3065,7 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   .header-phone{font-size:13px}
 }
 
-/* Mobile: brand and phone on row 1, navigation on row 2. */
+/* Mobile: compact two-row header with no overlap. */
 @media(max-width:760px){
   .header{
     width:calc(100% - 36px);
@@ -3079,7 +3074,7 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
     grid-template-areas:"brand phone" "nav nav";
     column-gap:12px;
     row-gap:7px;
-    padding-block:8px 0;
+    padding:8px 0 0;
   }
   .header .brand{
     grid-area:brand;
