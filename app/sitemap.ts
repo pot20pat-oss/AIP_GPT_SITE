@@ -22,6 +22,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/realisation-envol-des-enfants",
     "/tarifs",
     "/faq",
+    "/a-propos",
+    "/comment-ca-marche",
+    "/contact",
+    "/avis-clients",
   ];
 
   return paths.map((path) => ({
