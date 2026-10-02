@@ -1259,7 +1259,7 @@ html,body{max-width:100%;overflow-x:hidden}
 /* Prevent horizontal clipping/overflow on tablet widths. */
 html,body{max-width:100%;overflow-x:hidden}
 @media (min-width:761px) and (max-width:1050px){
-  .header{width:100%!important;max-width:100%!important;box-sizing:border-box!important}
+  /* Header width is controlled by the final header architecture below. */
   .metrics-grid{
     width:100%!important;
     max-width:100%!important;
@@ -2942,7 +2942,8 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
 
 /* === HEADER ARCHITECTURE — single source of truth === */
 .header{
-  width:min(1200px,calc(100% - 80px));
+  width:min(1200px,calc(100% - 80px))!important;
+  max-width:1200px!important;
   min-height:112px;
   margin-inline:auto;
   display:grid;
@@ -3026,7 +3027,8 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
 /* Compact desktop/tablet: brand and contact on row 1, navigation on row 2. */
 @media (min-width:761px) and (max-width:1399px){
   .header{
-    width:min(1200px,calc(100% - 80px));
+    width:min(1200px,calc(100% - 80px))!important;
+    max-width:1200px!important;
     min-height:148px;
     grid-template-columns:minmax(0,1fr) auto;
     grid-template-areas:
