@@ -3095,15 +3095,15 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   .header .brand-name{
     min-width:0;
     flex:1 1 auto;
-    white-space:nowrap;
-    overflow:hidden;
+    white-space:normal;
+    overflow:visible;
   }
   .header .brand-name > span{
     display:block;
-    font-size:clamp(13px,3.8vw,17px);
-    line-height:1.05;
-    white-space:nowrap;
-    overflow:hidden;
+    font-size:clamp(15px,4.3vw,18px);
+    line-height:1.08;
+    white-space:normal;
+    overflow:visible;
     text-overflow:clip;
   }
   .header-contact{
