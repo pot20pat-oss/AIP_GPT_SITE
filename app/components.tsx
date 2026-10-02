@@ -40,7 +40,7 @@ export function SiteHeader() {
     <header className="header shell">
       <Link className="brand" href="/" aria-label="AIP Atelier Informatique Potvin, accueil"><img className="brand-logo" src="/aip-icon-v7.png" alt="Logo AIP Atelier Informatique Potvin" width="71" height="61" /><span className="brand-name"><span>Designer Web &amp; Informaticien</span></span></Link>
       <nav aria-label="Navigation principale"><Link href="/creation-sites-web">Sites web</Link><Link href="/#realisations">Réalisations</Link><Link href="/a-propos">À propos</Link><Link href="/tarifs">Tarifs</Link><Link href="/contact">Contact</Link></nav>
-      <div className="header-contact"><div className="header-service-note">Service local dans un rayon de 50 km autour de Nicolet<br /><span>Réponse habituellement dans la journée</span></div><a className="header-phone" href="tel:+18193802999">{phone}</a></div>
+      <div className="header-contact"><div className="header-service-note">Service local · Nicolet · Bécancour · Trois-Rivières · environs<br /><span>Rayon d’environ 50 km · réponse habituellement dans la journée</span></div><a className="header-phone" href="tel:+18193802999">{phone}</a></div>
     </header>
   </>;
 }
