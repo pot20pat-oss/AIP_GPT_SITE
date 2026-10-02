@@ -2946,29 +2946,33 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   min-height:112px;
   margin-inline:auto;
   display:grid;
-  grid-template-columns:360px minmax(0,1fr) 330px;
+  grid-template-columns:minmax(330px,360px) minmax(0,1fr) minmax(300px,330px);
   align-items:center;
-  column-gap:0;
+  column-gap:24px;
   padding-block:12px;
 }
 .header .brand{
   min-width:0;
-  display:flex;
+  width:100%;
+  display:grid;
+  grid-template-columns:92px minmax(0,1fr);
   align-items:center;
-  gap:12px;
+  column-gap:12px;
 }
 .header .brand-logo{
-  width:92px;
-  height:64px;
-  flex:0 0 92px;
-  object-fit:contain;
   display:block;
+  width:92px!important;
+  height:64px!important;
+  max-width:92px!important;
+  min-width:92px!important;
+  object-fit:contain;
 }
 .header .brand-name{
   min-width:0;
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
+  width:auto;
+  margin:0;
+  padding:0;
+  display:block;
   white-space:nowrap;
   color:#53647b;
   font-size:13px;
@@ -2976,11 +2980,13 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
 }
 .header .brand-name > span{
   display:block;
-  margin-top:5px;
+  width:auto;
+  margin:0;
   color:#087be8;
   font-size:20px;
   font-weight:800;
   line-height:1;
+  white-space:nowrap;
 }
 .header nav{
   min-width:0;
@@ -3017,27 +3023,31 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   font-weight:650;
 }
 
-/* Tablet / compact desktop: two clean header rows so the brand and navigation never overlap. */
+/* Compact desktop/tablet: brand and contact on row 1, navigation on row 2. */
 @media (min-width:761px) and (max-width:1399px){
   .header{
     width:min(1200px,calc(100% - 80px));
-    min-height:142px;
+    min-height:148px;
     grid-template-columns:minmax(0,1fr) auto;
     grid-template-areas:
       "brand contact"
       "nav nav";
-    grid-template-rows:82px 48px;
+    grid-template-rows:88px 52px;
     column-gap:24px;
     row-gap:0;
     padding-block:6px 0;
   }
-  .header .brand{grid-area:brand;gap:10px}
-  .header .brand-logo{
-    width:88px;
-    height:62px;
-    flex-basis:88px;
+  .header .brand{
+    grid-area:brand;
+    grid-template-columns:88px minmax(0,1fr);
+    column-gap:12px;
   }
-  .header .brand-name{font-size:12px}
+  .header .brand-logo{
+    width:88px!important;
+    height:62px!important;
+    max-width:88px!important;
+    min-width:88px!important;
+  }
   .header .brand-name > span{font-size:19px}
   .header nav{
     grid-area:nav;
@@ -3051,28 +3061,34 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   .header-contact{
     grid-area:contact;
     justify-content:flex-end;
-    gap:18px;
   }
   .header-service-note{font-size:10px}
   .header-phone{font-size:13px}
 }
 
-/* Mobile: brand/phone on the first row, navigation on its own row. */
+/* Mobile: brand and phone on row 1, navigation on row 2. */
 @media(max-width:760px){
   .header{
     width:calc(100% - 36px);
     min-height:0;
-    display:grid;
     grid-template-columns:minmax(0,1fr) auto;
     grid-template-areas:"brand phone" "nav nav";
     column-gap:12px;
     row-gap:7px;
     padding-block:8px 0;
   }
-  .header .brand{grid-area:brand;gap:8px}
-  .header .brand-logo{width:58px;height:42px;flex-basis:58px}
-  .header .brand-name{font-size:9.5px}
-  .header .brand-name > span{font-size:14px;margin-top:4px}
+  .header .brand{
+    grid-area:brand;
+    grid-template-columns:58px minmax(0,1fr);
+    column-gap:8px;
+  }
+  .header .brand-logo{
+    width:58px!important;
+    height:42px!important;
+    max-width:58px!important;
+    min-width:58px!important;
+  }
+  .header .brand-name > span{font-size:14px}
   .header nav{
     grid-area:nav;
     width:100%;
