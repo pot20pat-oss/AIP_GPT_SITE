@@ -2946,9 +2946,9 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   min-height:112px;
   margin-inline:auto;
   display:grid;
-  grid-template-columns:290px minmax(0,1fr) 310px;
+  grid-template-columns:360px minmax(0,1fr) 330px;
   align-items:center;
-  column-gap:24px;
+  column-gap:0;
   padding-block:12px;
 }
 .header .brand{
@@ -3016,23 +3016,49 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   font-size:13px;
   font-weight:650;
 }
-@media (min-width:761px) and (max-width:1150px){
+
+/* Tablet / compact desktop: two clean header rows so the brand and navigation never overlap. */
+@media (min-width:761px) and (max-width:1399px){
   .header{
-    min-height:108px;
-    grid-template-columns:250px minmax(0,1fr) 120px;
-    column-gap:16px;
-    padding-block:10px;
+    width:min(1200px,calc(100% - 80px));
+    min-height:142px;
+    grid-template-columns:minmax(0,1fr) auto;
+    grid-template-areas:
+      "brand contact"
+      "nav nav";
+    grid-template-rows:82px 48px;
+    column-gap:24px;
+    row-gap:0;
+    padding-block:6px 0;
   }
-  .header .brand{gap:9px}
-  .header .brand-logo{width:76px;height:54px;flex-basis:76px}
-  .header .brand-name{font-size:11px}
-  .header .brand-name > span{font-size:16px}
-  .header nav{gap:12px;font-size:11px;justify-content:center}
-  .header-contact{gap:0}
-  .header-service-note{display:none}
-  .header-phone{font-size:11px}
+  .header .brand{grid-area:brand;gap:10px}
+  .header .brand-logo{
+    width:88px;
+    height:62px;
+    flex-basis:88px;
+  }
+  .header .brand-name{font-size:12px}
+  .header .brand-name > span{font-size:19px}
+  .header nav{
+    grid-area:nav;
+    width:100%;
+    justify-content:space-around;
+    gap:12px;
+    padding:0 8px;
+    border-top:1px solid #e3e8f1;
+    font-size:13px;
+  }
+  .header-contact{
+    grid-area:contact;
+    justify-content:flex-end;
+    gap:18px;
+  }
+  .header-service-note{font-size:10px}
+  .header-phone{font-size:13px}
 }
-@media (max-width:760px){
+
+/* Mobile: brand/phone on the first row, navigation on its own row. */
+@media(max-width:760px){
   .header{
     width:calc(100% - 36px);
     min-height:0;
