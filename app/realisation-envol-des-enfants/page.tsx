@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../components";
-import { businessName, jsonLd, pageMetadata, siteUrl } from "../seo";
+import { businessName, jsonLd, webPageMetadata, siteUrl, webSiteUrl } from "../seo";
 
 const path = "/realisation-envol-des-enfants";
 
