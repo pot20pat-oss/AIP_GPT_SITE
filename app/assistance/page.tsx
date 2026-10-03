@@ -204,10 +204,9 @@ export default function Page() {
             une demande de confirmation. RustDesk lui-même est téléchargé depuis sa publication officielle.
           </p>
         </div>
-        <div className="related-links">
-          <a href="/assistance-informatique-a-distance">Voir le service d’assistance à distance <span>→</span></a>
-          <a href="tel:+18193802999">Appeler Patrick <span>→</span></a>
-          <a href="/">Retour à l’accueil <span>→</span></a>
+        <div className="assistance-next-actions">
+          <a className="button button-dark" href="tel:+18193802999">Appeler Patrick</a>
+          <a className="button button-outline" href="/assistance-informatique-a-distance">Voir le service d’assistance</a>
         </div>
       </section>
 

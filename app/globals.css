@@ -3406,3 +3406,31 @@ a.button.download-button:active::after{
 .technical-details[open]>summary::after{content:"−"}
 .technical-details[open]>summary{border-bottom:1px solid #e6ebf2}
 .technical-details>.detail-grid{padding:30px}
+
+
+/* AIP ASSISTANCE — CLEAN NEXT ACTIONS 2026-10-03 */
+.assistance-next-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:28px;
+  align-items:center;
+}
+.assistance-next-actions .button{
+  width:auto!important;
+  min-width:0!important;
+  padding:14px 22px!important;
+}
+.assistance-next-actions .button::after{
+  display:none!important;
+  content:none!important;
+}
+@media(max-width:620px){
+  .assistance-next-actions{
+    align-items:stretch;
+  }
+  .assistance-next-actions .button{
+    width:100%!important;
+    justify-content:center;
+  }
+}
