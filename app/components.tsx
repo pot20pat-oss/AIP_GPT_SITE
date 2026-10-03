@@ -128,12 +128,11 @@ export function DetailPage({ eyebrow, title, accent, intro, points, asideTitle, 
     {isRemoteService && <section className="remote-mobile-quick shell" aria-label="Assistance rapide">
       <div className="remote-mobile-quick-title"><span>ASSISTANCE RAPIDE</span><strong>Trois étapes, puis je prends le relais.</strong></div>
       <div className="remote-mobile-steps">
-        <div><b>1</b><span>Appelez-moi au <a href="tel:+18193802999">{phone}</a></span></div>
-        <div><b>2</b><span>Téléchargez et ouvrez AIP Assistance.</span></div>
-        <div><b>3</b><span>Donnez-moi l’identifiant affiché.</span></div>
+        <div><b>1</b><span>Téléchargez et ouvrez AIP Assistance.</span></div>
+        <div><b>2</b><span>Donnez-moi l’identifiant affiché.</span></div>
+        <div><b>3</b><span>Je me connecte avec votre autorisation et je vous guide.</span></div>
       </div>
       <div className="remote-mobile-meta"><strong>60 $</strong><span>jusqu’à 45 min · Internet requis</span></div>
-      <Link className="button button-dark download-button" href="/assistance">Télécharger AIP Assistance</Link>
     </section>}
     <section className="detail-body section"><div className="shell detail-grid"><div className="detail-points">{points.map((point, index) => <article key={point.title}><span>0{index + 1}</span><div><h2>{point.title}</h2><p>{point.text}</p></div></article>)}</div><aside><div className="eyebrow"><span></span>{isWebService ? "Création Web locale" : "Service local"}</div><h2>{asideTitle}</h2><p>{asideText}</p><div className="trust-box"><div><strong>5,0 ★</strong><span>10 avis Google</span></div><div><strong>40 ans</strong><span>d’expérience</span></div></div></aside></div></section>
     {scenarios?.length && <section className="service-depth section shell"><div className="section-heading"><div><div className="eyebrow"><span></span>Des situations bien réelles</div><h2>Ça vous ressemble?<br /><em>On peut vous aider.</em></h2></div><p>Quelques problèmes fréquents et des réponses concrètes, adaptées à votre situation.</p></div><div className="scenario-grid">{scenarios.map(scenario => <article key={scenario.title}><h3>{scenario.title}</h3><p>{scenario.text}</p></article>)}</div><div className="service-practical"><article><div className="eyebrow"><span></span>Prix indicatif</div><h3>{priceLabel}</h3><p>{priceText}</p></article><article><div className="eyebrow"><span></span>Zone de service</div><h3>{isWebService ? "Un créateur Web près de vous" : "Un technicien près de vous"}</h3><p>{areaText}</p></article>{isWebService ? <Link className="button button-dark" href="/contact">Discuter de mon projet</Link> : <a className="button button-dark phone-button" href="tel:+18193802999">Appeler Patrick</a>}</div></section>}
