@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { DetailPage } from "../components";
-import { pageMetadata } from "../seo";
+import { webPageMetadata } from "../seo";
 
-export const metadata: Metadata = pageMetadata({
+export const metadata: Metadata = webPageMetadata({
   title: "Création de boutique en ligne | AIP Nicolet",
   description: "Création de boutiques en ligne et e-commerce sur mesure : catalogue, gestion des produits, CMS et fonctions adaptées à votre entreprise.",
   path: "/creation-boutique-en-ligne",
