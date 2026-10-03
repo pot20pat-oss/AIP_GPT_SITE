@@ -12,14 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/assistance-informatique-a-distance",
     "/installation-ordinateur-transfert-donnees",
     "/configuration-wifi-sauvegarde",
-    "/creation-sites-web",
-    "/creation-site-web-nicolet",
-    "/creation-site-web-becancour",
-    "/creation-site-web-trois-rivieres",
-    "/site-web-pme",
-    "/creation-boutique-en-ligne",
-    "/developpement-cms-sur-mesure",
-    "/realisation-envol-des-enfants",
     "/tarifs",
     "/faq",
     "/a-propos",
@@ -31,6 +23,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return paths.map((path) => ({
     url: `${siteUrl}${path}`,
     changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : path === "/creation-sites-web" ? 0.95 : path.startsWith("/creation-site-web-") ? 0.9 : ["/site-web-pme", "/creation-boutique-en-ligne", "/developpement-cms-sur-mesure", "/realisation-envol-des-enfants"].includes(path) ? 0.85 : 0.8,
+    priority: path === "" ? 1 : ["/depannage-informatique-nicolet", "/assistance-informatique-a-distance"].includes(path) ? 0.95 : 0.8,
   }));
 }
