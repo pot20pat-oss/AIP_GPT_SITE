@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { DetailPage } from "../components";
-import { pageMetadata } from "../seo";
+import { webPageMetadata } from "../seo";
 
-export const metadata: Metadata = pageMetadata({
+export const metadata: Metadata = webPageMetadata({
   title: "Création de site web à Trois-Rivières | AIP",
   description: "Création de sites web pour PME de Trois-Rivières : vitrines, boutiques en ligne, CMS et développement sur mesure par AIP.",
   path: "/creation-site-web-trois-rivieres",
