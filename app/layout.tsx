@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const requestHeaders = await headers();
   const host = (requestHeaders.get("host") || "").split(":")[0].toLowerCase();
-  const isWebSite = host === "creationatelierpotvin.ca" || host === "www.creationatelierpotvin.ca";
+  const isWebSite = host === "aipcreation.ca" || host === "www.aipcreation.ca";
   const currentSiteUrl = isWebSite ? webSiteUrl : siteUrl;
   const currentSiteName = isWebSite ? "AIP Création Web" : businessName;
 
@@ -57,7 +57,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       gtag('js', new Date());
       gtag('config', 'G-T0HN0N449R', {
         send_page_view: false,
-        linker: { domains: ['atelierpotvin.ca', 'creationatelierpotvin.ca'] }
+        linker: { domains: ['atelierpotvin.ca', 'aipcreation.ca'] }
       });
     ` }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} />
