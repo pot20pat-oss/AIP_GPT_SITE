@@ -3207,18 +3207,18 @@ a.button:not(.download-button):not(.phone-button)::after,
 .text-link::after{
   content:""!important;
   display:inline-block!important;
-  width:38px!important;
-  height:16px!important;
-  min-width:38px!important;
-  flex:0 0 38px!important;
-  margin-left:8px!important;
+  width:28px!important;
+  height:12px!important;
+  min-width:28px!important;
+  flex:0 0 28px!important;
+  margin-left:6px!important;
   border:0!important;
   border-radius:0!important;
   background:transparent url("/aip-arrow-button.webp") center/contain no-repeat!important;
   box-shadow:none!important;
   text-shadow:none!important;
   transform:translateX(0) scale(1)!important;
-  filter:drop-shadow(0 2px 4px rgba(0,70,135,.22))!important;
+  filter:drop-shadow(0 1px 3px rgba(0,70,135,.18))!important;
   transition:transform .18s ease,filter .18s ease!important;
 }
 
@@ -3244,10 +3244,11 @@ a.button:not(.download-button):not(.phone-button)::after,
   .local-area-grid a::after,
   .portfolio-service-link::after,
   .text-link::after{
-    width:34px!important;
-    height:14px!important;
-    min-width:34px!important;
-    flex-basis:34px!important;
+    width:24px!important;
+    height:10px!important;
+    min-width:24px!important;
+    flex-basis:24px!important;
+    margin-left:5px!important;
   }
 }
 
