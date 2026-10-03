@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { DetailPage } from "../components";
-import { pageMetadata } from "../seo";
+import { webPageMetadata } from "../seo";
 
-export const metadata: Metadata = pageMetadata({
+export const metadata: Metadata = webPageMetadata({
   title: "Création et conception de sites web à Nicolet | AIP",
   description: "Créateur et concepteur de sites web à Nicolet : création Web, conception et développement de sites sur mesure pour PME, boutiques en ligne et CMS.",
-  path: "/creation-sites-web",
+  path: "",
   image: "/aip-travail-13.webp",
 });
 
