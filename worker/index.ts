@@ -96,7 +96,7 @@ Host: https://${webHost}
 
     if (url.hostname === webHost && url.pathname === "/sitemap.xml") {
       const paths = ["", "/creation-site-web-nicolet", "/creation-site-web-becancour", "/creation-site-web-trois-rivieres", "/site-web-pme", "/creation-boutique-en-ligne", "/developpement-cms-sur-mesure", "/realisation-envol-des-enfants", "/tarifs", "/contact"];
-      const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${paths.map(path => `  <url><loc>https://${webHost}${path}</loc></url>`).join("\\n")}\n</urlset>`;
+      const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${paths.map(path => `  <url><loc>https://${webHost}${path}</loc></url>`).join("\n")}\n</urlset>`;
       return new Response(body, { headers: { "content-type": "application/xml; charset=utf-8" } });
     }
 
