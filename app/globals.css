@@ -4199,3 +4199,48 @@ a.button.phone-button:active::after{
     padding-bottom:48px!important;
   }
 }
+
+
+/* TWO-DOMAIN SITE MODE 2026-10-03 */
+.nav-site-web,
+.brand-name-web,
+.footer-site-web{
+  display:none!important;
+}
+html[data-site-mode="web"] .nav-site-it,
+html[data-site-mode="web"] .brand-name-it,
+html[data-site-mode="web"] .footer-site-it{
+  display:none!important;
+}
+html[data-site-mode="web"] .nav-site-web{
+  display:flex!important;
+}
+html[data-site-mode="web"] .brand-name-web{
+  display:block!important;
+}
+html[data-site-mode="web"] .footer-site-web{
+  display:grid!important;
+}
+.footer-site{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.footer-cross-site{
+  padding-left:20px;
+  border-left:1px solid var(--line);
+}
+.footer-cross-site a:first-of-type{
+  color:#147fbd;
+  font-weight:750;
+}
+@media(max-width:760px){
+  .footer-site{
+    grid-template-columns:1fr 1fr;
+  }
+  .footer-cross-site{
+    grid-column:1/-1;
+    padding-left:0;
+    padding-top:12px;
+    border-left:0;
+    border-top:1px solid var(--line);
+  }
+}

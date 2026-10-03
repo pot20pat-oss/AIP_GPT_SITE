@@ -38,11 +38,16 @@ function EnvolCmsGallery() {
 export function SiteHeader() {
   return <>
     <header className="header shell header-simple">
-      <div className="brand"><Link className="brand-home-link" href="/" aria-label="Retour à l’accueil"><img className="brand-logo" src="/aip-icon-v7.png" alt="AIP Atelier Informatique Potvin" width="71" height="61" /></Link><span className="brand-name"><span>Designer Web &amp; Informaticien</span></span></div>
-      <nav aria-label="Navigation principale">
+      <div className="brand"><Link className="brand-home-link" href="/" aria-label="Retour à l’accueil"><img className="brand-logo" src="/aip-icon-v7.png" alt="AIP Atelier Informatique Potvin" width="71" height="61" /></Link><span className="brand-name brand-name-it"><span>Informaticien · Service local</span></span><span className="brand-name brand-name-web"><span>Designer Web · Création sur mesure</span></span></div>
+      <nav className="nav-site nav-site-it" aria-label="Navigation principale informatique">
         <Link href="/depannage-informatique-nicolet">Informatique</Link>
         <Link href="/assistance-informatique-a-distance">Assistance</Link>
-        <Link href="/creation-sites-web">Sites Web</Link>
+        <Link href="/tarifs">Tarifs</Link>
+        <Link href="/contact">Contact</Link>
+      </nav>
+      <nav className="nav-site nav-site-web" aria-label="Navigation principale création Web">
+        <Link href="/">Sites Web</Link>
+        <Link href="/#realisations">Réalisations</Link>
         <Link href="/tarifs">Tarifs</Link>
         <Link href="/contact">Contact</Link>
       </nav>
@@ -53,32 +58,18 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   return <>
-    <nav className="footer-service-links footer-simple shell" aria-label="Services et informations">
-      <div>
-        <strong>Informatique</strong>
-        <Link href="/depannage-informatique-nicolet">Dépannage et réparation</Link>
-        <Link href="/assistance-informatique-a-distance">Assistance à distance</Link>
-        <Link href="/suppression-virus">Virus et sécurité</Link>
-        <Link href="/installation-ordinateur-transfert-donnees">Installation et transfert</Link>
-        <Link href="/configuration-wifi-sauvegarde">Wi-Fi et sauvegardes</Link>
-      </div>
-      <div>
-        <strong>Sites Web</strong>
-        <Link href="/creation-sites-web">Création de sites Web</Link>
-        <Link href="/site-web-pme">Sites Web pour PME</Link>
-        <Link href="/creation-boutique-en-ligne">Boutiques en ligne</Link>
-        <Link href="/developpement-cms-sur-mesure">CMS sur mesure</Link>
-        <Link href="/#realisations">Réalisations</Link>
-      </div>
-      <div>
-        <strong>AIP</strong>
-        <Link href="/a-propos">À propos</Link>
-        <Link href="/tarifs">Tarifs</Link>
-        <Link href="/avis-clients">Avis clients</Link>
-        <Link href="/faq">FAQ</Link>
-        <Link href="/contact">Contact</Link>
-      </div>
+    <nav className="footer-service-links footer-simple footer-site footer-site-it shell" aria-label="Services informatiques et informations">
+      <div><strong>Informatique</strong><Link href="/depannage-informatique-nicolet">Dépannage et réparation</Link><Link href="/assistance-informatique-a-distance">Assistance à distance</Link><Link href="/suppression-virus">Virus et sécurité</Link><Link href="/installation-ordinateur-transfert-donnees">Installation et transfert</Link><Link href="/configuration-wifi-sauvegarde">Wi-Fi et sauvegardes</Link></div>
+      <div><strong>AIP</strong><Link href="/a-propos">À propos</Link><Link href="/tarifs">Tarifs</Link><Link href="/avis-clients">Avis clients</Link><Link href="/faq">FAQ</Link><Link href="/contact">Contact</Link></div>
+      <div className="footer-cross-site"><strong>Création Web</strong><a href="https://creationatelierpotvin.ca/">Sites Web pour entreprises</a><a href="https://creationatelierpotvin.ca/#realisations">Voir les réalisations</a></div>
     </nav>
+
+    <nav className="footer-service-links footer-simple footer-site footer-site-web shell" aria-label="Création Web et informations">
+      <div><strong>Sites Web</strong><Link href="/">Création de sites Web</Link><Link href="/site-web-pme">Sites Web pour PME</Link><Link href="/creation-boutique-en-ligne">Boutiques en ligne</Link><Link href="/developpement-cms-sur-mesure">Gestion et CMS sur mesure</Link><Link href="/#realisations">Réalisations</Link></div>
+      <div><strong>Création locale</strong><Link href="/creation-site-web-nicolet">Nicolet</Link><Link href="/creation-site-web-becancour">Bécancour</Link><Link href="/creation-site-web-trois-rivieres">Trois-Rivières</Link><Link href="/tarifs">Tarifs Web</Link><Link href="/contact">Contact</Link></div>
+      <div className="footer-cross-site"><strong>Besoin informatique?</strong><a href="https://atelierpotvin.ca/">Atelier Informatique Potvin</a><a href="https://atelierpotvin.ca/assistance-informatique-a-distance">Assistance à distance</a></div>
+    </nav>
+
     <div className="footer-nap shell"><strong>{businessName}</strong><span>{businessAddress}</span><a href="tel:+18193802999">{phone}</a><a href={googleBusinessUrl} target="_blank" rel="noopener noreferrer">Nous trouver sur Google Maps</a></div>
     <footer className="footer shell"><Link className="footer-brand footer-logo-only" href="/" aria-label="AIP Atelier Informatique Potvin, accueil"><img src="/aip-icon-v7.png" alt="AIP Atelier Informatique Potvin" width="92" height="79" /></Link><p>© 2026 AIP · <span className="footer-legal-name">AIP Atelier Informatique Potvin</span> · Nicolet, Québec</p><a href="tel:+18193802999">{phone}</a></footer>
   </>;
