@@ -3186,7 +3186,7 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
 }
 
 /* AIP BRANDED ARROW 2026-10-03 */
-/* Replace the old circular/gold arrow buttons with the custom AIP arrow asset. */
+/* Keep the branded arrow only for compact secondary navigation links. */
 .gold-arrow,
 .web-card-arrow,
 .related-links a > span:last-child,
@@ -3194,19 +3194,24 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   display:none!important;
 }
 
-/* Main CTA links */
-a.button::after,
-.related-links a::after,
+/* Primary buttons and related-service cards stay visually clean. */
+a.button:not(.download-button):not(.phone-button)::after,
+.related-links a::after{
+  display:none!important;
+  content:none!important;
+}
+
+/* Secondary text/navigation links may keep the AIP arrow. */
 .local-area-grid a::after,
 .portfolio-service-link::after,
 .text-link::after{
   content:""!important;
   display:inline-block!important;
-  width:46px!important;
-  height:20px!important;
-  min-width:46px!important;
-  flex:0 0 46px!important;
-  margin-left:10px!important;
+  width:38px!important;
+  height:16px!important;
+  min-width:38px!important;
+  flex:0 0 38px!important;
+  margin-left:8px!important;
   border:0!important;
   border-radius:0!important;
   background:transparent url("/aip-arrow-button.webp") center/contain no-repeat!important;
@@ -3217,49 +3222,25 @@ a.button::after,
   transition:transform .18s ease,filter .18s ease!important;
 }
 
-/* Keep the arrow aligned in text-style CTAs. */
 .text-link{
   display:inline-flex!important;
   align-items:center!important;
   gap:6px!important;
 }
 
-/* Smooth branded motion instead of the old circular-button animation. */
-a.button:hover::after,
-.related-links a:hover::after,
 .local-area-grid a:hover::after,
 .portfolio-service-link:hover::after,
 .text-link:hover::after{
   transform:translateX(5px) scale(1.05)!important;
   filter:drop-shadow(0 3px 7px rgba(0,122,220,.34)) brightness(1.06)!important;
 }
-a.button:active::after,
-.related-links a:active::after,
 .local-area-grid a:active::after,
 .portfolio-service-link:active::after,
 .text-link:active::after{
   transform:translateX(3px) scale(.98)!important;
 }
 
-/* Smaller arrow for compact inline links. */
-.local-area-grid a::after,
-.portfolio-service-link::after,
-.text-link::after{
-  width:38px!important;
-  height:16px!important;
-  min-width:38px!important;
-  flex-basis:38px!important;
-  margin-left:8px!important;
-}
-
 @media(max-width:760px){
-  a.button::after,
-  .related-links a::after{
-    width:40px!important;
-    height:17px!important;
-    min-width:40px!important;
-    flex-basis:40px!important;
-  }
   .local-area-grid a::after,
   .portfolio-service-link::after,
   .text-link::after{
