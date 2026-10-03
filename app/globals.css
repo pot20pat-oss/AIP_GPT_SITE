@@ -3465,3 +3465,74 @@ a.button.phone-button:active::after{
   display:inline-block!important;
   content:""!important;
 }
+
+
+/* HOMEPAGE HYBRID INTENT GATEWAY 2026-10-03 */
+.hero-intent-actions{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:12px!important;
+  max-width:620px!important;
+}
+.hero-intent-choice{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-width:0!important;
+  min-height:54px!important;
+  padding:13px 18px!important;
+  border-radius:6px!important;
+  text-align:center!important;
+  text-decoration:none!important;
+  font-weight:780!important;
+  line-height:1.15!important;
+  transition:transform .18s ease,background .18s ease,border-color .18s ease!important;
+}
+.hero-intent-choice::after{
+  display:none!important;
+  content:none!important;
+}
+.hero-intent-it{
+  color:#fff!important;
+  background:#0b75b8!important;
+  border:1px solid #49c5ff!important;
+}
+.hero-intent-web{
+  color:#fff!important;
+  background:rgba(7,31,55,.78)!important;
+  border:1px solid rgba(255,255,255,.78)!important;
+  backdrop-filter:blur(8px);
+}
+@media(hover:hover){
+  .hero-intent-choice:hover{transform:translateY(-2px)!important}
+  .hero-intent-it:hover{background:#1188cf!important}
+  .hero-intent-web:hover{background:rgba(18,52,82,.92)!important}
+}
+@media(max-width:760px){
+  .hero-intent-actions{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    width:100%!important;
+    max-width:290px!important;
+    gap:8px!important;
+    margin-top:14px!important;
+  }
+  .hero-intent-actions .hero-intent-choice{
+    display:flex!important;
+    width:100%!important;
+    min-height:43px!important;
+    padding:9px 11px!important;
+    font-size:10.5px!important;
+  }
+}
+
+/* The gateway cards are equal destinations; urgency changes the tone, not the hierarchy. */
+.expertise-gateway{
+  grid-template-columns:.78fr 1fr 1fr!important;
+}
+.expertise-gateway-card{
+  min-height:210px;
+}
+.expertise-gateway-card h2{
+  max-width:390px;
+}
