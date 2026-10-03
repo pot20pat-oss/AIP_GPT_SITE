@@ -3880,3 +3880,138 @@ a.button.phone-button:active::after{
     display:none;
   }
 }
+
+
+/* MOBILE REMOTE ASSISTANCE — compact path 2026-10-03 */
+.remote-mobile-quick{
+  display:none;
+}
+@media(max-width:760px){
+  .remote-service-page .detail-hero{
+    padding-top:34px!important;
+    padding-bottom:28px!important;
+    gap:0!important;
+  }
+  .remote-service-page .detail-hero h1{
+    font-size:43px!important;
+    margin:18px 0 16px!important;
+  }
+  .remote-service-page .detail-hero-copy>p{
+    font-size:13px!important;
+    line-height:1.55!important;
+  }
+  .remote-service-page .detail-hero .hero-actions{
+    margin-top:22px!important;
+    gap:10px!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+  }
+  .remote-service-page .detail-hero .hero-actions .button{
+    width:100%!important;
+  }
+  .remote-service-page .detail-photo{
+    display:none!important;
+  }
+
+  .remote-mobile-quick{
+    display:block;
+    margin-top:0;
+    margin-bottom:34px;
+    padding:20px;
+    border:1px solid var(--line);
+    background:#f7f9fc;
+  }
+  .remote-mobile-quick-title{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    margin-bottom:16px;
+  }
+  .remote-mobile-quick-title span{
+    color:#438fb7;
+    font-size:9px;
+    font-weight:850;
+    letter-spacing:.11em;
+  }
+  .remote-mobile-quick-title strong{
+    font-size:19px;
+    line-height:1.25;
+  }
+  .remote-mobile-steps{
+    display:grid;
+    gap:10px;
+    margin-bottom:16px;
+  }
+  .remote-mobile-steps>div{
+    display:grid;
+    grid-template-columns:28px 1fr;
+    gap:10px;
+    align-items:center;
+    padding:10px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .remote-mobile-steps b{
+    display:flex;
+    width:28px;
+    height:28px;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#071f37;
+    color:#fff;
+    font-size:11px;
+  }
+  .remote-mobile-steps span{
+    font-size:13px;
+    line-height:1.4;
+  }
+  .remote-mobile-steps a{
+    color:#0b75b8;
+    font-weight:800;
+  }
+  .remote-mobile-meta{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    margin:14px 0 16px;
+  }
+  .remote-mobile-meta strong{
+    font-size:26px;
+  }
+  .remote-mobile-meta span{
+    color:var(--muted);
+    font-size:11px;
+  }
+  .remote-mobile-quick>.button{
+    width:100%!important;
+  }
+
+  /* The long explanatory sections stay available on desktop,
+     but mobile goes straight to FAQ/contact after the quick path. */
+  .remote-service-page .detail-body,
+  .remote-service-page .service-depth,
+  .remote-service-page .related,
+  .remote-service-page .expertise-bridge{
+    display:none!important;
+  }
+  .remote-service-page .service-faq.section{
+    padding-top:34px!important;
+    padding-bottom:38px!important;
+  }
+  .remote-service-page .service-faq .section-heading{
+    margin-bottom:12px!important;
+  }
+  .remote-service-page .service-faq .section-heading h2{
+    font-size:34px!important;
+  }
+  .remote-service-page .faq-list details{
+    padding:17px 0!important;
+  }
+  .remote-service-page .faq-list summary{
+    font-size:15px!important;
+  }
+  .remote-service-page .contact.section{
+    padding-top:42px!important;
+    padding-bottom:48px!important;
+  }
+}
