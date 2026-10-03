@@ -29,7 +29,7 @@ export default function Page() {
           </p>
           <div className="hero-actions">
             <a className="button button-dark" href="#telechargements">Voir les téléchargements</a>
-            <a className="text-link" href="tel:+18193802999">Besoin d’aide? 819 380-2999</a>
+            <a className="text-link phone-link" href="tel:+18193802999">Besoin d’aide? 819 380-2999</a>
           </div>
         </div>
         <figure className="download-hero-visual">

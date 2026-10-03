@@ -90,7 +90,45 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
-  return <><nav className="footer-service-links shell" aria-label="Services et informations"><div><strong>Informatique</strong><Link href="/reparation-ordinateur-nicolet">Réparation ordinateur Nicolet</Link><Link href="/depannage-informatique-becancour">Dépannage Bécancour</Link><Link href="/depannage-informatique-trois-rivieres">Dépannage Trois-Rivières</Link><Link href="/assistance-informatique-a-distance">Assistance à distance</Link><Link href="/assistance">Télécharger AIP Assistance</Link></div><div><strong>Installation & sécurité</strong><Link href="/installation-ordinateur-transfert-donnees">Installation et transfert</Link><Link href="/configuration-wifi-sauvegarde">Wi-Fi et sauvegardes</Link><Link href="/suppression-virus">Suppression de virus</Link><Link href="/faq">FAQ</Link></div><div><strong>Web</strong><Link href="/creation-sites-web">Création et conception Web</Link><Link href="/creation-site-web-nicolet">Création Web Nicolet</Link><Link href="/creation-site-web-becancour">Création Web Bécancour</Link><Link href="/creation-site-web-trois-rivieres">Création Web Trois-Rivières</Link></div><div><strong>AIP</strong><Link href="/a-propos">À propos</Link><Link href="/comment-ca-marche">Comment ça marche</Link><Link href="/avis-clients">Avis clients</Link><Link href="/contact">Contact</Link></div></nav><div className="footer-nap shell"><strong>{businessName}</strong><span>{businessAddress}</span><a href="tel:+18193802999">{phone}</a><a href={googleBusinessUrl} target="_blank" rel="noopener noreferrer">Nous trouver sur Google Maps</a></div><footer className="footer shell"><Link className="footer-brand footer-logo-only" href="/" aria-label="AIP Atelier Informatique Potvin, accueil"><img src="/aip-icon-v7.png" alt="AIP Atelier Informatique Potvin" width="92" height="79" /></Link><p>© 2026 AIP · <span className="footer-legal-name">AIP Atelier Informatique Potvin</span> · Nicolet, Québec</p><a href="tel:+18193802999">{phone}</a></footer></>;
+  const pathname = usePathname() || "/";
+  const isWebIntent = [
+    "/creation-sites-web",
+    "/creation-site-web-",
+    "/site-web-pme",
+    "/creation-boutique-en-ligne",
+    "/developpement-cms-sur-mesure",
+    "/realisation-envol-des-enfants",
+  ].some(prefix => pathname.startsWith(prefix));
+  const isItIntent = [
+    "/reparation-ordinateur",
+    "/depannage-informatique",
+    "/suppression-virus",
+    "/assistance",
+    "/installation-ordinateur",
+    "/configuration-wifi",
+    "/reseau-sauvegarde",
+  ].some(prefix => pathname.startsWith(prefix));
+
+  return <>
+    <nav className={`footer-service-links footer-context-${isWebIntent ? "web" : isItIntent ? "it" : "general"} shell`} aria-label="Services et informations">
+      {isWebIntent ? <>
+        <div><strong>Création Web</strong><Link href="/creation-sites-web">Création et conception Web</Link><Link href="/site-web-pme">Sites Web pour PME</Link><Link href="/creation-boutique-en-ligne">Boutiques en ligne</Link><Link href="/developpement-cms-sur-mesure">CMS sur mesure</Link></div>
+        <div><strong>Web dans votre région</strong><Link href="/creation-site-web-nicolet">Nicolet</Link><Link href="/creation-site-web-becancour">Bécancour</Link><Link href="/creation-site-web-trois-rivieres">Trois-Rivières</Link><Link href="/#realisations">Réalisations</Link></div>
+        <div className="footer-other-expertise"><strong>Besoin informatique?</strong><Link href="/depannage-informatique-nicolet">Dépannage informatique</Link><Link href="/assistance-informatique-a-distance">Assistance à distance</Link><Link href="/tarifs">Tarifs</Link></div>
+      </> : isItIntent ? <>
+        <div><strong>Dépannage informatique</strong><Link href="/reparation-ordinateur-nicolet">Réparation d’ordinateur</Link><Link href="/suppression-virus">Suppression de virus</Link><Link href="/assistance-informatique-a-distance">Assistance à distance</Link><Link href="/assistance">Télécharger AIP Assistance</Link></div>
+        <div><strong>Installation &amp; réseau</strong><Link href="/installation-ordinateur-transfert-donnees">Installation et transfert</Link><Link href="/configuration-wifi-sauvegarde">Wi-Fi et sauvegardes</Link><Link href="/depannage-informatique-becancour">Dépannage Bécancour</Link><Link href="/depannage-informatique-trois-rivieres">Dépannage Trois-Rivières</Link></div>
+        <div className="footer-other-expertise"><strong>Vous avez un projet Web?</strong><Link href="/creation-sites-web">Création de sites Web</Link><Link href="/#realisations">Voir les réalisations</Link><Link href="/tarifs">Tarifs</Link></div>
+      </> : <>
+        <div><strong>Informatique</strong><Link href="/reparation-ordinateur-nicolet">Réparation d’ordinateur</Link><Link href="/suppression-virus">Suppression de virus</Link><Link href="/assistance-informatique-a-distance">Assistance à distance</Link><Link href="/configuration-wifi-sauvegarde">Wi-Fi et sauvegardes</Link></div>
+        <div><strong>Création Web</strong><Link href="/creation-sites-web">Création et conception Web</Link><Link href="/site-web-pme">Sites Web pour PME</Link><Link href="/creation-boutique-en-ligne">Boutiques en ligne</Link><Link href="/developpement-cms-sur-mesure">CMS sur mesure</Link></div>
+        <div><strong>Dans votre région</strong><Link href="/depannage-informatique-becancour">Dépannage Bécancour</Link><Link href="/depannage-informatique-trois-rivieres">Dépannage Trois-Rivières</Link><Link href="/creation-site-web-nicolet">Création Web Nicolet</Link><Link href="/creation-site-web-becancour">Création Web Bécancour</Link></div>
+      </>}
+      <div><strong>AIP</strong><Link href="/a-propos">À propos</Link><Link href="/comment-ca-marche">Comment ça marche</Link><Link href="/avis-clients">Avis clients</Link><Link href="/faq">FAQ</Link><Link href="/contact">Contact</Link></div>
+    </nav>
+    <div className="footer-nap shell"><strong>{businessName}</strong><span>{businessAddress}</span><a href="tel:+18193802999">{phone}</a><a href={googleBusinessUrl} target="_blank" rel="noopener noreferrer">Nous trouver sur Google Maps</a></div>
+    <footer className="footer shell"><Link className="footer-brand footer-logo-only" href="/" aria-label="AIP Atelier Informatique Potvin, accueil"><img src="/aip-icon-v7.png" alt="AIP Atelier Informatique Potvin" width="92" height="79" /></Link><p>© 2026 AIP · <span className="footer-legal-name">AIP Atelier Informatique Potvin</span> · Nicolet, Québec</p><a href="tel:+18193802999">{phone}</a></footer>
+  </>;
 }
 
 export function LocalServiceArea() {
@@ -139,7 +177,7 @@ export function DetailPage({ eyebrow, title, accent, intro, points, asideTitle, 
     {faqs?.length && <section className="service-faq section"><div className="shell"><div className="section-heading"><div><div className="eyebrow"><span></span>{isWebService ? "Avant de démarrer votre projet" : "Avant de prendre rendez-vous"}</div><h2>Vos questions.<br /><em>Des réponses claires.</em></h2></div></div><div className="faq-list">{faqs.map(({ question, answer }) => <details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></div></section>}
     {servicePath === "/creation-sites-web" && <section className="web-value section"><div className="shell"><div className="web-value-grid"><article className="web-value-local"><div className="eyebrow"><span></span>Une approche différente</div><h2>Un technicien local.<br /><em>Un seul interlocuteur.</em></h2><p>Votre site n’est pas confié à une chaîne d’intermédiaires. Vous échangez directement avec Patrick, de la première discussion jusqu’à la mise en ligne et au suivi.</p><div className="web-value-facts"><span><strong>40 ans</strong>d’expérience informatique</span><span><strong>Local</strong>Nicolet et la région</span><span><strong>Web + TI</strong>un même contact</span><span><strong>Sur mesure</strong>site, boutique et CMS</span></div></article><article className="web-value-included"><div className="eyebrow"><span></span>Inclus dans votre projet</div><h2>Un site prêt à travailler<br /><em>pour votre entreprise.</em></h2><ul><li>Design adapté à votre entreprise</li><li>Affichage téléphone, tablette et ordinateur</li><li>Structure et SEO local</li><li>Mise en ligne et configuration du domaine</li><li>Explications simples pour prendre le site en main</li><li>Accompagnement après la mise en ligne</li></ul><p className="web-value-price">Site vitrine de base <strong>à partir de 900 $</strong></p></article></div></div></section>}
     {showcaseProject && <ProjectShowcase showServiceLink={false} />}
-    <section className="related section shell"><div className="eyebrow"><span></span>{isWebService ? "Pour aller plus loin" : "Vous pourriez aussi chercher"}</div><div className="related-links">{links.map(link => <Link className={`button button-outline${link.href === "/assistance" ? " download-button" : ""}`} href={link.href} key={link.href}>{link.label}</Link>)}</div></section>
+    <section className={`related section shell related-${isWebService ? "web" : "it"}`}><div className="eyebrow"><span></span>{isWebService ? "Continuer votre projet Web" : "Autres services informatiques"}</div><div className="related-links">{links.map(link => <Link className={`button button-outline${link.href === "/assistance" ? " download-button" : ""}`} href={link.href} key={link.href}>{link.label}</Link>)}</div></section>
     <section className="contact section"><div className="shell contact-inner"><div><div className="eyebrow"><span></span>{isWebService ? "Votre projet Web" : "On règle ça ensemble"}</div><h2>{isWebService ? <>Une idée en tête?<br /><em>Parlons-en.</em></> : <>Besoin d’aide?<br /><em>Écrivez-moi ou appelez-moi.</em></>}</h2><p>{isWebService ? "Expliquez-moi votre entreprise, vos besoins et ce que vous voulez accomplir. Je vous dirai clairement par où commencer." : "Expliquez-moi le problème dans vos mots. Je vous dirai clairement ce qu’on peut faire."}</p><a className="contact-inline-phone" href="tel:+18193802999">{phone}</a></div><div className="contact-card contact-form-card"><span>Demande rapide</span><form className="contact-mini-form" action="https://formsubmit.co/contact@atelierpotvin.ca" method="POST"><input type="hidden" name="_subject" value="Nouvelle demande — atelierpotvin.ca" /><input type="hidden" name="_template" value="table" /><input type="hidden" name="_next" value="https://atelierpotvin.ca/merci" /><input className="contact-honey" type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" /><label>Nom<input type="text" name="name" autoComplete="name" required /></label><label>Téléphone ou courriel<input type="text" name="coordonnees" autoComplete="email" required /></label><label>De quoi avez-vous besoin?<textarea name="message" rows={4} required /></label><button className="button button-lime" type="submit">Envoyer ma demande</button></form><div className="response-note"><span></span>Réponse habituellement dans la journée</div></div></div></section>
     <SiteFooter />
   </main>;
