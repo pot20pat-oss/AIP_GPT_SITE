@@ -29,7 +29,7 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
     const primaryHost = "atelierpotvin.ca";
-    const webHost = "creationatelierpotvin.ca";
+    const webHost = "aipcreation.ca";
 
     if (url.hostname === "www.atelierpotvin.ca" || url.hostname === "atelierpotvin.tech" || url.hostname === "www.atelierpotvin.tech") {
       url.protocol = "https:";
@@ -38,7 +38,7 @@ const worker = {
       return Response.redirect(url.toString(), 301);
     }
 
-    if (url.hostname === "www.creationatelierpotvin.ca") {
+    if (url.hostname === "www.aipcreation.ca") {
       url.protocol = "https:";
       url.hostname = webHost;
       url.port = "";
