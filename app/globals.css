@@ -4244,3 +4244,74 @@ html[data-site-mode="web"] .footer-site-web{
     border-top:1px solid var(--line);
   }
 }
+
+
+/* DOMAIN HOMEPAGES 2026-10-03 */
+.domain-services{
+  padding-top:70px;
+  padding-bottom:78px;
+}
+.domain-service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.domain-service-grid article{
+  display:flex;
+  flex-direction:column;
+  min-height:280px;
+  padding:28px;
+  border:1px solid var(--line);
+  background:#fff;
+}
+.domain-service-grid article>span{
+  color:#438fb7;
+  font-size:10px;
+  font-weight:850;
+}
+.domain-service-grid h3{
+  margin:18px 0 10px;
+  font-size:23px;
+  letter-spacing:-.7px;
+}
+.domain-service-grid p{
+  margin:0 0 24px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.65;
+}
+.domain-service-grid .button{
+  margin-top:auto;
+  align-self:flex-start;
+}
+.home-domain-it .home-assistance-choice{
+  background:#fff!important;
+  color:#0b2948!important;
+  border:1px solid rgba(255,255,255,.75)!important;
+}
+@media(max-width:760px){
+  .domain-services{
+    padding-top:46px;
+    padding-bottom:52px;
+  }
+  .domain-service-grid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .domain-service-grid article{
+    min-height:0;
+    padding:21px 19px;
+  }
+  .domain-service-grid h3{
+    margin-top:12px;
+    font-size:21px;
+  }
+  .domain-service-grid p{
+    margin-bottom:18px;
+    font-size:12.5px;
+    line-height:1.5;
+  }
+  .domain-service-grid .button{
+    width:100%;
+  }
+}
