@@ -4326,3 +4326,49 @@ html[data-site-mode="web"] .footer-site-web{
   color:#0b2948!important;
   border:1px solid rgba(255,255,255,.75)!important;
 }
+
+
+/* CONTACT PAGE CARDS 2026-10-03 */
+.contact-page-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+  align-items:stretch;
+}
+.contact-method{
+  display:flex;
+  flex-direction:column;
+  min-height:310px;
+  padding:32px 30px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 12px 34px rgba(23,36,69,.055);
+}
+.contact-method h2{
+  margin:18px 0 14px;
+  font-size:clamp(27px,2.3vw,36px);
+  line-height:1.1;
+  letter-spacing:-1.2px;
+}
+.contact-method p{
+  margin:0 0 28px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.65;
+}
+.contact-method .button{
+  margin-top:auto;
+  align-self:flex-start;
+  min-width:210px;
+}
+@media(max-width:900px){
+  .contact-page-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+  .contact-method{
+    min-height:0;
+    padding:28px 24px;
+  }
+}
