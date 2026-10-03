@@ -61,7 +61,7 @@ export function SiteFooter() {
     <nav className="footer-service-links footer-simple footer-site footer-site-it shell" aria-label="Services informatiques et informations">
       <div><strong>Informatique</strong><Link href="/depannage-informatique-nicolet">Dépannage et réparation</Link><Link href="/assistance-informatique-a-distance">Assistance à distance</Link><Link href="/suppression-virus">Virus et sécurité</Link><Link href="/installation-ordinateur-transfert-donnees">Installation et transfert</Link><Link href="/configuration-wifi-sauvegarde">Wi-Fi et sauvegardes</Link></div>
       <div><strong>AIP</strong><Link href="/a-propos">À propos</Link><Link href="/tarifs">Tarifs</Link><Link href="/avis-clients">Avis clients</Link><Link href="/faq">FAQ</Link><Link href="/contact">Contact</Link></div>
-      <div className="footer-cross-site"><strong>Création Web</strong><a href="https://creationatelierpotvin.ca/">Sites Web pour entreprises</a><a href="https://creationatelierpotvin.ca/#realisations">Voir les réalisations</a></div>
+      <div className="footer-cross-site"><strong>Création Web</strong><a href="https://aipcreation.ca/">Sites Web pour entreprises</a><a href="https://aipcreation.ca/#realisations">Voir les réalisations</a></div>
     </nav>
 
     <nav className="footer-service-links footer-simple footer-site footer-site-web shell" aria-label="Création Web et informations">
