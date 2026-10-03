@@ -19,7 +19,9 @@ export async function generateMetadata(): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: base },
-    keywords: ["dépannage informatique Nicolet", "réparation ordinateur Nicolet", "assistance informatique à distance", "Atelier Informatique Potvin"],
+    keywords: isWebSite
+      ? ["création site web Nicolet", "conception site web Nicolet", "site web PME", "boutique en ligne", "CMS sur mesure"]
+      : ["dépannage informatique Nicolet", "réparation ordinateur Nicolet", "assistance informatique à distance", "Atelier Informatique Potvin"],
     authors: [{ name: "Patrick Potvin" }],
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
     openGraph: { title, description, url: base, siteName: isWebSite ? "AIP Création Web" : businessName, images: [{ url: `${base}/aip-travail-03.webp`, alt: "Patrick Potvin, services informatiques à Nicolet" }], locale: "fr_CA", type: "website" },
@@ -52,7 +54,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         url: siteUrl,
         telephone: "+1-819-380-2999",
         image,
-        logo: `${siteUrl}/aip-icon-v7.ico`,
+        logo: `${siteUrl}/aip-icon-v7.png`,
         founder: { "@type": "Person", name: "Patrick Potvin" },
         address: { "@type": "PostalAddress", streetAddress: "462 rue D. N. St-Cyr", addressLocality: "Nicolet", addressRegion: "QC", postalCode: "J3T 1H3", addressCountry: "CA" },
         areaServed: ["Nicolet", "Bécancour", "Trois-Rivières", "Saint-Célestin", "Centre-du-Québec"].map(name => ({ "@type": "Place", name })),
