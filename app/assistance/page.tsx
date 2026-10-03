@@ -24,9 +24,8 @@ export default function Page() {
           <div className="eyebrow"><span></span> AIP Assistance à distance</div>
           <h1>Besoin d’aide maintenant? <em>Choisissez votre appareil.</em></h1>
           <p>
-            AIP Assistance prépare RustDesk pour utiliser le serveur privé d’Atelier Informatique Potvin.
-            Sur Windows et Mac, utilisez l’installateur AIP. Sur Android, installez RustDesk puis scannez
-            le code QR de configuration.
+            Choisissez votre appareil, téléchargez l’outil puis ouvrez-le. Donnez-moi ensuite
+            l’identifiant affiché à l’écran. Si une confirmation apparaît, je vous guide au téléphone.
           </p>
           <div className="hero-actions">
             <a className="button button-dark" href="#telechargements">Voir les téléchargements</a>
@@ -43,38 +42,50 @@ export default function Page() {
           <div className="section-heading">
             <div>
               <div className="eyebrow"><span></span> Téléchargements</div>
-              <h2>Windows, Mac et mobile.<br /><em>Le bon outil pour chaque appareil.</em></h2>
+              <h2>Choisissez votre appareil.<br /><em>Je vous guide ensuite.</em></h2>
             </div>
-            <p>Les versions Windows et Mac configurent automatiquement le serveur AIP. Android se configure en scannant le QR ci-dessous.</p>
+            <p>Pas besoin de connaître l’informatique : choisissez simplement votre appareil et suivez les trois étapes.</p>
           </div>
 
-          <div className="seo-prices">
+          <div className="seo-prices download-device-grid">
             <article>
               <span>Windows 10 / 11 · 64 bits</span>
               <strong>Windows</strong>
-              <p>Téléchargez le ZIP, extrayez-le puis lancez Installer-AIP-Assistance.cmd. Le serveur AIP et sa clé sont configurés automatiquement.</p>
+              <ol className="download-card-steps">
+                <li>Téléchargez AIP Assistance.</li>
+                <li>Ouvrez le fichier téléchargé et lancez AIP Assistance.</li>
+                <li>Donnez-moi l’identifiant affiché à l’écran.</li>
+              </ol>
               <a className="button button-dark download-button" href="/downloads/AIP-Assistance-Windows-x64.zip" download>Télécharger pour Windows</a>
             </article>
 
             <article>
               <span>Apple Silicon et Intel</span>
               <strong>macOS</strong>
-              <p>L’installateur détecte automatiquement le processeur du Mac, télécharge le DMG officiel RustDesk 1.5.0 et configure le serveur AIP.</p>
+              <ol className="download-card-steps">
+                <li>Téléchargez AIP Assistance.</li>
+                <li>Ouvrez le fichier et suivez les indications de macOS.</li>
+                <li>Donnez-moi l’identifiant affiché à l’écran.</li>
+              </ol>
               <a className="button button-dark download-button" href="/downloads/AIP-Assistance-macOS.zip" download>Télécharger pour Mac</a>
             </article>
 
             <article>
               <span>Android</span>
               <strong>Android</strong>
-              <p>Installez l’APK officiel RustDesk 1.5.0. Ensuite, dans RustDesk, ouvrez la configuration du serveur et scannez le code QR AIP plus bas.</p>
+              <ol className="download-card-steps">
+                <li>Installez RustDesk.</li>
+                <li>Scannez le code QR AIP plus bas.</li>
+                <li>Donnez-moi votre identifiant et acceptez le partage d’écran.</li>
+              </ol>
               <a className="button button-dark download-button" href="https://github.com/rustdesk/rustdesk/releases/download/1.5.0/rustdesk-1.5.0-universal-signed.apk">Télécharger RustDesk Android</a>
             </article>
 
             <article>
               <span>iPhone et iPad</span>
               <strong>iOS / iPadOS</strong>
-              <p>L’application RustDesk pour iPhone et iPad peut servir à contrôler un autre ordinateur, mais iOS ne permet pas de prendre le contrôle à distance de l’iPhone ou de l’iPad.</p>
-              <a className="button button-dark download-button ios-download-button" href="https://apps.apple.com/ca/app/rustdesk-remote-desktop/id1581225015" target="_blank" rel="noopener noreferrer">Ouvrir dans l’App Store</a>
+              <p className="download-ios-note">Pour l’assistance sur iPhone ou iPad, le dépannage se fait généralement en personne. RustDesk reste disponible si vous voulez contrôler un ordinateur depuis votre appareil Apple.</p>
+              <a className="button button-dark download-button" href="https://apps.apple.com/ca/app/rustdesk-remote-desktop/id1581225015" target="_blank" rel="noopener noreferrer">Ouvrir dans l’App Store</a>
             </article>
           </div>
         </div>
@@ -129,7 +140,10 @@ export default function Page() {
       </section>
 
       <section className="detail-body section">
-        <div className="shell detail-grid">
+        <div className="shell">
+          <details className="technical-details">
+            <summary>Afficher les détails d’installation et de sécurité</summary>
+            <div className="detail-grid">
           <div className="detail-points">
             <article>
               <span>01</span>
@@ -174,6 +188,8 @@ export default function Page() {
               <div><strong>1.5.0</strong><span>RustDesk</span></div>
             </div>
           </aside>
+            </div>
+          </details>
         </div>
       </section>
 

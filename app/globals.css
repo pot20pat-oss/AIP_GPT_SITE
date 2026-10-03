@@ -3360,24 +3360,49 @@ a.button.download-button:active::after{
 }
 
 
-/* iOS download button — force the AIP download glyph. */
-a.button.download-button.ios-download-button::after{
-  content:""!important;
-  display:inline-block!important;
-  width:30px!important;
-  height:30px!important;
-  min-width:30px!important;
-  flex:0 0 30px!important;
-  margin-left:12px!important;
-  background:transparent url("/aip-download-icon.webp") center/contain no-repeat!important;
-  border:0!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-  text-shadow:none!important;
-  filter:drop-shadow(0 2px 4px rgba(0,110,200,.30))!important;
-  transform:translateY(0) scale(1)!important;
+
+
+/* AIP ASSISTANCE — SIMPLE CLIENT FLOW 2026-10-03 */
+.download-device-grid article{
+  display:flex;
+  flex-direction:column;
 }
-a.button.download-button.ios-download-button:hover::after{
-  transform:translateY(3px) scale(1.07)!important;
-  filter:drop-shadow(0 4px 7px rgba(0,145,245,.38)) brightness(1.05)!important;
+.download-card-steps{
+  margin:14px 0 22px;
+  padding-left:22px;
+  color:var(--muted);
+  line-height:1.65;
 }
+.download-card-steps li{margin:6px 0}
+.download-ios-note{
+  margin:14px 0 22px;
+  color:var(--muted);
+  line-height:1.65;
+}
+.download-device-grid .download-button{
+  margin-top:auto;
+  align-self:flex-start;
+}
+.technical-details{
+  border:1px solid #dfe7f1;
+  border-radius:18px;
+  background:#fff;
+  overflow:hidden;
+}
+.technical-details>summary{
+  cursor:pointer;
+  list-style:none;
+  padding:22px 26px;
+  font-weight:800;
+  color:#162445;
+}
+.technical-details>summary::-webkit-details-marker{display:none}
+.technical-details>summary::after{
+  content:"+";
+  float:right;
+  font-size:24px;
+  line-height:1;
+}
+.technical-details[open]>summary::after{content:"−"}
+.technical-details[open]>summary{border-bottom:1px solid #e6ebf2}
+.technical-details>.detail-grid{padding:30px}
