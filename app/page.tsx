@@ -1,18 +1,11 @@
 import Link from "next/link";
-import { LocalServiceArea, phone, ProjectShowcase, SiteFooter, SiteHeader } from "./components";
-
-const services = [
-  { number: "01", title: "Dépannage et réparation", description: "Un ordinateur qui rame, un écran bleu ou un PC qui ne démarre plus? On trouve la vraie cause, puis on règle le problème.", icon: "↗", href: "/depannage-informatique-nicolet", image: "/aip-travail-03.webp", imageAlt: "Patrick Potvin répare un ordinateur depuis son bureau à domicile à Nicolet" },
-  { number: "02", title: "Virus et cybersécurité", description: "Suppression des logiciels malveillants, nettoyage complet et protection de vos fichiers, sans mauvaises surprises.", icon: "◈", href: "/suppression-virus", image: "/aip-travail-08.webp", imageAlt: "Patrick Potvin vérifie la sécurité et élimine les logiciels malveillants" },
-  { number: "03", title: "Assistance à distance", description: "Une solution rapide et sécurisée, directement chez vous. Rien de compliqué à installer après l’intervention.", icon: "⌘", href: "/assistance-informatique-a-distance", image: "/aip-travail-04.webp", imageAlt: "Patrick Potvin accompagne un client à distance depuis son bureau à domicile" },
-  { number: "04", title: "Installation et transfert", description: "Nouveau PC, imprimante, Windows ou transfert de données : tout fonctionne comme il faut, dès le départ.", icon: "⇄", href: "/installation-ordinateur-transfert-donnees", image: "/aip-travail-05.webp", imageAlt: "Patrick Potvin configure un nouvel ordinateur et transfère les données" },
-  { number: "05", title: "Réseau et sauvegardes", description: "Un Wi-Fi fiable, des appareils bien connectés et des copies de sécurité pour ne plus craindre de tout perdre.", icon: "⌁", href: "/configuration-wifi-sauvegarde", image: "/aip-travail-11.webp", imageAlt: "Patrick Potvin configure un routeur et une sauvegarde informatique" },
-  ];
+import { SiteFooter, SiteHeader } from "./components";
 
 export default function Home() {
   return (
-    <main className="home-page">
+    <main className="home-page home-short">
       <SiteHeader />
+
       <section className="hero-clean hero-split" id="accueil">
         <div className="hero-split-media">
           <img className="hero-clean-bg" src="/hero-aip-clean.png" alt="Atelier Informatique Potvin" fetchPriority="high" decoding="async" />
@@ -29,20 +22,91 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="metrics"><div className="shell metrics-grid"><div><strong>40 ans</strong><span>d’expérience sur le terrain</span></div><div><strong>50 km</strong><span>de service à domicile</span></div><div><strong>5,0 <i>★</i></strong><span>sur Google, 10 avis</span></div><div><strong>1 seul</strong><span>interlocuteur, du début à la fin</span></div></div></section>
-      <section className="expertise-gateway shell" aria-label="Choisir selon votre besoin">
-        <div className="expertise-gateway-intro"><span>DEUX PARCOURS · UNE SEULE ENTREPRISE</span><strong>Qu’est-ce qui vous amène aujourd’hui?</strong></div>
-        <Link className="expertise-gateway-card expertise-gateway-it" href="/depannage-informatique-nicolet"><span>01 · J’AI UN PROBLÈME</span><h2>Mon informatique ne fonctionne pas comme il faut.</h2><p>PC lent, virus, Windows, Wi-Fi, installation ou assistance à distance.</p><b>Aller au dépannage informatique</b></Link>
-        <Link className="expertise-gateway-card expertise-gateway-web" href="/creation-sites-web"><span>02 · J’AI UN PROJET</span><h2>Je veux un site Web pour mon entreprise.</h2><p>Site vitrine dès 900 $, boutique en ligne et outils simples à gérer.</p><b>Aller à la création Web</b></Link>
+
+      <section className="metrics">
+        <div className="shell metrics-grid">
+          <div><strong>40 ans</strong><span>d’expérience sur le terrain</span></div>
+          <div><strong>50 km</strong><span>de service à domicile</span></div>
+          <div><strong>5,0 <i>★</i></strong><span>sur Google, 10 avis</span></div>
+          <div><strong>1 seul</strong><span>interlocuteur, du début à la fin</span></div>
+        </div>
       </section>
-      <section className="web-focus section shell" id="web"><div className="web-live-heading"><div><span>• &nbsp; CRÉATION WEB</span><h2>Votre entreprise.<br/><em>Votre outil numérique.</em></h2></div><p>Sites vitrines, boutiques en ligne et outils adaptés à votre entreprise :<br/>des solutions utiles, rapides et simples à gérer.</p></div><div className="web-mobile-grid"><article><img src="/aip-travail-13.webp" alt="Création d’un site web professionnel" loading="lazy" decoding="async" /><span>01</span><h3>Sites professionnels</h3><p>Sites vitrines rapides et adaptés au mobile pour présenter votre entreprise et générer des contacts.</p><Link className="button button-dark" href="/site-web-pme">Voir le service</Link></article><article><img src="/projet-envol-enfants.png" alt="Boutique e-commerce et CMS sur mesure" loading="lazy" decoding="async" /><span>02</span><h3>Boutique en ligne &amp; gestion</h3><p>Vendez en ligne et gérez facilement vos produits, vos photos, vos prix et votre stock.</p><Link className="button button-dark" href="/creation-boutique-en-ligne">Parler de votre projet</Link></article><article><img src="/projet-bois-morphee.webp" alt="Solution web conçue sur mesure" loading="lazy" decoding="async" /><span>03</span><h3>Outils adaptés à votre travail</h3><p>Des fonctions conçues autour de votre façon de travailler pour vous faire gagner du temps.</p><Link className="button button-dark" href="/developpement-cms-sur-mesure">Découvrir les possibilités</Link></article></div></section>
-      <ProjectShowcase />
-      <section className="services section shell" id="services"><div className="section-heading"><div><div className="eyebrow"><span></span> Services informatiques</div><h2>Votre informatique bloque?<br /><em>On s’occupe du problème.</em></h2></div><p>Réparation, virus, assistance à distance, installation, Wi-Fi et sauvegardes à Nicolet et dans les environs.</p></div><div className="services-mobile-grid">{services.map(service => <article className="service-mobile-card" key={service.href}><img src={service.image} alt={service.imageAlt} loading="lazy" decoding="async" /><div className="service-mobile-copy"><span>{service.number}</span><h3>{service.title}</h3><p>{service.description}</p><Link className="button button-dark" href={service.href}>En savoir plus</Link></div></article>)}</div></section>
-      <section className="approach section" id="approche"><div className="shell approach-inner"><div className="approach-copy"><div className="eyebrow"><span></span> Un service vraiment humain</div><h2>Pas de jargon.<br /><em>Pas de détour.</em></h2><p>Depuis 40 ans, j’aide les gens de ma région avec leur informatique et leurs projets numériques. Je vous explique ce qu’on peut faire, ce que ça coûte et par où commencer — avant d’aller plus loin.</p><a className="button button-lime" href="tel:+18193802999">On en parle?</a></div><div className="approach-steps"><div><span>01</span><h3>Vous m’expliquez.</h3><p>Au téléphone, simplement, dans vos mots.</p></div><div><span>02</span><h3>Je trouve la cause.</h3><p>Un diagnostic clair, avec un prix annoncé d’avance.</p></div><div><span>03</span><h3>On règle ça ensemble.</h3><p>Chez vous, depuis chez moi ou à distance, selon vos besoins.</p></div></div></div></section>
-      <section className="pricing section shell" id="tarifs"><div className="section-heading"><div><div className="eyebrow"><span></span> Des prix clairs, tout simplement</div><h2>Un point de départ.<br /><em>Puis du sur mesure.</em></h2></div><p>Un site vitrine de base commence à 900 $. Le prix varie ensuite selon les besoins réels de votre projet.</p></div><div className="pricing-group pricing-group-web"><div className="pricing-group-heading"><span>01</span><div><h3>Création de sites Web</h3><p>Une base accessible, puis un prix adapté à la portée réelle du projet.</p></div></div><div className="pricing-grid pricing-grid-two"><article className="price-card"><span>Site vitrine de base</span><strong>900 $<small> +</small></strong><p>Une présence web professionnelle simple pour présenter clairement votre entreprise.</p></article><article className="price-card"><span>Projet sur mesure</span><strong>Sur estimation</strong><p>Pages, contenu, e-commerce, CMS, automatisations et autres fonctions sont évalués selon vos besoins.</p></article></div></div><div className="pricing-group"><div className="pricing-group-heading"><span>02</span><div><h3>Services informatiques</h3><p>Diagnostic, réparation, configuration, optimisation et assistance à distance.</p></div></div><div className="pricing-grid pricing-grid-two"><article className="price-card"><span>Diagnostic</span><strong>60 $</strong><p>Évaluation complète et soumission claire. Le diagnostic est crédité si vous faites effectuer la réparation.</p></article><article className="price-card"><span>Service informatique</span><strong>60 $<small> / h</small></strong><p>Réparation, configuration, optimisation, installation et assistance à distance.</p></article></div></div></section>
-      <section className="reviews section"><div className="shell"><div className="section-heading"><div><div className="eyebrow"><span></span> Ce que mes clients en disent</div><h2>De vraies personnes.<br /><em>De vrais résultats.</em></h2></div><p>Une note de 5,0 sur Google, grâce à dix avis de clients de la région.</p></div><div className="reviews-grid"><article><div className="stars">★★★★★</div><blockquote>« Service impeccable. Je recommande fortement ses services, il est expert dans son domaine. »</blockquote><span>Alex Therrien</span></article><article><div className="stars">★★★★★</div><blockquote>« Un gros problème de micro, j’ai gossé dessus pendant deux mois, il a trouvé le problème en 10 minutes. »</blockquote><span>Etienne Therrien</span></article><article><div className="stars">★★★★★</div><blockquote>« Service dépannage au top. Service hors pair pour résoudre mon problème, avec un langage clair et de l’humour. »</blockquote><span>Solange Poulin</span></article></div></div></section>
-      <LocalServiceArea />
-      <section className="contact section" id="contact"><div className="shell contact-inner"><div><div className="eyebrow"><span></span> Informatique ou Web</div><h2>Un problème ou un projet?<br /><em>Parlons-en.</em></h2><p>Expliquez-moi ce dont vous avez besoin. Je vous dirai clairement ce qu’on peut faire et quelle est la prochaine étape.</p></div><div className="contact-card"><span>Joignez-moi directement</span><a className="big-phone" href="tel:+18193802999">819 380-2999</a><p>462, rue D. N. St-Cyr<br />Nicolet (Québec) J3T 1H3</p><div className="response-note"><span></span>Réponse habituellement dans la journée</div><a className="button button-lime" href="tel:+18193802999">Appeler maintenant</a></div></div></section>
+
+      <section className="home-paths section shell" aria-label="Choisir un service">
+        <div className="section-heading home-paths-heading">
+          <div><div className="eyebrow"><span></span> Deux expertises</div><h2>Choisissez votre besoin.<br /><em>Je vous amène au bon endroit.</em></h2></div>
+          <p>L’accueil reste simple. Les détails sont maintenant regroupés dans les pages Informatique et Sites Web.</p>
+        </div>
+        <div className="home-path-grid">
+          <article className="home-path-card home-path-card-it">
+            <span>INFORMATIQUE</span>
+            <h3>Un problème à régler?</h3>
+            <p>PC lent, virus, Windows, Wi-Fi, installation, transfert de données ou problème qui peut être vérifié à distance.</p>
+            <div className="home-path-actions">
+              <Link className="button button-dark home-intent-it" href="/depannage-informatique-nicolet">Voir les services informatiques</Link>
+              <Link className="text-link home-intent-it" href="/assistance-informatique-a-distance">Assistance rapide à distance</Link>
+            </div>
+          </article>
+
+          <article className="home-path-card home-path-card-web">
+            <span>SITES WEB</span>
+            <h3>Un projet pour votre entreprise?</h3>
+            <p>Site vitrine, boutique en ligne ou outil de gestion : une solution claire, adaptée à votre activité et simple à utiliser.</p>
+            <div className="home-path-actions">
+              <Link className="button button-dark home-intent-web" href="/creation-sites-web">Voir les services Web</Link>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="home-featured section" id="realisations">
+        <div className="shell home-featured-grid">
+          <a className="home-featured-image" href="https://envoldesenfants.com/" target="_blank" rel="noopener noreferrer" aria-label="Visiter L’Envol des Enfants">
+            <img src="/projet-envol-enfants.png" alt="Boutique en ligne L’Envol des Enfants" loading="lazy" decoding="async" />
+          </a>
+          <div className="home-featured-copy">
+            <div className="eyebrow"><span></span> Réalisation Web</div>
+            <h2>L’Envol des Enfants.<br /><em>Une boutique pensée pour le vrai travail.</em></h2>
+            <p>Boutique bilingue avec gestion des produits, photos, prix, stock et visibilité. L’objectif : que la cliente puisse gérer son commerce simplement.</p>
+            <div className="home-featured-actions">
+              <Link className="button button-dark" href="/realisation-envol-des-enfants">Voir l’étude de cas</Link>
+              <Link className="button button-outline home-intent-web" href="/creation-sites-web">Voir les services Web</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="reviews section">
+        <div className="shell">
+          <div className="section-heading">
+            <div><div className="eyebrow"><span></span> Ce que mes clients en disent</div><h2>De vraies personnes.<br /><em>De vrais résultats.</em></h2></div>
+            <p>Une note de 5,0 sur Google, grâce à dix avis de clients de la région.</p>
+          </div>
+          <div className="reviews-grid">
+            <article><div className="stars">★★★★★</div><blockquote>« Service impeccable. Je recommande fortement ses services, il est expert dans son domaine. »</blockquote><span>Alex Therrien</span></article>
+            <article><div className="stars">★★★★★</div><blockquote>« Un gros problème de micro, j’ai gossé dessus pendant deux mois, il a trouvé le problème en 10 minutes. »</blockquote><span>Etienne Therrien</span></article>
+            <article><div className="stars">★★★★★</div><blockquote>« Service dépannage au top. Service hors pair pour résoudre mon problème, avec un langage clair et de l’humour. »</blockquote><span>Solange Poulin</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section className="contact section" id="contact">
+        <div className="shell contact-inner">
+          <div>
+            <div className="eyebrow"><span></span> Informatique ou Web</div>
+            <h2>Un problème ou un projet?<br /><em>Parlons-en.</em></h2>
+            <p>Expliquez-moi ce dont vous avez besoin. Je vous dirai clairement ce qu’on peut faire et quelle est la prochaine étape.</p>
+          </div>
+          <div className="contact-card">
+            <span>Joignez-moi directement</span>
+            <a className="big-phone" href="tel:+18193802999">819 380-2999</a>
+            <p>462, rue D. N. St-Cyr<br />Nicolet (Québec) J3T 1H3</p>
+            <div className="response-note"><span></span>Réponse habituellement dans la journée</div>
+            <a className="button button-lime" href="tel:+18193802999">Appeler maintenant</a>
+          </div>
+        </div>
+      </section>
+
       <SiteFooter />
     </main>
   );

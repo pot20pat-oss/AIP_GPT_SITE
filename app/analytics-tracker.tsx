@@ -116,11 +116,11 @@ export function AnalyticsTracker() {
       const currentIntent = sessionIntent(currentPath);
       const entry = entryPath();
 
-      if (anchor.classList.contains("hero-intent-it") || anchor.classList.contains("expertise-gateway-it")) {
+      if (anchor.classList.contains("hero-intent-it") || anchor.classList.contains("expertise-gateway-it") || anchor.classList.contains("home-intent-it")) {
         sessionStorage.setItem("aip_intent", "informatique");
         sendEvent("select_intent", {
           intent: "informatique",
-          placement: anchor.classList.contains("hero-intent-choice") ? "hero" : "gateway",
+          placement: anchor.classList.contains("hero-intent-choice") ? "hero" : anchor.classList.contains("home-intent-it") ? "home_path" : "gateway",
           destination: href,
           page_path: currentPath,
           entry_path: entry,
@@ -128,11 +128,11 @@ export function AnalyticsTracker() {
         return;
       }
 
-      if (anchor.classList.contains("hero-intent-web") || anchor.classList.contains("expertise-gateway-web")) {
+      if (anchor.classList.contains("hero-intent-web") || anchor.classList.contains("expertise-gateway-web") || anchor.classList.contains("home-intent-web")) {
         sessionStorage.setItem("aip_intent", "web");
         sendEvent("select_intent", {
           intent: "web",
-          placement: anchor.classList.contains("hero-intent-choice") ? "hero" : "gateway",
+          placement: anchor.classList.contains("hero-intent-choice") ? "hero" : anchor.classList.contains("home-intent-web") ? "home_path" : "gateway",
           destination: href,
           page_path: currentPath,
           entry_path: entry,
