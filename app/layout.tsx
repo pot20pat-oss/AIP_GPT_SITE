@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { businessName, jsonLd, siteUrl } from "./seo";
+import { AnalyticsTracker } from "./analytics-tracker";
 import "./globals.css";
 
 const title = "Création de sites web à Nicolet | Atelier Informatique Potvin";
@@ -48,9 +49,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-T0HN0N449R');
+      gtag('config', 'G-T0HN0N449R', { send_page_view: false });
     ` }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(localBusiness) }} />
+    <AnalyticsTracker />
     {children}
   </body></html>;
 }
