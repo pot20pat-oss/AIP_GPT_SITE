@@ -34,7 +34,7 @@ const itPrefixes = [
 function intentFromPath(pathname: string): Intent {
   if (typeof window !== "undefined") {
     const host = window.location.hostname.toLowerCase();
-    if (host === "creationatelierpotvin.ca" || host === "www.creationatelierpotvin.ca") return "web";
+    if (host === "aipcreation.ca" || host === "www.aipcreation.ca") return "web";
     if ((host === "atelierpotvin.ca" || host === "www.atelierpotvin.ca") && pathname === "/") return "informatique";
   }
   if (webPrefixes.some(prefix => pathname.startsWith(prefix))) return "web";
