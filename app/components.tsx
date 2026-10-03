@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { businessAddress, businessName, googleBusinessUrl, jsonLd, siteUrl } from "./seo";
 
 export const phone = "819 380-2999";
@@ -36,11 +37,54 @@ function EnvolCmsGallery() {
 
 
 export function SiteHeader() {
+  const pathname = usePathname() || "/";
+  const isWebIntent = [
+    "/creation-sites-web",
+    "/creation-site-web-",
+    "/site-web-pme",
+    "/creation-boutique-en-ligne",
+    "/developpement-cms-sur-mesure",
+    "/realisation-envol-des-enfants",
+  ].some(prefix => pathname.startsWith(prefix));
+  const isItIntent = [
+    "/reparation-ordinateur",
+    "/depannage-informatique",
+    "/suppression-virus",
+    "/assistance",
+    "/installation-ordinateur",
+    "/configuration-wifi",
+    "/reseau-sauvegarde",
+  ].some(prefix => pathname.startsWith(prefix));
+
+  const navItems = isWebIntent
+    ? [
+        { href: "/creation-sites-web", label: "Création Web", active: true },
+        { href: "/#realisations", label: "Réalisations" },
+        { href: "/tarifs", label: "Tarifs" },
+        { href: "/depannage-informatique-nicolet", label: "Informatique" },
+        { href: "/contact", label: "Contact" },
+      ]
+    : isItIntent
+      ? [
+          { href: "/depannage-informatique-nicolet", label: "Dépannage", active: !pathname.startsWith("/assistance") },
+          { href: "/assistance-informatique-a-distance", label: "Assistance", active: pathname.startsWith("/assistance") },
+          { href: "/tarifs", label: "Tarifs" },
+          { href: "/creation-sites-web", label: "Sites web" },
+          { href: "/contact", label: "Contact" },
+        ]
+      : [
+          { href: "/depannage-informatique-nicolet", label: "Informatique" },
+          { href: "/creation-sites-web", label: "Sites web" },
+          { href: "/#realisations", label: "Réalisations" },
+          { href: "/tarifs", label: "Tarifs" },
+          { href: "/contact", label: "Contact" },
+        ];
+
   return <>
-    <header className="header shell">
+    <header className={`header shell header-context-${isWebIntent ? "web" : isItIntent ? "it" : "general"}`}>
       <Link className="brand" href="/" aria-label="AIP Atelier Informatique Potvin, accueil"><img className="brand-logo" src="/aip-icon-v7.png" alt="Logo AIP Atelier Informatique Potvin" width="71" height="61" /><span className="brand-name"><span>Designer Web &amp; Informaticien</span></span></Link>
-      <nav aria-label="Navigation principale"><Link href="/creation-sites-web">Sites web</Link><Link href="/#realisations">Réalisations</Link><Link href="/a-propos">À propos</Link><Link href="/tarifs">Tarifs</Link><Link href="/contact">Contact</Link></nav>
-      <div className="header-contact"><div className="header-service-note">Service local · Nicolet · Bécancour · Trois-Rivières · environs<br /><span>Rayon d’environ 50 km · réponse habituellement dans la journée</span></div><a className="header-phone" href="tel:+18193802999">{phone}</a></div>
+      <nav aria-label="Navigation principale">{navItems.map(item => <Link className={item.active ? "nav-active" : undefined} aria-current={item.active ? "page" : undefined} href={item.href} key={item.href}>{item.label}</Link>)}</nav>
+      <div className="header-contact"><div className="header-service-note">{isWebIntent ? <>Création Web · PME · e-commerce · CMS<br /><span>Nicolet · Bécancour · Trois-Rivières · à distance</span></> : isItIntent ? <>Dépannage informatique · service local<br /><span>Rayon d’environ 50 km · assistance à distance</span></> : <>Service local · Nicolet · Bécancour · Trois-Rivières · environs<br /><span>Web et informatique · un seul interlocuteur</span></>}</div><a className="header-phone" href="tel:+18193802999">{phone}</a></div>
     </header>
   </>;
 }
