@@ -3507,15 +3507,17 @@ a.button.phone-button:active::after{
   }
 }
 
-/* The gateway cards are equal destinations; urgency changes the tone, not the hierarchy. */
-.expertise-gateway{
-  grid-template-columns:.78fr 1fr 1fr!important;
-}
-.expertise-gateway-card{
-  min-height:210px;
-}
-.expertise-gateway-card h2{
-  max-width:390px;
+/* The gateway cards are equal destinations on desktop; mobile must stack them. */
+@media(min-width:761px){
+  .expertise-gateway{
+    grid-template-columns:.78fr 1fr 1fr!important;
+  }
+  .expertise-gateway-card{
+    min-height:210px;
+  }
+  .expertise-gateway-card h2{
+    max-width:390px;
+  }
 }
 
 
