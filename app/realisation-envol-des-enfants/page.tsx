@@ -5,7 +5,7 @@ import { businessName, jsonLd, pageMetadata, siteUrl } from "../seo";
 
 const path = "/realisation-envol-des-enfants";
 
-export const metadata: Metadata = pageMetadata({
+export const metadata: Metadata = webPageMetadata({
   title: "L’Envol des Enfants : boutique en ligne sur mesure | AIP",
   description: "Étude de cas AIP : conception d’une boutique e-commerce bilingue avec catalogue, gestion multi-marché et administration sur mesure pour L’Envol des Enfants.",
   path,
@@ -18,19 +18,19 @@ export default function Page() {
     "@graph": [
       {
         "@type": "CreativeWork",
-        "@id": `${siteUrl}${path}#project`,
+        "@id": `${webSiteUrl}${path}#project`,
         name: "L’Envol des Enfants — boutique e-commerce et CMS sur mesure",
         description: "Conception et développement d’une boutique e-commerce bilingue avec catalogue, gestion multi-marché et outils d’administration sur mesure.",
-        url: `${siteUrl}${path}`,
-        image: `${siteUrl}/projet-envol-enfants.png`,
+        url: `${webSiteUrl}${path}`,
+        image: `${webSiteUrl}/projet-envol-enfants.png`,
         creator: { "@id": `${siteUrl}/#entreprise`, name: businessName },
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Accueil", item: siteUrl },
-          { "@type": "ListItem", position: 2, name: "Réalisations", item: `${siteUrl}/#realisations` },
-          { "@type": "ListItem", position: 3, name: "L’Envol des Enfants", item: `${siteUrl}${path}` },
+          { "@type": "ListItem", position: 1, name: "Accueil", item: webSiteUrl },
+          { "@type": "ListItem", position: 2, name: "Réalisations", item: `${webSiteUrl}/#realisations` },
+          { "@type": "ListItem", position: 3, name: "L’Envol des Enfants", item: `${webSiteUrl}${path}` },
         ],
       },
     ],
