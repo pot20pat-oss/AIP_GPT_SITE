@@ -74,7 +74,7 @@ export default function Page() {
               <span>iPhone et iPad</span>
               <strong>iOS / iPadOS</strong>
               <p>L’application RustDesk pour iPhone et iPad peut servir à contrôler un autre ordinateur, mais iOS ne permet pas de prendre le contrôle à distance de l’iPhone ou de l’iPad.</p>
-              <a className="button button-dark download-button" href="https://apps.apple.com/ca/app/rustdesk-remote-desktop/id1581225015" target="_blank" rel="noopener noreferrer">Ouvrir dans l’App Store</a>
+              <a className="button button-dark download-button ios-download-button" href="https://apps.apple.com/ca/app/rustdesk-remote-desktop/id1581225015" target="_blank" rel="noopener noreferrer">Ouvrir dans l’App Store</a>
             </article>
           </div>
         </div>
