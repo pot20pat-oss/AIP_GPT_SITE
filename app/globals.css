@@ -3434,3 +3434,34 @@ a.button.download-button:active::after{
     justify-content:center;
   }
 }
+
+
+/* AIP PHONE BUTTON ICON 2026-10-03 */
+a.button.phone-button::after{
+  content:""!important;
+  display:inline-block!important;
+  width:32px!important;
+  height:27px!important;
+  min-width:32px!important;
+  flex:0 0 32px!important;
+  margin-left:12px!important;
+  background:transparent url("/aip-phone-icon.webp") center/contain no-repeat!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  text-shadow:none!important;
+  filter:drop-shadow(0 2px 4px rgba(0,110,200,.30))!important;
+  transform:translateY(0) scale(1)!important;
+  transition:transform .18s ease,filter .18s ease!important;
+}
+a.button.phone-button:hover::after{
+  transform:translateY(-1px) scale(1.07)!important;
+  filter:drop-shadow(0 4px 7px rgba(0,145,245,.38)) brightness(1.06)!important;
+}
+a.button.phone-button:active::after{
+  transform:scale(.97)!important;
+}
+.assistance-next-actions .button.phone-button::after{
+  display:inline-block!important;
+  content:""!important;
+}

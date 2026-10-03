@@ -205,7 +205,7 @@ export default function Page() {
           </p>
         </div>
         <div className="assistance-next-actions">
-          <a className="button button-dark" href="tel:+18193802999">Appeler Patrick</a>
+          <a className="button button-dark phone-button" href="tel:+18193802999">Appeler Patrick</a>
           <a className="button button-outline" href="/assistance-informatique-a-distance">Voir le service d’assistance</a>
         </div>
       </section>
