@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const siteUrl = "https://atelierpotvin.ca";
-export const webSiteUrl = "https://creationatelierpotvin.ca";
+export const webSiteUrl = "https://aipcreation.ca";
 export const businessName = "AIP Atelier Informatique Potvin";
 export const businessAddress = "462 rue D. N. St-Cyr, Nicolet, QC J3T 1H3";
 export const googleBusinessUrl = "https://www.google.com/maps/search/?api=1&query=Atelier%20Informatique%20Potvin%2C%20462%20rue%20D.%20N.%20St-Cyr%2C%20Nicolet%2C%20QC%20J3T%201H3";
