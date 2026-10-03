@@ -3269,3 +3269,92 @@ a.button:active::after,
     flex-basis:34px!important;
   }
 }
+
+
+/* AIP DOWNLOAD PAGE + ICON 2026-10-03 */
+.download-hero{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(260px,.55fr);
+  gap:70px;
+  align-items:center;
+  padding-block:78px 92px;
+}
+.download-hero-copy{max-width:760px}
+.download-hero h1{
+  font-size:clamp(48px,6vw,78px);
+  line-height:1.04;
+  letter-spacing:-4px;
+  margin:24px 0 25px;
+}
+.download-hero h1 em{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:400;
+  color:#357ea5;
+}
+.download-hero-copy>p{
+  max-width:650px;
+  color:var(--muted);
+  line-height:1.8;
+}
+.download-hero-visual{
+  margin:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:300px;
+}
+.download-hero-visual img{
+  display:block;
+  width:min(100%,330px);
+  height:auto;
+  filter:drop-shadow(0 18px 28px rgba(0,72,135,.22));
+}
+.breadcrumb{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  margin-bottom:24px;
+  color:#7188a4;
+  font-size:11px;
+  font-weight:650;
+  letter-spacing:.02em;
+}
+.breadcrumb a:hover{color:#1687ed}
+.breadcrumb strong{color:#172445;font-weight:700}
+
+/* Download CTAs use the vertical AIP download icon instead of the right-arrow asset. */
+a.button.download-button::after{
+  content:""!important;
+  display:inline-block!important;
+  width:30px!important;
+  height:30px!important;
+  min-width:30px!important;
+  flex:0 0 30px!important;
+  margin-left:12px!important;
+  background:transparent url("/aip-download-icon.webp") center/contain no-repeat!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  filter:drop-shadow(0 2px 4px rgba(0,110,200,.30))!important;
+  transform:translateY(0) scale(1)!important;
+}
+a.button.download-button:hover::after{
+  transform:translateY(3px) scale(1.07)!important;
+  filter:drop-shadow(0 4px 7px rgba(0,145,245,.38)) brightness(1.05)!important;
+}
+a.button.download-button:active::after{
+  transform:translateY(2px) scale(.97)!important;
+}
+
+@media(max-width:760px){
+  .download-hero{
+    grid-template-columns:1fr;
+    gap:18px;
+    padding:48px 0 62px;
+  }
+  .download-hero h1{font-size:49px;letter-spacing:-2.8px}
+  .download-hero-visual{min-height:0;order:-1}
+  .download-hero-visual img{width:min(62vw,220px)}
+  .breadcrumb{margin-bottom:18px}
+}

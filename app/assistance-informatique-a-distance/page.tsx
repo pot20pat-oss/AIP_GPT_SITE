@@ -19,5 +19,5 @@ export default function Page() {
     { question: "Est-ce sécuritaire de donner accès à mon ordinateur?", answer: "La connexion doit être autorisée pour l’intervention. Vous voyez ce qui se passe et vous pouvez y mettre fin. Patrick n’accède qu’aux éléments nécessaires au dépannage." },
     { question: "Faut-il être bon en informatique?", answer: "Non. Patrick vous guide étape par étape au téléphone pour démarrer la séance et vous explique les manipulations clairement." },
     { question: "Que se passe-t-il si Internet ne fonctionne plus?", answer: "Une intervention à distance n’est alors pas possible. Selon votre emplacement, un dépannage à domicile peut être envisagé." },
-  ]} links={[{ href: "/depannage-informatique-nicolet", label: "Dépannage informatique" }, { href: "/configuration-wifi-sauvegarde", label: "Problèmes de Wi-Fi" }, { href: "/tarifs", label: "Tous les tarifs" }]} servicePath="/assistance-informatique-a-distance" />;
+  ]} links={[{ href: "/assistance", label: "Télécharger AIP Assistance" }, { href: "/depannage-informatique-nicolet", label: "Dépannage informatique" }, { href: "/configuration-wifi-sauvegarde", label: "Problèmes de Wi-Fi" }]} servicePath="/assistance-informatique-a-distance" />;
 }

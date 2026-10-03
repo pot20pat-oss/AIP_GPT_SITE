@@ -14,18 +14,28 @@ export default function Page() {
     <main>
       <SiteHeader />
 
-      <section className="detail-hero">
-        <div className="eyebrow"><span></span> AIP Assistance à distance</div>
-        <h1>Besoin d’aide maintenant? <em>Choisissez votre appareil.</em></h1>
-        <p>
-          AIP Assistance prépare RustDesk pour utiliser le serveur privé d’Atelier Informatique Potvin.
-          Sur Windows et Mac, utilisez l’installateur AIP. Sur Android, installez RustDesk puis scannez
-          le code QR de configuration.
-        </p>
-        <div className="hero-actions">
-          <a className="button button-dark" href="#telechargements">Voir les téléchargements</a>
-          <a className="text-link" href="tel:+18193802999">Besoin d’aide? 819 380-2999</a>
+      <section className="download-hero shell">
+        <div className="download-hero-copy">
+          <nav className="breadcrumb" aria-label="Fil d’Ariane">
+            <a href="/">Accueil</a><span>/</span>
+            <a href="/assistance-informatique-a-distance">Assistance à distance</a><span>/</span>
+            <strong>Téléchargement</strong>
+          </nav>
+          <div className="eyebrow"><span></span> AIP Assistance à distance</div>
+          <h1>Besoin d’aide maintenant? <em>Choisissez votre appareil.</em></h1>
+          <p>
+            AIP Assistance prépare RustDesk pour utiliser le serveur privé d’Atelier Informatique Potvin.
+            Sur Windows et Mac, utilisez l’installateur AIP. Sur Android, installez RustDesk puis scannez
+            le code QR de configuration.
+          </p>
+          <div className="hero-actions">
+            <a className="button button-dark" href="#telechargements">Voir les téléchargements</a>
+            <a className="text-link" href="tel:+18193802999">Besoin d’aide? 819 380-2999</a>
+          </div>
         </div>
+        <figure className="download-hero-visual">
+          <img src="/aip-download-icon.webp" alt="" aria-hidden="true" width="384" height="329" />
+        </figure>
       </section>
 
       <section className="detail-body section" id="telechargements">
@@ -43,21 +53,21 @@ export default function Page() {
               <span>Windows 10 / 11 · 64 bits</span>
               <strong>Windows</strong>
               <p>Téléchargez le ZIP, extrayez-le puis lancez Installer-AIP-Assistance.cmd. Le serveur AIP et sa clé sont configurés automatiquement.</p>
-              <a className="button button-dark" href="/downloads/AIP-Assistance-Windows-x64.zip" download>Télécharger pour Windows</a>
+              <a className="button button-dark download-button" href="/downloads/AIP-Assistance-Windows-x64.zip" download>Télécharger pour Windows</a>
             </article>
 
             <article>
               <span>Apple Silicon et Intel</span>
               <strong>macOS</strong>
               <p>L’installateur détecte automatiquement le processeur du Mac, télécharge le DMG officiel RustDesk 1.5.0 et configure le serveur AIP.</p>
-              <a className="button button-dark" href="/downloads/AIP-Assistance-macOS.zip" download>Télécharger pour Mac</a>
+              <a className="button button-dark download-button" href="/downloads/AIP-Assistance-macOS.zip" download>Télécharger pour Mac</a>
             </article>
 
             <article>
               <span>Android</span>
               <strong>Android</strong>
               <p>Installez l’APK officiel RustDesk 1.5.0. Ensuite, dans RustDesk, ouvrez la configuration du serveur et scannez le code QR AIP plus bas.</p>
-              <a className="button button-dark" href="https://github.com/rustdesk/rustdesk/releases/download/1.5.0/rustdesk-1.5.0-universal-signed.apk">Télécharger RustDesk Android</a>
+              <a className="button button-dark download-button" href="https://github.com/rustdesk/rustdesk/releases/download/1.5.0/rustdesk-1.5.0-universal-signed.apk">Télécharger RustDesk Android</a>
             </article>
 
             <article>
