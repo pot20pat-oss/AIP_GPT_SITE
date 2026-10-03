@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { DetailPage } from "../components";
-import { pageMetadata } from "../seo";
+import { webPageMetadata } from "../seo";
 
-export const metadata: Metadata = pageMetadata({
+export const metadata: Metadata = webPageMetadata({
   title: "Création de site web pour PME | AIP Nicolet",
   description: "Sites web professionnels pour PME et travailleurs autonomes : design sur mesure, mobile, SEO local et accompagnement direct.",
   path: "/site-web-pme",
