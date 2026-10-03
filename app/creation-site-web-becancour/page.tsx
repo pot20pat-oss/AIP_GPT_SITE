@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { DetailPage } from "../components";
-import { pageMetadata } from "../seo";
+import { webPageMetadata } from "../seo";
 
-export const metadata: Metadata = pageMetadata({
+export const metadata: Metadata = webPageMetadata({
   title: "Création de site web à Bécancour | AIP",
   description: "Création de sites web pour entreprises de Bécancour : site vitrine, e-commerce, CMS et solutions sur mesure avec accompagnement local.",
   path: "/creation-site-web-becancour",
