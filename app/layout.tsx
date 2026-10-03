@@ -8,18 +8,31 @@ const title = "Dépannage informatique à Nicolet | Atelier Informatique Potvin"
 const description = "Dépannage informatique, assistance à distance, réparation, installation et réseau à Nicolet et dans les environs."
 const image = `${siteUrl}/aip-travail-03.webp`;
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title,
-  description,
-  alternates: { canonical: siteUrl },
-  keywords: ["dépannage informatique Nicolet", "réparation ordinateur Nicolet", "assistance informatique à distance", "Atelier Informatique Potvin"],
-  authors: [{ name: "Patrick Potvin" }],
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
-  openGraph: { title, description, url: siteUrl, siteName: businessName, images: [{ url: image, alt: "Patrick Potvin, services informatiques à Nicolet" }], locale: "fr_CA", type: "website" },
-  twitter: { card: "summary_large_image", title, description, images: [image] },
-  icons: { icon: "/aip-favicon-v8.ico", shortcut: "/aip-favicon-v8.ico" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const requestHeaders = await headers();
+  const host = (requestHeaders.get("host") || "").split(":")[0].toLowerCase();
+  const isWebSite = host === "aipcreation.ca" || host === "www.aipcreation.ca";
+  const base = isWebSite ? webSiteUrl : siteUrl;
+
+  return {
+    metadataBase: new URL(base),
+    title,
+    description,
+    alternates: { canonical: base },
+    keywords: ["dépannage informatique Nicolet", "réparation ordinateur Nicolet", "assistance informatique à distance", "Atelier Informatique Potvin"],
+    authors: [{ name: "Patrick Potvin" }],
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
+    openGraph: { title, description, url: base, siteName: isWebSite ? "AIP Création Web" : businessName, images: [{ url: `${base}/aip-travail-03.webp`, alt: "Patrick Potvin, services informatiques à Nicolet" }], locale: "fr_CA", type: "website" },
+    twitter: { card: "summary_large_image", title, description, images: [`${base}/aip-travail-03.webp`] },
+    icons: {
+      icon: [
+        { url: "/aip-icon-v7.png", type: "image/png" },
+        { url: "/aip-favicon-v8.ico", type: "image/x-icon" },
+      ],
+      shortcut: "/aip-icon-v7.png",
+    },
+  };
+}
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const requestHeaders = await headers();
