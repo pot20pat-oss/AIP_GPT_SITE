@@ -1,28 +1,50 @@
 import type { MetadataRoute } from "next";
-import { siteUrl } from "./seo";
+import { headers } from "next/headers";
+import { siteUrl, webSiteUrl } from "./seo";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = [
-    "",
-    "/depannage-informatique-nicolet",
-    "/reparation-ordinateur-nicolet",
-    "/depannage-informatique-becancour",
-    "/depannage-informatique-trois-rivieres",
-    "/suppression-virus",
-    "/assistance-informatique-a-distance",
-    "/installation-ordinateur-transfert-donnees",
-    "/configuration-wifi-sauvegarde",
-    "/tarifs",
-    "/faq",
-    "/a-propos",
-    "/comment-ca-marche",
-    "/contact",
-    "/avis-clients",
-  ];
+const itPaths = [
+  "",
+  "/depannage-informatique-nicolet",
+  "/reparation-ordinateur-nicolet",
+  "/depannage-informatique-becancour",
+  "/depannage-informatique-trois-rivieres",
+  "/suppression-virus",
+  "/assistance-informatique-a-distance",
+  "/installation-ordinateur-transfert-donnees",
+  "/configuration-wifi-sauvegarde",
+  "/tarifs",
+  "/faq",
+  "/a-propos",
+  "/comment-ca-marche",
+  "/contact",
+  "/avis-clients",
+];
+
+const webPaths = [
+  "",
+  "/creation-site-web-nicolet",
+  "/creation-site-web-becancour",
+  "/creation-site-web-trois-rivieres",
+  "/site-web-pme",
+  "/creation-boutique-en-ligne",
+  "/developpement-cms-sur-mesure",
+  "/realisation-envol-des-enfants",
+  "/tarifs",
+  "/contact",
+];
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const requestHeaders = await headers();
+  const host = (requestHeaders.get("host") || "").split(":")[0].toLowerCase();
+  const web = host === "aipcreation.ca" || host === "www.aipcreation.ca";
+  const base = web ? webSiteUrl : siteUrl;
+  const paths = web ? webPaths : itPaths;
 
   return paths.map((path) => ({
-    url: `${siteUrl}${path}`,
+    url: `${base}${path}`,
     changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : ["/depannage-informatique-nicolet", "/assistance-informatique-a-distance"].includes(path) ? 0.95 : 0.8,
+    priority: path === "" ? 1 : web
+      ? ["/creation-site-web-nicolet", "/site-web-pme"].includes(path) ? 0.95 : 0.8
+      : ["/depannage-informatique-nicolet", "/assistance-informatique-a-distance"].includes(path) ? 0.95 : 0.8,
   }));
 }
