@@ -3706,3 +3706,14 @@ a.button.phone-button:active::after{
     font-size:15px;
   }
 }
+
+
+/* HEADER BRAND LINK BEHAVIOR 2026-10-03 */
+.header .brand-home-link{
+  display:block;
+  width:max-content;
+  line-height:0;
+}
+.header .brand-name{
+  cursor:default;
+}
