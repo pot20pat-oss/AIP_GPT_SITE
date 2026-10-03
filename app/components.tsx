@@ -119,13 +119,27 @@ export function DetailPage({ eyebrow, title, accent, intro, points, asideTitle, 
     servicePath === "/developpement-cms-sur-mesure"
   );
   const isRemoteService = servicePath === "/assistance-informatique-a-distance";
+  const isMainWebService = servicePath === "/creation-sites-web";
   const graph: object[] = servicePath ? [{ "@type": "Service", "@id": `${siteUrl}${servicePath}#service`, name: eyebrow, description: intro, url: `${siteUrl}${servicePath}`, image: `${siteUrl}${image}`, provider: { "@id": `${siteUrl}/#entreprise`, name: businessName }, areaServed: ["Nicolet", "Bécancour", "Trois-Rivières", "Centre-du-Québec"], serviceArea: { "@type": "GeoCircle", geoMidpoint: { "@type": "GeoCoordinates", latitude: 46.2268, longitude: -72.6141 }, geoRadius: "50000 m" } }, { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: siteUrl }, { "@type": "ListItem", position: 2, name: eyebrow, item: `${siteUrl}${servicePath}` }] }] : [];
   if (faqs?.length) graph.push({ "@type": "FAQPage", mainEntity: faqs.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) });
   const structuredData = graph.length ? { "@context": "https://schema.org", "@graph": graph } : null;
-  return <main className={isRemoteService ? "remote-service-page" : undefined}><SiteHeader />
+  return <main className={isRemoteService ? "remote-service-page" : isMainWebService ? "web-main-service-page" : undefined}><SiteHeader />
     {structuredData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} />}
     <section className="detail-hero detail-hero-photo shell"><div className="detail-hero-copy"><div className="eyebrow"><span></span>{eyebrow}</div><h1>{title}<br /><em>{accent}</em></h1><p>{intro}</p><div className="hero-actions">{isWebService ? <><Link className="button button-dark" href="/contact">Discuter de mon projet</Link><Link className="button button-outline" href="/tarifs">Voir les tarifs Web</Link></> : <><a className="button button-dark phone-button" href="tel:+18193802999">Parler à Patrick</a>{isRemoteService ? <Link className="button button-outline download-button" href="/assistance">Télécharger AIP Assistance</Link> : <Link className="button button-outline quick-assistance-button" href="/assistance-informatique-a-distance">Assistance rapide à distance</Link>}</>}</div>{!isWebService && !isRemoteService && <p className="quick-assistance-note">Si votre ordinateur a encore accès à Internet, je peux souvent regarder le problème avec vous sans déplacement.</p>}</div><figure className="detail-photo"><img src={image} alt={imageAlt} /></figure></section>
     {isRemoteService && <figure className="remote-mobile-photo shell"><img src={image} alt={imageAlt} /></figure>}
+    {isMainWebService && <section className="web-mobile-quick shell" aria-label="Création Web en bref">
+      <div className="web-mobile-quick-title"><span>CRÉATION WEB EN BREF</span><strong>Le bon site, sans vous noyer dans la technique.</strong></div>
+      <div className="web-mobile-quick-grid">
+        <article><b>01</b><div><strong>Site vitrine</strong><p>Présentez clairement votre entreprise et transformez les visites en appels ou demandes.</p></div></article>
+        <article><b>02</b><div><strong>Boutique en ligne</strong><p>Vendez vos produits avec une boutique simple à utiliser et adaptée au mobile.</p></div></article>
+        <article><b>03</b><div><strong>Gestion sur mesure</strong><p>Gérez produits, photos, prix, stock ou contenu avec un outil adapté à votre travail.</p></div></article>
+      </div>
+      <div className="web-mobile-price"><strong>À partir de 900 $</strong><span>site vitrine de base · estimation selon le projet</span></div>
+      <Link className="web-mobile-showcase" href="/realisation-envol-des-enfants">
+        <img src="/projet-envol-enfants.png" alt="Boutique en ligne L’Envol des Enfants" />
+        <span><b>Voir une réalisation complète</b><small>L’Envol des Enfants · boutique en ligne et gestion sur mesure</small></span>
+      </Link>
+    </section>}
     {isRemoteService && <section className="remote-mobile-quick shell" aria-label="Assistance rapide">
       <div className="remote-mobile-quick-title"><span>ASSISTANCE RAPIDE</span><strong>Trois étapes, puis je prends le relais.</strong></div>
       <div className="remote-mobile-steps">

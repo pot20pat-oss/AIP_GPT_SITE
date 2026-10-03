@@ -4039,3 +4039,163 @@ a.button.phone-button:active::after{
     object-position:center 40%;
   }
 }
+
+
+/* MOBILE MAIN WEB SERVICE — compact path 2026-10-03 */
+.web-mobile-quick{
+  display:none;
+}
+@media(max-width:760px){
+  .web-main-service-page .detail-hero{
+    padding-top:34px!important;
+    padding-bottom:24px!important;
+    gap:18px!important;
+  }
+  .web-main-service-page .detail-hero h1{
+    font-size:41px!important;
+    line-height:1.02!important;
+    margin:18px 0 16px!important;
+  }
+  .web-main-service-page .detail-hero-copy>p{
+    font-size:13px!important;
+    line-height:1.55!important;
+  }
+  .web-main-service-page .detail-hero .hero-actions{
+    margin-top:20px!important;
+    gap:10px!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+  }
+  .web-main-service-page .detail-hero .hero-actions .button{
+    width:100%!important;
+  }
+  .web-main-service-page .detail-photo{
+    height:150px!important;
+    aspect-ratio:auto!important;
+  }
+
+  .web-mobile-quick{
+    display:block;
+    margin-bottom:34px;
+    padding:20px;
+    border:1px solid var(--line);
+    background:#f7f9fc;
+  }
+  .web-mobile-quick-title{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    margin-bottom:16px;
+  }
+  .web-mobile-quick-title span{
+    color:#438fb7;
+    font-size:9px;
+    font-weight:850;
+    letter-spacing:.11em;
+  }
+  .web-mobile-quick-title strong{
+    font-size:20px;
+    line-height:1.25;
+  }
+  .web-mobile-quick-grid{
+    display:grid;
+    gap:0;
+  }
+  .web-mobile-quick-grid article{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:10px;
+    padding:13px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .web-mobile-quick-grid article>b{
+    color:#438fb7;
+    font-size:10px;
+    padding-top:3px;
+  }
+  .web-mobile-quick-grid article strong{
+    display:block;
+    margin-bottom:4px;
+    font-size:14px;
+  }
+  .web-mobile-quick-grid article p{
+    margin:0;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.45;
+  }
+  .web-mobile-price{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+    padding:16px 0;
+  }
+  .web-mobile-price strong{
+    font-size:24px;
+  }
+  .web-mobile-price span{
+    color:var(--muted);
+    font-size:11px;
+  }
+  .web-mobile-showcase{
+    display:grid;
+    grid-template-columns:100px 1fr;
+    gap:13px;
+    align-items:center;
+    padding:10px;
+    border:1px solid var(--line);
+    background:#fff;
+    text-decoration:none;
+  }
+  .web-mobile-showcase img{
+    display:block;
+    width:100px;
+    height:72px;
+    object-fit:contain;
+    background:#fff;
+  }
+  .web-mobile-showcase span{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+  .web-mobile-showcase b{
+    color:var(--ink);
+    font-size:12px;
+  }
+  .web-mobile-showcase small{
+    color:var(--muted);
+    font-size:10px;
+    line-height:1.35;
+  }
+
+  /* Keep the full desktop sales page, but make mobile a short decision path. */
+  .web-main-service-page .detail-body,
+  .web-main-service-page .service-depth,
+  .web-main-service-page .web-value,
+  .web-main-service-page .portfolio,
+  .web-main-service-page .related,
+  .web-main-service-page .expertise-bridge{
+    display:none!important;
+  }
+  .web-main-service-page .service-faq.section{
+    padding-top:34px!important;
+    padding-bottom:38px!important;
+  }
+  .web-main-service-page .service-faq .section-heading{
+    margin-bottom:12px!important;
+  }
+  .web-main-service-page .service-faq .section-heading h2{
+    font-size:34px!important;
+  }
+  .web-main-service-page .faq-list details{
+    padding:17px 0!important;
+  }
+  .web-main-service-page .faq-list summary{
+    font-size:15px!important;
+  }
+  .web-main-service-page .contact.section{
+    padding-top:42px!important;
+    padding-bottom:48px!important;
+  }
+}

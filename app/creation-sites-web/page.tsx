@@ -16,7 +16,7 @@ export default function Page() {
     imageAlt="Aperçu d’un site web professionnel réalisé sur mesure par Atelier Informatique Potvin"
     title="Création et conception de sites web à Nicolet."
     accent="Un créateur Web local pour les entreprises d’ici."
-    intro="Vous cherchez une agence Web à Nicolet? AIP n’est pas une agence Web traditionnelle : vous travaillez directement avec Patrick Potvin, qui conçoit, développe et met votre site en ligne. Création Web, conception et développement sur mesure, site vitrine, boutique en ligne ou CMS : un seul interlocuteur, de la première discussion jusqu’au suivi."
+    intro="Je crée des sites Web professionnels pour les PME de Nicolet et de la région : site vitrine, boutique en ligne ou outil sur mesure. Vous travaillez directement avec Patrick, de la conception jusqu’à la mise en ligne."
     points={[
       { title: "Conception Web professionnelle sur mesure", text: "Un site Web sur mesure avec une identité visuelle adaptée à votre entreprise, à vos clients et à votre marché. Pas de modèle générique : la conception Web est construite autour de vos services et de votre image." },
       { title: "Référencement local", text: "Structure, titres, contenu et pages pensés pour aider Google à comprendre vos services et les secteurs que vous desservez, notamment Nicolet, Bécancour et Trois-Rivières." },
