@@ -41,6 +41,7 @@ export function SiteHeader() {
       <div className="brand"><Link className="brand-home-link" href="/" aria-label="Retour à l’accueil"><img className="brand-logo" src="/aip-icon-v7.png" alt="AIP Atelier Informatique Potvin" width="71" height="61" /></Link><span className="brand-name"><span>Designer Web &amp; Informaticien</span></span></div>
       <nav aria-label="Navigation principale">
         <Link href="/depannage-informatique-nicolet">Informatique</Link>
+        <Link href="/assistance-informatique-a-distance">Assistance</Link>
         <Link href="/creation-sites-web">Sites Web</Link>
         <Link href="/tarifs">Tarifs</Link>
         <Link href="/contact">Contact</Link>
