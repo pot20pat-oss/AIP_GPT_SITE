@@ -7,7 +7,7 @@ import { businessName, siteUrl, webSiteUrl } from "./seo";
 async function isCreationDomain() {
   const requestHeaders = await headers();
   const host = (requestHeaders.get("host") || "").split(":")[0].toLowerCase();
-  return host === "creationatelierpotvin.ca" || host === "www.creationatelierpotvin.ca";
+  return host === "aipcreation.ca" || host === "www.aipcreation.ca";
 }
 
 export async function generateMetadata(): Promise<Metadata> {
