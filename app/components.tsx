@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { businessAddress, businessName, googleBusinessUrl, jsonLd, siteUrl } from "./seo";
 
 export const phone = "819 380-2999";
@@ -37,94 +36,47 @@ function EnvolCmsGallery() {
 
 
 export function SiteHeader() {
-  const pathname = usePathname() || "/";
-  const isWebIntent = [
-    "/creation-sites-web",
-    "/creation-site-web-",
-    "/site-web-pme",
-    "/creation-boutique-en-ligne",
-    "/developpement-cms-sur-mesure",
-    "/realisation-envol-des-enfants",
-  ].some(prefix => pathname.startsWith(prefix));
-  const isItIntent = [
-    "/reparation-ordinateur",
-    "/depannage-informatique",
-    "/suppression-virus",
-    "/assistance",
-    "/installation-ordinateur",
-    "/configuration-wifi",
-    "/reseau-sauvegarde",
-  ].some(prefix => pathname.startsWith(prefix));
-
-  const navItems = isWebIntent
-    ? [
-        { href: "/creation-sites-web", label: "Création Web", active: true },
-        { href: "/#realisations", label: "Réalisations" },
-        { href: "/tarifs", label: "Tarifs" },
-        { href: "/depannage-informatique-nicolet", label: "Informatique" },
-        { href: "/contact", label: "Contact" },
-      ]
-    : isItIntent
-      ? [
-          { href: "/depannage-informatique-nicolet", label: "Dépannage", active: !pathname.startsWith("/assistance") },
-          { href: "/assistance-informatique-a-distance", label: "Assistance", active: pathname.startsWith("/assistance") },
-          { href: "/tarifs", label: "Tarifs" },
-          { href: "/creation-sites-web", label: "Sites web" },
-          { href: "/contact", label: "Contact" },
-        ]
-      : [
-          { href: "/depannage-informatique-nicolet", label: "Informatique" },
-          { href: "/creation-sites-web", label: "Sites web" },
-          { href: "/#realisations", label: "Réalisations" },
-          { href: "/tarifs", label: "Tarifs" },
-          { href: "/contact", label: "Contact" },
-        ];
-
   return <>
-    <header className={`header shell header-context-${isWebIntent ? "web" : isItIntent ? "it" : "general"}`}>
+    <header className="header shell header-simple">
       <Link className="brand" href="/" aria-label="AIP Atelier Informatique Potvin, accueil"><img className="brand-logo" src="/aip-icon-v7.png" alt="Logo AIP Atelier Informatique Potvin" width="71" height="61" /><span className="brand-name"><span>Designer Web &amp; Informaticien</span></span></Link>
-      <nav aria-label="Navigation principale">{navItems.map(item => <Link className={item.active ? "nav-active" : undefined} aria-current={item.active ? "page" : undefined} href={item.href} key={item.href}>{item.label}</Link>)}</nav>
-      <div className="header-contact"><div className="header-service-note">{isWebIntent ? <>Création Web · PME · e-commerce · CMS<br /><span>Nicolet · Bécancour · Trois-Rivières · à distance</span></> : isItIntent ? <>Dépannage informatique · service local<br /><span>Rayon d’environ 50 km · assistance à distance</span></> : <>Service local · Nicolet · Bécancour · Trois-Rivières · environs<br /><span>Web et informatique · un seul interlocuteur</span></>}</div><a className="header-phone" href="tel:+18193802999">{phone}</a></div>
+      <nav aria-label="Navigation principale">
+        <Link href="/depannage-informatique-nicolet">Informatique</Link>
+        <Link href="/creation-sites-web">Sites Web</Link>
+        <Link href="/tarifs">Tarifs</Link>
+        <Link href="/contact">Contact</Link>
+      </nav>
+      <div className="header-contact header-contact-simple"><a className="header-phone" href="tel:+18193802999">{phone}</a></div>
     </header>
   </>;
 }
 
 export function SiteFooter() {
-  const pathname = usePathname() || "/";
-  const isWebIntent = [
-    "/creation-sites-web",
-    "/creation-site-web-",
-    "/site-web-pme",
-    "/creation-boutique-en-ligne",
-    "/developpement-cms-sur-mesure",
-    "/realisation-envol-des-enfants",
-  ].some(prefix => pathname.startsWith(prefix));
-  const isItIntent = [
-    "/reparation-ordinateur",
-    "/depannage-informatique",
-    "/suppression-virus",
-    "/assistance",
-    "/installation-ordinateur",
-    "/configuration-wifi",
-    "/reseau-sauvegarde",
-  ].some(prefix => pathname.startsWith(prefix));
-
   return <>
-    <nav className={`footer-service-links footer-context-${isWebIntent ? "web" : isItIntent ? "it" : "general"} shell`} aria-label="Services et informations">
-      {isWebIntent ? <>
-        <div><strong>Création Web</strong><Link href="/creation-sites-web">Création et conception Web</Link><Link href="/site-web-pme">Sites Web pour PME</Link><Link href="/creation-boutique-en-ligne">Boutiques en ligne</Link><Link href="/developpement-cms-sur-mesure">CMS sur mesure</Link></div>
-        <div><strong>Web dans votre région</strong><Link href="/creation-site-web-nicolet">Nicolet</Link><Link href="/creation-site-web-becancour">Bécancour</Link><Link href="/creation-site-web-trois-rivieres">Trois-Rivières</Link><Link href="/#realisations">Réalisations</Link></div>
-        <div className="footer-other-expertise"><strong>Besoin informatique?</strong><Link href="/depannage-informatique-nicolet">Dépannage informatique</Link><Link href="/assistance-informatique-a-distance">Assistance à distance</Link><Link href="/tarifs">Tarifs</Link></div>
-      </> : isItIntent ? <>
-        <div><strong>Dépannage informatique</strong><Link href="/reparation-ordinateur-nicolet">Réparation d’ordinateur</Link><Link href="/suppression-virus">Suppression de virus</Link><Link href="/assistance-informatique-a-distance">Assistance à distance</Link><Link href="/assistance">Télécharger AIP Assistance</Link></div>
-        <div><strong>Installation &amp; réseau</strong><Link href="/installation-ordinateur-transfert-donnees">Installation et transfert</Link><Link href="/configuration-wifi-sauvegarde">Wi-Fi et sauvegardes</Link><Link href="/depannage-informatique-becancour">Dépannage Bécancour</Link><Link href="/depannage-informatique-trois-rivieres">Dépannage Trois-Rivières</Link></div>
-        <div className="footer-other-expertise"><strong>Vous avez un projet Web?</strong><Link href="/creation-sites-web">Création de sites Web</Link><Link href="/#realisations">Voir les réalisations</Link><Link href="/tarifs">Tarifs</Link></div>
-      </> : <>
-        <div><strong>Informatique</strong><Link href="/reparation-ordinateur-nicolet">Réparation d’ordinateur</Link><Link href="/suppression-virus">Suppression de virus</Link><Link href="/assistance-informatique-a-distance">Assistance à distance</Link><Link href="/configuration-wifi-sauvegarde">Wi-Fi et sauvegardes</Link></div>
-        <div><strong>Création Web</strong><Link href="/creation-sites-web">Création et conception Web</Link><Link href="/site-web-pme">Sites Web pour PME</Link><Link href="/creation-boutique-en-ligne">Boutiques en ligne</Link><Link href="/developpement-cms-sur-mesure">CMS sur mesure</Link></div>
-        <div><strong>Dans votre région</strong><Link href="/depannage-informatique-becancour">Dépannage Bécancour</Link><Link href="/depannage-informatique-trois-rivieres">Dépannage Trois-Rivières</Link><Link href="/creation-site-web-nicolet">Création Web Nicolet</Link><Link href="/creation-site-web-becancour">Création Web Bécancour</Link></div>
-      </>}
-      <div><strong>AIP</strong><Link href="/a-propos">À propos</Link><Link href="/comment-ca-marche">Comment ça marche</Link><Link href="/avis-clients">Avis clients</Link><Link href="/faq">FAQ</Link><Link href="/contact">Contact</Link></div>
+    <nav className="footer-service-links footer-simple shell" aria-label="Services et informations">
+      <div>
+        <strong>Informatique</strong>
+        <Link href="/depannage-informatique-nicolet">Dépannage et réparation</Link>
+        <Link href="/assistance-informatique-a-distance">Assistance à distance</Link>
+        <Link href="/suppression-virus">Virus et sécurité</Link>
+        <Link href="/installation-ordinateur-transfert-donnees">Installation et transfert</Link>
+        <Link href="/configuration-wifi-sauvegarde">Wi-Fi et sauvegardes</Link>
+      </div>
+      <div>
+        <strong>Sites Web</strong>
+        <Link href="/creation-sites-web">Création de sites Web</Link>
+        <Link href="/site-web-pme">Sites Web pour PME</Link>
+        <Link href="/creation-boutique-en-ligne">Boutiques en ligne</Link>
+        <Link href="/developpement-cms-sur-mesure">CMS sur mesure</Link>
+        <Link href="/#realisations">Réalisations</Link>
+      </div>
+      <div>
+        <strong>AIP</strong>
+        <Link href="/a-propos">À propos</Link>
+        <Link href="/tarifs">Tarifs</Link>
+        <Link href="/avis-clients">Avis clients</Link>
+        <Link href="/faq">FAQ</Link>
+        <Link href="/contact">Contact</Link>
+      </div>
     </nav>
     <div className="footer-nap shell"><strong>{businessName}</strong><span>{businessAddress}</span><a href="tel:+18193802999">{phone}</a><a href={googleBusinessUrl} target="_blank" rel="noopener noreferrer">Nous trouver sur Google Maps</a></div>
     <footer className="footer shell"><Link className="footer-brand footer-logo-only" href="/" aria-label="AIP Atelier Informatique Potvin, accueil"><img src="/aip-icon-v7.png" alt="AIP Atelier Informatique Potvin" width="92" height="79" /></Link><p>© 2026 AIP · <span className="footer-legal-name">AIP Atelier Informatique Potvin</span> · Nicolet, Québec</p><a href="tel:+18193802999">{phone}</a></footer>
