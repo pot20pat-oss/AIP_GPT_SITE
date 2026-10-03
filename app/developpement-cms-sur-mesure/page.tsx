@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { DetailPage } from "../components";
-import { pageMetadata } from "../seo";
+import { webPageMetadata } from "../seo";
 
-export const metadata: Metadata = pageMetadata({
+export const metadata: Metadata = webPageMetadata({
   title: "Développement de CMS sur mesure | AIP",
   description: "Développement de CMS, interfaces d’administration et outils web sur mesure pour PME : gestion de contenu, catalogue et automatisations.",
   path: "/developpement-cms-sur-mesure",
