@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { businessAddress, businessName, googleBusinessUrl, jsonLd, siteUrl } from "./seo";
+import { businessAddress, businessName, googleBusinessUrl, jsonLd, siteUrl, webSiteUrl } from "./seo";
 
 export const phone = "819 380-2999";
 
@@ -120,7 +120,9 @@ export function DetailPage({ eyebrow, title, accent, intro, points, asideTitle, 
   );
   const isRemoteService = servicePath === "/assistance-informatique-a-distance";
   const isMainWebService = servicePath === "/creation-sites-web";
-  const graph: object[] = servicePath ? [{ "@type": "Service", "@id": `${siteUrl}${servicePath}#service`, name: eyebrow, description: intro, url: `${siteUrl}${servicePath}`, image: `${siteUrl}${image}`, provider: { "@id": `${siteUrl}/#entreprise`, name: businessName }, areaServed: ["Nicolet", "Bécancour", "Trois-Rivières", "Centre-du-Québec"], serviceArea: { "@type": "GeoCircle", geoMidpoint: { "@type": "GeoCoordinates", latitude: 46.2268, longitude: -72.6141 }, geoRadius: "50000 m" } }, { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: siteUrl }, { "@type": "ListItem", position: 2, name: eyebrow, item: `${siteUrl}${servicePath}` }] }] : [];
+  const serviceBaseUrl = isWebService ? webSiteUrl : siteUrl;
+  const serviceUrl = isMainWebService ? webSiteUrl : servicePath ? `${serviceBaseUrl}${servicePath}` : serviceBaseUrl;
+  const graph: object[] = servicePath ? [{ "@type": "Service", "@id": `${serviceUrl}#service`, name: eyebrow, description: intro, url: serviceUrl, image: `${serviceBaseUrl}${image}`, provider: { "@id": `${siteUrl}/#entreprise`, name: businessName }, areaServed: ["Nicolet", "Bécancour", "Trois-Rivières", "Centre-du-Québec"], serviceArea: { "@type": "GeoCircle", geoMidpoint: { "@type": "GeoCoordinates", latitude: 46.2268, longitude: -72.6141 }, geoRadius: "50000 m" } }, { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: serviceBaseUrl }, { "@type": "ListItem", position: 2, name: eyebrow, item: serviceUrl }] }] : [];
   if (faqs?.length) graph.push({ "@type": "FAQPage", mainEntity: faqs.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) });
   const structuredData = graph.length ? { "@context": "https://schema.org", "@graph": graph } : null;
   return <main className={isRemoteService ? "remote-service-page" : isMainWebService ? "web-main-service-page" : undefined}><SiteHeader />
