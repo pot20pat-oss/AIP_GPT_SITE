@@ -70,7 +70,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
     ],
   };
 
-  return <html lang="fr-CA" data-site-mode={isWebSite ? "web" : "it"}><body>
+  return <html lang="fr-CA" data-site-mode={isWebSite ? "web" : "it"} className={isWebSite ? "motion-ready" : undefined}><body>
     <script dangerouslySetInnerHTML={{ __html: `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
