@@ -5512,3 +5512,121 @@ html[data-site-mode="web"] .editorial-web .header-phone{
 .editorial-web .footer>a:last-child:hover{
   color:#8feeff!important;
 }
+
+
+/* AIP CREATION — FUTURISTIC HEADER BRAND 2026-10-04 */
+html[data-site-mode="web"] .editorial-web .header .brand{
+  position:relative;
+  padding:8px 12px 8px 8px;
+  border:1px solid rgba(103,232,255,.14);
+  background:
+    linear-gradient(135deg,rgba(103,232,255,.045),rgba(109,168,255,.025));
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.03),
+    0 0 26px rgba(103,232,255,.035);
+}
+html[data-site-mode="web"] .editorial-web .header .brand::after{
+  content:"";
+  position:absolute;
+  left:108px;
+  right:12px;
+  bottom:7px;
+  height:1px;
+  background:linear-gradient(90deg,rgba(103,232,255,.65),transparent);
+  opacity:.65;
+}
+html[data-site-mode="web"] .editorial-web .header .brand-logo{
+  filter:
+    drop-shadow(0 0 8px rgba(103,232,255,.22))
+    drop-shadow(0 0 18px rgba(109,168,255,.12));
+}
+html[data-site-mode="web"] .editorial-web .brand-name-web{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:7px;
+  min-width:0;
+}
+html[data-site-mode="web"] .editorial-web .brand-name-web small{
+  display:block;
+  color:#75dff4;
+  font-family:Consolas,"SFMono-Regular",monospace;
+  font-size:9px;
+  line-height:1;
+  letter-spacing:.16em;
+  font-weight:700;
+  text-transform:uppercase;
+  text-shadow:0 0 12px rgba(103,232,255,.25);
+}
+html[data-site-mode="web"] .editorial-web .brand-name-web > span{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  width:max-content;
+  max-width:100%;
+  color:#f3f9ff!important;
+  font-size:18px!important;
+  line-height:1.05!important;
+  font-weight:760!important;
+  letter-spacing:-.35px;
+  text-shadow:0 0 18px rgba(103,232,255,.08);
+}
+html[data-site-mode="web"] .editorial-web .brand-name-web > span::before{
+  content:"";
+  width:7px;
+  height:7px;
+  flex:0 0 7px;
+  border-radius:50%;
+  background:#63e9ff;
+  box-shadow:0 0 12px #63e9ff;
+}
+html[data-site-mode="web"] .editorial-web .header nav{
+  border-color:rgba(103,232,255,.12);
+}
+html[data-site-mode="web"] .editorial-web .header nav a{
+  color:#b9ccdc;
+  letter-spacing:.02em;
+}
+html[data-site-mode="web"] .editorial-web .header nav a:hover,
+html[data-site-mode="web"] .editorial-web .header nav a.nav-active{
+  color:#8feeff!important;
+}
+html[data-site-mode="web"] .editorial-web .header-phone{
+  color:#dff7ff!important;
+  padding:8px 12px;
+  border:1px solid rgba(103,232,255,.16);
+  background:rgba(103,232,255,.035);
+}
+
+@media (min-width:761px) and (max-width:1499px){
+  html[data-site-mode="web"] .editorial-web .header .brand{
+    padding-right:10px;
+  }
+  html[data-site-mode="web"] .editorial-web .header .brand::after{
+    left:102px;
+  }
+  html[data-site-mode="web"] .editorial-web .brand-name-web > span{
+    font-size:17px!important;
+  }
+}
+@media(max-width:760px){
+  html[data-site-mode="web"] .editorial-web .header .brand{
+    padding:7px 9px 8px 6px;
+  }
+  html[data-site-mode="web"] .editorial-web .header .brand::after{
+    left:90px;
+    right:9px;
+    bottom:6px;
+  }
+  html[data-site-mode="web"] .editorial-web .brand-name-web{
+    gap:5px;
+  }
+  html[data-site-mode="web"] .editorial-web .brand-name-web small{
+    font-size:7.5px;
+    letter-spacing:.11em;
+  }
+  html[data-site-mode="web"] .editorial-web .brand-name-web > span{
+    font-size:clamp(14px,4vw,17px)!important;
+  }
+}
