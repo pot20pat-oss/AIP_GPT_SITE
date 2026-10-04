@@ -54,7 +54,7 @@ export function LocalServiceArea() {
 export function ProjectShowcase({ showServiceLink = true }: { showServiceLink?: boolean }) {
   return <section className={`portfolio section${showServiceLink ? " portfolio-home" : ""}`} id="realisations"><div className="shell"><div className="section-heading"><div><div className="eyebrow"><span></span>Projets web sur mesure</div><h2>Du concept au concret.<br /><em>Découvrez les projets.</em></h2></div><p>Deux réalisations en production et une maquette client : trois exemples de solutions Web conçues selon des besoins très différents.</p></div>
     <article className="portfolio-project portfolio-project-aip">
-      <a className="portfolio-image portfolio-image-cover" href="https://atelierpotvin.ca/" target="_blank" rel="noopener noreferrer" aria-label="Visiter Atelier Informatique Potvin, nouvelle fenêtre"><img src="/hero-aip-clean.webp" alt="Atelier Informatique Potvin, site de services avec CMS interne et référencement local" loading="lazy" decoding="async" /></a>
+      <a className="portfolio-image portfolio-image-cover" href="https://atelierpotvin.ca/" target="_blank" rel="noopener noreferrer" aria-label="Visiter Atelier Informatique Potvin, nouvelle fenêtre"><img src="/aip-hero.webp" alt="Atelier Informatique Potvin, site de services avec CMS interne et référencement local" loading="lazy" decoding="async" /></a>
       <div className="portfolio-copy">
         <div className="eyebrow"><span></span>Projet interne AIP · Site de services &amp; CMS</div>
         <h3>Atelier Informatique Potvin</h3>
