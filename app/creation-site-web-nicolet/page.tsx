@@ -32,6 +32,8 @@ export default function Page() {
       { href: "/site-web-pme", label: "Sites Web pour PME" },
       { href: "/creation-boutique-en-ligne", label: "Boutiques en ligne" },
       { href: "/developpement-cms-sur-mesure", label: "CMS sur mesure" },
+      { href: "/creation-site-web-saint-celestin", label: "Création Web à Saint-Célestin" },
+      { href: "/creation-site-web-centre-du-quebec", label: "Création Web au Centre-du-Québec" },
     ]}
     showcaseProject
     servicePath="/creation-site-web-nicolet"
