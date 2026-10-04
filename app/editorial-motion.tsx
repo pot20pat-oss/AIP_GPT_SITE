@@ -10,11 +10,10 @@ export function EditorialMotion() {
     const elements = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
     if (!elements.length) return;
 
-    const typeTargets = Array.from(document.querySelectorAll<HTMLElement>("[data-typewrite]"));
-    typeTargets.forEach((el) => {
+    const prepareTypeTarget = (el: HTMLElement) => {
       if (el.dataset.typeReady === "true") return;
-      const label = el.textContent || "";
 
+      const label = el.textContent || "";
       const accessibleText = document.createElement("span");
       accessibleText.className = "sr-only";
       accessibleText.textContent = label;
@@ -24,6 +23,7 @@ export function EditorialMotion() {
       let tokenIndex = 0;
       const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
       const textNodes: Text[] = [];
+
       while (walker.nextNode()) {
         const node = walker.currentNode as Text;
         if ((node.parentElement as HTMLElement | null)?.classList.contains("sr-only")) continue;
@@ -58,7 +58,12 @@ export function EditorialMotion() {
       });
 
       el.dataset.typeReady = "true";
-    });
+    };
+
+    const prepareTypeTargetsWithin = (container: HTMLElement) => {
+      if (container.matches("[data-typewrite]")) prepareTypeTarget(container);
+      container.querySelectorAll<HTMLElement>("[data-typewrite]").forEach(prepareTypeTarget);
+    };
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       elements.forEach((el) => el.classList.add("is-visible"));
@@ -91,6 +96,7 @@ export function EditorialMotion() {
 
           entering.forEach((el, index) => {
             clearTimer(el);
+            prepareTypeTargetsWithin(el);
             const timer = window.setTimeout(() => {
               el.classList.add("is-visible");
               timers.delete(el);
