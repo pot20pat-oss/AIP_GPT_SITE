@@ -7729,11 +7729,11 @@ html[data-site-mode="it"] .back-to-top{
 /* AIP CREATION — AIP PROJECT PORTRAIT CROP 2026-10-04 */
 .editorial-project-aip .editorial-project-media img{
   object-fit:cover;
-  object-position:68% center;
+  object-position:50% center;
 }
 @media(max-width:900px){
   .editorial-project-aip .editorial-project-media img{
-    object-position:64% center;
+    object-position:50% center;
   }
 }
 
