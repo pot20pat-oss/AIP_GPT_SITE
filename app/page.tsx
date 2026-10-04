@@ -40,10 +40,6 @@ function Reviews() {
   return <section className="reviews section"><div className="shell"><div className="section-heading"><div><div className="eyebrow"><span></span> Ce que mes clients en disent</div><h2>De vraies personnes.<br /><em>De vrais résultats.</em></h2></div><p>Une note de 5,0 sur Google, grâce à dix avis de clients de la région.</p></div><div className="reviews-grid"><article><div className="stars">★★★★★</div><blockquote>« Service impeccable. Je recommande fortement ses services, il est expert dans son domaine. »</blockquote><span>Alex Therrien</span></article><article><div className="stars">★★★★★</div><blockquote>« Un gros problème de micro, j’ai gossé dessus pendant deux mois, il a trouvé le problème en 10 minutes. »</blockquote><span>Etienne Therrien</span></article><article><div className="stars">★★★★★</div><blockquote>« Service dépannage au top. Service hors pair pour résoudre mon problème, avec un langage clair et de l’humour. »</blockquote><span>Solange Poulin</span></article></div></div></section>;
 }
 
-function WebProof() {
-  return <section className="reviews section web-proof"><div className="shell"><div className="section-heading"><div><div className="eyebrow"><span></span> Savoir-faire Web</div><h2>Du concept à la mise en ligne.<br /><em>Tout est pensé ensemble.</em></h2></div><p>L’Envol des Enfants montre une approche complète : expérience client, boutique bilingue, gestion interne et déploiement dans un même projet.</p></div><div className="reviews-grid web-proof-grid"><article><div className="stars">01</div><div className="web-proof-kicker">Expérience client</div><h3>Boutique bilingue</h3><p>Une vitrine claire en français et en anglais, avec catalogue, navigation et contenu adaptés au commerce.</p><ul><li>FR / EN</li><li>Catalogue structuré</li><li>Parcours mobile</li></ul><span>Projet en production</span></article><article><div className="stars">02</div><div className="web-proof-kicker">Outil métier</div><h3>CMS sur mesure</h3><p>Une interface conçue autour des vraies opérations de la boutique, pas un panneau générique à contourner.</p><ul><li>Produits et photos</li><li>Prix et stock</li><li>Visibilité et gestion en lot</li></ul><span>Gestion adaptée au quotidien</span></article><article><div className="stars">03</div><div className="web-proof-kicker">Projet complet</div><h3>Conception à déploiement</h3><p>Architecture, développement, mise en ligne et évolution sont suivis dans une même logique technique.</p><ul><li>Design et développement</li><li>Déploiement Cloud</li><li>Évolution continue</li></ul><span>Un seul interlocuteur</span></article></div><div className="web-proof-strip"><span>Design</span><span>Développement</span><span>E-commerce</span><span>CMS</span><span>SEO technique</span><span>Déploiement</span></div></div></section>;
-}
-
 function WebNeutralReview() {
   return <section className="reviews section web-neutral-review"><div className="shell"><div className="section-heading"><div><div className="eyebrow"><span></span> Avis client</div><h2>Une expérience appréciée.<br /><em>Un service qui inspire confiance.</em></h2></div><p>Cet avis porte sur la qualité du service et de l’accompagnement. La réalisation Web présentée plus haut montre concrètement le travail de conception.</p></div><article className="web-neutral-review-card"><div className="stars">★★★★★</div><blockquote>Service impeccable. Je recommande fortement ses services, il est expert dans son domaine.</blockquote><span>Alex Therrien</span></article></div></section>;
 }
@@ -117,7 +113,6 @@ function WebHome() {
       </div>
     </section>
 
-    <WebProof />
     <WebNeutralReview />
     <ContactBlock web />
     <SiteFooter />
