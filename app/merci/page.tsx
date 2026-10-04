@@ -9,10 +9,12 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default async function MerciPage() {
+export default async function MerciPage({ searchParams }: { searchParams?: Promise<{ site?: string }> }) {
   const requestHeaders = await headers();
-  const host = (requestHeaders.get("host") || "").split(":")[0].toLowerCase();
-  const web = host === "aipcreation.ca" || host === "www.aipcreation.ca";
+  const params = searchParams ? await searchParams : {};
+  const forwardedHost = (requestHeaders.get("x-forwarded-host") || "").split(",")[0].trim();
+  const host = (forwardedHost || requestHeaders.get("host") || "").split(":")[0].toLowerCase();
+  const web = params.site === "web" || (params.site !== "it" && (host === "aipcreation.ca" || host === "www.aipcreation.ca"));
 
-  return <main className={web ? "web-service-page web-thank-you-page" : undefined}><SiteHeader /><section className="thank-you shell"><div className="eyebrow"><span></span>Message envoyé</div><h1>Merci.<br /><em>J’ai bien reçu votre demande.</em></h1><p>{web ? "Votre demande de projet Web a bien été envoyée. Je vous répondrai habituellement dans la journée." : "Je vous répondrai habituellement dans la journée. Pour une demande urgente, vous pouvez aussi m’appeler directement."}</p><div className="hero-actions"><a className="button button-dark" href="tel:+18193802999">819-380-2999</a><Link className="button button-outline" href="/">Retour à l’accueil</Link></div></section><SiteFooter /></main>;
+  return <main className={web ? "web-service-page web-thank-you-page web-thank-you-force" : undefined}><SiteHeader /><section className="thank-you shell"><div className="eyebrow"><span></span>Message envoyé</div><h1>Merci.<br /><em>J’ai bien reçu votre demande.</em></h1><p>{web ? "Votre demande de projet Web a bien été envoyée. Je vous répondrai habituellement dans la journée." : "Je vous répondrai habituellement dans la journée. Pour une demande urgente, vous pouvez aussi m’appeler directement."}</p><div className="hero-actions"><a className="button button-dark" href="tel:+18193802999">819-380-2999</a><Link className="button button-outline" href="/">Retour à l’accueil</Link></div></section><SiteFooter /></main>;
 }
