@@ -8185,3 +8185,41 @@ html[data-site-mode="it"] .header-it-cta:hover{
     transform:none!important;
   }
 }
+
+
+/* AIP MARK CENTERING FINAL 2026-10-04 */
+.header .brand-home-link{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  height:100%!important;
+  line-height:0!important;
+}
+.header .brand-logo{
+  margin:auto!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  transform:none!important;
+}
+.footer .footer-brand{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.footer .footer-brand img{
+  display:block!important;
+  margin-inline:auto!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+}
+.back-to-top-orb{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.back-to-top-orb img{
+  margin:auto!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+}
