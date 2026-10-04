@@ -7343,18 +7343,14 @@ html[data-site-mode="it"] .back-to-top{
 }
 
 
-/* AIP CREATION — PAGE SPEED PASS 2026-10-04 */
-:is(.editorial-web,.web-service-page) > section:not(:first-of-type),
-:is(.editorial-web,.web-service-page) .portfolio-project,
-:is(.editorial-web,.web-service-page) .editorial-project{
-  content-visibility:auto;
-  contain-intrinsic-size:auto 720px;
-}
-:is(.editorial-web,.web-service-page) [data-typewrite] .magic-char{
+/* AIP CREATION — PAGE SPEED PASS 2026-10-04
+   Do not use content-visibility with guessed intrinsic heights here:
+   the real section heights vary heavily and were causing large CLS. */
+:is(.editorial-web,.web-service-page) [data-typewrite] :is(.magic-char,.magic-word){
   backface-visibility:hidden;
 }
 @media(prefers-reduced-motion:reduce){
-  :is(.editorial-web,.web-service-page) [data-typewrite] .magic-char{
+  :is(.editorial-web,.web-service-page) [data-typewrite] :is(.magic-char,.magic-word){
     will-change:auto!important;
   }
 }
