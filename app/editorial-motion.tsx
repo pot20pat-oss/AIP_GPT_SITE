@@ -20,7 +20,8 @@ export function EditorialMotion() {
       accessibleText.textContent = label;
       el.prepend(accessibleText);
 
-      let charIndex = 0;
+      const mode = el.dataset.typewrite === "body" ? "word" : "char";
+      let tokenIndex = 0;
       const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
       const textNodes: Text[] = [];
       while (walker.nextNode()) {
@@ -31,14 +32,28 @@ export function EditorialMotion() {
 
       textNodes.forEach((node) => {
         const fragment = document.createDocumentFragment();
-        Array.from(node.data).forEach((char) => {
-          const span = document.createElement("span");
-          span.className = "magic-char";
-          span.setAttribute("aria-hidden", "true");
-          span.style.setProperty("--char-index", String(charIndex++));
-          span.textContent = char;
-          fragment.appendChild(span);
-        });
+
+        if (mode === "word") {
+          const parts = node.data.match(/\S+\s*/g) || [];
+          parts.forEach((part) => {
+            const span = document.createElement("span");
+            span.className = "magic-word";
+            span.setAttribute("aria-hidden", "true");
+            span.style.setProperty("--token-index", String(tokenIndex++));
+            span.textContent = part;
+            fragment.appendChild(span);
+          });
+        } else {
+          Array.from(node.data).forEach((char) => {
+            const span = document.createElement("span");
+            span.className = "magic-char";
+            span.setAttribute("aria-hidden", "true");
+            span.style.setProperty("--token-index", String(tokenIndex++));
+            span.textContent = char;
+            fragment.appendChild(span);
+          });
+        }
+
         node.replaceWith(fragment);
       });
 
