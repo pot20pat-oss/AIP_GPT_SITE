@@ -42,6 +42,7 @@ export default function Page() {
     priceLabel="Site vitrine à partir de 900 $"
     priceText="Le prix dépend du nombre de pages, du contenu, des intégrations et des fonctions nécessaires. Une estimation claire est préparée avant le développement."
     areaText="AIP Création est établi à Nicolet et dessert Saint-Célestin ainsi que les municipalités voisines. Le suivi peut se faire localement ou entièrement à distance."
+    areaServed={["Saint-Célestin", "Centre-du-Québec"]}
     faqs={[
       { question: "Créez-vous des sites pour des entreprises de Saint-Célestin?", answer: "Oui. Saint-Célestin fait partie du territoire desservi par AIP Création pour les sites vitrines, boutiques en ligne et projets Web sur mesure." },
       { question: "Est-ce utile d’avoir un site si mon entreprise est petite?", answer: "Oui, surtout si vos clients recherchent vos services sur Google avant de vous contacter. Un site clair peut rassurer, expliquer votre offre et faciliter la prise de contact." },
