@@ -26,13 +26,19 @@ export async function generateMetadata(): Promise<Metadata> {
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
     openGraph: { title, description, url: base, siteName: isWebSite ? "AIP Création Web" : businessName, images: [{ url: `${base}/aip-travail-03.webp`, alt: "Patrick Potvin, services informatiques à Nicolet" }], locale: "fr_CA", type: "website" },
     twitter: { card: "summary_large_image", title, description, images: [`${base}/aip-travail-03.webp`] },
-    icons: {
-      icon: [
-        { url: "/aip-icon-v7.webp", type: "image/webp" },
-        { url: "/aip-favicon-v8.ico", type: "image/x-icon" },
-      ],
-      shortcut: "/aip-icon-v7.webp",
-    },
+    icons: isWebSite
+      ? {
+          icon: [{ url: "/aipcreation-favicon-v1.png", type: "image/png", sizes: "48x48" }],
+          shortcut: "/aipcreation-favicon-v1.png",
+          apple: "/aipcreation-favicon-v1.png",
+        }
+      : {
+          icon: [
+            { url: "/aip-icon-v7.webp", type: "image/webp" },
+            { url: "/aip-favicon-v8.ico", type: "image/x-icon" },
+          ],
+          shortcut: "/aip-icon-v7.webp",
+        },
   };
 }
 
