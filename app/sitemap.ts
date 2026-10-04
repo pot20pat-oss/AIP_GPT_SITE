@@ -44,7 +44,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${base}${path}`,
     changeFrequency: path === "" ? "weekly" : "monthly",
     priority: path === "" ? 1 : web
-      ? ["/creation-site-web-nicolet", "/site-web-pme"].includes(path) ? 0.95 : 0.8
+      ? ["/creation-site-web-nicolet", "/site-web-pme"].includes(path) ? 0.95 : ["/creation-site-web-becancour", "/creation-site-web-trois-rivieres"].includes(path) ? 0.9 : 0.8
       : ["/depannage-informatique-nicolet", "/assistance-informatique-a-distance"].includes(path) ? 0.95 : 0.8,
   }));
 }
