@@ -41,12 +41,12 @@ function Reviews() {
 }
 
 function WebNeutralReview() {
-  return <section className="reviews section web-neutral-review"><div className="shell"><div className="section-heading"><div><div className="eyebrow"><span></span> Avis client</div><h2>Une expérience appréciée.<br /><em>Un service qui inspire confiance.</em></h2></div><p>Cet avis porte sur la qualité du service et de l’accompagnement. La réalisation Web présentée plus haut montre concrètement le travail de conception.</p></div><article className="web-neutral-review-card"><div className="stars">★★★★★</div><blockquote>Service impeccable. Je recommande fortement ses services, il est expert dans son domaine.</blockquote><span>Alex Therrien</span></article></div></section>;
+  return <section className="reviews section web-neutral-review" data-reveal="section"><div className="shell"><div className="section-heading" data-reveal="feature"><div><div className="eyebrow"><span></span> Avis client</div><h2>Une expérience appréciée.<br /><em>Un service qui inspire confiance.</em></h2></div><p>Cet avis porte sur la qualité du service et de l’accompagnement. La réalisation Web présentée plus haut montre concrètement le travail de conception.</p></div><article className="web-neutral-review-card" data-reveal="feature"><div className="stars">★★★★★</div><blockquote>Service impeccable. Je recommande fortement ses services, il est expert dans son domaine.</blockquote><span>Alex Therrien</span></article></div></section>;
 }
 
 function ContactBlock({ web }: { web: boolean }) {
   if (web) {
-    return <section className="contact section web-contact" id="contact"><div className="shell contact-inner"><div><div className="eyebrow"><span></span>Votre projet Web</div><h2>Une idée en tête?<br /><em>Parlons-en.</em></h2><p>Expliquez-moi votre entreprise, votre projet et ce que vous voulez accomplir. Je vous répondrai avec une première direction claire.</p><a className="contact-inline-phone" href="tel:+18193802999">819 380-2999</a></div><div className="contact-card contact-form-card"><span>Écrivez-moi</span><form className="contact-mini-form" action="https://formsubmit.co/contact@atelierpotvin.ca" method="POST"><input type="hidden" name="_subject" value="Nouvelle demande — aipcreation.ca" /><input type="hidden" name="_template" value="table" /><input type="hidden" name="_next" value="https://aipcreation.ca/merci" /><input className="contact-honey" type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" /><label>Nom<input type="text" name="name" autoComplete="name" required /></label><label>Téléphone ou courriel<input type="text" name="coordonnees" required /></label><label>Parlez-moi du projet<textarea name="message" rows={4} required /></label><button className="button button-lime" type="submit">Envoyer ma demande</button></form><div className="response-note"><span></span>Réponse habituellement dans la journée</div></div></div></section>;
+    return <section className="contact section web-contact" id="contact" data-reveal="section"><div className="shell contact-inner"><div data-reveal="feature"><div className="eyebrow"><span></span>Votre projet Web</div><h2>Une idée en tête?<br /><em>Parlons-en.</em></h2><p>Expliquez-moi votre entreprise, votre projet et ce que vous voulez accomplir. Je vous répondrai avec une première direction claire.</p><a className="contact-inline-phone" href="tel:+18193802999">819 380-2999</a></div><div className="contact-card contact-form-card" data-reveal="feature"><span>Écrivez-moi</span><form className="contact-mini-form" action="https://formsubmit.co/contact@atelierpotvin.ca" method="POST"><input type="hidden" name="_subject" value="Nouvelle demande — aipcreation.ca" /><input type="hidden" name="_template" value="table" /><input type="hidden" name="_next" value="https://aipcreation.ca/merci" /><input className="contact-honey" type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" /><label>Nom<input type="text" name="name" autoComplete="name" required /></label><label>Téléphone ou courriel<input type="text" name="coordonnees" required /></label><label>Parlez-moi du projet<textarea name="message" rows={4} required /></label><button className="button button-lime" type="submit">Envoyer ma demande</button></form><div className="response-note"><span></span>Réponse habituellement dans la journée</div></div></div></section>;
   }
   return <section className="contact section" id="contact"><div className="shell contact-inner"><div><div className="eyebrow"><span></span>Besoin d’aide?</div><h2>Un problème informatique?<br /><em>On regarde ça ensemble.</em></h2><p>Expliquez-moi le problème dans vos mots. Je vous dirai si on peut le régler à distance ou s’il faut une intervention sur place.</p></div><div className="contact-card"><span>Joignez-moi directement</span><a className="big-phone" href="tel:+18193802999">819 380-2999</a><p>462, rue D. N. St-Cyr<br />Nicolet (Québec) J3T 1H3</p><div className="response-note"><span></span>Réponse habituellement dans la journée</div><a className="button button-lime" href="tel:+18193802999">Appeler maintenant</a></div></div></section>;
 }
@@ -93,13 +93,13 @@ function WebHome() {
       </aside>
     </section>
 
-    <section className="editorial-index holo-index">
+    <section className="editorial-index holo-index" data-reveal="section">
       <div className="holo-data-stream" aria-hidden="true">AIP CRÉATION · DESIGN · DÉVELOPPEMENT · BOUTIQUES · CMS · RÉFÉRENCEMENT LOCAL ·</div>
       <div className="shell editorial-index-grid">
-        <div><strong>900 $ +</strong><span>site vitrine de base</span><small>Boutique et CMS sur devis</small></div>
-        <div><strong>FR / EN</strong><span>boutique bilingue en production</span><small>Une même expérience dans les deux langues</small></div>
-        <div><strong>CMS métier</strong><span>produits, photos, prix et stock</span><small>Gestion pensée autour des opérations</small></div>
-        <div><strong>1 seul</strong><span>interlocuteur du début à la fin</span><small>Conception, code et déploiement</small></div>
+        <div data-reveal="feature"><strong>900 $ +</strong><span>site vitrine de base</span><small>Boutique et CMS sur devis</small></div>
+        <div data-reveal="feature"><strong>FR / EN</strong><span>boutique bilingue en production</span><small>Une même expérience dans les deux langues</small></div>
+        <div data-reveal="feature"><strong>CMS métier</strong><span>produits, photos, prix et stock</span><small>Gestion pensée autour des opérations</small></div>
+        <div data-reveal="feature"><strong>1 seul</strong><span>interlocuteur du début à la fin</span><small>Conception, code et déploiement</small></div>
       </div>
     </section>
 
