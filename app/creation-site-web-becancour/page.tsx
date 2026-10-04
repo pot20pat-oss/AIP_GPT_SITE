@@ -44,6 +44,7 @@ export default function Page() {
     priceLabel="Site vitrine à partir de 900 $"
     priceText="Le coût est établi selon la portée réelle du projet : contenu, nombre de pages, fonctions, intégrations et niveau de gestion nécessaire."
     areaText="Service de création Web pour Bécancour et les environs depuis Nicolet. Les rencontres et le suivi peuvent se faire localement ou entièrement à distance."
+    areaServed={["Bécancour", "Centre-du-Québec"]}
     faqs={[
       { question: "Desserviez-vous les entreprises de Bécancour?", answer: "Oui. Bécancour fait partie du territoire local desservi par AIP Création. Le projet peut être réalisé avec des rencontres locales ou entièrement à distance selon vos préférences." },
       { question: "Pouvez-vous créer un site pour une PME de services?", answer: "Oui. Les sites vitrines sont conçus pour présenter clairement les services, le territoire, les réalisations et les moyens de contact d’une PME." },
