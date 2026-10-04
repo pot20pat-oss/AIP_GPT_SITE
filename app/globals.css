@@ -5630,3 +5630,109 @@ html[data-site-mode="web"] .editorial-web .header-phone{
     font-size:clamp(14px,4vw,17px)!important;
   }
 }
+
+
+/* AIP CREATION — CONTENT CLARITY PASS 2026-10-04 */
+.editorial-web .section-heading h2 em,
+.editorial-web .contact h2 em{
+  color:#7cecff!important;
+  text-shadow:0 0 16px rgba(103,232,255,.24);
+}
+.editorial-web .section-heading>p,
+.editorial-web .contact-inner>div>p,
+.editorial-web .editorial-lead>p,
+.editorial-web .editorial-brief p,
+.editorial-web .editorial-section-heading p,
+.editorial-web .editorial-feature-grid p{
+  color:#b5c7d7!important;
+}
+.editorial-web .editorial-index-grid small{
+  color:#8fa9be!important;
+}
+.editorial-web .holo-data-stream{
+  color:rgba(153,226,242,.34)!important;
+}
+.editorial-web .web-neutral-review{
+  padding-bottom:56px!important;
+}
+.editorial-web .web-contact{
+  padding-top:64px!important;
+}
+.editorial-web .web-neutral-review-card blockquote{
+  margin:16px 0 12px;
+  max-width:760px;
+  text-wrap:pretty;
+  hanging-punctuation:first last;
+}
+.editorial-web .contact-inline-phone{
+  display:inline-flex;
+  margin-top:22px;
+  color:#dff8ff;
+  font-size:22px;
+  font-weight:750;
+  letter-spacing:-.4px;
+}
+.editorial-web .contact-form-card{
+  padding:30px;
+}
+.editorial-web .contact-mini-form{
+  display:grid;
+  gap:14px;
+  margin-top:18px;
+}
+.editorial-web .contact-mini-form label{
+  display:grid;
+  gap:7px;
+  color:#c7d9e8;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.025em;
+}
+.editorial-web .contact-mini-form input,
+.editorial-web .contact-mini-form textarea{
+  width:100%;
+  border:1px solid rgba(103,232,255,.2);
+  border-radius:0;
+  outline:none;
+  background:rgba(3,10,19,.72);
+  color:#f4fbff;
+  padding:12px 13px;
+  font:inherit;
+  box-shadow:inset 0 1px rgba(255,255,255,.025);
+  transition:border-color .2s ease,box-shadow .2s ease,background .2s ease;
+}
+.editorial-web .contact-mini-form textarea{
+  resize:vertical;
+  min-height:118px;
+}
+.editorial-web .contact-mini-form input:focus,
+.editorial-web .contact-mini-form textarea:focus{
+  border-color:rgba(103,232,255,.62);
+  background:rgba(6,17,29,.9);
+  box-shadow:0 0 0 3px rgba(103,232,255,.07),0 0 20px rgba(103,232,255,.06);
+}
+.editorial-web .contact-mini-form .button{
+  width:100%;
+  border:0;
+  cursor:pointer;
+  font:inherit;
+  font-weight:800;
+}
+.editorial-web .contact-honey{
+  position:absolute!important;
+  left:-9999px!important;
+  width:1px!important;
+  height:1px!important;
+  opacity:0!important;
+}
+@media(max-width:760px){
+  .editorial-web .web-neutral-review{
+    padding-bottom:38px!important;
+  }
+  .editorial-web .web-contact{
+    padding-top:46px!important;
+  }
+  .editorial-web .contact-form-card{
+    padding:22px;
+  }
+}
