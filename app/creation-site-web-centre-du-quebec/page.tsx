@@ -42,6 +42,7 @@ export default function Page() {
     priceLabel="Site vitrine à partir de 900 $"
     priceText="Le coût dépend du contenu, du nombre de pages, des intégrations et des fonctions nécessaires. Une estimation est préparée selon la portée réelle du projet."
     areaText="AIP Création travaille depuis Nicolet avec des entreprises du Centre-du-Québec et des secteurs voisins. Les rencontres et le suivi peuvent aussi se faire entièrement à distance."
+    areaServed={["Centre-du-Québec", "Nicolet", "Bécancour", "Saint-Célestin"]}
     faqs={[
       { question: "Quelles villes desservez-vous au Centre-du-Québec?", answer: "AIP Création dessert notamment Nicolet, Bécancour, Saint-Célestin et les municipalités voisines, ainsi que des entreprises de Trois-Rivières et des environs." },
       { question: "Pouvez-vous créer plusieurs pages locales sur mon site?", answer: "Oui, lorsqu’elles correspondent à de vraies zones de service et qu’elles apportent un contenu distinct et utile aux visiteurs. L’objectif n’est pas de dupliquer la même page avec un autre nom de ville." },
