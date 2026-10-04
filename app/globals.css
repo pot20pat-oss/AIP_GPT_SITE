@@ -4555,7 +4555,7 @@ html[data-site-mode="web"] .footer-site-web{
 .editorial-lead h1{
   max-width:900px;
   margin:12px 0 18px;
-  font-family:Georgia,"Times New Roman",serif;
+  font-family:Inter,"Avenir Next","Segoe UI",sans-serif;
   font-size:clamp(42px,5vw,72px);
   line-height:.98;
   letter-spacing:-2.7px;
@@ -4615,8 +4615,9 @@ html[data-site-mode="web"] .footer-site-web{
 }
 .editorial-brief h2{
   margin:5px 0 8px;
-  font-family:Georgia,"Times New Roman",serif;
+  font-family:Inter,"Avenir Next","Segoe UI",sans-serif;
   font-size:25px;
+  font-weight:780;
   line-height:1.08;
   letter-spacing:-.7px;
 }
@@ -4679,8 +4680,9 @@ html[data-site-mode="web"] .footer-site-web{
 }
 .editorial-section-heading h2{
   margin:0;
-  font-family:Georgia,"Times New Roman",serif;
+  font-family:Inter,"Avenir Next","Segoe UI",sans-serif;
   font-size:clamp(40px,5vw,66px);
+  font-weight:800;
   line-height:1;
   letter-spacing:-2px;
 }
@@ -4721,8 +4723,9 @@ html[data-site-mode="web"] .footer-site-web{
 }
 .editorial-feature-grid h3{
   margin:14px 0 14px;
-  font-family:Georgia,"Times New Roman",serif;
+  font-family:Inter,"Avenir Next","Segoe UI",sans-serif;
   font-size:30px;
+  font-weight:780;
   line-height:1.05;
   letter-spacing:-1px;
 }
@@ -4981,7 +4984,7 @@ html[data-site-mode="web"] .footer-site-web{
   --holo-blue:#6da8ff;
   --holo-violet:#9d7cff;
   --holo-line:rgba(103,232,255,.24);
-  --holo-muted:#8da7bd;
+  --holo-muted:#b3c8d9;
   --holo-text:#eef8ff;
   color:var(--holo-text);
   background:
@@ -5208,7 +5211,7 @@ html[data-site-mode="web"] .editorial-web .header-phone{
 .editorial-brief p,
 .editorial-section-heading p,
 .editorial-feature-grid p{
-  color:#94abc0;
+  color:#b5c8d8;
 }
 .editorial-actions{
   border-top:1px solid rgba(103,232,255,.14);
@@ -5275,7 +5278,7 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   font-family:Consolas,monospace;
 }
 .editorial-brief small{
-  color:#7fb6d4;
+  color:#a8cfe3;
 }
 .editorial-brief h2{
   color:#f1f8ff;
@@ -5292,7 +5295,7 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   top:7px;
   left:0;
   white-space:nowrap;
-  color:rgba(103,232,255,.17);
+  color:rgba(167,229,244,.46);
   font-family:Consolas,monospace;
   font-size:9px;
   letter-spacing:.18em;
@@ -5310,10 +5313,10 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   text-shadow:0 0 20px rgba(103,232,255,.17);
 }
 .editorial-index-grid span{
-  color:#95afc5;
+  color:#c0d1df;
 }
 .editorial-index-grid small{
-  color:#5f8099;
+  color:#94aec3;
 }
 .editorial-section{
   position:relative;
@@ -5344,6 +5347,9 @@ html[data-site-mode="web"] .editorial-web .header-phone{
 }
 .editorial-section-heading h2 em{
   color:var(--holo-cyan);
+  font-family:inherit;
+  font-style:normal;
+  font-weight:800;
   text-shadow:0 0 18px rgba(103,232,255,.23);
 }
 .editorial-feature-grid{
@@ -5353,7 +5359,8 @@ html[data-site-mode="web"] .editorial-web .header-phone{
 .editorial-feature-grid article{
   position:relative;
   overflow:hidden;
-  padding:30px 28px;
+  min-height:0;
+  padding:26px 28px 24px;
   border:1px solid rgba(103,232,255,.14)!important;
   background:linear-gradient(145deg,rgba(10,23,40,.82),rgba(5,13,24,.72));
   transition:border-color .25s ease,transform .25s ease,box-shadow .25s ease;
@@ -5364,7 +5371,7 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   box-shadow:0 18px 42px rgba(0,0,0,.26),0 0 26px rgba(103,232,255,.07);
 }
 .editorial-feature-grid small{
-  color:#6baecc;
+  color:#9ccce1;
 }
 .editorial-feature-grid h3{
   color:#eff8ff;
@@ -5384,7 +5391,7 @@ html[data-site-mode="web"] .editorial-web .header-phone{
 }
 .editorial-web .section-heading>p,
 .editorial-web .contact-inner>div>p{
-  color:#91a9bd;
+  color:#b3c7d7;
 }
 .editorial-web .web-proof-grid>article,
 .editorial-web .web-neutral-review-card,
@@ -5407,7 +5414,7 @@ html[data-site-mode="web"] .editorial-web .header-phone{
 .editorial-web .contact-card>span,
 .editorial-web .contact-card>p,
 .editorial-web .response-note{
-  color:#8ea7bb;
+  color:#b1c5d5;
 }
 .editorial-web .web-proof-strip span{
   color:#bfeeff;
