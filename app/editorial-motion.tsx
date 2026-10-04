@@ -97,10 +97,14 @@ export function EditorialMotion() {
           entering.forEach((el, index) => {
             clearTimer(el);
             prepareTypeTargetsWithin(el);
+
+            const revealType = el.dataset.reveal || "";
+            const delay = revealType.startsWith("hero") ? 0 : index * 220;
+
             const timer = window.setTimeout(() => {
               el.classList.add("is-visible");
               timers.delete(el);
-            }, index * 220);
+            }, delay);
             timers.set(el, timer);
           });
 
