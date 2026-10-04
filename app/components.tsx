@@ -37,7 +37,7 @@ export function SiteFooter() {
 
     <nav className="footer-service-links footer-simple footer-site footer-site-web shell" aria-label="Création Web et informations">
       <div><strong>Sites Web</strong><Link href="/">Création de sites Web</Link><Link href="/site-web-pme">Sites Web pour PME</Link><Link href="/creation-boutique-en-ligne">Boutiques en ligne</Link><Link href="/developpement-cms-sur-mesure">Gestion et CMS sur mesure</Link><Link href="/#realisations">Réalisations</Link></div>
-      <div><strong>Création locale</strong><Link href="/creation-site-web-nicolet">Nicolet</Link><Link href="/creation-site-web-becancour">Bécancour</Link><Link href="/creation-site-web-trois-rivieres">Trois-Rivières</Link><Link href="/tarifs">Tarifs Web</Link><Link href="/contact">Contact</Link></div>
+      <div><strong>Création locale</strong><Link href="/creation-site-web-nicolet">Création de site web à Nicolet</Link><Link href="/creation-site-web-becancour">Création de site web à Bécancour</Link><Link href="/creation-site-web-trois-rivieres">Création de site web à Trois-Rivières</Link><Link href="/tarifs">Tarifs Web</Link><Link href="/contact">Contact</Link></div>
       <div className="footer-cross-site"><strong>Besoin informatique?</strong><a href="https://atelierpotvin.ca/">Atelier Informatique Potvin</a><a href="https://atelierpotvin.ca/assistance-informatique-a-distance">Assistance à distance</a></div>
     </nav>
 
