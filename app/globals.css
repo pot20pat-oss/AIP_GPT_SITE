@@ -4958,13 +4958,13 @@ html[data-site-mode="web"] .footer-site-web{
   }
 }
 .editorial-web .editorial-masthead{
-  animation:editorialIntro 1.25s .45s cubic-bezier(.16,.8,.2,1) both;
+  animation:editorialIntro 2.2s .55s cubic-bezier(.16,.8,.2,1) both;
 }
 .editorial-web .editorial-lead{
-  animation:editorialIntro 1.25s .78s cubic-bezier(.16,.8,.2,1) both;
+  animation:editorialIntro 2s 1s cubic-bezier(.16,.8,.2,1) both;
 }
 .editorial-web .editorial-rail{
-  animation:editorialIntroSide 1.2s 1.08s cubic-bezier(.16,.8,.2,1) both;
+  animation:editorialIntroSide 1.9s 1.4s cubic-bezier(.16,.8,.2,1) both;
 }
 @media(prefers-reduced-motion:reduce){
   .editorial-web .editorial-masthead,
