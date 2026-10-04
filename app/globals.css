@@ -4331,6 +4331,67 @@ html[data-site-mode="web"] .footer-site-web{
 }
 
 
+
+/* Atelier Potvin — restrained motion language */
+.motion-ready .home-domain-it [data-reveal]{
+  opacity:0;
+  transform:translateY(18px);
+  filter:blur(2px);
+  transition:
+    opacity .52s cubic-bezier(.22,1,.36,1),
+    transform .52s cubic-bezier(.22,1,.36,1),
+    filter .42s ease;
+  will-change:opacity,transform;
+}
+.motion-ready .home-domain-it [data-reveal="hero"]{
+  transform:translateY(10px);
+  transition-duration:.58s;
+}
+.motion-ready .home-domain-it [data-reveal].is-visible{
+  opacity:1;
+  transform:translateY(0);
+  filter:none;
+}
+.motion-ready .home-domain-it .domain-service-grid [data-reveal="feature"],
+.motion-ready .home-domain-it .reviews-grid [data-reveal="feature"]{
+  transition-duration:.46s;
+}
+.home-domain-it .domain-service-grid article,
+.home-domain-it .reviews-grid>article,
+.home-domain-it .contact-card{
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
+}
+@media (hover:hover){
+  .home-domain-it .domain-service-grid article:hover,
+  .home-domain-it .reviews-grid>article:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 28px rgba(23,40,79,.09);
+  }
+  .home-domain-it .hero-intent-choice:hover,
+  .home-domain-it .button:hover{
+    transform:translateY(-2px);
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .motion-ready .home-domain-it [data-reveal]{
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+    transition:none!important;
+  }
+  .home-domain-it .domain-service-grid article,
+  .home-domain-it .reviews-grid>article,
+  .home-domain-it .contact-card,
+  .home-domain-it .hero-intent-choice,
+  .home-domain-it .button{
+    transition:none!important;
+    transform:none!important;
+  }
+}
+
 /* CONTACT PAGE CARDS 2026-10-03 */
 .contact-page-grid{
   display:grid;
