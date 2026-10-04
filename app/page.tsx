@@ -92,6 +92,28 @@ function WebHome() {
       </aside>
     </section>
 
+    <section className="editorial-tech-proof shell" aria-labelledby="tech-proof-title">
+      <div className="editorial-tech-proof-head">
+        <div>
+          <span className="editorial-kicker">PREUVE TECHNIQUE · L’ENVOL DES ENFANTS</span>
+          <h2 id="tech-proof-title">Ce qu’il y a derrière l’interface.</h2>
+        </div>
+        <p>Le projet ne repose pas sur un thème préfabriqué. La boutique et son outil de gestion ont été construits autour du travail réel de la cliente.</p>
+      </div>
+      <div className="editorial-tech-proof-grid">
+        <article><strong>FR / EN</strong><span>Boutique bilingue</span><p>Une même expérience client en français et en anglais, avec un contenu géré dans le même système.</p></article>
+        <article><strong>CMS sur mesure</strong><span>Gestion métier</span><p>Produits, prix, stock, photos et visibilité sont administrés depuis une interface conçue pour la boutique.</p></article>
+        <article><strong>Cloudflare</strong><span>Déploiement moderne</span><p>Application déployée sur Cloudflare avec stockage de données et fichiers adapté au projet.</p></article>
+        <article><strong>Responsive</strong><span>Mobile d’abord</span><p>Catalogue, navigation et administration restent utilisables sur téléphone, tablette et ordinateur.</p></article>
+        <article><strong>SEO technique</strong><span>Structure propre</span><p>Balises, données structurées, performance, maillage et contenu sont préparés pour faciliter l’exploration et l’indexation.</p></article>
+        <article><strong>Sur mesure</strong><span>Pas de thème générique</span><p>Les fonctions sont développées autour des opérations de la boutique plutôt que forcées dans un modèle standard.</p></article>
+      </div>
+      <div className="editorial-tech-proof-actions">
+        <Link href="/realisation-envol-des-enfants" className="editorial-read">Voir l’étude de cas complète →</Link>
+        <Link href="/contact" className="editorial-cta">Discuter de votre projet</Link>
+      </div>
+    </section>
+
     <section className="editorial-index holo-index" data-reveal="section">
       <div className="holo-data-stream" aria-hidden="true">AIP CRÉATION · DESIGN · DÉVELOPPEMENT · BOUTIQUES · CMS · RÉFÉRENCEMENT LOCAL ·</div>
       <div className="shell editorial-index-grid">
