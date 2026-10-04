@@ -4853,3 +4853,73 @@ html[data-site-mode="web"] .footer-site-web{
     font-size:8.5px;
   }
 }
+
+
+/* EDITORIAL MOTION 2026-10-04 */
+.motion-ready .editorial-web [data-reveal]{
+  opacity:0;
+  transform:translateY(18px);
+  transition:
+    opacity .62s ease,
+    transform .62s cubic-bezier(.2,.7,.2,1);
+}
+.motion-ready .editorial-web [data-reveal].is-visible{
+  opacity:1;
+  transform:none;
+}
+.motion-ready .editorial-web [data-reveal="hero"]{
+  transition-delay:.04s;
+}
+.motion-ready .editorial-web [data-reveal="hero-lead"]{
+  transition-delay:.12s;
+}
+.motion-ready .editorial-web [data-reveal="hero-rail"]{
+  transition-delay:.2s;
+}
+.motion-ready .editorial-web .editorial-rail [data-reveal="brief"]:nth-of-type(2){
+  transition-delay:.08s;
+}
+.motion-ready .editorial-web .editorial-rail [data-reveal="brief"]:nth-of-type(3){
+  transition-delay:.16s;
+}
+.motion-ready .editorial-web .editorial-rail [data-reveal="brief"]:nth-of-type(4){
+  transition-delay:.24s;
+}
+.motion-ready .editorial-web .editorial-feature-grid [data-reveal="feature"]:nth-child(2){
+  transition-delay:.1s;
+}
+.motion-ready .editorial-web .editorial-feature-grid [data-reveal="feature"]:nth-child(3){
+  transition-delay:.2s;
+}
+.editorial-web .editorial-read,
+.editorial-web .editorial-cta,
+.editorial-web .editorial-feature-grid a,
+.editorial-web .editorial-brief{
+  transition:
+    color .2s ease,
+    background-color .2s ease,
+    border-color .2s ease,
+    transform .2s ease;
+}
+.editorial-web .editorial-read:hover,
+.editorial-web .editorial-feature-grid a:hover{
+  transform:translateX(3px);
+}
+.editorial-web .editorial-cta:hover{
+  transform:translateY(-2px);
+  background:#274775;
+}
+.editorial-web .editorial-brief:hover{
+  transform:translateX(4px);
+}
+@media(prefers-reduced-motion:reduce){
+  .motion-ready .editorial-web [data-reveal],
+  .editorial-web .editorial-read,
+  .editorial-web .editorial-cta,
+  .editorial-web .editorial-feature-grid a,
+  .editorial-web .editorial-brief{
+    opacity:1!important;
+    transform:none!important;
+    transition:none!important;
+  }
+}
