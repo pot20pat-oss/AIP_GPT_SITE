@@ -6826,18 +6826,16 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
 :is(.editorial-web,.web-service-page) [data-typewrite] .magic-char{
   display:inline;
   opacity:0;
-  filter:blur(5px);
-  transform:translateY(.18em);
+  transform:translateY(.16em);
   transition:
-    opacity .16s ease,
-    filter .24s ease,
-    transform .24s ease;
+    opacity .14s ease,
+    transform .2s ease;
   transition-delay:0ms;
+  will-change:opacity,transform;
 }
 :is(.editorial-web,.web-service-page) .is-visible [data-typewrite] .magic-char,
 :is(.editorial-web,.web-service-page) [data-reveal].is-visible[data-typewrite] .magic-char{
   opacity:1;
-  filter:blur(0);
   transform:none;
   transition-delay:calc(var(--char-index) * var(--type-step));
 }
@@ -7359,5 +7357,22 @@ html[data-site-mode="it"] .back-to-top{
   }
   .back-to-top-orb{
     transform:none!important;
+  }
+}
+
+
+/* AIP CREATION — PAGE SPEED PASS 2026-10-04 */
+:is(.editorial-web,.web-service-page) > section:not(:first-of-type),
+:is(.editorial-web,.web-service-page) .portfolio-project,
+:is(.editorial-web,.web-service-page) .editorial-project{
+  content-visibility:auto;
+  contain-intrinsic-size:auto 720px;
+}
+:is(.editorial-web,.web-service-page) [data-typewrite] .magic-char{
+  backface-visibility:hidden;
+}
+@media(prefers-reduced-motion:reduce){
+  :is(.editorial-web,.web-service-page) [data-typewrite] .magic-char{
+    will-change:auto!important;
   }
 }
