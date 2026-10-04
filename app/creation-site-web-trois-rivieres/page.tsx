@@ -30,6 +30,7 @@ export default function Page() {
     links={[
       { href: "/creation-sites-web", label: "Création de sites Web" },
       { href: "/creation-site-web-becancour", label: "Création Web à Bécancour" },
+      { href: "/creation-site-web-centre-du-quebec", label: "Création Web au Centre-du-Québec" },
       { href: "/site-web-pme", label: "Sites Web pour PME" },
       { href: "/creation-boutique-en-ligne", label: "E-commerce" },
       { href: "/developpement-cms-sur-mesure", label: "CMS sur mesure" },
