@@ -7774,7 +7774,7 @@ html[data-site-mode="it"] .header-web-cta{
 
 html[data-site-mode="it"] .hero-clean-bg{
   object-fit:cover;
-  object-position:68% center;
+  object-position:66% center;
 }
 
 @media (min-width:761px) and (max-width:1499px){
@@ -7820,7 +7820,7 @@ html[data-site-mode="it"] .hero-clean-bg{
   }
 
   html[data-site-mode="it"] .hero-clean-bg{
-    object-position:66% center;
+    object-position:63% center;
   }
 }
 
@@ -7907,7 +7907,7 @@ html[data-site-mode="it"] .hero-clean-bg{
   }
 
   html[data-site-mode="it"] .hero-clean-bg{
-    object-position:62% center;
+    object-position:60% center;
   }
 }
 
