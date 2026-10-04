@@ -6796,10 +6796,13 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
 :is(.editorial-web,.web-service-page) [data-typewrite]{
   --type-step:18ms;
 }
+:is(.editorial-web,.web-service-page) [data-typewrite="body"]{
+  --type-step:58ms;
+}
 .editorial-web [data-typewrite="title"]{
   --type-step:24ms;
 }
-:is(.editorial-web,.web-service-page) [data-typewrite] .magic-char{
+:is(.editorial-web,.web-service-page) [data-typewrite] :is(.magic-char,.magic-word){
   display:inline;
   opacity:0;
   transform:translateY(.16em);
@@ -6808,11 +6811,11 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
     transform .2s ease;
   transition-delay:0ms;
 }
-:is(.editorial-web,.web-service-page) .is-visible [data-typewrite] .magic-char,
-:is(.editorial-web,.web-service-page) [data-reveal].is-visible[data-typewrite] .magic-char{
+:is(.editorial-web,.web-service-page) .is-visible [data-typewrite] :is(.magic-char,.magic-word),
+:is(.editorial-web,.web-service-page) [data-reveal].is-visible[data-typewrite] :is(.magic-char,.magic-word){
   opacity:1;
   transform:none;
-  transition-delay:calc(var(--char-index) * var(--type-step));
+  transition-delay:calc(var(--token-index) * var(--type-step));
 }
 :is(.editorial-web,.web-service-page) [data-typewrite][data-type-ready="true"]{
   position:relative;
@@ -6873,13 +6876,14 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
 /* Keep typing readable: body copy types faster than headings. */
 @media(max-width:760px){
   :is(.editorial-web,.web-service-page) [data-typewrite]{--type-step:10ms}
+  :is(.editorial-web,.web-service-page) [data-typewrite="body"]{--type-step:34ms}
   .editorial-web [data-typewrite="title"]{--type-step:15ms}
   .motion-ready :is(.editorial-web,.web-service-page) [data-reveal]:not(.is-visible) .magic-photo{
     transform:translate3d(20px,-20px,0) rotate(2deg) scale(.96);
   }
 }
 @media(prefers-reduced-motion:reduce){
-  :is(.editorial-web,.web-service-page) [data-typewrite] .magic-char{
+  :is(.editorial-web,.web-service-page) [data-typewrite] :is(.magic-char,.magic-word){
     opacity:1!important;
     filter:none!important;
     transform:none!important;
