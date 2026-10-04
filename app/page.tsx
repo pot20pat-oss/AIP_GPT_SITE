@@ -45,11 +45,14 @@ function WebProof() {
 }
 
 function WebNeutralReview() {
-  return <section className="reviews section web-neutral-review"><div className="shell"><div className="section-heading"><div><div className="eyebrow"><span></span> Avis client</div><h2>Une expérience appréciée.<br /><em>Un service qui inspire confiance.</em></h2></div><p>Des clients soulignent la qualité du service, l’expertise et l’accompagnement.</p></div><article className="web-neutral-review-card"><div className="stars">★★★★★</div><blockquote>« Service impeccable. Je recommande fortement ses services, il est expert dans son domaine. »</blockquote><span>Alex Therrien</span></article></div></section>;
+  return <section className="reviews section web-neutral-review"><div className="shell"><div className="section-heading"><div><div className="eyebrow"><span></span> Avis client</div><h2>Une expérience appréciée.<br /><em>Un service qui inspire confiance.</em></h2></div><p>Cet avis porte sur la qualité du service et de l’accompagnement. La réalisation Web présentée plus haut montre concrètement le travail de conception.</p></div><article className="web-neutral-review-card"><div className="stars">★★★★★</div><blockquote>Service impeccable. Je recommande fortement ses services, il est expert dans son domaine.</blockquote><span>Alex Therrien</span></article></div></section>;
 }
 
 function ContactBlock({ web }: { web: boolean }) {
-  return <section className="contact section" id="contact"><div className="shell contact-inner"><div><div className="eyebrow"><span></span>{web ? "Votre projet Web" : "Besoin d’aide?"}</div><h2>{web ? <>Une idée en tête?<br /><em>Parlons-en.</em></> : <>Un problème informatique?<br /><em>On regarde ça ensemble.</em></>}</h2><p>{web ? "Expliquez-moi votre entreprise et ce que vous voulez accomplir. Je vous dirai clairement par où commencer." : "Expliquez-moi le problème dans vos mots. Je vous dirai si on peut le régler à distance ou s’il faut une intervention sur place."}</p></div><div className="contact-card"><span>Joignez-moi directement</span><a className="big-phone" href="tel:+18193802999">819 380-2999</a><p>462, rue D. N. St-Cyr<br />Nicolet (Québec) J3T 1H3</p><div className="response-note"><span></span>Réponse habituellement dans la journée</div><a className="button button-lime" href="tel:+18193802999">Appeler maintenant</a></div></div></section>;
+  if (web) {
+    return <section className="contact section web-contact" id="contact"><div className="shell contact-inner"><div><div className="eyebrow"><span></span>Votre projet Web</div><h2>Une idée en tête?<br /><em>Parlons-en.</em></h2><p>Expliquez-moi votre entreprise, votre projet et ce que vous voulez accomplir. Je vous répondrai avec une première direction claire.</p><a className="contact-inline-phone" href="tel:+18193802999">819 380-2999</a></div><div className="contact-card contact-form-card"><span>Écrivez-moi</span><form className="contact-mini-form" action="https://formsubmit.co/contact@atelierpotvin.ca" method="POST"><input type="hidden" name="_subject" value="Nouvelle demande — aipcreation.ca" /><input type="hidden" name="_template" value="table" /><input type="hidden" name="_next" value="https://aipcreation.ca/merci" /><input className="contact-honey" type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" /><label>Nom<input type="text" name="name" autoComplete="name" required /></label><label>Téléphone ou courriel<input type="text" name="coordonnees" required /></label><label>Parlez-moi du projet<textarea name="message" rows={4} required /></label><button className="button button-lime" type="submit">Envoyer ma demande</button></form><div className="response-note"><span></span>Réponse habituellement dans la journée</div></div></div></section>;
+  }
+  return <section className="contact section" id="contact"><div className="shell contact-inner"><div><div className="eyebrow"><span></span>Besoin d’aide?</div><h2>Un problème informatique?<br /><em>On regarde ça ensemble.</em></h2><p>Expliquez-moi le problème dans vos mots. Je vous dirai si on peut le régler à distance ou s’il faut une intervention sur place.</p></div><div className="contact-card"><span>Joignez-moi directement</span><a className="big-phone" href="tel:+18193802999">819 380-2999</a><p>462, rue D. N. St-Cyr<br />Nicolet (Québec) J3T 1H3</p><div className="response-note"><span></span>Réponse habituellement dans la journée</div><a className="button button-lime" href="tel:+18193802999">Appeler maintenant</a></div></div></section>;
 }
 
 function InformatiqueHome() {
@@ -69,8 +72,8 @@ function WebHome() {
       <div className="holo-scanline" aria-hidden="true"></div>
       <div className="holo-orbit holo-orbit-a" aria-hidden="true"></div>
       <div className="holo-orbit holo-orbit-b" aria-hidden="true"></div>
-      <div className="editorial-masthead-top"><span>AIP CRÉATION · ÉDITION NUMÉRIQUE</span><span>NICOLET · BÉCANCOUR · TROIS-RIVIÈRES · À DISTANCE</span></div>
-      <div className="editorial-nameplate"><span>CRÉATION</span> <em>WEB</em><i aria-hidden="true">/// 2035</i></div>
+      <div className="editorial-masthead-top"><span>AIP CRÉATION · SITES WEB SUR MESURE</span><span>NICOLET · BÉCANCOUR · TROIS-RIVIÈRES · À DISTANCE</span></div>
+      <div className="editorial-nameplate"><span>CRÉATION</span> <em>WEB</em></div>
       <div className="editorial-deck"><span>Sites Web</span><span>Boutiques en ligne</span><span>CMS sur mesure</span><span>Expériences numériques</span></div>
     </section>
 
@@ -86,8 +89,8 @@ function WebHome() {
       </article>
 
       <aside className="editorial-rail holo-panel" data-reveal="hero-rail">
-        <div className="holo-status" aria-hidden="true"><span></span> SIGNAL ACTIF</div>
-        <div className="editorial-rail-title">DOSSIERS / FLUX</div>
+        <div className="holo-status" aria-hidden="true"><span></span> SERVICES WEB</div>
+        <div className="editorial-rail-title">SERVICES</div>
         <Link className="editorial-brief" href="/site-web-pme" data-reveal="brief"><span>01</span><div><small>PRÉSENCE EN LIGNE</small><h2>Un site professionnel qui donne envie d’appeler.</h2><p>Structure claire, contenu utile, mobile et référencement local.</p></div></Link>
         <Link className="editorial-brief" href="/creation-boutique-en-ligne" data-reveal="brief"><span>02</span><div><small>COMMERCE</small><h2>Une boutique qui vend sans compliquer la gestion.</h2><p>Catalogue, navigation, expérience d’achat et administration.</p></div></Link>
         <Link className="editorial-brief" href="/developpement-cms-sur-mesure" data-reveal="brief"><span>03</span><div><small>OUTILS MÉTIER</small><h2>Un CMS construit autour de votre façon de travailler.</h2><p>Moins de contournements. Plus de contrôle.</p></div></Link>
@@ -95,7 +98,7 @@ function WebHome() {
     </section>
 
     <section className="editorial-index holo-index">
-      <div className="holo-data-stream" aria-hidden="true">AIP // DESIGN // DEV // CMS // COMMERCE // SEO // CLOUD //</div>
+      <div className="holo-data-stream" aria-hidden="true">AIP CRÉATION · DESIGN · DÉVELOPPEMENT · BOUTIQUES · CMS · RÉFÉRENCEMENT LOCAL ·</div>
       <div className="shell editorial-index-grid">
         <div><strong>900 $ +</strong><span>site vitrine de base</span><small>Boutique et CMS sur devis</small></div>
         <div><strong>FR / EN</strong><span>boutique bilingue en production</span><small>Une même expérience dans les deux langues</small></div>
@@ -106,7 +109,7 @@ function WebHome() {
 
     <section className="editorial-section shell holo-section" data-reveal="section">
       <div className="holo-axis" aria-hidden="true"></div>
-      <div className="editorial-section-heading"><span>SAVOIR-FAIRE // 03 MODULES</span><h2>Le design ne sert pas à décorer.<br/><em>Il sert à faire comprendre.</em></h2><p>Chaque projet combine structure, hiérarchie visuelle, développement et performance pour rendre votre offre plus évidente.</p></div>
+      <div className="editorial-section-heading"><span>SAVOIR-FAIRE</span><h2>Le design ne sert pas à décorer.<br/><em>Il sert à faire comprendre.</em></h2><p>Chaque projet combine structure, hiérarchie visuelle, développement et performance pour rendre votre offre plus évidente.</p></div>
       <div className="editorial-feature-grid">
         <article data-reveal="feature"><small>01 · STRATÉGIE</small><h3>Une structure qui raconte la bonne histoire.</h3><p>On organise le contenu pour que le visiteur comprenne rapidement qui vous êtes, ce que vous faites et pourquoi vous choisir.</p><Link href="/site-web-pme">Sites pour PME →</Link></article>
         <article data-reveal="feature"><small>02 · DESIGN</small><h3>Une identité visuelle qui ne ressemble pas à un thème acheté.</h3><p>Typographie, rythme, images, espaces et détails sont pensés comme un ensemble cohérent.</p><Link href="/creation-site-web-nicolet">Création Web locale →</Link></article>
