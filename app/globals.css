@@ -5169,9 +5169,9 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   height:26%;
   z-index:1;
   pointer-events:none;
-  opacity:.42;
-  background:linear-gradient(to bottom,transparent,rgba(103,232,255,.08),transparent);
-  animation:holoScan 8.5s linear infinite;
+  opacity:.58;
+  background:linear-gradient(to bottom,transparent,rgba(103,232,255,.12),transparent);
+  animation:holoScan 7.2s linear infinite;
   will-change:transform;
 }
 .holo-orbit{
@@ -5191,7 +5191,7 @@ html[data-site-mode="web"] .editorial-web .header-phone{
 .holo-orbit-a{
   width:310px;height:310px;
   right:-110px;top:-170px;
-  animation:holoOrbit 24s linear infinite;
+  animation:holoOrbit 19s linear infinite;
   will-change:transform;
 }
 .holo-orbit-a::after{left:35px;bottom:38px}
@@ -5199,7 +5199,7 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   width:170px;height:170px;
   right:82px;top:-92px;
   border-color:rgba(157,124,255,.16);
-  animation:holoOrbitReverse 17s linear infinite;
+  animation:holoOrbitReverse 13s linear infinite;
   will-change:transform;
 }
 .holo-orbit-b::after{
@@ -5234,15 +5234,20 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   position:absolute;
   inset:0;
   pointer-events:none;
-  background:linear-gradient(105deg,transparent 0 42%,rgba(103,232,255,.035) 50%,transparent 58%);
-  transform:translateX(-130%);
-  transition:transform .8s ease;
+  background:linear-gradient(105deg,transparent 0 40%,rgba(103,232,255,.085) 50%,transparent 60%);
+  transform:translateX(-135%);
+  animation:holoPanelSheen 10s cubic-bezier(.4,0,.2,1) infinite;
+  will-change:transform,opacity;
 }
-.editorial-lead:hover::after,
-.editorial-rail:hover::after,
-.editorial-feature-grid article:hover::after,
-.editorial-web .web-proof-grid>article:hover::after{
-  transform:translateX(130%);
+.editorial-rail::after{animation-delay:-2.5s}
+.editorial-feature-grid article:nth-child(2)::after{animation-delay:-3.3s}
+.editorial-feature-grid article:nth-child(3)::after{animation-delay:-6.6s}
+.editorial-web .web-proof-grid>article:nth-child(2)::after{animation-delay:-4s}
+@keyframes holoPanelSheen{
+  0%,58%{transform:translateX(-135%);opacity:0}
+  64%{opacity:1}
+  78%{transform:translateX(135%);opacity:.9}
+  79%,100%{transform:translateX(135%);opacity:0}
 }
 .editorial-lead-image{
   position:relative;
@@ -6777,25 +6782,28 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
 /* AIP CREATION — PROGRESSIVE BUILD REVEAL 2026-10-04 */
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal]{
   opacity:0;
-  transform:translateY(30px) scale(.985);
+  transform:translateY(52px) scale(.97);
+  filter:blur(4px);
   transition:
-    opacity 1.05s cubic-bezier(.16,.8,.2,1),
-    transform 1.05s cubic-bezier(.16,.8,.2,1);
+    opacity 1.08s cubic-bezier(.16,.8,.2,1),
+    transform 1.18s cubic-bezier(.16,.8,.2,1),
+    filter .9s ease;
 }
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal].is-visible{
   opacity:1;
   transform:none;
+  filter:none;
 }
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal="feature"]{
-  transform:translateY(20px) scale(.99);
+  transform:translateY(34px) scale(.98);
 }
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal="brief"]{
-  transform:translateX(26px);
+  transform:translateX(44px) scale(.985);
 }
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal="hero"],
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal="hero-lead"],
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal="hero-rail"]{
-  transition-duration:1.35s;
+  transition-duration:1.45s;
 }
 
 /* The first screen assembles itself with compositor-friendly properties only. */
@@ -6829,11 +6837,13 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
 @keyframes editorialBuildPiece{
   from{
     opacity:0;
-    transform:translateY(22px);
+    transform:translateY(34px) scale(.985);
+    filter:blur(3px);
   }
   to{
     opacity:1;
     transform:none;
+    filter:none;
   }
 }
 
