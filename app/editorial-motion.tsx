@@ -146,6 +146,31 @@ export function EditorialMotion() {
         });
 
         elements.forEach((el) => observer?.observe(el));
+
+        // Force the first viewport to animate on initial load instead of waiting
+        // for the first scroll event to wake the IntersectionObserver.
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        const initiallyVisible = elements
+          .filter((el) => {
+            const rect = el.getBoundingClientRect();
+            return rect.bottom > 0 && rect.top < viewportHeight * 0.96;
+          })
+          .sort((a, b) => {
+            const position = a.compareDocumentPosition(b);
+            return position & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1;
+          });
+
+        initiallyVisible.forEach((el, index) => {
+          clearTimer(el);
+          prepareTypeTargetsWithin(el);
+
+          const delay = 140 + index * 180;
+          const timer = window.setTimeout(() => {
+            el.classList.add("is-visible");
+            timers.delete(el);
+          }, delay);
+          timers.set(el, timer);
+        });
       });
     });
 
