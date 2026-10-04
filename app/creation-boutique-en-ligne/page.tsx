@@ -6,13 +6,13 @@ export const metadata: Metadata = webPageMetadata({
   title: "Création de boutique en ligne | AIP Nicolet",
   description: "Création de boutiques en ligne et e-commerce sur mesure : catalogue, gestion des produits, CMS et fonctions adaptées à votre entreprise.",
   path: "/creation-boutique-en-ligne",
-  image: "/projet-envol-enfants.png",
+  image: "/projet-envol-enfants.webp",
 });
 
 export default function Page() {
   return <DetailPage
     eyebrow="E-commerce · Boutique en ligne"
-    image="/projet-envol-enfants.png"
+    image="/projet-envol-enfants.webp"
     imageAlt="Exemple de boutique en ligne développée sur mesure par AIP"
     title="Création de boutique en ligne."
     accent="Un commerce qui suit vos opérations."
