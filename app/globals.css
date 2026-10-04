@@ -5356,10 +5356,14 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   top:7px;
   left:0;
   white-space:nowrap;
-  color:rgba(167,229,244,.46);
+  color:#38d9ff;
   font-family:Consolas,monospace;
-  font-size:9px;
-  letter-spacing:.18em;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.16em;
+  text-shadow:
+    0 0 8px rgba(56,217,255,.38),
+    0 0 18px rgba(56,217,255,.14);
   animation:holoTicker 24s linear infinite;
 }
 .editorial-index-grid{
@@ -5716,9 +5720,6 @@ html[data-site-mode="web"] .editorial-web .header-phone{
 }
 .editorial-web .editorial-index-grid small{
   color:#8fa9be!important;
-}
-.editorial-web .holo-data-stream{
-  color:rgba(153,226,242,.34)!important;
 }
 .editorial-web .web-neutral-review{
   padding-bottom:56px!important;
