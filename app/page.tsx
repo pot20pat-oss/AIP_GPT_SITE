@@ -77,19 +77,19 @@ function WebHome() {
       <article className="editorial-lead holo-panel" data-reveal="hero-lead">
         <div className="holo-corner holo-corner-tl" aria-hidden="true"></div>
         <div className="holo-corner holo-corner-br" aria-hidden="true"></div>
-        <Link className="editorial-lead-image" href="/realisation-envol-des-enfants"><img src="/projet-envol-enfants.png" alt="L’Envol des Enfants, boutique en ligne conçue sur mesure" fetchPriority="high" decoding="async" /></Link>
+        <Link className="editorial-lead-image magic-photo" href="/realisation-envol-des-enfants"><img src="/projet-envol-enfants.png" alt="L’Envol des Enfants, boutique en ligne conçue sur mesure" fetchPriority="high" decoding="async" /></Link>
         <div className="editorial-kicker">À LA UNE · RÉALISATION</div>
-        <h1>Une boutique en ligne pensée comme un vrai outil de travail.</h1>
-        <p>L’Envol des Enfants réunit commerce bilingue, catalogue, gestion des produits, prix, stock, photos et visibilité dans une même expérience.</p>
+        <h1 data-typewrite="title">Une boutique en ligne pensée comme un vrai outil de travail.</h1>
+        <p data-typewrite="body">L’Envol des Enfants réunit commerce bilingue, catalogue, gestion des produits, prix, stock, photos et visibilité dans une même expérience.</p>
         <div className="editorial-actions"><Link className="editorial-read" href="/realisation-envol-des-enfants">Lire l’étude de cas →</Link><Link className="editorial-cta" href="/contact">Discuter de votre projet</Link></div>
       </article>
 
       <aside className="editorial-rail holo-panel" data-reveal="hero-rail">
         <div className="holo-status" aria-hidden="true"><span></span> SERVICES WEB</div>
         <div className="editorial-rail-title">SERVICES</div>
-        <Link className="editorial-brief" href="/site-web-pme" data-reveal="brief"><span>01</span><div><small>PRÉSENCE EN LIGNE</small><h2>Un site professionnel qui donne envie d’appeler.</h2><p>Structure claire, contenu utile, mobile et référencement local.</p></div></Link>
-        <Link className="editorial-brief" href="/creation-boutique-en-ligne" data-reveal="brief"><span>02</span><div><small>COMMERCE</small><h2>Une boutique qui vend sans compliquer la gestion.</h2><p>Catalogue, navigation, expérience d’achat et administration.</p></div></Link>
-        <Link className="editorial-brief" href="/developpement-cms-sur-mesure" data-reveal="brief"><span>03</span><div><small>OUTILS MÉTIER</small><h2>Un CMS construit autour de votre façon de travailler.</h2><p>Moins de contournements. Plus de contrôle.</p></div></Link>
+        <Link className="editorial-brief" href="/site-web-pme" data-reveal="brief"><span>01</span><div><small>PRÉSENCE EN LIGNE</small><h2 data-typewrite="title">Un site professionnel qui donne envie d’appeler.</h2><p>Structure claire, contenu utile, mobile et référencement local.</p></div></Link>
+        <Link className="editorial-brief" href="/creation-boutique-en-ligne" data-reveal="brief"><span>02</span><div><small>COMMERCE</small><h2 data-typewrite="title">Une boutique qui vend sans compliquer la gestion.</h2><p>Catalogue, navigation, expérience d’achat et administration.</p></div></Link>
+        <Link className="editorial-brief" href="/developpement-cms-sur-mesure" data-reveal="brief"><span>03</span><div><small>OUTILS MÉTIER</small><h2 data-typewrite="title">Un CMS construit autour de votre façon de travailler.</h2><p>Moins de contournements. Plus de contrôle.</p></div></Link>
       </aside>
     </section>
 
@@ -104,7 +104,7 @@ function WebHome() {
     </section>
 
     <section className="editorial-project editorial-project-aip shell holo-panel" data-reveal="section" aria-labelledby="atelier-project-title">
-      <div className="editorial-project-media">
+      <div className="editorial-project-media magic-photo">
         <a href="https://atelierpotvin.ca/" target="_blank" rel="noopener noreferrer" aria-label="Visiter Atelier Informatique Potvin">
           <img src="/hero-aip-clean.png" alt="Atelier Informatique Potvin, site de services informatiques et plateforme de gestion" loading="lazy" decoding="async" />
         </a>
@@ -112,7 +112,7 @@ function WebHome() {
       <div className="editorial-project-copy">
         <div className="editorial-kicker">RÉALISATION EN PRODUCTION · PROJET INTERNE AIP</div>
         <h2 id="atelier-project-title">Atelier Informatique Potvin.<br/><span>Site Web, CMS et acquisition locale.</span></h2>
-        <p>Le site public et son système de gestion ont été conçus comme un même outil : présenter les services, soutenir le référencement local et faire évoluer le contenu sans multiplier les plateformes.</p>
+        <p data-typewrite="body">Le site public et son système de gestion ont été conçus comme un même outil : présenter les services, soutenir le référencement local et faire évoluer le contenu sans multiplier les plateformes.</p>
         <div className="editorial-project-points">
           <span>Site de services</span><span>CMS interne</span><span>SEO local</span><span>Responsive</span><span>Déploiement Cloud</span>
         </div>
@@ -127,7 +127,7 @@ function WebHome() {
 
     <section className="editorial-section shell holo-section" data-reveal="section">
       <div className="holo-axis" aria-hidden="true"></div>
-      <div className="editorial-section-heading"><span>SAVOIR-FAIRE</span><h2>Le design ne sert pas à décorer.<br/><em>Il sert à faire comprendre.</em></h2><p>Chaque projet combine structure, hiérarchie visuelle, développement et performance pour rendre votre offre plus évidente.</p></div>
+      <div className="editorial-section-heading"><span>SAVOIR-FAIRE</span><h2>Le design ne sert pas à décorer.<br/><em>Il sert à faire comprendre.</em></h2><p data-typewrite="body">Chaque projet combine structure, hiérarchie visuelle, développement et performance pour rendre votre offre plus évidente.</p></div>
       <div className="editorial-feature-grid">
         <article data-reveal="feature"><small>01 · STRATÉGIE</small><h3>Une structure qui raconte la bonne histoire.</h3><p>On organise le contenu pour que le visiteur comprenne rapidement qui vous êtes, ce que vous faites et pourquoi vous choisir.</p><Link href="/site-web-pme">Sites pour PME →</Link></article>
         <article data-reveal="feature"><small>02 · DESIGN</small><h3>Une identité visuelle qui ne ressemble pas à un thème acheté.</h3><p>Typographie, rythme, images, espaces et détails sont pensés comme un ensemble cohérent.</p><Link href="/creation-site-web-nicolet">Création Web locale →</Link></article>
