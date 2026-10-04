@@ -31,6 +31,7 @@ export default function Page() {
       { href: "/creation-sites-web", label: "Création de sites Web" },
       { href: "/creation-site-web-nicolet", label: "Création Web à Nicolet" },
       { href: "/creation-site-web-trois-rivieres", label: "Création Web à Trois-Rivières" },
+      { href: "/creation-site-web-saint-celestin", label: "Création Web à Saint-Célestin" },
       { href: "/site-web-pme", label: "Sites Web pour PME" },
       { href: "/creation-boutique-en-ligne", label: "Boutiques en ligne" },
     ]}
