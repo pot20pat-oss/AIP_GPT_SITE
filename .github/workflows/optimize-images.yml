@@ -31,6 +31,13 @@ jobs:
             -define webp:method=6 \
             public/projet-envol-enfants.webp
 
+          convert public/projet-envol-enfants.png \
+            -resize '700x>' \
+            -strip \
+            -quality 80 \
+            -define webp:method=6 \
+            public/projet-envol-enfants-700.webp
+
           convert public/hero-aip-clean.png \
             -resize '1600x>' \
             -strip \
@@ -58,7 +65,7 @@ jobs:
               p.write_text(s, encoding="utf-8")
           PY
 
-          ls -lh public/projet-envol-enfants.png public/projet-envol-enfants.webp
+          ls -lh public/projet-envol-enfants.png public/projet-envol-enfants.webp public/projet-envol-enfants-700.webp
           ls -lh public/hero-aip-clean.png public/hero-aip-clean.webp
           ls -lh public/aip-icon-v7.png public/aip-icon-v7.webp
 
@@ -71,6 +78,6 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/projet-envol-enfants.webp public/hero-aip-clean.webp public/aip-icon-v7.webp app/page.tsx app/components.tsx
+          git add public/projet-envol-enfants.webp public/projet-envol-enfants-700.webp public/hero-aip-clean.webp public/aip-icon-v7.webp app/page.tsx app/components.tsx
           git commit -m "Optimize heavy project images for PageSpeed"
           git push
