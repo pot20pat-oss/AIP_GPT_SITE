@@ -44,7 +44,7 @@ function WebProof() {
 }
 
 function WebNeutralReview() {
-  return <section className="reviews section web-neutral-review"><div className="shell"><div className="section-heading"><div><div className="eyebrow"><span></span> Avis client AIP</div><h2>Une expérience de service.<br /><em>Sans l’attribuer au dépannage.</em></h2></div><p>Seuls les avis généraux, qui ne parlent pas d’un dépannage précis, sont repris ici.</p></div><article className="web-neutral-review-card"><div className="stars">★★★★★</div><blockquote>« Service impeccable. Je recommande fortement ses services, il est expert dans son domaine. »</blockquote><span>Alex Therrien</span></article></div></section>;
+  return <section className="reviews section web-neutral-review"><div className="shell"><div className="section-heading"><div><div className="eyebrow"><span></span> Avis client</div><h2>Une expérience appréciée.<br /><em>Un service qui inspire confiance.</em></h2></div><p>Des clients soulignent la qualité du service, l’expertise et l’accompagnement.</p></div><article className="web-neutral-review-card"><div className="stars">★★★★★</div><blockquote>« Service impeccable. Je recommande fortement ses services, il est expert dans son domaine. »</blockquote><span>Alex Therrien</span></article></div></section>;
 }
 
 function ContactBlock({ web }: { web: boolean }) {
