@@ -7640,3 +7640,273 @@ html[data-site-mode="it"] .back-to-top{
     object-position:64% center;
   }
 }
+
+
+/* AIP IT — HEADER + HERO ALIGNMENT 2026-10-04 */
+.header-it-cta{display:none}
+
+html[data-site-mode="it"] .header{
+  width:min(1480px,calc(100% - 64px))!important;
+  max-width:1480px!important;
+  min-height:96px;
+  grid-template-columns:minmax(360px,1.1fr) minmax(420px,.9fr) auto;
+  column-gap:26px;
+  padding:10px 14px;
+  border:1px solid rgba(103,232,255,.12);
+  border-top:0;
+  background:
+    radial-gradient(circle at 8% 50%,rgba(44,161,255,.08),transparent 22%),
+    linear-gradient(180deg,#07111f 0%,#050c16 100%);
+  box-shadow:0 18px 45px rgba(0,0,0,.18),inset 0 -1px rgba(103,232,255,.05);
+}
+
+html[data-site-mode="it"] .header .brand{
+  grid-template-columns:92px minmax(0,1fr);
+  column-gap:14px;
+}
+
+html[data-site-mode="it"] .header .brand-logo{
+  filter:
+    drop-shadow(0 0 8px rgba(103,232,255,.18))
+    drop-shadow(0 0 16px rgba(36,124,255,.08));
+}
+
+html[data-site-mode="it"] .brand-name-it{
+  display:flex!important;
+  flex-direction:column;
+  justify-content:center;
+  gap:6px;
+  min-width:0;
+}
+
+html[data-site-mode="it"] .brand-name-it small{
+  display:block;
+  color:#6fdef2;
+  font-family:Consolas,"SFMono-Regular",monospace;
+  font-size:8px;
+  line-height:1;
+  letter-spacing:.15em;
+  font-weight:700;
+  text-transform:uppercase;
+}
+
+html[data-site-mode="it"] .brand-name-it>span{
+  color:#f4f9ff!important;
+  font-size:18px!important;
+  line-height:1.05!important;
+  font-weight:780!important;
+  letter-spacing:-.35px;
+}
+
+html[data-site-mode="it"] .brand-name-it em{
+  display:block;
+  color:#89a3b8;
+  font-size:9px;
+  line-height:1.1;
+  font-style:normal;
+  letter-spacing:.03em;
+}
+
+html[data-site-mode="it"] .nav-site-it{
+  display:flex!important;
+  justify-content:center;
+  gap:28px;
+  color:#b8ccdc;
+  border:0;
+}
+
+html[data-site-mode="it"] .nav-site-it a{
+  position:relative;
+  color:#b8ccdc;
+  font-weight:650;
+  letter-spacing:.015em;
+}
+
+html[data-site-mode="it"] .nav-site-it a:hover{
+  color:#82e9fb;
+}
+
+html[data-site-mode="it"] .nav-site-it a::after{
+  content:"";
+  position:absolute;
+  left:12%;
+  right:12%;
+  bottom:-8px;
+  height:1px;
+  background:#67e8ff;
+  transform:scaleX(0);
+  transform-origin:center;
+  transition:transform .2s ease;
+}
+
+html[data-site-mode="it"] .nav-site-it a:hover::after{
+  transform:scaleX(1);
+}
+
+html[data-site-mode="it"] .header-contact{
+  gap:12px;
+}
+
+html[data-site-mode="it"] .header-phone{
+  color:#dff7ff!important;
+  padding:8px 11px;
+  border:1px solid rgba(103,232,255,.14);
+  background:rgba(103,232,255,.025);
+}
+
+html[data-site-mode="it"] .header-it-cta{
+  display:flex;
+  min-height:42px;
+  align-items:center;
+  justify-content:center;
+  padding:0 16px;
+  border:1px solid rgba(103,232,255,.32);
+  background:linear-gradient(180deg,rgba(16,40,66,.96),rgba(7,20,36,.96));
+  color:#f4fbff;
+  font-size:10px;
+  font-weight:760;
+  white-space:nowrap;
+}
+
+html[data-site-mode="it"] .header-web-cta{
+  display:none!important;
+}
+
+html[data-site-mode="it"] .hero-clean-bg{
+  object-fit:cover;
+  object-position:68% center;
+}
+
+@media (min-width:761px) and (max-width:1499px){
+  html[data-site-mode="it"] .header{
+    width:min(1200px,calc(100% - 56px))!important;
+    max-width:1200px!important;
+    min-height:122px;
+    grid-template-columns:minmax(0,1fr) auto;
+    grid-template-areas:
+      "brand contact"
+      "nav nav";
+    grid-template-rows:72px 42px;
+    row-gap:0;
+    padding:6px 12px 0;
+  }
+
+  html[data-site-mode="it"] .header .brand{
+    grid-area:brand;
+    grid-template-columns:82px minmax(0,1fr);
+  }
+
+  html[data-site-mode="it"] .header .brand-logo{
+    width:82px!important;
+    height:58px!important;
+    min-width:82px!important;
+    max-width:82px!important;
+  }
+
+  html[data-site-mode="it"] .header-contact{
+    grid-area:contact;
+  }
+
+  html[data-site-mode="it"] .nav-site-it{
+    grid-area:nav;
+    width:100%;
+    justify-content:space-around;
+    padding:0 10px;
+    border-top:1px solid rgba(103,232,255,.095);
+  }
+
+  html[data-site-mode="it"] .brand-name-it>span{
+    font-size:17px!important;
+  }
+
+  html[data-site-mode="it"] .hero-clean-bg{
+    object-position:66% center;
+  }
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .header{
+    width:calc(100% - 24px)!important;
+    min-height:0;
+    grid-template-columns:1fr;
+    grid-template-areas:"brand" "contact" "nav";
+    row-gap:8px;
+    padding:8px 10px 0;
+  }
+
+  html[data-site-mode="it"] .header .brand{
+    grid-area:brand;
+    grid-template-columns:70px minmax(0,1fr);
+    column-gap:10px;
+  }
+
+  html[data-site-mode="it"] .header .brand-logo{
+    width:70px!important;
+    height:50px!important;
+    min-width:70px!important;
+    max-width:70px!important;
+  }
+
+  html[data-site-mode="it"] .brand-name-it{
+    gap:4px;
+  }
+
+  html[data-site-mode="it"] .brand-name-it small{
+    font-size:6.5px;
+  }
+
+  html[data-site-mode="it"] .brand-name-it>span{
+    font-size:15px!important;
+    white-space:normal!important;
+  }
+
+  html[data-site-mode="it"] .brand-name-it em{
+    display:none;
+  }
+
+  html[data-site-mode="it"] .header-contact{
+    grid-area:contact;
+    width:100%;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:8px;
+  }
+
+  html[data-site-mode="it"] .header-phone{
+    display:flex!important;
+    align-items:center;
+    justify-content:center;
+    min-height:40px;
+    padding:0 10px;
+    font-size:10px;
+  }
+
+  html[data-site-mode="it"] .header-it-cta{
+    min-height:40px;
+    width:100%;
+    padding:0 10px;
+    font-size:10px;
+  }
+
+  html[data-site-mode="it"] .nav-site-it{
+    grid-area:nav;
+    display:grid!important;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:0;
+    width:100%;
+    padding:5px 0 2px;
+    border-top:1px solid rgba(103,232,255,.095);
+  }
+
+  html[data-site-mode="it"] .nav-site-it a{
+    justify-content:center;
+    min-height:32px;
+    padding:6px 4px;
+    font-size:9px;
+    text-align:center;
+  }
+
+  html[data-site-mode="it"] .hero-clean-bg{
+    object-position:62% center;
+  }
+}
