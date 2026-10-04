@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export function EditorialMotion() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const root = document.documentElement;
     root.classList.add("motion-ready");
@@ -161,7 +164,7 @@ export function EditorialMotion() {
       window.removeEventListener("pageshow", syncVisibleState);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }
