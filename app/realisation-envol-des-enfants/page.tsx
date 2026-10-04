@@ -9,7 +9,7 @@ export const metadata: Metadata = webPageMetadata({
   title: "L’Envol des Enfants : boutique en ligne sur mesure | AIP",
   description: "Étude de cas AIP : conception d’une boutique e-commerce bilingue avec catalogue, gestion multi-marché et administration sur mesure pour L’Envol des Enfants.",
   path,
-  image: "/projet-envol-enfants.png",
+  image: "/projet-envol-enfants.webp",
 });
 
 export default function Page() {
@@ -22,7 +22,7 @@ export default function Page() {
         name: "L’Envol des Enfants — boutique e-commerce et CMS sur mesure",
         description: "Conception et développement d’une boutique e-commerce bilingue avec catalogue, gestion multi-marché et outils d’administration sur mesure.",
         url: `${webSiteUrl}${path}`,
-        image: `${webSiteUrl}/projet-envol-enfants.png`,
+        image: `${webSiteUrl}/projet-envol-enfants.webp`,
         creator: { "@id": `${siteUrl}/#entreprise`, name: businessName },
       },
       {
@@ -87,7 +87,7 @@ export default function Page() {
         </div>
       </div>
       <figure className="detail-photo">
-        <img src="/projet-envol-enfants.png" alt="Boutique en ligne L’Envol des Enfants développée par Atelier Informatique Potvin" />
+        <img src="/projet-envol-enfants.webp" alt="Boutique en ligne L’Envol des Enfants développée par Atelier Informatique Potvin" />
       </figure>
     </section>
 
