@@ -22,6 +22,7 @@ const itPaths = [
 
 const webPaths = [
   "",
+  "/creation-sites-web",
   "/creation-site-web-nicolet",
   "/creation-site-web-becancour",
   "/creation-site-web-trois-rivieres",
@@ -46,7 +47,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${base}${path}`,
     changeFrequency: path === "" ? "weekly" : "monthly",
     priority: path === "" ? 1 : web
-      ? ["/creation-site-web-nicolet", "/site-web-pme"].includes(path) ? 0.95 : ["/creation-site-web-becancour", "/creation-site-web-trois-rivieres"].includes(path) ? 0.9 : ["/creation-site-web-saint-celestin", "/creation-site-web-centre-du-quebec"].includes(path) ? 0.85 : 0.8
+      ? ["/creation-sites-web", "/creation-site-web-nicolet", "/site-web-pme"].includes(path) ? 0.95 : ["/creation-site-web-becancour", "/creation-site-web-trois-rivieres"].includes(path) ? 0.9 : ["/creation-site-web-saint-celestin", "/creation-site-web-centre-du-quebec"].includes(path) ? 0.85 : 0.8
       : ["/depannage-informatique-nicolet", "/assistance-informatique-a-distance"].includes(path) ? 0.95 : 0.8,
   }));
 }
