@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { EditorialMotion } from "./editorial-motion";
 import { businessAddress, businessName, googleBusinessUrl, jsonLd, siteUrl, webSiteUrl } from "./seo";
 
 export const phone = "819 380-2999";
@@ -37,6 +38,7 @@ function EnvolCmsGallery() {
 
 export function SiteHeader() {
   return <>
+    <EditorialMotion />
     <header className="header shell header-simple">
       <div className="brand"><Link className="brand-home-link" href="/" aria-label="Retour à l’accueil"><img className="brand-logo" src="/aip-icon-v7.png" alt="AIP Atelier Informatique Potvin" width="71" height="61" /></Link><span className="brand-name brand-name-it"><span>Informaticien · Service local</span></span><span className="brand-name brand-name-web"><small>STUDIO WEB · NICOLET</small><span>AIP CRÉATION</span><em>Sites Web · Boutiques · CMS sur mesure</em></span></div>
       <nav className="nav-site nav-site-it" aria-label="Navigation principale informatique">
