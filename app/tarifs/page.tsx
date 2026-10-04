@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { SiteFooter, SiteHeader } from "../components";
-import { EditorialMotion } from "../editorial-motion";
 import { siteUrl, webSiteUrl } from "../seo";
 
 async function isCreationDomain() {
@@ -31,7 +30,7 @@ const webPackages = [
 export default async function Page() {
   const web = await isCreationDomain();
 
-  return <main className={web ? "web-service-page web-pricing-page" : undefined}>{web && <EditorialMotion />}<SiteHeader />
+  return <main className={web ? "web-service-page web-pricing-page" : undefined}><SiteHeader />
     <section className="detail-hero detail-hero-photo shell" data-reveal={web ? "section" : undefined}>
       <div className="detail-hero-copy"><div className="eyebrow"><span></span>{web ? "Tarifs création Web" : "Tarifs informatiques"}</div><h1 data-typewrite={web ? "title" : undefined}>{web ? <>Un site adapté.<br /><em>Un prix expliqué clairement.</em></> : <>Des tarifs simples.<br /><em>Sans surprise.</em></>}</h1><p>{web ? "Un site vitrine de base commence à 900 $. Le montant évolue ensuite selon les pages, le contenu et les fonctions réellement nécessaires." : "Diagnostic, dépannage, configuration et assistance à distance : le prix est expliqué avant d’aller plus loin."}</p></div>
       <figure className={`detail-photo${web ? " magic-photo" : ""}`}><img src={web ? "/projet-bois-morphee.webp" : "/aip-travail-03.webp"} alt={web ? "Exemple de création Web AIP" : "Dépannage informatique AIP"} /></figure>
