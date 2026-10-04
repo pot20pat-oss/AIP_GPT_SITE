@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "./components";
-import { EditorialMotion } from "./editorial-motion";
 import { businessName, siteUrl, webSiteUrl } from "./seo";
 
 async function isCreationDomain() {
@@ -63,7 +62,7 @@ function InformatiqueHome() {
 }
 
 function WebHome() {
-  return <main className="home-page home-domain-web editorial-web"><EditorialMotion /><SiteHeader />
+  return <main className="home-page home-domain-web editorial-web"><SiteHeader />
     <section className="editorial-masthead shell" id="accueil" data-reveal="hero">
       <div className="holo-scanline" aria-hidden="true"></div>
       <div className="holo-orbit holo-orbit-a" aria-hidden="true"></div>
