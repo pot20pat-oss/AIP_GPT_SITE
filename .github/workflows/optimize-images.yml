@@ -32,11 +32,11 @@ jobs:
             public/projet-envol-enfants.webp
 
           convert public/projet-envol-enfants.png \
-            -resize '700x>' \
+            -resize '640x>' \
             -strip \
-            -quality 80 \
+            -quality 74 \
             -define webp:method=6 \
-            public/projet-envol-enfants-700.webp
+            public/projet-envol-enfants-640.webp
 
           convert public/hero-aip-clean.png \
             -resize '1600x>' \
