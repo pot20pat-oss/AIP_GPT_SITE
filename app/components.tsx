@@ -40,7 +40,7 @@ export function SiteHeader() {
   return <>
     <EditorialMotion />
     <header className="header shell header-simple">
-      <div className="brand"><Link className="brand-home-link" href="/" aria-label="Retour à l’accueil"><img className="brand-logo" src="/aip-icon-v7.png" alt="AIP Atelier Informatique Potvin" width="71" height="61" /></Link><span className="brand-name brand-name-it"><span>Informaticien · Service local</span></span><span className="brand-name brand-name-web"><small>STUDIO WEB · NICOLET</small><span>AIP CRÉATION</span><em>Sites Web · Boutiques · CMS sur mesure</em></span></div>
+      <div className="brand"><Link className="brand-home-link" href="/" aria-label="Retour à l’accueil"><img className="brand-logo" src="/aip-icon-v7.ico" alt="AIP Atelier Informatique Potvin" width="71" height="61" decoding="async" /></Link><span className="brand-name brand-name-it"><span>Informaticien · Service local</span></span><span className="brand-name brand-name-web"><small>STUDIO WEB · NICOLET</small><span>AIP CRÉATION</span><em>Sites Web · Boutiques · CMS sur mesure</em></span></div>
       <nav className="nav-site nav-site-it" aria-label="Navigation principale informatique">
         <Link href="/depannage-informatique-nicolet">Informatique</Link>
         <Link href="/assistance-informatique-a-distance">Assistance</Link>
@@ -74,7 +74,7 @@ function BackToTopButton() {
     aria-label="Retour en haut"
     title="Retour en haut"
     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-  ><span className="back-to-top-orb" aria-hidden="true"><img src="/aip-icon-v7.png" alt="" width="40" height="35" /></span></button>;
+  ><span className="back-to-top-orb" aria-hidden="true"><img src="/aip-icon-v7.ico" alt="" width="40" height="35" decoding="async" /></span></button>;
 }
 
 export function SiteFooter() {
@@ -92,7 +92,7 @@ export function SiteFooter() {
     </nav>
 
     <div className="footer-nap shell"><strong>{businessName}</strong><span>{businessAddress}</span><a href="tel:+18193802999">{phone}</a><a href={googleBusinessUrl} target="_blank" rel="noopener noreferrer">Nous trouver sur Google Maps</a></div>
-    <footer className="footer shell"><Link className="footer-brand footer-logo-only" href="/" aria-label="AIP Atelier Informatique Potvin, accueil"><img src="/aip-icon-v7.png" alt="AIP Atelier Informatique Potvin" width="92" height="79" /></Link><p>© 2026 AIP · <span className="footer-legal-name">AIP Atelier Informatique Potvin</span> · Nicolet, Québec</p><a href="tel:+18193802999">{phone}</a></footer>
+    <footer className="footer shell"><Link className="footer-brand footer-logo-only" href="/" aria-label="AIP Atelier Informatique Potvin, accueil"><img src="/aip-icon-v7.ico" alt="AIP Atelier Informatique Potvin" width="92" height="79" /></Link><p>© 2026 AIP · <span className="footer-legal-name">AIP Atelier Informatique Potvin</span> · Nicolet, Québec</p><a href="tel:+18193802999">{phone}</a></footer>
     <BackToTopButton />
   </>;
 }
