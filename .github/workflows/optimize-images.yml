@@ -38,6 +38,13 @@ jobs:
             -define webp:method=6 \
             public/hero-aip-clean.webp
 
+          convert public/aip-icon-v7.png \
+            -resize '160x160>' \
+            -strip \
+            -quality 90 \
+            -define webp:method=6 \
+            public/aip-icon-v7.webp
+
           python3 - <<'PY'
           from pathlib import Path
 
@@ -46,11 +53,14 @@ jobs:
               s = p.read_text(encoding="utf-8")
               s = s.replace("/projet-envol-enfants.png", "/projet-envol-enfants.webp")
               s = s.replace("/hero-aip-clean.png", "/hero-aip-clean.webp")
+              s = s.replace("/aip-icon-v7.ico", "/aip-icon-v7.webp")
+              s = s.replace("/aip-icon-v7.png", "/aip-icon-v7.webp")
               p.write_text(s, encoding="utf-8")
           PY
 
           ls -lh public/projet-envol-enfants.png public/projet-envol-enfants.webp
           ls -lh public/hero-aip-clean.png public/hero-aip-clean.webp
+          ls -lh public/aip-icon-v7.png public/aip-icon-v7.webp
 
       - name: Commit optimized assets
         run: |
@@ -61,6 +71,6 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/projet-envol-enfants.webp public/hero-aip-clean.webp app/page.tsx app/components.tsx
+          git add public/projet-envol-enfants.webp public/hero-aip-clean.webp public/aip-icon-v7.webp app/page.tsx app/components.tsx
           git commit -m "Optimize heavy project images for PageSpeed"
           git push
