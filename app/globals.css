@@ -4942,20 +4942,17 @@ html[data-site-mode="web"] .footer-site-web{
   to{
     opacity:1;
     transform:translateY(0) scale(1);
-    filter:blur(0);
-  }
+    }
 }
 @keyframes editorialIntroSide{
   from{
     opacity:0;
     transform:translateX(72px);
-    filter:blur(7px);
-  }
+    }
   to{
     opacity:1;
     transform:translateX(0);
-    filter:blur(0);
-  }
+    }
 }
 .editorial-web .editorial-masthead{
   animation:editorialIntro 2.2s .55s cubic-bezier(.16,.8,.2,1) both;
@@ -6688,19 +6685,14 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal]{
   opacity:0;
   transform:translateY(30px) scale(.985);
-  filter:blur(7px);
-  clip-path:inset(0 0 18% 0);
   transition:
     opacity 1.05s cubic-bezier(.16,.8,.2,1),
     transform 1.05s cubic-bezier(.16,.8,.2,1),
-    filter 1.05s ease,
-    clip-path 1.15s cubic-bezier(.16,.8,.2,1);
+    transform 1.05s cubic-bezier(.16,.8,.2,1);
 }
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal].is-visible{
   opacity:1;
   transform:none;
-  filter:blur(0);
-  clip-path:inset(0 0 0 0);
 }
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal="feature"]{
   transform:translateY(20px) scale(.99);
@@ -6749,15 +6741,12 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
   from{
     opacity:0;
     transform:translateY(22px);
-    filter:blur(7px);
-    clip-path:inset(0 0 35% 0);
+      clip-path:inset(0 0 35% 0);
   }
   to{
     opacity:1;
     transform:none;
-    filter:blur(0);
-    clip-path:inset(0 0 0 0);
-  }
+      }
 }
 
 /* Disable the former whole-block intro so the staged construction is the only entrance system. */
@@ -6792,12 +6781,9 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
 
 /* AIP CREATION — REVERSIBLE SCROLL BUILD 2026-10-04 */
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal]{
-  will-change:opacity,transform,filter,clip-path;
 }
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal]:not(.is-visible){
   opacity:0;
-  filter:blur(7px);
-  clip-path:inset(10% 0 24% 0);
 }
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal="section"]:not(.is-visible){
   transform:translateY(42px) scale(.975);
@@ -6811,8 +6797,6 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal].is-visible{
   opacity:1;
   transform:none;
-  filter:blur(0);
-  clip-path:inset(0 0 0 0);
 }
 
 
@@ -6831,7 +6815,6 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
     opacity .14s ease,
     transform .2s ease;
   transition-delay:0ms;
-  will-change:opacity,transform;
 }
 :is(.editorial-web,.web-service-page) .is-visible [data-typewrite] .magic-char,
 :is(.editorial-web,.web-service-page) [data-reveal].is-visible[data-typewrite] .magic-char{
@@ -7375,4 +7358,18 @@ html[data-site-mode="it"] .back-to-top{
   :is(.editorial-web,.web-service-page) [data-typewrite] .magic-char{
     will-change:auto!important;
   }
+}
+
+
+/* ACCESSIBILITY — readable original text for animated typography */
+.sr-only{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
 }
