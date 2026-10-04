@@ -6682,3 +6682,109 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
     padding:22px;
   }
 }
+
+
+/* AIP CREATION — PROGRESSIVE BUILD REVEAL 2026-10-04 */
+.motion-ready .editorial-web [data-reveal]{
+  opacity:0;
+  transform:translateY(30px) scale(.985);
+  filter:blur(7px);
+  clip-path:inset(0 0 18% 0);
+  transition:
+    opacity 1.05s cubic-bezier(.16,.8,.2,1),
+    transform 1.05s cubic-bezier(.16,.8,.2,1),
+    filter 1.05s ease,
+    clip-path 1.15s cubic-bezier(.16,.8,.2,1);
+}
+.motion-ready .editorial-web [data-reveal].is-visible{
+  opacity:1;
+  transform:none;
+  filter:blur(0);
+  clip-path:inset(0 0 0 0);
+}
+.motion-ready .editorial-web [data-reveal="feature"]{
+  transform:translateY(20px) scale(.99);
+}
+.motion-ready .editorial-web [data-reveal="brief"]{
+  transform:translateX(26px);
+}
+.motion-ready .editorial-web [data-reveal="hero"],
+.motion-ready .editorial-web [data-reveal="hero-lead"],
+.motion-ready .editorial-web [data-reveal="hero-rail"]{
+  transition-duration:1.35s;
+}
+
+/* The first screen assembles itself instead of appearing all at once. */
+.editorial-web .editorial-masthead.is-visible .editorial-masthead-top{
+  animation:editorialBuildPiece .9s .18s both;
+}
+.editorial-web .editorial-masthead.is-visible .editorial-nameplate{
+  animation:editorialBuildPiece 1.15s .62s both;
+}
+.editorial-web .editorial-masthead.is-visible .editorial-deck{
+  animation:editorialBuildPiece .95s 1.15s both;
+}
+.editorial-web .editorial-lead.is-visible .editorial-lead-image{
+  animation:editorialBuildPiece 1.05s .2s both;
+}
+.editorial-web .editorial-lead.is-visible .editorial-kicker{
+  animation:editorialBuildPiece .7s .7s both;
+}
+.editorial-web .editorial-lead.is-visible h1{
+  animation:editorialBuildPiece .95s .95s both;
+}
+.editorial-web .editorial-lead.is-visible>p{
+  animation:editorialBuildPiece .85s 1.28s both;
+}
+.editorial-web .editorial-lead.is-visible .editorial-actions{
+  animation:editorialBuildPiece .8s 1.58s both;
+}
+.editorial-web .editorial-rail.is-visible .holo-status{
+  animation:editorialBuildPiece .6s .18s both;
+}
+.editorial-web .editorial-rail.is-visible .editorial-rail-title{
+  animation:editorialBuildPiece .7s .5s both;
+}
+@keyframes editorialBuildPiece{
+  from{
+    opacity:0;
+    transform:translateY(22px);
+    filter:blur(7px);
+    clip-path:inset(0 0 35% 0);
+  }
+  to{
+    opacity:1;
+    transform:none;
+    filter:blur(0);
+    clip-path:inset(0 0 0 0);
+  }
+}
+
+/* Disable the former whole-block intro so the staged construction is the only entrance system. */
+.editorial-web .editorial-masthead,
+.editorial-web .editorial-lead,
+.editorial-web .editorial-rail{
+  animation:none!important;
+}
+
+@media(prefers-reduced-motion:reduce){
+  .motion-ready .editorial-web [data-reveal]{
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+    clip-path:none!important;
+    transition:none!important;
+  }
+  .editorial-web .editorial-masthead-top,
+  .editorial-web .editorial-nameplate,
+  .editorial-web .editorial-deck,
+  .editorial-web .editorial-lead-image,
+  .editorial-web .editorial-kicker,
+  .editorial-web .editorial-lead h1,
+  .editorial-web .editorial-lead>p,
+  .editorial-web .editorial-actions,
+  .editorial-web .holo-status,
+  .editorial-web .editorial-rail-title{
+    animation:none!important;
+  }
+}
