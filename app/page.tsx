@@ -73,7 +73,7 @@ function WebHome() {
       <div className="editorial-deck"><span>Sites Web</span><span>Boutiques en ligne</span><span>CMS sur mesure</span><span>Expériences numériques</span></div>
     </section>
 
-    <section className="editorial-front shell">
+    <section className="editorial-front shell" id="realisations">
       <article className="editorial-lead holo-panel" data-reveal="hero-lead">
         <div className="holo-corner holo-corner-tl" aria-hidden="true"></div>
         <div className="holo-corner holo-corner-br" aria-hidden="true"></div>
@@ -100,6 +100,28 @@ function WebHome() {
         <div><strong>FR / EN</strong><span>boutique bilingue en production</span><small>Une même expérience dans les deux langues</small></div>
         <div><strong>CMS métier</strong><span>produits, photos, prix et stock</span><small>Gestion pensée autour des opérations</small></div>
         <div><strong>1 seul</strong><span>interlocuteur du début à la fin</span><small>Conception, code et déploiement</small></div>
+      </div>
+    </section>
+
+    <section className="editorial-project editorial-project-aip shell holo-panel" data-reveal="section" aria-labelledby="atelier-project-title">
+      <div className="editorial-project-media">
+        <a href="https://atelierpotvin.ca/" target="_blank" rel="noopener noreferrer" aria-label="Visiter Atelier Informatique Potvin">
+          <img src="/hero-aip-clean.png" alt="Atelier Informatique Potvin, site de services informatiques et plateforme de gestion" loading="lazy" decoding="async" />
+        </a>
+      </div>
+      <div className="editorial-project-copy">
+        <div className="editorial-kicker">RÉALISATION EN PRODUCTION · PROJET INTERNE AIP</div>
+        <h2 id="atelier-project-title">Atelier Informatique Potvin.<br/><span>Site Web, CMS et acquisition locale.</span></h2>
+        <p>Le site public et son système de gestion ont été conçus comme un même outil : présenter les services, soutenir le référencement local et faire évoluer le contenu sans multiplier les plateformes.</p>
+        <div className="editorial-project-points">
+          <span>Site de services</span><span>CMS interne</span><span>SEO local</span><span>Responsive</span><span>Déploiement Cloud</span>
+        </div>
+        <ul>
+          <li>Pages de services et parcours de conversion pour Nicolet, Bécancour et Trois-Rivières</li>
+          <li>Gestion de contenu et évolution du site depuis un CMS interne</li>
+          <li>Structure SEO locale, performance et mise en production suivies dans la même base technique</li>
+        </ul>
+        <div className="editorial-actions"><a className="editorial-read" href="https://atelierpotvin.ca/" target="_blank" rel="noopener noreferrer">Voir le site en ligne →</a><Link className="editorial-cta" href="/developpement-cms-sur-mesure">Voir les CMS sur mesure</Link></div>
       </div>
     </section>
 
