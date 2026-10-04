@@ -6814,3 +6814,115 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
   filter:blur(0);
   clip-path:inset(0 0 0 0);
 }
+
+
+/* AIP CREATION — LIVING NEWSPAPER / MAGICAL BUILD 2026-10-04 */
+.editorial-web [data-typewrite]{
+  --type-step:18ms;
+}
+.editorial-web [data-typewrite="title"]{
+  --type-step:24ms;
+}
+.editorial-web [data-typewrite] .magic-char{
+  display:inline;
+  opacity:0;
+  filter:blur(5px);
+  transform:translateY(.18em);
+  transition:
+    opacity .16s ease,
+    filter .24s ease,
+    transform .24s ease;
+  transition-delay:0ms;
+}
+.editorial-web .is-visible [data-typewrite] .magic-char,
+.editorial-web [data-reveal].is-visible[data-typewrite] .magic-char{
+  opacity:1;
+  filter:blur(0);
+  transform:none;
+  transition-delay:calc(var(--char-index) * var(--type-step));
+}
+.editorial-web [data-typewrite][data-type-ready="true"]{
+  position:relative;
+}
+.editorial-web [data-typewrite][data-type-ready="true"]::after{
+  content:"";
+  display:inline-block;
+  width:.08em;
+  height:.9em;
+  margin-left:.08em;
+  vertical-align:-.08em;
+  background:currentColor;
+  opacity:0;
+}
+.editorial-web .is-visible [data-typewrite][data-type-ready="true"]::after,
+.editorial-web [data-reveal].is-visible[data-typewrite][data-type-ready="true"]::after{
+  animation:magicCaret .72s steps(1,end) 4;
+}
+@keyframes magicCaret{
+  0%,48%{opacity:.82}
+  49%,100%{opacity:0}
+}
+
+/* Photos float in, rotate slightly, then settle into their frame like pinned clippings. */
+.editorial-web .magic-photo{
+  position:relative;
+  transform-origin:50% 60%;
+  transition:
+    opacity 1.1s cubic-bezier(.16,.8,.2,1),
+    transform 1.45s cubic-bezier(.16,.9,.18,1),
+    filter 1.2s ease,
+    box-shadow 1.2s ease;
+}
+.motion-ready .editorial-web [data-reveal]:not(.is-visible) .magic-photo,
+.motion-ready .editorial-web [data-reveal].magic-photo:not(.is-visible){
+  opacity:0;
+  transform:translate3d(34px,-34px,0) rotate(3.4deg) scale(.93);
+  filter:blur(8px) saturate(.82);
+  box-shadow:0 28px 70px rgba(0,0,0,.06);
+}
+.motion-ready .editorial-web [data-reveal].is-visible .magic-photo,
+.motion-ready .editorial-web [data-reveal].magic-photo.is-visible{
+  opacity:1;
+  transform:translate3d(0,0,0) rotate(0deg) scale(1);
+  filter:blur(0) saturate(1);
+  box-shadow:0 22px 58px rgba(0,0,0,.32),0 0 28px rgba(103,232,255,.06);
+}
+.editorial-web .magic-photo::after{
+  content:"";
+  position:absolute;
+  inset:8px;
+  pointer-events:none;
+  border:1px solid rgba(103,232,255,.0);
+  box-shadow:0 0 0 rgba(103,232,255,0);
+  transition:border-color .9s ease .6s,box-shadow .9s ease .6s;
+}
+.editorial-web [data-reveal].is-visible .magic-photo::after{
+  border-color:rgba(103,232,255,.18);
+  box-shadow:inset 0 0 24px rgba(103,232,255,.035);
+}
+
+/* Keep typing readable: body copy types faster than headings. */
+@media(max-width:760px){
+  .editorial-web [data-typewrite]{--type-step:10ms}
+  .editorial-web [data-typewrite="title"]{--type-step:15ms}
+  .motion-ready .editorial-web [data-reveal]:not(.is-visible) .magic-photo{
+    transform:translate3d(20px,-20px,0) rotate(2deg) scale(.96);
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .editorial-web [data-typewrite] .magic-char{
+    opacity:1!important;
+    filter:none!important;
+    transform:none!important;
+    transition:none!important;
+  }
+  .editorial-web [data-typewrite]::after{
+    display:none!important;
+  }
+  .editorial-web .magic-photo{
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+    transition:none!important;
+  }
+}
