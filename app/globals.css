@@ -8055,3 +8055,37 @@ html[data-site-mode="it"] .header-it-cta:hover{
     transform:none!important;
   }
 }
+
+
+/* AIP IT — HERO FACE CENTER ABSOLUTE CROP 2026-10-04
+   Explicitly crop 22% from the left. This moves the face from ~61% of the
+   source frame to ~52% of the visible hero, instead of relying on object-position. */
+@media(min-width:1200px){
+  html[data-site-mode="it"] .hero-split-media{
+    position:relative!important;
+    overflow:hidden!important;
+  }
+
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    position:absolute!important;
+    top:0!important;
+    bottom:auto!important;
+    left:-22%!important;
+    right:auto!important;
+    width:122%!important;
+    max-width:none!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:center 46%!important;
+    transform:none!important;
+  }
+}
+
+@media(min-width:761px) and (max-width:1199px){
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    left:-14%!important;
+    width:114%!important;
+    max-width:none!important;
+    transform:none!important;
+  }
+}
