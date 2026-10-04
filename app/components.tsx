@@ -38,7 +38,7 @@ function EnvolCmsGallery() {
 export function SiteHeader() {
   return <>
     <header className="header shell header-simple">
-      <div className="brand"><Link className="brand-home-link" href="/" aria-label="Retour à l’accueil"><img className="brand-logo" src="/aip-icon-v7.png" alt="AIP Atelier Informatique Potvin" width="71" height="61" /></Link><span className="brand-name brand-name-it"><span>Informaticien · Service local</span></span><span className="brand-name brand-name-web"><span>Designer Web · Création sur mesure</span></span></div>
+      <div className="brand"><Link className="brand-home-link" href="/" aria-label="Retour à l’accueil"><img className="brand-logo" src="/aip-icon-v7.png" alt="AIP Atelier Informatique Potvin" width="71" height="61" /></Link><span className="brand-name brand-name-it"><span>Informaticien · Service local</span></span><span className="brand-name brand-name-web"><small>AIP CRÉATION // STUDIO WEB</small><span>Designer Web · Création sur mesure</span></span></div>
       <nav className="nav-site nav-site-it" aria-label="Navigation principale informatique">
         <Link href="/depannage-informatique-nicolet">Informatique</Link>
         <Link href="/assistance-informatique-a-distance">Assistance</Link>
