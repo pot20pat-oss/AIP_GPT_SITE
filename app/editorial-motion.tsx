@@ -14,7 +14,9 @@ export function EditorialMotion() {
     if (!elements.length) return;
 
     const prepareTypeTarget = (el: HTMLElement) => {
-      if (el.dataset.typeReady === "true") return;
+      if (el.dataset.typeReady === "true") {
+        return Number(el.dataset.typeTokenCount || "0");
+      }
 
       const label = el.textContent || "";
       const accessibleText = document.createElement("span");
@@ -61,11 +63,29 @@ export function EditorialMotion() {
       });
 
       el.dataset.typeReady = "true";
+      el.dataset.typeTokenCount = String(tokenIndex);
+      return tokenIndex;
     };
 
     const prepareTypeTargetsWithin = (container: HTMLElement) => {
-      if (container.matches("[data-typewrite]")) prepareTypeTarget(container);
-      container.querySelectorAll<HTMLElement>("[data-typewrite]").forEach(prepareTypeTarget);
+      const targets: HTMLElement[] = [];
+      if (container.matches("[data-typewrite]")) targets.push(container);
+      container.querySelectorAll<HTMLElement>("[data-typewrite]").forEach((target) => targets.push(target));
+
+      let offsetMs = 0;
+      const gapMs = 220;
+
+      targets.forEach((target) => {
+        const tokenCount = prepareTypeTarget(target);
+
+        if (!target.style.getPropertyValue("--type-offset")) {
+          target.style.setProperty("--type-offset", `${offsetMs}ms`);
+        }
+
+        const mode = target.dataset.typewrite === "body" ? "body" : "title";
+        const stepMs = mode === "body" ? 58 : 24;
+        offsetMs += tokenCount * stepMs + gapMs;
+      });
     };
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
