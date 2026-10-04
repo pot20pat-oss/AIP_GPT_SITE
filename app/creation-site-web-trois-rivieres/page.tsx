@@ -3,8 +3,8 @@ import { DetailPage } from "../components";
 import { webPageMetadata } from "../seo";
 
 export const metadata: Metadata = webPageMetadata({
-  title: "Création de site web à Trois-Rivières | AIP",
-  description: "Création de sites web pour PME de Trois-Rivières : vitrines, boutiques en ligne, CMS et développement sur mesure par AIP.",
+  title: "Création de site web à Trois-Rivières pour PME | AIP Création",
+  description: "Création de sites web à Trois-Rivières pour PME et travailleurs autonomes : site vitrine, boutique en ligne, CMS sur mesure et accompagnement direct par AIP Création.",
   path: "/creation-site-web-trois-rivieres",
   image: "/aip-travail-13.webp",
 });
@@ -16,9 +16,9 @@ export default function Page() {
     imageAlt="Création de site web professionnel pour une PME de Trois-Rivières"
     title="Création de site web à Trois-Rivières."
     accent="Une solution claire et sur mesure."
-    intro="Atelier Informatique Potvin conçoit des sites Web pour les PME et travailleurs autonomes de Trois-Rivières qui veulent une présence professionnelle sans passer par une chaîne d’intermédiaires. Design, développement, mise en ligne et suivi sont pris en charge directement."
+    intro="AIP Création conçoit des sites Web pour les PME, entreprises de services et travailleurs autonomes de Trois-Rivières qui veulent une présence professionnelle sans passer par une chaîne d’intermédiaires. Design, développement, mise en ligne et suivi sont pris en charge directement."
     points={[
-      { title: "Une offre adaptée aux petites entreprises", text: "Le contenu et les fonctions sont définis selon vos services, vos clients et vos objectifs plutôt que selon un forfait rempli d’options inutiles." },
+      { title: "Une offre adaptée aux PME de Trois-Rivières", text: "Le contenu et les fonctions sont définis selon vos services, vos clients et vos objectifs plutôt que selon un forfait rempli d’options inutiles ou un thème générique." },
       { title: "Sites vitrines rapides et mobiles", text: "Vos pages restent faciles à consulter sur téléphone, tablette et ordinateur, avec des appels à l’action visibles et un parcours simple." },
       { title: "Structure SEO locale", text: "Les pages sont organisées pour expliquer clairement à Google et aux visiteurs ce que vous faites, où vous le faites et quelles informations sont importantes." },
       { title: "E-commerce selon vos opérations", text: "Une boutique peut inclure catalogue, gestion des produits, contenus bilingues ou autres fonctions selon la réalité de votre entreprise." },
@@ -29,6 +29,7 @@ export default function Page() {
     asideText="AIP travaille depuis Nicolet avec les entreprises de Trois-Rivières et de la région. Le suivi peut se faire à distance ou localement selon le projet."
     links={[
       { href: "/creation-sites-web", label: "Création de sites Web" },
+      { href: "/creation-site-web-becancour", label: "Création Web à Bécancour" },
       { href: "/site-web-pme", label: "Sites Web pour PME" },
       { href: "/creation-boutique-en-ligne", label: "E-commerce" },
       { href: "/developpement-cms-sur-mesure", label: "CMS sur mesure" },
@@ -43,7 +44,7 @@ export default function Page() {
     priceText="Une estimation est préparée selon le contenu, le nombre de pages, les intégrations et les fonctionnalités nécessaires à votre entreprise."
     areaText="AIP est basé à Nicolet et réalise des projets Web pour Trois-Rivières et les municipalités environnantes, avec un suivi possible entièrement à distance."
     faqs={[
-      { question: "Travaillez-vous avec des entreprises de Trois-Rivières?", answer: "Oui. Trois-Rivières fait partie du territoire desservi par AIP pour les projets de création et de modernisation de sites Web." },
+      { question: "Travaillez-vous avec des entreprises de Trois-Rivières?", answer: "Oui. Trois-Rivières fait partie du territoire desservi par AIP Création pour les projets de sites Web. Le suivi peut se faire localement ou entièrement à distance." },
       { question: "Est-ce que vous utilisez des thèmes préfabriqués?", answer: "Les projets sont conçus autour des besoins de l’entreprise. Selon le mandat, le design et les fonctions peuvent être développés sur mesure plutôt que dépendre d’un thème générique." },
       { question: "Pouvez-vous gérer le domaine et la mise en ligne?", answer: "Oui. La configuration du domaine et la mise en ligne peuvent faire partie du projet afin d’éviter de multiplier les intervenants." },
     ]}
