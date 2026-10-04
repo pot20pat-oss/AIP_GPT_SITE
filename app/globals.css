@@ -6687,7 +6687,6 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
   transform:translateY(30px) scale(.985);
   transition:
     opacity 1.05s cubic-bezier(.16,.8,.2,1),
-    transform 1.05s cubic-bezier(.16,.8,.2,1),
     transform 1.05s cubic-bezier(.16,.8,.2,1);
 }
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal].is-visible{
@@ -6706,7 +6705,7 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
   transition-duration:1.35s;
 }
 
-/* The first screen assembles itself instead of appearing all at once. */
+/* The first screen assembles itself with compositor-friendly properties only. */
 .editorial-web .editorial-masthead.is-visible .editorial-masthead-top{
   animation:editorialBuildPiece .9s .18s both;
 }
@@ -6715,9 +6714,6 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
 }
 .editorial-web .editorial-masthead.is-visible .editorial-deck{
   animation:editorialBuildPiece .95s 1.15s both;
-}
-.editorial-web .editorial-lead.is-visible .editorial-lead-image{
-  animation:editorialBuildPiece 1.05s .2s both;
 }
 .editorial-web .editorial-lead.is-visible .editorial-kicker{
   animation:editorialBuildPiece .7s .7s both;
@@ -6741,12 +6737,11 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
   from{
     opacity:0;
     transform:translateY(22px);
-      clip-path:inset(0 0 35% 0);
   }
   to{
     opacity:1;
     transform:none;
-      }
+  }
 }
 
 /* Disable the former whole-block intro so the staged construction is the only entrance system. */
@@ -6760,14 +6755,11 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
   .motion-ready :is(.editorial-web,.web-service-page) [data-reveal]{
     opacity:1!important;
     transform:none!important;
-    filter:none!important;
-    clip-path:none!important;
     transition:none!important;
   }
   .editorial-web .editorial-masthead-top,
   .editorial-web .editorial-nameplate,
   .editorial-web .editorial-deck,
-  .editorial-web .editorial-lead-image,
   .editorial-web .editorial-kicker,
   .editorial-web .editorial-lead h1,
   .editorial-web .editorial-lead>p,
@@ -6851,21 +6843,18 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
   transition:
     opacity 1.1s cubic-bezier(.16,.8,.2,1),
     transform 1.45s cubic-bezier(.16,.9,.18,1),
-    filter 1.2s ease,
     box-shadow 1.2s ease;
 }
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal]:not(.is-visible) .magic-photo,
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal].magic-photo:not(.is-visible){
   opacity:0;
   transform:translate3d(34px,-34px,0) rotate(3.4deg) scale(.93);
-  filter:blur(8px) saturate(.82);
   box-shadow:0 28px 70px rgba(0,0,0,.06);
 }
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal].is-visible .magic-photo,
 .motion-ready :is(.editorial-web,.web-service-page) [data-reveal].magic-photo.is-visible{
   opacity:1;
   transform:translate3d(0,0,0) rotate(0deg) scale(1);
-  filter:blur(0) saturate(1);
   box-shadow:0 22px 58px rgba(0,0,0,.32),0 0 28px rgba(103,232,255,.06);
 }
 :is(.editorial-web,.web-service-page) .magic-photo::after{
