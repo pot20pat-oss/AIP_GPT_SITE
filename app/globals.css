@@ -8022,3 +8022,36 @@ html[data-site-mode="it"] .header-it-cta:hover{
     object-position:61% 44%!important;
   }
 }
+
+
+/* AIP IT — HERO FACE CENTER CROP 2026-10-04
+   The source image is wider than the visible subject placement; object-position
+   alone cannot recenter horizontally when the image already spans the viewport.
+   Crop from the left by scaling from the right edge so Patrick becomes the focal point. */
+@media(min-width:1200px){
+  html[data-site-mode="it"] .hero-split-media{
+    overflow:hidden!important;
+  }
+
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:center 46%!important;
+    transform:scale(1.22)!important;
+    transform-origin:100% 50%!important;
+  }
+}
+
+@media(min-width:761px) and (max-width:1199px){
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    transform:scale(1.12)!important;
+    transform-origin:100% 50%!important;
+  }
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    transform:none!important;
+  }
+}
