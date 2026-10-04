@@ -72,7 +72,7 @@ export default function Page() {
     { title: "Base Cloudflare", text: "Workers, D1 et R2 fournissent l’exécution, la base de données et le stockage nécessaires au projet." },
   ];
 
-  return <main>
+  return <main className="web-service-page web-case-study">
     <SiteHeader />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} />
 
