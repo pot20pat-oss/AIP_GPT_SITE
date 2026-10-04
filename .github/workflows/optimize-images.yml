@@ -78,6 +78,7 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add public/projet-envol-enfants.webp public/projet-envol-enfants-700.webp public/hero-aip-clean.webp public/aip-icon-v7.webp app/page.tsx app/components.tsx
           git commit -m "Optimize heavy project images for PageSpeed"
           git push
