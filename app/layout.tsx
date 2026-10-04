@@ -84,11 +84,14 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           document.head.appendChild(s);
         }
         function schedule(){
-          if ('requestIdleCallback' in window) {
-            requestIdleCallback(loadGtag, { timeout: 2500 });
-          } else {
-            setTimeout(loadGtag, 1800);
+          var timer = setTimeout(loadGtag, 8000);
+          var events = ['pointerdown','keydown','touchstart'];
+          function onIntent(){
+            clearTimeout(timer);
+            events.forEach(function(name){ window.removeEventListener(name, onIntent, true); });
+            loadGtag();
           }
+          events.forEach(function(name){ window.addEventListener(name, onIntent, { once:true, passive:true, capture:true }); });
         }
         if (document.readyState === 'complete') schedule();
         else window.addEventListener('load', schedule, { once: true });
