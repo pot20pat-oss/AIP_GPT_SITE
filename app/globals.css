@@ -6603,3 +6603,82 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
     padding:20px;
   }
 }
+
+
+/* AIP CREATION — CONTACT + CASE STUDY CONSISTENCY 2026-10-04 */
+.web-service-page .contact-page-grid{
+  gap:16px;
+}
+.web-service-page .contact-method{
+  min-height:300px;
+  padding:30px;
+  border:1px solid rgba(103,232,255,.15);
+  border-radius:0;
+  background:linear-gradient(145deg,rgba(10,23,40,.84),rgba(5,13,24,.76));
+  color:#eef8ff;
+  box-shadow:0 18px 48px rgba(0,0,0,.18);
+}
+.web-service-page .contact-method h2{
+  color:#f3fbff;
+  font-family:Inter,"Avenir Next","Segoe UI",sans-serif;
+  font-weight:800;
+}
+.web-service-page .contact-method p{
+  color:#b3c7d7;
+}
+.web-service-page .contact-method .button{
+  margin-top:auto;
+}
+.web-service-page .portfolio{
+  background:transparent;
+}
+.web-service-page .portfolio .section-heading h2{
+  color:#f3fbff;
+  font-family:Inter,"Avenir Next","Segoe UI",sans-serif;
+  font-weight:820;
+}
+.web-service-page .portfolio .section-heading h2 em{
+  color:var(--web-cyan);
+  font-family:inherit;
+  font-style:normal;
+  font-weight:820;
+}
+.web-service-page .portfolio .section-heading>p{
+  color:#b2c5d5;
+}
+.web-service-page .portfolio-project{
+  margin-top:18px;
+}
+.web-service-page .portfolio-project-aip .portfolio-image img{
+  object-fit:cover;
+  object-position:center;
+}
+.web-service-page .portfolio-proof{
+  border-left-color:var(--web-cyan);
+  background:rgba(103,232,255,.045);
+}
+.web-service-page .portfolio-proof strong{
+  color:#eafaff;
+}
+.web-service-page .portfolio-proof li{
+  color:#b4c8d8;
+}
+.web-service-page .portfolio-proof li::before{
+  background:var(--web-cyan);
+}
+.web-service-page .portfolio-envol-cms-row{
+  border-top-color:rgba(103,232,255,.14);
+}
+.web-service-page .envol-cms-preview span,
+.web-service-page .envol-cms-showcase figcaption{
+  color:#a9bfd2;
+}
+.web-case-study .service-depth{
+  padding-top:54px;
+}
+@media(max-width:760px){
+  .web-service-page .contact-method{
+    min-height:0;
+    padding:22px;
+  }
+}
