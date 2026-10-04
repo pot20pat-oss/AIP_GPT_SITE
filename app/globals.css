@@ -5485,3 +5485,30 @@ html[data-site-mode="web"] .editorial-web .header-phone{
     animation:none!important;
   }
 }
+
+
+/* AIP CREATION footer contrast hard override 2026-10-04 */
+.editorial-web .footer-service-links a{
+  color:#c7d9e8!important;
+}
+.editorial-web .footer-service-links strong{
+  color:#f1f8ff!important;
+}
+.editorial-web .footer-nap,
+.editorial-web .footer-nap span,
+.editorial-web .footer-nap a{
+  color:#b9cde0!important;
+}
+.editorial-web .footer-nap strong{
+  color:#f1f8ff!important;
+}
+.editorial-web .footer,
+.editorial-web .footer p,
+.editorial-web .footer>a:last-child{
+  color:#b9cde0!important;
+}
+.editorial-web .footer-service-links a:hover,
+.editorial-web .footer-nap a:hover,
+.editorial-web .footer>a:last-child:hover{
+  color:#8feeff!important;
+}
