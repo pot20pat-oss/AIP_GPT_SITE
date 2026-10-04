@@ -4372,3 +4372,25 @@ html[data-site-mode="web"] .footer-site-web{
     padding:28px 24px;
   }
 }
+
+
+/* WEB NEUTRAL REVIEW 2026-10-03 */
+.web-neutral-review{padding-top:22px}
+.web-neutral-review-card{
+  max-width:760px;
+  padding:30px 32px;
+  background:var(--paper);
+}
+.web-neutral-review-card blockquote{
+  margin:18px 0;
+  font-size:17px;
+  line-height:1.7;
+}
+.web-neutral-review-card>span{
+  font-size:11px;
+  color:var(--muted);
+}
+@media(max-width:760px){
+  .web-neutral-review-card{padding:24px 20px}
+  .web-neutral-review-card blockquote{font-size:15px}
+}
