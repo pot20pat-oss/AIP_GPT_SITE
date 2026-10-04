@@ -18,7 +18,15 @@ export function EditorialMotion() {
     let observer: IntersectionObserver | null = null;
     let frame1 = 0;
     let frame2 = 0;
-    const timers: number[] = [];
+    const timers = new Map<HTMLElement, number>();
+
+    const clearTimer = (el: HTMLElement) => {
+      const timer = timers.get(el);
+      if (timer !== undefined) {
+        window.clearTimeout(timer);
+        timers.delete(el);
+      }
+    };
 
     frame1 = window.requestAnimationFrame(() => {
       frame2 = window.requestAnimationFrame(() => {
@@ -32,13 +40,25 @@ export function EditorialMotion() {
             });
 
           entering.forEach((el, index) => {
-            observer?.unobserve(el);
+            clearTimer(el);
             const timer = window.setTimeout(() => {
               el.classList.add("is-visible");
-            }, index * 240);
-            timers.push(timer);
+              timers.delete(el);
+            }, index * 220);
+            timers.set(el, timer);
           });
-        }, { threshold: 0.16, rootMargin: "0px 0px -6% 0px" });
+
+          entries
+            .filter((entry) => !entry.isIntersecting)
+            .forEach((entry) => {
+              const el = entry.target as HTMLElement;
+              clearTimer(el);
+              el.classList.remove("is-visible");
+            });
+        }, {
+          threshold: [0, 0.12, 0.22],
+          rootMargin: "-5% 0px -8% 0px",
+        });
 
         elements.forEach((el) => observer?.observe(el));
       });
@@ -48,6 +68,7 @@ export function EditorialMotion() {
       window.cancelAnimationFrame(frame1);
       window.cancelAnimationFrame(frame2);
       timers.forEach((timer) => window.clearTimeout(timer));
+      timers.clear();
       observer?.disconnect();
     };
   }, []);
