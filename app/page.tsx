@@ -89,10 +89,10 @@ function WebHome() {
 
     <section className="editorial-index">
       <div className="shell editorial-index-grid">
-        <div><strong>900 $ +</strong><span>site vitrine de base</span></div>
-        <div><strong>Sur mesure</strong><span>design, boutique et gestion</span></div>
-        <div><strong>Mobile</strong><span>pensé pour tous les écrans</span></div>
-        <div><strong>1 seul</strong><span>interlocuteur du début à la fin</span></div>
+        <div><strong>900 $ +</strong><span>site vitrine de base</span><small>Boutique et CMS sur devis</small></div>
+        <div><strong>FR / EN</strong><span>boutique bilingue en production</span><small>Une même expérience dans les deux langues</small></div>
+        <div><strong>CMS métier</strong><span>produits, photos, prix et stock</span><small>Gestion pensée autour des opérations</small></div>
+        <div><strong>1 seul</strong><span>interlocuteur du début à la fin</span><small>Conception, code et déploiement</small></div>
       </div>
     </section>
 
