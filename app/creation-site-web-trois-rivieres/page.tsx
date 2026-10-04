@@ -44,6 +44,7 @@ export default function Page() {
     priceLabel="Site vitrine à partir de 900 $"
     priceText="Une estimation est préparée selon le contenu, le nombre de pages, les intégrations et les fonctionnalités nécessaires à votre entreprise."
     areaText="AIP est basé à Nicolet et réalise des projets Web pour Trois-Rivières et les municipalités environnantes, avec un suivi possible entièrement à distance."
+    areaServed={["Trois-Rivières", "Mauricie"]}
     faqs={[
       { question: "Travaillez-vous avec des entreprises de Trois-Rivières?", answer: "Oui. Trois-Rivières fait partie du territoire desservi par AIP Création pour les projets de sites Web. Le suivi peut se faire localement ou entièrement à distance." },
       { question: "Est-ce que vous utilisez des thèmes préfabriqués?", answer: "Les projets sont conçus autour des besoins de l’entreprise. Selon le mandat, le design et les fonctions peuvent être développés sur mesure plutôt que dépendre d’un thème générique." },
