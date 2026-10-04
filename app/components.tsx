@@ -88,10 +88,11 @@ type DetailProps = {
   priceLabel?: string;
   priceText?: string;
   areaText?: string;
+  areaServed?: string[];
   faqs?: { question: string; answer: string }[];
 };
 
-export function DetailPage({ eyebrow, title, accent, intro, points, asideTitle, asideText, links, image, imageAlt, showcaseProject, servicePath, scenarios, priceLabel, priceText, areaText, faqs }: DetailProps) {
+export function DetailPage({ eyebrow, title, accent, intro, points, asideTitle, asideText, links, image, imageAlt, showcaseProject, servicePath, scenarios, priceLabel, priceText, areaText, areaServed, faqs }: DetailProps) {
   const isWebService = !!servicePath && (
     servicePath.startsWith("/creation-") ||
     servicePath === "/site-web-pme" ||
@@ -101,7 +102,8 @@ export function DetailPage({ eyebrow, title, accent, intro, points, asideTitle, 
   const isMainWebService = servicePath === "/creation-sites-web";
   const serviceBaseUrl = isWebService ? webSiteUrl : siteUrl;
   const serviceUrl = isMainWebService ? webSiteUrl : servicePath ? `${serviceBaseUrl}${servicePath}` : serviceBaseUrl;
-  const graph: object[] = servicePath ? [{ "@type": "Service", "@id": `${serviceUrl}#service`, name: eyebrow, description: intro, url: serviceUrl, image: `${serviceBaseUrl}${image}`, provider: { "@id": `${siteUrl}/#entreprise`, name: businessName }, areaServed: ["Nicolet", "Bécancour", "Trois-Rivières", "Centre-du-Québec"], serviceArea: { "@type": "GeoCircle", geoMidpoint: { "@type": "GeoCoordinates", latitude: 46.2268, longitude: -72.6141 }, geoRadius: "50000 m" } }, { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: serviceBaseUrl }, { "@type": "ListItem", position: 2, name: eyebrow, item: serviceUrl }] }] : [];
+  const servedAreas = areaServed?.length ? areaServed : ["Nicolet", "Bécancour", "Trois-Rivières", "Centre-du-Québec"];
+  const graph: object[] = servicePath ? [{ "@type": "Service", "@id": `${serviceUrl}#service`, name: eyebrow, description: intro, url: serviceUrl, image: `${serviceBaseUrl}${image}`, provider: { "@id": `${siteUrl}/#entreprise`, name: businessName }, areaServed: servedAreas.map(name => ({ "@type": "Place", name })), serviceArea: { "@type": "GeoCircle", geoMidpoint: { "@type": "GeoCoordinates", latitude: 46.2268, longitude: -72.6141 }, geoRadius: "50000 m" } }, { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: serviceBaseUrl }, { "@type": "ListItem", position: 2, name: eyebrow, item: serviceUrl }] }] : [];
   if (faqs?.length) graph.push({ "@type": "FAQPage", mainEntity: faqs.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) });
   const structuredData = graph.length ? { "@context": "https://schema.org", "@graph": graph } : null;
   return <main className={isRemoteService ? "remote-service-page" : isWebService ? `web-service-page${isMainWebService ? " web-main-service-page" : ""}` : undefined}><SiteHeader />
