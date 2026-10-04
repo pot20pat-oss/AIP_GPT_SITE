@@ -105,7 +105,7 @@ function WebHome() {
     <section className="editorial-project editorial-project-aip shell holo-panel" data-reveal="section" aria-labelledby="atelier-project-title">
       <div className="editorial-project-media magic-photo">
         <a href="https://atelierpotvin.ca/" target="_blank" rel="noopener noreferrer" aria-label="Visiter Atelier Informatique Potvin">
-          <img src="/hero-aip-clean.webp" alt="Atelier Informatique Potvin, site de services informatiques et plateforme de gestion" loading="lazy" decoding="async" />
+          <img src="/hero-aip-clean.webp" srcSet="/hero-aip-clean-900.webp 900w, /hero-aip-clean.webp 1149w" sizes="(max-width: 1100px) calc(100vw - 48px), 857px" alt="Atelier Informatique Potvin, site de services informatiques et plateforme de gestion" loading="lazy" decoding="async" />
         </a>
       </div>
       <div className="editorial-project-copy">
