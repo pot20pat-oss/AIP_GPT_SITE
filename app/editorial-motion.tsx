@@ -14,12 +14,20 @@ export function EditorialMotion() {
     typeTargets.forEach((el) => {
       if (el.dataset.typeReady === "true") return;
       const label = el.textContent || "";
-      el.setAttribute("aria-label", label);
+
+      const accessibleText = document.createElement("span");
+      accessibleText.className = "sr-only";
+      accessibleText.textContent = label;
+      el.prepend(accessibleText);
 
       let charIndex = 0;
       const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
       const textNodes: Text[] = [];
-      while (walker.nextNode()) textNodes.push(walker.currentNode as Text);
+      while (walker.nextNode()) {
+        const node = walker.currentNode as Text;
+        if ((node.parentElement as HTMLElement | null)?.classList.contains("sr-only")) continue;
+        textNodes.push(node);
+      }
 
       textNodes.forEach((node) => {
         const fragment = document.createDocumentFragment();
