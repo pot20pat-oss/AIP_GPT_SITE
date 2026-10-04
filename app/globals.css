@@ -7502,3 +7502,91 @@ html[data-site-mode="it"] .back-to-top{
 .web-service-page .trust-box>div span{
   color:#8fa9bd;
 }
+
+
+/* AIP CREATION — FORCED THANK-YOU THEME 2026-10-04 */
+.web-thank-you-force{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 84% 8%,rgba(39,117,190,.16),transparent 32%),
+    linear-gradient(180deg,#07111f 0%,#050c16 100%);
+  color:#eef8ff;
+}
+.web-thank-you-force .nav-site-it,
+.web-thank-you-force .brand-name-it,
+.web-thank-you-force .footer-site-it{display:none!important}
+.web-thank-you-force .nav-site-web{display:flex!important}
+.web-thank-you-force .brand-name-web{display:flex!important}
+.web-thank-you-force .footer-site-web{display:grid!important}
+.web-thank-you-force .header{
+  border:1px solid rgba(103,232,255,.13);
+  border-top:0;
+  background:
+    radial-gradient(circle at 7% 50%,rgba(44,161,255,.085),transparent 20%),
+    linear-gradient(180deg,#07111f 0%,#050c16 100%);
+  box-shadow:0 18px 45px rgba(0,0,0,.22),inset 0 -1px rgba(103,232,255,.055);
+}
+.web-thank-you-force .brand-name-web small{color:#70dff3!important}
+.web-thank-you-force .brand-name-web>span{color:#f6fbff!important}
+.web-thank-you-force .header nav a,
+.web-thank-you-force .header-phone{color:#c5d8e7!important}
+.web-thank-you-force .header-web-cta{display:flex!important}
+.web-thank-you-force .thank-you{
+  width:min(1180px,calc(100% - 64px));
+  margin:42px auto 72px;
+  padding:64px;
+  border:1px solid rgba(103,232,255,.16);
+  background:
+    linear-gradient(145deg,rgba(10,23,40,.9),rgba(5,13,24,.82)),
+    radial-gradient(circle at 78% 18%,rgba(103,232,255,.06),transparent 36%);
+  box-shadow:0 28px 70px rgba(0,0,0,.24);
+}
+.web-thank-you-force .thank-you .eyebrow{color:#7eeaff}
+.web-thank-you-force .thank-you h1{
+  margin:20px 0 22px;
+  color:#f3fbff;
+  font-family:Inter,"Avenir Next","Segoe UI",sans-serif;
+  font-size:clamp(56px,7vw,96px);
+  line-height:.98;
+  letter-spacing:-3px;
+}
+.web-thank-you-force .thank-you h1 em{
+  color:#64def4;
+  font-family:inherit;
+  font-style:normal;
+}
+.web-thank-you-force .thank-you p{
+  max-width:720px;
+  color:#afc3d3;
+  font-size:16px;
+  line-height:1.7;
+}
+.web-thank-you-force .thank-you .button-dark{
+  background:#18abe7;
+  border-color:#18abe7;
+  color:#fff;
+}
+.web-thank-you-force .thank-you .button-outline{
+  border-color:rgba(103,232,255,.32);
+  color:#eafaff;
+  background:rgba(103,232,255,.035);
+}
+.web-thank-you-force .footer-service-links,
+.web-thank-you-force .footer-nap,
+.web-thank-you-force .footer{
+  border-color:rgba(103,232,255,.12);
+  color:#9fb5c7;
+}
+.web-thank-you-force .footer-service-links strong,
+.web-thank-you-force .footer a{color:#eafaff}
+@media(max-width:760px){
+  .web-thank-you-force .thank-you{
+    width:calc(100% - 24px);
+    margin:18px auto 42px;
+    padding:32px 22px;
+  }
+  .web-thank-you-force .thank-you h1{
+    font-size:48px;
+    letter-spacing:-2px;
+  }
+}
