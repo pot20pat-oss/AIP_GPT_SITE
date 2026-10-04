@@ -5065,6 +5065,8 @@ html[data-site-mode="web"] .footer-site-web{
     linear-gradient(90deg,rgba(103,232,255,.035) 1px,transparent 1px);
   background-size:42px 42px;
   mask-image:linear-gradient(to bottom,black,transparent 88%);
+  animation:holoGridDrift 28s linear infinite;
+  will-change:background-position;
 }
 .editorial-web > *{
   position:relative;
@@ -5167,9 +5169,10 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   height:26%;
   z-index:1;
   pointer-events:none;
-  opacity:.5;
+  opacity:.42;
   background:linear-gradient(to bottom,transparent,rgba(103,232,255,.08),transparent);
-  animation:holoScan 6.5s linear infinite;
+  animation:holoScan 8.5s linear infinite;
+  will-change:transform;
 }
 .holo-orbit{
   position:absolute;
@@ -5188,14 +5191,16 @@ html[data-site-mode="web"] .editorial-web .header-phone{
 .holo-orbit-a{
   width:310px;height:310px;
   right:-110px;top:-170px;
-  animation:holoOrbit 16s linear infinite;
+  animation:holoOrbit 24s linear infinite;
+  will-change:transform;
 }
 .holo-orbit-a::after{left:35px;bottom:38px}
 .holo-orbit-b{
   width:170px;height:170px;
   right:82px;top:-92px;
   border-color:rgba(157,124,255,.16);
-  animation:holoOrbitReverse 11s linear infinite;
+  animation:holoOrbitReverse 17s linear infinite;
+  will-change:transform;
 }
 .holo-orbit-b::after{
   right:22px;bottom:26px;
@@ -5325,7 +5330,7 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   border-radius:50%;
   background:#5ff0bd;
   box-shadow:0 0 12px #5ff0bd;
-  animation:holoPulse 1.8s ease-in-out infinite;
+  animation:holoPulse 2.4s ease-in-out infinite;
 }
 .editorial-brief{
   position:relative;
@@ -5355,6 +5360,8 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   position:absolute;
   top:7px;
   left:0;
+  display:flex;
+  width:max-content;
   white-space:nowrap;
   color:#38d9ff;
   font-family:Consolas,monospace;
@@ -5364,7 +5371,12 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   text-shadow:
     0 0 8px rgba(56,217,255,.38),
     0 0 18px rgba(56,217,255,.14);
-  animation:holoTicker 24s linear infinite;
+  animation:holoTicker 18s linear infinite;
+  will-change:transform;
+}
+.holo-data-stream span{
+  flex:none;
+  padding-right:48px;
 }
 .editorial-index-grid{
   padding-top:28px;
@@ -5528,8 +5540,16 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   50%{opacity:1;transform:scale(1.2)}
 }
 @keyframes holoTicker{
-  from{transform:translateX(-15%)}
-  to{transform:translateX(110%)}
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(-50%,0,0)}
+}
+@keyframes holoGridDrift{
+  from{background-position:0 0,0 0}
+  to{background-position:42px 42px,42px 42px}
+}
+@keyframes holoGlowBreath{
+  0%,100%{opacity:.72}
+  50%{opacity:1}
 }
 
 @media(max-width:900px){
@@ -5550,6 +5570,7 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   .holo-axis{display:none}
 }
 @media(prefers-reduced-motion:reduce){
+  .editorial-web::before,
   .holo-scanline,
   .holo-orbit,
   .holo-status span,
