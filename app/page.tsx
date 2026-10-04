@@ -115,7 +115,7 @@ function WebHome() {
     </section>
 
     <section className="editorial-index holo-index" data-reveal="section">
-      <div className="holo-data-stream" aria-hidden="true">AIP CRÉATION · DESIGN · DÉVELOPPEMENT · BOUTIQUES · CMS · RÉFÉRENCEMENT LOCAL ·</div>
+      <div className="holo-data-stream" aria-hidden="true"><span>AIP CRÉATION · DESIGN · DÉVELOPPEMENT · BOUTIQUES · CMS · RÉFÉRENCEMENT LOCAL ·</span><span>AIP CRÉATION · DESIGN · DÉVELOPPEMENT · BOUTIQUES · CMS · RÉFÉRENCEMENT LOCAL ·</span></div>
       <div className="shell editorial-index-grid">
         <div data-reveal="feature"><strong>900 $ +</strong><span>site vitrine de base</span><small>Boutique et CMS sur devis</small></div>
         <div data-reveal="feature"><strong>FR / EN</strong><span>boutique bilingue en production</span><small>Une même expérience dans les deux langues</small></div>
