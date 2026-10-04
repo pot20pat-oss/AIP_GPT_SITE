@@ -43,7 +43,7 @@ export default function Page() {
     priceText="Une estimation est préparée selon le contenu, le nombre de pages, les intégrations et les fonctionnalités nécessaires à votre entreprise."
     areaText="AIP est basé à Nicolet et réalise des projets Web pour Trois-Rivières et les municipalités environnantes, avec un suivi possible entièrement à distance."
     faqs={[
-      { question: "Travaillez-vous avec des entreprises de Trois-Rivières?", answer: "Oui. Trois-Rivières fait partie du territoire desservi par AIP pour les projets de création et de refonte de sites Web." },
+      { question: "Travaillez-vous avec des entreprises de Trois-Rivières?", answer: "Oui. Trois-Rivières fait partie du territoire desservi par AIP pour les projets de création et de modernisation de sites Web." },
       { question: "Est-ce que vous utilisez des thèmes préfabriqués?", answer: "Les projets sont conçus autour des besoins de l’entreprise. Selon le mandat, le design et les fonctions peuvent être développés sur mesure plutôt que dépendre d’un thème générique." },
       { question: "Pouvez-vous gérer le domaine et la mise en ligne?", answer: "Oui. La configuration du domaine et la mise en ligne peuvent faire partie du projet afin d’éviter de multiplier les intervenants." },
     ]}
