@@ -10,6 +10,33 @@ export function EditorialMotion() {
     const elements = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
     if (!elements.length) return;
 
+    const typeTargets = Array.from(document.querySelectorAll<HTMLElement>("[data-typewrite]"));
+    typeTargets.forEach((el) => {
+      if (el.dataset.typeReady === "true") return;
+      const label = el.textContent || "";
+      el.setAttribute("aria-label", label);
+
+      let charIndex = 0;
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      const textNodes: Text[] = [];
+      while (walker.nextNode()) textNodes.push(walker.currentNode as Text);
+
+      textNodes.forEach((node) => {
+        const fragment = document.createDocumentFragment();
+        Array.from(node.data).forEach((char) => {
+          const span = document.createElement("span");
+          span.className = "magic-char";
+          span.setAttribute("aria-hidden", "true");
+          span.style.setProperty("--char-index", String(charIndex++));
+          span.textContent = char;
+          fragment.appendChild(span);
+        });
+        node.replaceWith(fragment);
+      });
+
+      el.dataset.typeReady = "true";
+    });
+
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       elements.forEach((el) => el.classList.add("is-visible"));
       return;
