@@ -38,7 +38,7 @@ function EnvolCmsGallery() {
 export function SiteHeader() {
   return <>
     <header className="header shell header-simple">
-      <div className="brand"><Link className="brand-home-link" href="/" aria-label="Retour à l’accueil"><img className="brand-logo" src="/aip-icon-v7.png" alt="AIP Atelier Informatique Potvin" width="71" height="61" /></Link><span className="brand-name brand-name-it"><span>Informaticien · Service local</span></span><span className="brand-name brand-name-web"><small>AIP CRÉATION // STUDIO WEB</small><span>Designer Web · Création sur mesure</span></span></div>
+      <div className="brand"><Link className="brand-home-link" href="/" aria-label="Retour à l’accueil"><img className="brand-logo" src="/aip-icon-v7.png" alt="AIP Atelier Informatique Potvin" width="71" height="61" /></Link><span className="brand-name brand-name-it"><span>Informaticien · Service local</span></span><span className="brand-name brand-name-web"><small>STUDIO WEB · NICOLET</small><span>AIP CRÉATION</span><em>Sites Web · Boutiques · CMS sur mesure</em></span></div>
       <nav className="nav-site nav-site-it" aria-label="Navigation principale informatique">
         <Link href="/depannage-informatique-nicolet">Informatique</Link>
         <Link href="/assistance-informatique-a-distance">Assistance</Link>
@@ -51,7 +51,7 @@ export function SiteHeader() {
         <Link href="/tarifs">Tarifs</Link>
         <Link href="/contact">Contact</Link>
       </nav>
-      <div className="header-contact header-contact-simple"><a className="header-phone" href="tel:+18193802999">{phone}</a></div>
+      <div className="header-contact header-contact-simple"><a className="header-phone" href="tel:+18193802999">{phone}</a><Link className="header-web-cta" href="/contact">Parler de votre projet</Link></div>
     </header>
   </>;
 }
