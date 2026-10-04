@@ -7594,3 +7594,37 @@ html[data-site-mode="it"] .back-to-top{
     letter-spacing:-2px;
   }
 }
+
+
+/* AIP CREATION — CMS HERO PREVIEW 2026-10-04 */
+.web-service-page .detail-photo-cms{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 75% 18%,rgba(103,232,255,.08),transparent 38%),
+    linear-gradient(145deg,#091827,#050d18);
+  border:1px solid rgba(103,232,255,.16);
+  box-shadow:0 22px 60px rgba(0,0,0,.28);
+}
+.web-service-page .detail-photo-cms::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(4,13,24,.04),rgba(4,13,24,.18));
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.018);
+}
+.web-service-page .detail-photo-cms img{
+  object-fit:cover!important;
+  object-position:center 8%!important;
+  transform:scale(1.34);
+  transform-origin:50% 8%;
+  filter:brightness(.76) contrast(1.14) saturate(.88);
+}
+@media(max-width:760px){
+  .web-service-page .detail-photo-cms img{
+    transform:scale(1.22);
+    transform-origin:50% 10%;
+    filter:brightness(.8) contrast(1.1) saturate(.9);
+  }
+}
