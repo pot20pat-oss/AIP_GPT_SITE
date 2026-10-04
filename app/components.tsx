@@ -56,6 +56,25 @@ export function SiteHeader() {
   </>;
 }
 
+function BackToTopButton() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const update = () => setVisible(window.scrollY > 420);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
+  }, []);
+
+  return <button
+    type="button"
+    className={`back-to-top${visible ? " is-visible" : ""}`}
+    aria-label="Retour en haut"
+    title="Retour en haut"
+    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  ><span aria-hidden="true">↑</span></button>;
+}
+
 export function SiteFooter() {
   return <>
     <nav className="footer-service-links footer-simple footer-site footer-site-it shell" aria-label="Services informatiques et informations">
@@ -72,6 +91,7 @@ export function SiteFooter() {
 
     <div className="footer-nap shell"><strong>{businessName}</strong><span>{businessAddress}</span><a href="tel:+18193802999">{phone}</a><a href={googleBusinessUrl} target="_blank" rel="noopener noreferrer">Nous trouver sur Google Maps</a></div>
     <footer className="footer shell"><Link className="footer-brand footer-logo-only" href="/" aria-label="AIP Atelier Informatique Potvin, accueil"><img src="/aip-icon-v7.png" alt="AIP Atelier Informatique Potvin" width="92" height="79" /></Link><p>© 2026 AIP · <span className="footer-legal-name">AIP Atelier Informatique Potvin</span> · Nicolet, Québec</p><a href="tel:+18193802999">{phone}</a></footer>
+    <BackToTopButton />
   </>;
 }
 
