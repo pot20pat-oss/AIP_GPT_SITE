@@ -15,17 +15,30 @@ export function EditorialMotion() {
       return;
     }
 
-    const observer = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          (entry.target as HTMLElement).classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      }
-    }, { threshold: 0.18, rootMargin: "0px 0px -8% 0px" });
+    let observer: IntersectionObserver | null = null;
+    let frame1 = 0;
+    let frame2 = 0;
 
-    elements.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    frame1 = window.requestAnimationFrame(() => {
+      frame2 = window.requestAnimationFrame(() => {
+        observer = new IntersectionObserver((entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              (entry.target as HTMLElement).classList.add("is-visible");
+              observer?.unobserve(entry.target);
+            }
+          }
+        }, { threshold: 0.18, rootMargin: "0px 0px -8% 0px" });
+
+        elements.forEach((el) => observer?.observe(el));
+      });
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frame1);
+      window.cancelAnimationFrame(frame2);
+      observer?.disconnect();
+    };
   }, []);
 
   return null;
