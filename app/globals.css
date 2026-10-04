@@ -7368,3 +7368,17 @@ html[data-site-mode="it"] .back-to-top{
   white-space:nowrap!important;
   border:0!important;
 }
+
+
+/* AIP CREATION — LCP VISIBILITY FAST PATH 2026-10-04
+   Keep the above-fold construction motion, but never hide the LCP image with opacity. */
+.motion-ready :is(.editorial-web,.web-service-page) [data-reveal="hero"],
+.motion-ready :is(.editorial-web,.web-service-page) [data-reveal="hero-lead"],
+.motion-ready :is(.editorial-web,.web-service-page) [data-reveal="hero-rail"]{
+  opacity:1!important;
+  transition-property:transform!important;
+}
+.motion-ready .editorial-web [data-reveal="hero-lead"]:not(.is-visible) .editorial-lead-image.magic-photo,
+.motion-ready .editorial-web [data-reveal="hero-lead"].is-visible .editorial-lead-image.magic-photo{
+  opacity:1!important;
+}
