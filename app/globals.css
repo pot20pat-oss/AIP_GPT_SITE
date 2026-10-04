@@ -6918,7 +6918,7 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
 :is(.editorial-web,.web-service-page) [data-reveal].is-visible[data-typewrite] :is(.magic-char,.magic-word){
   opacity:1;
   transform:none;
-  transition-delay:calc(var(--token-index) * var(--type-step));
+  transition-delay:calc(var(--type-offset, 0ms) + var(--token-index) * var(--type-step));
 }
 :is(.editorial-web,.web-service-page) [data-typewrite][data-type-ready="true"]{
   position:relative;
