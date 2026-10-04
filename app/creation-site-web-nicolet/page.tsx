@@ -45,6 +45,7 @@ export default function Page() {
     priceLabel="Site vitrine à Nicolet à partir de 900 $"
     priceText="Le tarif dépend du nombre de pages, du contenu, des intégrations et des fonctions nécessaires. Une estimation claire est préparée avant le développement."
     areaText="AIP est établi à Nicolet et dessert aussi Bécancour, Trois-Rivières, Saint-Célestin et les environs. Les projets Web peuvent également être réalisés à distance."
+    areaServed={["Nicolet", "Centre-du-Québec"]}
     faqs={[
       { question: "Créez-vous des sites web directement à Nicolet?", answer: "Oui. Atelier Informatique Potvin est établi à Nicolet et accompagne directement les entreprises et travailleurs autonomes de la région pour leurs projets Web." },
       { question: "Combien coûte un site web pour une petite entreprise?", answer: "Un site vitrine de base débute à 900 $. Le prix final dépend surtout du nombre de pages, du contenu, des intégrations et des fonctionnalités nécessaires." },
