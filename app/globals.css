@@ -7910,3 +7910,80 @@ html[data-site-mode="it"] .hero-clean-bg{
     object-position:62% center;
   }
 }
+
+
+/* AIP IT — DISTINCT LIGHT HEADER 2026-10-04
+   Same structural discipline as AIP Creation, but Atelier keeps its own
+   lighter service identity and blue/navy palette. */
+html[data-site-mode="it"] .header{
+  border:0;
+  border-bottom:1px solid #dbe6f1;
+  background:
+    radial-gradient(circle at 7% 45%,rgba(37,132,238,.08),transparent 24%),
+    linear-gradient(180deg,rgba(255,255,255,.98),rgba(247,250,254,.98));
+  box-shadow:0 10px 28px rgba(19,45,78,.08);
+}
+
+html[data-site-mode="it"] .header .brand-logo{
+  filter:
+    drop-shadow(0 4px 10px rgba(18,91,172,.12))
+    drop-shadow(0 0 7px rgba(24,135,237,.08));
+}
+
+html[data-site-mode="it"] .brand-name-it small{
+  color:#2f79aa;
+}
+
+html[data-site-mode="it"] .brand-name-it>span{
+  color:#17345f!important;
+}
+
+html[data-site-mode="it"] .brand-name-it em{
+  color:#71839a;
+}
+
+html[data-site-mode="it"] .nav-site-it{
+  color:#314966;
+}
+
+html[data-site-mode="it"] .nav-site-it a{
+  color:#314966;
+}
+
+html[data-site-mode="it"] .nav-site-it a:hover{
+  color:#0f7ed8;
+}
+
+html[data-site-mode="it"] .nav-site-it a::after{
+  background:#2b8fce;
+}
+
+html[data-site-mode="it"] .header-phone{
+  color:#17345f!important;
+  border-color:#d6e3ef;
+  background:#fff;
+}
+
+html[data-site-mode="it"] .header-it-cta{
+  border-color:#17345f;
+  background:#17345f;
+  color:#fff;
+  box-shadow:0 5px 16px rgba(23,52,95,.14);
+}
+
+html[data-site-mode="it"] .header-it-cta:hover{
+  border-color:#286da4;
+  background:#286da4;
+}
+
+@media (min-width:761px) and (max-width:1499px){
+  html[data-site-mode="it"] .nav-site-it{
+    border-top-color:#dbe6f1;
+  }
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .nav-site-it{
+    border-top-color:#dbe6f1;
+  }
+}
