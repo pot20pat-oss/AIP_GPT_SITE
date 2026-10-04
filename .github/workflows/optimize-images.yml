@@ -1,0 +1,66 @@
+name: Optimize heavy site images
+
+on:
+  push:
+    paths:
+      - ".github/workflows/optimize-images.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      - name: Create optimized WebP assets
+        run: |
+          set -euo pipefail
+
+          convert public/projet-envol-enfants.png \
+            -resize '1400x>' \
+            -strip \
+            -quality 82 \
+            -define webp:method=6 \
+            public/projet-envol-enfants.webp
+
+          convert public/hero-aip-clean.png \
+            -resize '1600x>' \
+            -strip \
+            -quality 82 \
+            -define webp:method=6 \
+            public/hero-aip-clean.webp
+
+          python3 - <<'PY'
+          from pathlib import Path
+
+          for name in ("app/page.tsx", "app/components.tsx"):
+              p = Path(name)
+              s = p.read_text(encoding="utf-8")
+              s = s.replace("/projet-envol-enfants.png", "/projet-envol-enfants.webp")
+              s = s.replace("/hero-aip-clean.png", "/hero-aip-clean.webp")
+              p.write_text(s, encoding="utf-8")
+          PY
+
+          ls -lh public/projet-envol-enfants.png public/projet-envol-enfants.webp
+          ls -lh public/hero-aip-clean.png public/hero-aip-clean.webp
+
+      - name: Commit optimized assets
+        run: |
+          if git diff --quiet && [ ! -f public/projet-envol-enfants.webp ] && [ ! -f public/hero-aip-clean.webp ]; then
+            echo "Nothing to commit"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/projet-envol-enfants.webp public/hero-aip-clean.webp app/page.tsx app/components.tsx
+          git commit -m "Optimize heavy project images for PageSpeed"
+          git push
