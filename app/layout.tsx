@@ -65,7 +65,6 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   };
 
   return <html lang="fr-CA" data-site-mode={isWebSite ? "web" : "it"}><body>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0HN0N449R" />
     <script dangerouslySetInnerHTML={{ __html: `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -74,6 +73,26 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         send_page_view: false,
         linker: { domains: ['atelierpotvin.ca', 'aipcreation.ca'] }
       });
+      (function(){
+        var loaded = false;
+        function loadGtag(){
+          if (loaded) return;
+          loaded = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-T0HN0N449R';
+          document.head.appendChild(s);
+        }
+        function schedule(){
+          if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadGtag, { timeout: 2500 });
+          } else {
+            setTimeout(loadGtag, 1800);
+          }
+        }
+        if (document.readyState === 'complete') schedule();
+        else window.addEventListener('load', schedule, { once: true });
+      })();
     ` }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} />
     <AnalyticsTracker />
