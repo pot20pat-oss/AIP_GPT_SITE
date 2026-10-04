@@ -7049,3 +7049,179 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
     font-size:9.5px!important;
   }
 }
+
+
+/* AIP CREATION — CONTACT + PRICING THEME 2026-10-04 */
+.web-contact-page .detail-hero,
+.web-pricing-page .detail-hero{
+  background:
+    linear-gradient(135deg,rgba(13,30,50,.92),rgba(5,13,24,.84)),
+    radial-gradient(circle at 80% 18%,rgba(103,232,255,.07),transparent 38%);
+}
+.web-contact-page .contact-page-grid,
+.web-pricing-page .web-package-grid{
+  position:relative;
+  z-index:1;
+}
+.web-contact-page .contact-method,
+.web-pricing-page .web-package-card{
+  border:1px solid rgba(103,232,255,.16);
+  border-radius:0;
+  background:
+    linear-gradient(145deg,rgba(10,23,40,.9),rgba(5,13,24,.8)),
+    radial-gradient(circle at 90% 0%,rgba(103,232,255,.04),transparent 34%);
+  color:#eef8ff;
+  box-shadow:0 18px 46px rgba(0,0,0,.2),inset 0 1px rgba(255,255,255,.025);
+}
+.web-contact-page .contact-method h2,
+.web-pricing-page .web-package-card h3,
+.web-pricing-page .pricing-group-heading h2,
+.web-pricing-page .price-note h2{
+  color:#f3fbff;
+  font-family:Inter,"Avenir Next","Segoe UI",sans-serif;
+  font-weight:820;
+}
+.web-pricing-page .pricing-group-heading{
+  display:grid;
+  grid-template-columns:56px 1fr;
+  gap:18px;
+  align-items:start;
+  margin-bottom:24px;
+  padding-bottom:18px;
+  border-bottom:1px solid rgba(103,232,255,.14);
+}
+.web-pricing-page .pricing-group-heading>span{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:46px;
+  height:46px;
+  border:1px solid rgba(103,232,255,.28);
+  color:#86eaff;
+  font-family:Consolas,monospace;
+  font-size:11px;
+  box-shadow:0 0 18px rgba(103,232,255,.06);
+}
+.web-pricing-page .pricing-group-heading h2{
+  margin:0 0 7px;
+  font-size:clamp(30px,3.2vw,48px);
+  letter-spacing:-1.6px;
+}
+.web-pricing-page .pricing-group-heading p,
+.web-pricing-page .web-package-card>p,
+.web-pricing-page .package-note,
+.web-pricing-page .price-note p{
+  color:#b3c8d9;
+}
+.web-pricing-page .web-package-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+.web-pricing-page .web-package-card{
+  padding:28px;
+}
+.web-pricing-page .web-package-top{
+  display:grid;
+  grid-template-columns:42px 1fr;
+  gap:14px;
+  align-items:start;
+}
+.web-pricing-page .web-package-top>span{
+  color:#7feaff;
+  font-family:Consolas,monospace;
+  font-size:10px;
+}
+.web-pricing-page .web-package-card h3{
+  margin:0 0 8px;
+  font-size:24px;
+  letter-spacing:-.7px;
+}
+.web-pricing-page .web-package-card strong{
+  display:block;
+  color:#78eaff;
+  font-size:30px;
+  letter-spacing:-1px;
+}
+.web-pricing-page .web-package-card>p{
+  margin:18px 0;
+  font-size:13px;
+  line-height:1.7;
+}
+.web-pricing-page .web-package-card ul{
+  display:grid;
+  gap:9px;
+  margin:0 0 24px;
+  padding:0;
+  list-style:none;
+}
+.web-pricing-page .web-package-card li{
+  position:relative;
+  padding-left:17px;
+  color:#c2d4e2;
+  font-size:12px;
+  line-height:1.5;
+}
+.web-pricing-page .web-package-card li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.55em;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#67e8ff;
+  box-shadow:0 0 9px rgba(103,232,255,.55);
+}
+.web-pricing-page .web-package-card>a{
+  display:inline-flex;
+  min-height:42px;
+  align-items:center;
+  justify-content:center;
+  padding:0 16px;
+  border:1px solid rgba(103,232,255,.38);
+  background:rgba(103,232,255,.06);
+  color:#eafaff;
+  font-size:11px;
+  font-weight:800;
+}
+.web-pricing-page .package-note{
+  margin-top:18px;
+  font-size:11px;
+  line-height:1.6;
+}
+.web-pricing-page .price-note{
+  margin-top:34px;
+  padding:30px;
+  border:1px solid rgba(103,232,255,.18);
+  background:
+    linear-gradient(135deg,rgba(16,37,60,.88),rgba(5,13,24,.86)),
+    radial-gradient(circle at 82% 20%,rgba(103,232,255,.08),transparent 34%);
+  color:#eef8ff;
+}
+.web-pricing-page .price-note .button{
+  border:1px solid rgba(103,232,255,.5)!important;
+  background:linear-gradient(135deg,rgba(103,232,255,.2),rgba(109,168,255,.1))!important;
+  color:#f4fdff!important;
+}
+.web-contact-page .contact{
+  background:
+    linear-gradient(180deg,rgba(5,13,24,.2),rgba(7,19,32,.82)),
+    radial-gradient(circle at 15% 20%,rgba(103,232,255,.05),transparent 28%);
+}
+.web-contact-page .contact-card{
+  border:1px solid rgba(103,232,255,.18);
+  border-radius:0;
+}
+@media(max-width:760px){
+  .web-pricing-page .web-package-grid{
+    grid-template-columns:1fr;
+  }
+  .web-pricing-page .web-package-card{
+    padding:22px;
+  }
+  .web-pricing-page .pricing-group-heading{
+    grid-template-columns:42px 1fr;
+    gap:12px;
+  }
+}
