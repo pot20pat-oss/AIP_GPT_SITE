@@ -76,7 +76,7 @@ function WebHome() {
       <article className="editorial-lead holo-panel" data-reveal="hero-lead">
         <div className="holo-corner holo-corner-tl" aria-hidden="true"></div>
         <div className="holo-corner holo-corner-br" aria-hidden="true"></div>
-        <Link className="editorial-lead-image magic-photo" href="/realisation-envol-des-enfants"><img src="/projet-envol-enfants.webp" srcSet="/projet-envol-enfants-700.webp 700w, /projet-envol-enfants.webp 1400w" sizes="(max-width: 760px) calc(100vw - 48px), 616px" alt="L’Envol des Enfants, boutique en ligne conçue sur mesure" loading="eager" fetchPriority="high" decoding="async" /></Link>
+        <Link className="editorial-lead-image magic-photo" href="/realisation-envol-des-enfants"><img src="/projet-envol-enfants.webp" srcSet="/projet-envol-enfants-700.webp 700w, /projet-envol-enfants.webp 1400w" sizes="(max-width: 760px) calc(100vw - 48px), 616px" width="1400" height="760" alt="L’Envol des Enfants, boutique en ligne conçue sur mesure" loading="eager" fetchPriority="high" /></Link>
         <div className="editorial-kicker">À LA UNE · RÉALISATION</div>
         <h1 data-typewrite="title">Une boutique en ligne pensée comme un vrai outil de travail.</h1>
         <p data-typewrite="body">L’Envol des Enfants réunit commerce bilingue, catalogue, gestion des produits, prix, stock, photos et visibilité dans une même expérience.</p>
