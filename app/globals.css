@@ -7987,3 +7987,38 @@ html[data-site-mode="it"] .header-it-cta:hover{
     border-top-color:#dbe6f1;
   }
 }
+
+
+/* AIP IT — HERO FACE CENTER FINAL 2026-10-04
+   Override the legacy >=1200px "show whole image" rule so the subject can
+   actually be centered inside the visible hero. */
+@media(min-width:1200px){
+  html[data-site-mode="it"] .hero-split-media{
+    height:clamp(620px,50vw,820px)!important;
+    aspect-ratio:auto!important;
+    overflow:hidden!important;
+  }
+
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:67% 46%!important;
+  }
+}
+
+@media(min-width:761px) and (max-width:1199px){
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    object-fit:cover!important;
+    object-position:64% 46%!important;
+  }
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    object-fit:cover!important;
+    object-position:61% 44%!important;
+  }
+}
