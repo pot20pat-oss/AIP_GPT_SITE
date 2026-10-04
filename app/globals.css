@@ -5360,8 +5360,9 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   position:absolute;
   top:7px;
   left:0;
-  display:flex;
-  width:max-content;
+  right:0;
+  height:18px;
+  overflow:hidden;
   white-space:nowrap;
   color:#38d9ff;
   font-family:Consolas,monospace;
@@ -5371,12 +5372,18 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   text-shadow:
     0 0 8px rgba(56,217,255,.38),
     0 0 18px rgba(56,217,255,.14);
-  animation:holoTicker 18s linear infinite;
-  will-change:transform;
 }
 .holo-data-stream span{
-  flex:none;
+  position:absolute;
+  top:0;
+  left:0;
+  width:max-content;
   padding-right:48px;
+  animation:holoTicker 22s linear infinite;
+  will-change:transform;
+}
+.holo-data-stream span:nth-child(2){
+  animation-delay:-11s;
 }
 .editorial-index-grid{
   padding-top:28px;
@@ -5540,8 +5547,8 @@ html[data-site-mode="web"] .editorial-web .header-phone{
   50%{opacity:1;transform:scale(1.2)}
 }
 @keyframes holoTicker{
-  from{transform:translate3d(0,0,0)}
-  to{transform:translate3d(-50%,0,0)}
+  from{transform:translate3d(100vw,0,0)}
+  to{transform:translate3d(-100%,0,0)}
 }
 @keyframes holoGridDrift{
   from{background-position:0 0,0 0}
