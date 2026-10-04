@@ -172,7 +172,11 @@ export function EditorialMotion() {
       if (document.visibilityState === "visible") syncVisibleState();
     };
 
-    window.addEventListener("pageshow", syncVisibleState);
+    const handlePageShow = (event: PageTransitionEvent) => {
+      if (event.persisted) syncVisibleState();
+    };
+
+    window.addEventListener("pageshow", handlePageShow);
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
@@ -181,7 +185,7 @@ export function EditorialMotion() {
       timers.forEach((timer) => window.clearTimeout(timer));
       timers.clear();
       observer?.disconnect();
-      window.removeEventListener("pageshow", syncVisibleState);
+      window.removeEventListener("pageshow", handlePageShow);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, [pathname]);
