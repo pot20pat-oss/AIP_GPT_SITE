@@ -4837,3 +4837,19 @@ html[data-site-mode="web"] .footer-site-web{
     font-size:40px;
   }
 }
+
+
+/* EDITORIAL PROOF DETAILS 2026-10-04 */
+.editorial-index-grid small{
+  display:block;
+  margin-top:7px;
+  color:#9eabba;
+  font-size:9px;
+  line-height:1.45;
+  letter-spacing:.035em;
+}
+@media(max-width:760px){
+  .editorial-index-grid small{
+    font-size:8.5px;
+  }
+}
