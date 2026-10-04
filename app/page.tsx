@@ -63,11 +63,48 @@ function InformatiqueHome() {
 }
 
 function WebHome() {
-  return <main className="home-page home-short home-domain-web"><SiteHeader />
-    <section className="hero-clean hero-split" id="accueil"><div className="hero-split-media"><img className="hero-clean-bg" src="/hero-aip-clean.png" alt="AIP Création Web" fetchPriority="high" decoding="async" /></div><div className="hero-clean-overlay hero-split-copy"><div className="hero-clean-brand">AIP <strong>CRÉATION WEB</strong></div><div className="hero-clean-location">● &nbsp; NICOLET · BÉCANCOUR · TROIS-RIVIÈRES · À DISTANCE</div><h1>Création de sites Web<span>.</span></h1><h2>Un outil utile pour votre entreprise.</h2><p>Site vitrine, boutique en ligne ou gestion sur mesure : une solution claire, rapide et adaptée à votre façon de travailler.</p><div className="hero-clean-actions hero-intent-actions"><Link className="hero-intent-choice hero-intent-web" href="/contact">Discuter de mon projet</Link><Link className="hero-intent-choice home-web-secondary" href="/tarifs">Voir les tarifs</Link></div></div></section>
-    <section className="metrics"><div className="shell metrics-grid"><div><strong>900 $ +</strong><span>site vitrine de base</span></div><div><strong>Sur mesure</strong><span>design, boutique et gestion</span></div><div><strong>Mobile</strong><span>pensé pour tous les écrans</span></div><div><strong>1 seul</strong><span>interlocuteur du début à la fin</span></div></div></section>
-    <section className="domain-services section shell"><div className="section-heading"><div><div className="eyebrow"><span></span> Création Web</div><h2>Votre besoin.<br /><em>La bonne solution.</em></h2></div><p>Pas besoin de connaître le jargon : choisissez simplement ce que votre entreprise doit accomplir.</p></div><div className="domain-service-grid"><article><span>01</span><h3>Site professionnel</h3><p>Présentez clairement votre entreprise, vos services et la meilleure façon de vous joindre.</p><Link className="button button-dark" href="/site-web-pme">Sites pour PME</Link></article><article><span>02</span><h3>Boutique en ligne</h3><p>Vendez vos produits avec un catalogue et une expérience d’achat adaptés à votre activité.</p><Link className="button button-dark" href="/creation-boutique-en-ligne">Voir les boutiques</Link></article><article><span>03</span><h3>Gestion sur mesure</h3><p>Gérez produits, photos, prix, stock ou contenu avec un outil conçu autour de vos opérations.</p><Link className="button button-dark" href="/developpement-cms-sur-mesure">Voir les outils</Link></article></div></section>
-    <section className="home-featured section" id="realisations"><div className="shell home-featured-grid"><a className="home-featured-image" href="https://envoldesenfants.com/" target="_blank" rel="noopener noreferrer" aria-label="Visiter L’Envol des Enfants"><img src="/projet-envol-enfants.png" alt="Boutique en ligne L’Envol des Enfants" loading="lazy" decoding="async" /></a><div className="home-featured-copy"><div className="eyebrow"><span></span> Réalisation Web</div><h2>L’Envol des Enfants.<br /><em>Une boutique pensée pour le vrai travail.</em></h2><p>Boutique bilingue avec gestion des produits, photos, prix, stock et visibilité. L’objectif : que la cliente puisse gérer son commerce simplement.</p><div className="home-featured-actions"><Link className="button button-dark" href="/realisation-envol-des-enfants">Voir l’étude de cas</Link><Link className="button button-outline" href="/contact">Parler de votre projet</Link></div></div></div></section>
+  return <main className="home-page home-domain-web editorial-web"><SiteHeader />
+    <section className="editorial-masthead shell" id="accueil">
+      <div className="editorial-masthead-top"><span>AIP CRÉATION</span><span>NICOLET · BÉCANCOUR · TROIS-RIVIÈRES · À DISTANCE</span></div>
+      <div className="editorial-nameplate">CRÉATION <em>WEB</em></div>
+      <div className="editorial-deck">Sites Web · Boutiques en ligne · CMS sur mesure · Expériences numériques</div>
+    </section>
+
+    <section className="editorial-front shell">
+      <article className="editorial-lead">
+        <Link className="editorial-lead-image" href="/realisation-envol-des-enfants"><img src="/projet-envol-enfants.png" alt="L’Envol des Enfants, boutique en ligne conçue sur mesure" fetchPriority="high" decoding="async" /></Link>
+        <div className="editorial-kicker">À LA UNE · RÉALISATION</div>
+        <h1>Une boutique en ligne pensée comme un vrai outil de travail.</h1>
+        <p>L’Envol des Enfants réunit commerce bilingue, catalogue, gestion des produits, prix, stock, photos et visibilité dans une même expérience.</p>
+        <div className="editorial-actions"><Link className="editorial-read" href="/realisation-envol-des-enfants">Lire l’étude de cas →</Link><Link className="editorial-cta" href="/contact">Discuter de votre projet</Link></div>
+      </article>
+
+      <aside className="editorial-rail">
+        <div className="editorial-rail-title">DOSSIERS</div>
+        <Link className="editorial-brief" href="/site-web-pme"><span>01</span><div><small>PRÉSENCE EN LIGNE</small><h2>Un site professionnel qui donne envie d’appeler.</h2><p>Structure claire, contenu utile, mobile et référencement local.</p></div></Link>
+        <Link className="editorial-brief" href="/creation-boutique-en-ligne"><span>02</span><div><small>COMMERCE</small><h2>Une boutique qui vend sans compliquer la gestion.</h2><p>Catalogue, navigation, expérience d’achat et administration.</p></div></Link>
+        <Link className="editorial-brief" href="/developpement-cms-sur-mesure"><span>03</span><div><small>OUTILS MÉTIER</small><h2>Un CMS construit autour de votre façon de travailler.</h2><p>Moins de contournements. Plus de contrôle.</p></div></Link>
+      </aside>
+    </section>
+
+    <section className="editorial-index">
+      <div className="shell editorial-index-grid">
+        <div><strong>900 $ +</strong><span>site vitrine de base</span></div>
+        <div><strong>Sur mesure</strong><span>design, boutique et gestion</span></div>
+        <div><strong>Mobile</strong><span>pensé pour tous les écrans</span></div>
+        <div><strong>1 seul</strong><span>interlocuteur du début à la fin</span></div>
+      </div>
+    </section>
+
+    <section className="editorial-section shell">
+      <div className="editorial-section-heading"><span>SAVOIR-FAIRE</span><h2>Le design ne sert pas à décorer.<br/><em>Il sert à faire comprendre.</em></h2><p>Chaque projet combine structure, hiérarchie visuelle, développement et performance pour rendre votre offre plus évidente.</p></div>
+      <div className="editorial-feature-grid">
+        <article><small>01 · STRATÉGIE</small><h3>Une structure qui raconte la bonne histoire.</h3><p>On organise le contenu pour que le visiteur comprenne rapidement qui vous êtes, ce que vous faites et pourquoi vous choisir.</p><Link href="/site-web-pme">Sites pour PME →</Link></article>
+        <article><small>02 · DESIGN</small><h3>Une identité visuelle qui ne ressemble pas à un thème acheté.</h3><p>Typographie, rythme, images, espaces et détails sont pensés comme un ensemble cohérent.</p><Link href="/creation-site-web-nicolet">Création Web locale →</Link></article>
+        <article><small>03 · DÉVELOPPEMENT</small><h3>Des fonctions conçues pour le vrai travail.</h3><p>Boutique, CMS, gestion de contenu et automatisations sont construits autour de vos opérations.</p><Link href="/developpement-cms-sur-mesure">CMS sur mesure →</Link></article>
+      </div>
+    </section>
+
     <WebProof />
     <WebNeutralReview />
     <ContactBlock web />
