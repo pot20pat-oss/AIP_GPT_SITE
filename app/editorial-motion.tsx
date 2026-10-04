@@ -86,6 +86,8 @@ export function EditorialMotion() {
     frame1 = window.requestAnimationFrame(() => {
       frame2 = window.requestAnimationFrame(() => {
         observer = new IntersectionObserver((entries) => {
+          if (document.visibilityState !== "visible") return;
+
           const entering = entries
             .filter((entry) => entry.isIntersecting)
             .map((entry) => entry.target as HTMLElement)
@@ -124,12 +126,40 @@ export function EditorialMotion() {
       });
     });
 
+    const syncVisibleState = () => {
+      if (document.visibilityState !== "visible") return;
+
+      window.requestAnimationFrame(() => {
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        elements.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          const inView = rect.bottom > viewportHeight * 0.05 && rect.top < viewportHeight * 0.92;
+
+          if (inView) {
+            clearTimer(el);
+            prepareTypeTargetsWithin(el);
+            el.classList.add("is-visible");
+          }
+        });
+      });
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") syncVisibleState();
+    };
+
+    window.addEventListener("pageshow", syncVisibleState);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
     return () => {
       window.cancelAnimationFrame(frame1);
       window.cancelAnimationFrame(frame2);
       timers.forEach((timer) => window.clearTimeout(timer));
       timers.clear();
       observer?.disconnect();
+      window.removeEventListener("pageshow", syncVisibleState);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
 
