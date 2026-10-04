@@ -6926,3 +6926,126 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
     transition:none!important;
   }
 }
+
+
+/* AIP CREATION — MOBILE HEADER REPAIR 2026-10-04 */
+@media(max-width:760px){
+  html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header{
+    width:calc(100% - 24px)!important;
+    min-height:0!important;
+    grid-template-columns:1fr!important;
+    grid-template-areas:
+      "brand"
+      "nav"
+      "contact"!important;
+    grid-template-rows:auto auto auto!important;
+    row-gap:8px!important;
+    padding:10px 12px 12px!important;
+    overflow:hidden!important;
+  }
+
+  html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header .brand{
+    grid-area:brand!important;
+    display:grid!important;
+    grid-template-columns:58px minmax(0,1fr)!important;
+    align-items:center!important;
+    column-gap:10px!important;
+    width:100%!important;
+    min-width:0!important;
+  }
+
+  html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header .brand-logo{
+    width:58px!important;
+    height:44px!important;
+    max-width:58px!important;
+    min-width:58px!important;
+  }
+
+  html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .brand-name-web{
+    min-width:0!important;
+    padding-left:10px!important;
+    gap:2px!important;
+  }
+
+  html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .brand-name-web small{
+    font-size:6.5px!important;
+    letter-spacing:.16em!important;
+  }
+
+  html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .brand-name-web > span{
+    font-size:18px!important;
+    line-height:1!important;
+    letter-spacing:-.65px!important;
+    white-space:nowrap!important;
+  }
+
+  html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .brand-name-web em{
+    display:none!important;
+  }
+
+  html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .nav-site-web{
+    grid-area:nav!important;
+    display:grid!important;
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+    align-items:center!important;
+    width:100%!important;
+    gap:0!important;
+    margin:0!important;
+    padding:6px 0 2px!important;
+    border-top:1px solid rgba(103,232,255,.095)!important;
+    white-space:normal!important;
+    overflow:visible!important;
+  }
+
+  html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .nav-site-web a{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    min-width:0!important;
+    min-height:34px!important;
+    padding:6px 5px!important;
+    font-size:9.5px!important;
+    line-height:1.15!important;
+    text-align:center!important;
+    white-space:nowrap!important;
+    overflow:hidden!important;
+    text-overflow:clip!important;
+  }
+
+  html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .nav-site-web a::before{
+    left:7px!important;
+    right:7px!important;
+    bottom:2px!important;
+  }
+
+  html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-contact{
+    grid-area:contact!important;
+    display:block!important;
+    width:100%!important;
+    margin:0!important;
+  }
+
+  html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-phone{
+    display:none!important;
+  }
+
+  html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta{
+    display:flex!important;
+    width:100%!important;
+    min-height:40px!important;
+    padding:0 14px!important;
+    font-size:10.5px!important;
+  }
+}
+
+@media(max-width:420px){
+  html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .nav-site-web{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    row-gap:2px!important;
+  }
+
+  html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .nav-site-web a{
+    min-height:31px!important;
+    font-size:9.5px!important;
+  }
+}
