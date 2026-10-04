@@ -86,9 +86,9 @@ function WebHome() {
       <aside className="editorial-rail holo-panel" data-reveal="hero-rail">
         <div className="holo-status" aria-hidden="true"><span></span> SERVICES WEB</div>
         <div className="editorial-rail-title">SERVICES</div>
-        <Link className="editorial-brief" href="/site-web-pme" data-reveal="brief"><span>01</span><div><small>PRÉSENCE EN LIGNE</small><h2 data-typewrite="title">Un site professionnel qui donne envie d’appeler.</h2><p>Structure claire, contenu utile, mobile et référencement local.</p></div></Link>
-        <Link className="editorial-brief" href="/creation-boutique-en-ligne" data-reveal="brief"><span>02</span><div><small>COMMERCE</small><h2 data-typewrite="title">Une boutique qui vend sans compliquer la gestion.</h2><p>Catalogue, navigation, expérience d’achat et administration.</p></div></Link>
-        <Link className="editorial-brief" href="/developpement-cms-sur-mesure" data-reveal="brief"><span>03</span><div><small>OUTILS MÉTIER</small><h2 data-typewrite="title">Un CMS construit autour de votre façon de travailler.</h2><p>Moins de contournements. Plus de contrôle.</p></div></Link>
+        <Link className="editorial-brief" href="/site-web-pme"><span>01</span><div><small>PRÉSENCE EN LIGNE</small><h2 data-typewrite="title">Un site professionnel qui donne envie d’appeler.</h2><p>Structure claire, contenu utile, mobile et référencement local.</p></div></Link>
+        <Link className="editorial-brief" href="/creation-boutique-en-ligne"><span>02</span><div><small>COMMERCE</small><h2 data-typewrite="title">Une boutique qui vend sans compliquer la gestion.</h2><p>Catalogue, navigation, expérience d’achat et administration.</p></div></Link>
+        <Link className="editorial-brief" href="/developpement-cms-sur-mesure"><span>03</span><div><small>OUTILS MÉTIER</small><h2 data-typewrite="title">Un CMS construit autour de votre façon de travailler.</h2><p>Moins de contournements. Plus de contrôle.</p></div></Link>
       </aside>
     </section>
 
