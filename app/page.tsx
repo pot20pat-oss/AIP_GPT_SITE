@@ -66,13 +66,18 @@ function InformatiqueHome() {
 function WebHome() {
   return <main className="home-page home-domain-web editorial-web"><EditorialMotion /><SiteHeader />
     <section className="editorial-masthead shell" id="accueil" data-reveal="hero">
-      <div className="editorial-masthead-top"><span>AIP CRÉATION</span><span>NICOLET · BÉCANCOUR · TROIS-RIVIÈRES · À DISTANCE</span></div>
-      <div className="editorial-nameplate">CRÉATION <em>WEB</em></div>
-      <div className="editorial-deck">Sites Web · Boutiques en ligne · CMS sur mesure · Expériences numériques</div>
+      <div className="holo-scanline" aria-hidden="true"></div>
+      <div className="holo-orbit holo-orbit-a" aria-hidden="true"></div>
+      <div className="holo-orbit holo-orbit-b" aria-hidden="true"></div>
+      <div className="editorial-masthead-top"><span>AIP CRÉATION · ÉDITION NUMÉRIQUE</span><span>NICOLET · BÉCANCOUR · TROIS-RIVIÈRES · À DISTANCE</span></div>
+      <div className="editorial-nameplate"><span>CRÉATION</span> <em>WEB</em><i aria-hidden="true">/// 2035</i></div>
+      <div className="editorial-deck"><span>Sites Web</span><span>Boutiques en ligne</span><span>CMS sur mesure</span><span>Expériences numériques</span></div>
     </section>
 
     <section className="editorial-front shell">
-      <article className="editorial-lead" data-reveal="hero-lead">
+      <article className="editorial-lead holo-panel" data-reveal="hero-lead">
+        <div className="holo-corner holo-corner-tl" aria-hidden="true"></div>
+        <div className="holo-corner holo-corner-br" aria-hidden="true"></div>
         <Link className="editorial-lead-image" href="/realisation-envol-des-enfants"><img src="/projet-envol-enfants.png" alt="L’Envol des Enfants, boutique en ligne conçue sur mesure" fetchPriority="high" decoding="async" /></Link>
         <div className="editorial-kicker">À LA UNE · RÉALISATION</div>
         <h1>Une boutique en ligne pensée comme un vrai outil de travail.</h1>
@@ -80,15 +85,17 @@ function WebHome() {
         <div className="editorial-actions"><Link className="editorial-read" href="/realisation-envol-des-enfants">Lire l’étude de cas →</Link><Link className="editorial-cta" href="/contact">Discuter de votre projet</Link></div>
       </article>
 
-      <aside className="editorial-rail" data-reveal="hero-rail">
-        <div className="editorial-rail-title">DOSSIERS</div>
+      <aside className="editorial-rail holo-panel" data-reveal="hero-rail">
+        <div className="holo-status" aria-hidden="true"><span></span> SIGNAL ACTIF</div>
+        <div className="editorial-rail-title">DOSSIERS / FLUX</div>
         <Link className="editorial-brief" href="/site-web-pme" data-reveal="brief"><span>01</span><div><small>PRÉSENCE EN LIGNE</small><h2>Un site professionnel qui donne envie d’appeler.</h2><p>Structure claire, contenu utile, mobile et référencement local.</p></div></Link>
         <Link className="editorial-brief" href="/creation-boutique-en-ligne" data-reveal="brief"><span>02</span><div><small>COMMERCE</small><h2>Une boutique qui vend sans compliquer la gestion.</h2><p>Catalogue, navigation, expérience d’achat et administration.</p></div></Link>
         <Link className="editorial-brief" href="/developpement-cms-sur-mesure" data-reveal="brief"><span>03</span><div><small>OUTILS MÉTIER</small><h2>Un CMS construit autour de votre façon de travailler.</h2><p>Moins de contournements. Plus de contrôle.</p></div></Link>
       </aside>
     </section>
 
-    <section className="editorial-index">
+    <section className="editorial-index holo-index">
+      <div className="holo-data-stream" aria-hidden="true">AIP // DESIGN // DEV // CMS // COMMERCE // SEO // CLOUD //</div>
       <div className="shell editorial-index-grid">
         <div><strong>900 $ +</strong><span>site vitrine de base</span><small>Boutique et CMS sur devis</small></div>
         <div><strong>FR / EN</strong><span>boutique bilingue en production</span><small>Une même expérience dans les deux langues</small></div>
@@ -97,8 +104,9 @@ function WebHome() {
       </div>
     </section>
 
-    <section className="editorial-section shell" data-reveal="section">
-      <div className="editorial-section-heading"><span>SAVOIR-FAIRE</span><h2>Le design ne sert pas à décorer.<br/><em>Il sert à faire comprendre.</em></h2><p>Chaque projet combine structure, hiérarchie visuelle, développement et performance pour rendre votre offre plus évidente.</p></div>
+    <section className="editorial-section shell holo-section" data-reveal="section">
+      <div className="holo-axis" aria-hidden="true"></div>
+      <div className="editorial-section-heading"><span>SAVOIR-FAIRE // 03 MODULES</span><h2>Le design ne sert pas à décorer.<br/><em>Il sert à faire comprendre.</em></h2><p>Chaque projet combine structure, hiérarchie visuelle, développement et performance pour rendre votre offre plus évidente.</p></div>
       <div className="editorial-feature-grid">
         <article data-reveal="feature"><small>01 · STRATÉGIE</small><h3>Une structure qui raconte la bonne histoire.</h3><p>On organise le contenu pour que le visiteur comprenne rapidement qui vous êtes, ce que vous faites et pourquoi vous choisir.</p><Link href="/site-web-pme">Sites pour PME →</Link></article>
         <article data-reveal="feature"><small>02 · DESIGN</small><h3>Une identité visuelle qui ne ressemble pas à un thème acheté.</h3><p>Typographie, rythme, images, espaces et détails sont pensés comme un ensemble cohérent.</p><Link href="/creation-site-web-nicolet">Création Web locale →</Link></article>
