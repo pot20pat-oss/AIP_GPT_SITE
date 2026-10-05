@@ -8465,3 +8465,63 @@ html[data-site-mode="it"] .header-it-cta:hover{
   filter:none!important;
   transform:none!important;
 }
+
+
+/* MOBILE REALISATION IMAGE — keep the complete project preview visible */
+@media(max-width:760px){
+  .editorial-web .editorial-lead-image{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+  .editorial-web .editorial-lead-image img{
+    display:block;
+    width:100%!important;
+    height:auto!important;
+    max-width:100%!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center top!important;
+    margin:0 auto!important;
+  }
+}
+
+/* AIP IT — back-to-top orb, adapted to the light Atelier identity */
+html[data-site-mode="it"] .back-to-top{
+  display:flex;
+  border-color:rgba(39,111,164,.42);
+  background:
+    radial-gradient(circle at 34% 24%,rgba(255,255,255,.92),transparent 22%),
+    radial-gradient(circle at 50% 62%,rgba(55,139,205,.14),transparent 46%),
+    linear-gradient(145deg,#ffffff 0%,#eef5fb 58%,#dfeaf4 100%);
+  box-shadow:
+    0 12px 28px rgba(23,52,95,.18),
+    0 0 0 1px rgba(23,52,95,.06),
+    inset 0 1px 1px rgba(255,255,255,.95),
+    inset 0 -6px 12px rgba(50,95,135,.08);
+}
+html[data-site-mode="it"] .back-to-top::before{
+  border-color:rgba(39,111,164,.18);
+  background:
+    linear-gradient(155deg,rgba(255,255,255,.88),rgba(255,255,255,0) 48%),
+    radial-gradient(circle at 50% 72%,rgba(43,143,206,.08),transparent 44%);
+  box-shadow:inset 0 1px rgba(255,255,255,.9),inset 0 -4px 10px rgba(38,89,128,.06);
+}
+html[data-site-mode="it"] .back-to-top::after{
+  background:rgba(31,60,88,.2);
+  opacity:.42;
+}
+html[data-site-mode="it"] .back-to-top-orb img{
+  filter:
+    drop-shadow(0 0 2px rgba(25,126,200,.18))
+    drop-shadow(0 3px 3px rgba(22,54,86,.2));
+}
+html[data-site-mode="it"] .back-to-top:hover{
+  border-color:rgba(15,126,216,.62);
+  box-shadow:
+    0 16px 32px rgba(23,52,95,.2),
+    0 0 18px rgba(43,143,206,.12),
+    inset 0 1px 2px rgba(255,255,255,.98);
+}
