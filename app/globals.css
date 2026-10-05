@@ -8668,7 +8668,7 @@ html[data-site-mode="it"] .home-domain-it .contact-card::before{
     transparent 100%
   );
   transform:translate3d(-170%,0,0) skewX(-18deg);
-  animation:aipCardReflection 8.8s cubic-bezier(.22,1,.36,1) infinite;
+  animation:aipCardReflection 16s cubic-bezier(.22,1,.36,1) infinite;
   will-change:transform;
 }
 
@@ -8707,7 +8707,7 @@ html[data-site-mode="it"] .home-domain-it .contact-card::before{
   html[data-site-mode="it"] .home-domain-it .domain-service-grid article:hover::before,
   html[data-site-mode="it"] .home-domain-it .reviews-grid>article:hover::before,
   html[data-site-mode="it"] .home-domain-it .contact-card:hover::before{
-    animation-duration:5.8s;
+    animation-duration:11s;
   }
 }
 
