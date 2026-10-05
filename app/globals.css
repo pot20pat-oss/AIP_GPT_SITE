@@ -9133,3 +9133,125 @@ html[data-site-mode="it"] .footer-nap strong{
     gap:8px!important;
   }
 }
+
+
+/* AIP IT — mobile finishing pass 2026-10-05 */
+@media(max-width:760px){
+  html[data-site-mode="it"] .home-domain-it .hero-clean.hero-split .hero-split-copy{
+    padding-top:30px!important;
+    padding-bottom:38px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .hero-clean.hero-split h1{
+    font-size:42px!important;
+    line-height:.98!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .hero-clean.hero-split h2{
+    font-size:36px!important;
+    line-height:1.02!important;
+    margin-top:6px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .hero-clean.hero-split p{
+    max-width:34rem!important;
+    font-size:14.5px!important;
+    line-height:1.58!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .hero-intent-actions{
+    width:100%!important;
+    max-width:none!important;
+    gap:10px!important;
+    margin-top:20px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .hero-intent-actions .hero-intent-choice{
+    min-height:48px!important;
+    padding:11px 15px!important;
+    font-size:12px!important;
+    letter-spacing:.01em;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .metrics-grid{
+    gap:0!important;
+    padding-block:18px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .metrics-grid>div{
+    min-height:82px;
+    justify-content:center;
+    border-bottom:1px solid #e8edf3;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .metrics-grid>div:nth-last-child(-n+2){
+    border-bottom:0;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .metrics-grid strong{
+    font-size:23px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .metrics-grid span{
+    font-size:11.5px!important;
+    line-height:1.35!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .section{
+    padding-top:64px!important;
+    padding-bottom:64px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .section-heading{
+    margin-bottom:30px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .section-heading h2,
+  html[data-site-mode="it"] .home-domain-it .contact h2{
+    font-size:43px!important;
+    line-height:1.03!important;
+    letter-spacing:-2.2px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .section-heading>p,
+  html[data-site-mode="it"] .home-domain-it .contact-inner>div>p{
+    font-size:14px!important;
+    line-height:1.65!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .domain-service-grid{
+    gap:14px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .domain-service-grid article{
+    padding:23px 21px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .reviews-grid{
+    gap:14px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .reviews-grid>article{
+    padding:22px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .contact-inner{
+    gap:26px!important;
+  }
+
+  html[data-site-mode="it"] .footer{
+    min-height:118px!important;
+    justify-items:center!important;
+    text-align:center!important;
+    padding-bottom:24px!important;
+  }
+
+  html[data-site-mode="it"] .footer .footer-brand{
+    margin-inline:auto!important;
+  }
+
+  html[data-site-mode="it"] .footer>p{
+    width:100%!important;
+    text-align:center!important;
+  }
+}
