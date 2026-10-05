@@ -146,6 +146,21 @@ function WebHome() {
       </div>
     </section>
 
+    <section className="editorial-project editorial-project-morphee shell holo-panel" data-reveal="section" aria-labelledby="morphee-project-title">
+      <div className="morphee-mockups">
+        <span className="morphee-desktop" aria-hidden="true"><span className="morphee-browser-bar"><i></i><i></i><i></i></span><span className="morphee-screen"><img src="/projet-bois-morphee.webp" alt="" loading="lazy" decoding="async" /></span></span>
+        <span className="morphee-phone" aria-hidden="true"><span className="morphee-phone-notch"></span><span className="morphee-phone-screen"><img src="/projet-bois-morphee.webp" alt="" loading="lazy" decoding="async" /></span></span>
+        <span className="morphee-privacy-note">APERÇU ANONYMISÉ</span>
+      </div>
+      <div className="editorial-project-copy">
+        <div className="editorial-kicker">PROJET MAQUETTE · ÉBÉNISTERIE D’ART</div>
+        <h2 id="morphee-project-title">Les Bois Morphée.<br/><span>Une présence Web plus actuelle et plus immersive.</span></h2>
+        <p data-typewrite="body">Une proposition de modernisation pensée pour mettre en valeur le savoir-faire, l’atelier et les créations, sans exposer les renseignements personnels du propriétaire dans ce portfolio public.</p>
+        <div className="editorial-project-points"><span>Design sur mesure</span><span>Responsive</span><span>Image de marque</span><span>Aperçu anonymisé</span></div>
+        <div className="editorial-actions"><a className="editorial-read" href="https://bois-morphee-redesign.pages.dev/" target="_blank" rel="noopener noreferrer">Voir la maquette en ligne →</a><Link className="editorial-cta" href="/creation-sites-web">Création et conception Web</Link></div>
+      </div>
+    </section>
+
     <section className="editorial-section shell holo-section" data-reveal="section">
       <div className="holo-axis" aria-hidden="true"></div>
       <div className="editorial-section-heading"><span>SAVOIR-FAIRE</span><h2>Le design ne sert pas à décorer.<br/><em>Il sert à faire comprendre.</em></h2><p data-typewrite="body">Chaque projet combine structure, hiérarchie visuelle, développement et performance pour rendre votre offre plus évidente.</p></div>
