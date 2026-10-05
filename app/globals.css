@@ -9377,3 +9377,34 @@ html[data-site-mode="it"] .home-domain-it .contact-email-button{
     grid-template-columns:1fr;
   }
 }
+
+
+/* AIP IT — validation fixes 2026-10-05 */
+html[data-site-mode="it"] .back-to-top-arrow{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-54%);
+  z-index:3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  background:rgba(255,255,255,.92);
+  color:#145f96;
+  font-size:17px;
+  font-weight:900;
+  line-height:1;
+  box-shadow:0 2px 8px rgba(23,52,95,.12);
+  pointer-events:none;
+}
+html[data-site-mode="it"] .back-to-top-orb img{opacity:.34}
+@media(max-width:760px){
+  html[data-site-mode="it"] .back-to-top-arrow{
+    width:22px;
+    height:22px;
+    font-size:16px;
+  }
+}
