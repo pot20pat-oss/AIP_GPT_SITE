@@ -8538,3 +8538,16 @@ html[data-site-mode="it"] .footer-nap a{
 html[data-site-mode="it"] .footer-nap a:hover{
   color:#0d4d7d!important;
 }
+
+
+/* AIP IT — keep back-to-top clear of footer contact details */
+html[data-site-mode="it"] .back-to-top{
+  right:24px!important;
+  bottom:96px!important;
+}
+@media(max-width:760px){
+  html[data-site-mode="it"] .back-to-top{
+    right:14px!important;
+    bottom:84px!important;
+  }
+}
