@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - ".github/workflows/optimize-images.yml"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -20,72 +21,39 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y imagemagick
 
-      - name: Create optimized WebP assets
+      - name: Build responsive Atelier hero assets
         run: |
           set -euo pipefail
 
-          convert public/projet-envol-enfants.png \
-            -resize '1400x>' \
-            -strip \
-            -quality 82 \
-            -define webp:method=6 \
-            public/projet-envol-enfants.webp
+          curl -fsSL https://atelierpotvin.ca/aip-hero.webp -o /tmp/aip-hero.webp
 
-          convert public/projet-envol-enfants.png \
-            -resize '640x>' \
+          convert /tmp/aip-hero.webp \
+            -resize '800x>' \
             -strip \
-            -quality 74 \
+            -quality 72 \
             -define webp:method=6 \
-            public/projet-envol-enfants-640.webp
+            public/aip-hero-800.webp
 
-          convert public/hero-aip-clean.png \
-            -resize '1600x>' \
-            -strip \
-            -quality 82 \
-            -define webp:method=6 \
-            public/hero-aip-clean.webp
-
-          convert public/hero-aip-clean.png \
-            -resize '900x>' \
+          convert /tmp/aip-hero.webp \
+            -resize '1200x>' \
             -strip \
             -quality 78 \
             -define webp:method=6 \
-            public/hero-aip-clean-900.webp
+            public/aip-hero-1200.webp
 
-          convert public/aip-icon-v7.png \
-            -resize '160x160>' \
-            -strip \
-            -quality 90 \
-            -define webp:method=6 \
-            public/aip-icon-v7.webp
-
-          python3 - <<'PY'
-          from pathlib import Path
-
-          for name in ("app/page.tsx", "app/components.tsx"):
-              p = Path(name)
-              s = p.read_text(encoding="utf-8")
-              s = s.replace("/projet-envol-enfants.png", "/projet-envol-enfants.webp")
-              s = s.replace("/hero-aip-clean.png", "/hero-aip-clean.webp")
-              s = s.replace("/aip-icon-v7.ico", "/aip-icon-v7.webp")
-              s = s.replace("/aip-icon-v7.png", "/aip-icon-v7.webp")
-              p.write_text(s, encoding="utf-8")
-          PY
-
-          ls -lh public/projet-envol-enfants.png public/projet-envol-enfants.webp public/projet-envol-enfants-700.webp
-          ls -lh public/hero-aip-clean.png public/hero-aip-clean.webp public/hero-aip-clean-900.webp
-          ls -lh public/aip-icon-v7.png public/aip-icon-v7.webp
+          ls -lh /tmp/aip-hero.webp public/aip-hero-800.webp public/aip-hero-1200.webp
 
       - name: Commit optimized assets
         run: |
-          if git diff --quiet && [ ! -f public/projet-envol-enfants.webp ] && [ ! -f public/hero-aip-clean.webp ]; then
-            echo "Nothing to commit"
+          if git diff --quiet -- public/aip-hero-800.webp public/aip-hero-1200.webp && \
+             [ -f public/aip-hero-800.webp ] && [ -f public/aip-hero-1200.webp ]; then
+            echo "Responsive hero assets are already current"
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main
-          git add public/projet-envol-enfants.webp public/projet-envol-enfants-700.webp public/hero-aip-clean.webp public/hero-aip-clean-900.webp public/aip-icon-v7.webp app/page.tsx app/components.tsx
-          git commit -m "Optimize heavy project images for PageSpeed"
+          git add public/aip-hero-800.webp public/aip-hero-1200.webp
+          git commit -m "Add responsive Atelier hero images"
           git push
