@@ -8636,3 +8636,86 @@ html[data-site-mode="it"] .home-domain-it .contact-inner>div>p{
 .motion-ready .home-domain-it .reviews-grid [data-reveal="feature"]{
   transition-duration:1.15s;
 }
+
+
+/* AIP IT — animated card reflections 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .domain-service-grid article,
+html[data-site-mode="it"] .home-domain-it .reviews-grid>article,
+html[data-site-mode="it"] .home-domain-it .contact-card{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+
+html[data-site-mode="it"] .home-domain-it .domain-service-grid article::before,
+html[data-site-mode="it"] .home-domain-it .reviews-grid>article::before,
+html[data-site-mode="it"] .home-domain-it .contact-card::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  top:-30%;
+  bottom:-30%;
+  left:-55%;
+  width:42%;
+  pointer-events:none;
+  background:linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255,255,255,.03) 28%,
+    rgba(163,220,255,.20) 48%,
+    rgba(255,255,255,.28) 52%,
+    rgba(163,220,255,.12) 62%,
+    transparent 100%
+  );
+  transform:translate3d(-170%,0,0) skewX(-18deg);
+  animation:aipCardReflection 8.8s cubic-bezier(.22,1,.36,1) infinite;
+  will-change:transform;
+}
+
+html[data-site-mode="it"] .home-domain-it .domain-service-grid article:nth-child(2)::before{
+  animation-delay:1.2s;
+}
+html[data-site-mode="it"] .home-domain-it .domain-service-grid article:nth-child(3)::before{
+  animation-delay:2.4s;
+}
+html[data-site-mode="it"] .home-domain-it .reviews-grid>article:nth-child(1)::before{
+  animation-delay:.7s;
+}
+html[data-site-mode="it"] .home-domain-it .reviews-grid>article:nth-child(2)::before{
+  animation-delay:1.9s;
+}
+html[data-site-mode="it"] .home-domain-it .reviews-grid>article:nth-child(3)::before{
+  animation-delay:3.1s;
+}
+html[data-site-mode="it"] .home-domain-it .contact-card::before{
+  animation-delay:1.6s;
+}
+
+@keyframes aipCardReflection{
+  0%,58%{
+    transform:translate3d(-170%,0,0) skewX(-18deg);
+  }
+  76%{
+    transform:translate3d(420%,0,0) skewX(-18deg);
+  }
+  100%{
+    transform:translate3d(420%,0,0) skewX(-18deg);
+  }
+}
+
+@media(hover:hover){
+  html[data-site-mode="it"] .home-domain-it .domain-service-grid article:hover::before,
+  html[data-site-mode="it"] .home-domain-it .reviews-grid>article:hover::before,
+  html[data-site-mode="it"] .home-domain-it .contact-card:hover::before{
+    animation-duration:5.8s;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  html[data-site-mode="it"] .home-domain-it .domain-service-grid article::before,
+  html[data-site-mode="it"] .home-domain-it .reviews-grid>article::before,
+  html[data-site-mode="it"] .home-domain-it .contact-card::before{
+    animation:none!important;
+    display:none;
+  }
+}
