@@ -8604,3 +8604,22 @@ html[data-site-mode="it"] .home-domain-it .contact .eyebrow,
 html[data-site-mode="it"] .home-domain-it .contact-inner>div>p{
   color:#34445f!important;
 }
+
+
+/* AIP IT — MOBILE REVEALS WITHOUT LAYOUT SHIFT 2026-10-05 */
+@media(max-width:760px){
+  html[data-site-mode="it"] .home-domain-it [data-reveal]{
+    opacity:0!important;
+    transform:none!important;
+    transition:opacity .42s ease!important;
+    will-change:opacity!important;
+  }
+  html[data-site-mode="it"] .home-domain-it [data-reveal].is-visible{
+    opacity:1!important;
+    transform:none!important;
+  }
+  html[data-site-mode="it"] .home-domain-it .domain-service-grid [data-reveal="feature"],
+  html[data-site-mode="it"] .home-domain-it .reviews-grid [data-reveal="feature"]{
+    transition-duration:.38s!important;
+  }
+}
