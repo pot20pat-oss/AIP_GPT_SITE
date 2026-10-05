@@ -8551,3 +8551,32 @@ html[data-site-mode="it"] .back-to-top{
     bottom:84px!important;
   }
 }
+
+
+/* AIP IT — CLS STABILITY: reserve mobile hero geometry 2026-10-05 */
+@media(max-width:760px){
+  html[data-site-mode="it"] .hero-clean.hero-split .hero-split-media{
+    position:relative!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:1672 / 941!important;
+    overflow:hidden!important;
+    background:#061b30!important;
+  }
+  html[data-site-mode="it"] .hero-clean.hero-split .hero-split-media .hero-clean-bg{
+    position:absolute!important;
+    inset:0!important;
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-width:none!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:cover!important;
+    object-position:61% 44%!important;
+    transform:none!important;
+  }
+}
