@@ -157,7 +157,7 @@ function WebHome() {
         <h2 id="morphee-project-title">Les Bois Morphée.<br/><span>Une présence Web plus actuelle et plus immersive.</span></h2>
         <p data-typewrite="body">Une proposition de modernisation pensée pour mettre en valeur le savoir-faire, l’atelier et les créations, sans exposer les renseignements personnels du propriétaire dans ce portfolio public.</p>
         <div className="editorial-project-points"><span>Design sur mesure</span><span>Responsive</span><span>Image de marque</span><span>Aperçu anonymisé</span></div>
-        <div className="editorial-actions"><a className="editorial-read" href="https://bois-morphee-redesign.pages.dev/" target="_blank" rel="noopener noreferrer">Voir la maquette en ligne →</a><Link className="editorial-cta" href="/creation-sites-web">Création et conception Web</Link></div>
+        <div className="editorial-actions"><span className="editorial-read" aria-label="Aperçu public anonymisé">Aperçu anonymisé · lien public retiré</span><Link className="editorial-cta" href="/creation-sites-web">Création et conception Web</Link></div>
       </div>
     </section>
 
