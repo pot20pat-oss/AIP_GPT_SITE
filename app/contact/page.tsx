@@ -12,7 +12,7 @@ async function isCreationDomain() {
 
 export async function generateMetadata(): Promise<Metadata> {
   const web = await isCreationDomain();
-  const title = web ? "Contact création Web | AIP Création Web" : "Contact dépannage informatique | Atelier Informatique Potvin";
+  const title = web ? "Contact AIP Création Web | Nicolet" : "Contact dépannage informatique | Atelier Informatique Potvin";
   const description = web ? "Parlez directement à Patrick Potvin pour un site vitrine, une boutique en ligne ou un outil Web sur mesure." : "Contactez Atelier Informatique Potvin à Nicolet pour un dépannage, une réparation ou une assistance informatique à distance.";
   const base = web ? webSiteUrl : siteUrl;
   return { title, description, alternates: { canonical: `${base}/contact` }, openGraph: { title, description, url: `${base}/contact`, type: "website", locale: "fr_CA" } };
