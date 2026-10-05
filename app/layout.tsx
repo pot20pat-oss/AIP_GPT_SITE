@@ -27,9 +27,9 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: { title, description, url: base, siteName: isWebSite ? "AIP Création Web" : businessName, images: [{ url: `${base}/aip-travail-03.webp`, alt: "Patrick Potvin, services informatiques à Nicolet" }], locale: "fr_CA", type: "website" },
     twitter: { card: "summary_large_image", title, description, images: [`${base}/aip-travail-03.webp`] },
     icons: {
-      icon: [{ url: "/aip-favicon-exact-v10.png", type: "image/png", sizes: "48x48" }],
-      shortcut: "/aip-favicon-exact-v10.png",
-      apple: "/aip-favicon-exact-v10.png",
+      icon: [{ url: "/aip-icon-v7.png", type: "image/png", sizes: "48x48" }],
+      shortcut: "/aip-icon-v7.png",
+      apple: "/aip-icon-v7.png",
     },
   };
 }
@@ -52,7 +52,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         url: siteUrl,
         telephone: "+1-819-380-2999",
         image,
-        logo: `${siteUrl}/aip-logo-exact-v10.png`,
+        logo: `${siteUrl}/aip-icon-v7.png`,
         founder: { "@type": "Person", name: "Patrick Potvin" },
         address: { "@type": "PostalAddress", streetAddress: "462 rue D. N. St-Cyr", addressLocality: "Nicolet", addressRegion: "QC", postalCode: "J3T 1H3", addressCountry: "CA" },
         areaServed: ["Nicolet", "Bécancour", "Trois-Rivières", "Saint-Célestin", "Centre-du-Québec"].map(name => ({ "@type": "Place", name })),
