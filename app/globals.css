@@ -8230,7 +8230,7 @@ html[data-site-mode="it"] .header-it-cta:hover{
   position:relative;
   display:block;
   min-height:430px;
-  padding:34px 42px 34px 28px;
+  padding:34px 56px 34px 28px;
   overflow:hidden;
   background:
     radial-gradient(circle at 22% 18%,rgba(103,232,255,.11),transparent 32%),
@@ -8241,7 +8241,7 @@ html[data-site-mode="it"] .header-it-cta:hover{
 .morphee-desktop{
   position:relative;
   display:block;
-  width:min(92%,760px);
+  width:min(88%,760px);
   margin:8px auto 0 0;
   border:1px solid rgba(214,229,240,.22);
   border-radius:16px 16px 10px 10px;
@@ -8265,12 +8265,17 @@ html[data-site-mode="it"] .header-it-cta:hover{
   border-radius:50%;
   background:rgba(255,255,255,.25);
 }
-.morphee-screen{
+.morphee-screen,
+.morphee-phone-screen{
   position:relative;
   display:block;
-  aspect-ratio:16/10;
   overflow:hidden;
   background:#111;
+}
+.morphee-screen{aspect-ratio:16/10}
+.morphee-phone-screen{
+  aspect-ratio:9/18;
+  border-radius:15px;
 }
 .morphee-screen::after,
 .morphee-phone-screen::after{
@@ -8278,9 +8283,7 @@ html[data-site-mode="it"] .header-it-cta:hover{
   position:absolute;
   inset:0;
   pointer-events:none;
-  background:
-    linear-gradient(180deg,transparent 0 56%,rgba(5,10,16,.34) 74%,rgba(5,10,16,.72) 100%);
-  backdrop-filter:blur(1.4px);
+  background:linear-gradient(180deg,rgba(3,8,13,.04),transparent 24%,rgba(3,8,13,.06) 100%);
 }
 .morphee-screen img,
 .morphee-phone-screen img{
@@ -8288,38 +8291,65 @@ html[data-site-mode="it"] .header-it-cta:hover{
   height:100%;
   object-fit:cover;
   object-position:center top;
-  filter:blur(2.2px) saturate(.9) contrast(1.02);
-  transform:scale(1.012);
+  filter:saturate(.96) contrast(1.03) brightness(.96);
+  transform:none;
+}
+.morphee-private-mask{
+  position:absolute;
+  z-index:2;
+  display:block;
+  pointer-events:none;
+  border-radius:5px;
+  background:rgba(5,10,16,.72);
+  border:1px solid rgba(118,231,255,.12);
+  box-shadow:0 0 0 1px rgba(0,0,0,.25);
+  backdrop-filter:blur(13px);
+  -webkit-backdrop-filter:blur(13px);
+}
+.morphee-private-mask-header{
+  top:2.2%;
+  right:3.5%;
+  width:58%;
+  height:9%;
+}
+.morphee-private-mask-contact{
+  right:4%;
+  bottom:4%;
+  width:38%;
+  height:8%;
 }
 .morphee-phone{
   position:absolute;
-  right:24px;
+  left:min(72%,590px);
+  right:auto;
   bottom:22px;
-  width:124px;
+  width:108px;
   padding:9px 7px 8px;
-  border-radius:24px;
+  border-radius:22px;
   background:#05090e;
   border:1px solid rgba(222,238,249,.28);
   box-shadow:0 18px 48px rgba(0,0,0,.5);
 }
 .morphee-phone-notch{
   display:block;
-  width:38px;
+  width:34px;
   height:5px;
   margin:0 auto 7px;
   border-radius:999px;
   background:#222d38;
 }
-.morphee-phone-screen{
-  position:relative;
-  display:block;
-  aspect-ratio:9/18;
-  overflow:hidden;
-  border-radius:15px;
-  background:#111;
+.morphee-phone-screen img{object-position:54% top}
+.morphee-phone-screen .morphee-private-mask-header{
+  top:2%;
+  right:4%;
+  width:72%;
+  height:8%;
 }
-.morphee-phone-screen img{
-  object-position:54% top;
+.morphee-phone-screen .morphee-private-mask-contact{
+  right:5%;
+  bottom:4%;
+  width:55%;
+  height:7%;
 }
 .morphee-privacy-note{
   position:absolute;
@@ -8333,20 +8363,26 @@ html[data-site-mode="it"] .header-it-cta:hover{
   font:700 9px/1 Consolas,"SFMono-Regular",monospace;
   letter-spacing:.13em;
 }
+@media(max-width:1100px){
+  .morphee-phone{
+    left:auto;
+    right:18px;
+    width:96px;
+  }
+}
 @media(max-width:760px){
   .portfolio-project-morphee .morphee-mockups{
     min-height:310px;
-    padding:24px 34px 28px 18px;
+    padding:24px 24px 28px 18px;
   }
-  .morphee-desktop{
-    width:94%;
-  }
+  .morphee-desktop{width:91%}
   .morphee-phone{
-    width:88px;
+    width:78px;
     right:12px;
     bottom:14px;
-    border-radius:18px;
+    border-radius:17px;
   }
+  .morphee-private-mask{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
   .morphee-privacy-note{
     left:16px;
     bottom:14px;
