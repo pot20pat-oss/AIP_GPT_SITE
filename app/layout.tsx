@@ -27,9 +27,12 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: { title, description, url: base, siteName: isWebSite ? "AIP Création Web" : businessName, images: [{ url: `${base}/aip-travail-03.webp`, alt: "Patrick Potvin, services informatiques à Nicolet" }], locale: "fr_CA", type: "website" },
     twitter: { card: "summary_large_image", title, description, images: [`${base}/aip-travail-03.webp`] },
     icons: {
-      icon: [{ url: "/aip-icon-v7.png", type: "image/png", sizes: "48x48" }],
-      shortcut: "/aip-icon-v7.png",
-      apple: "/aip-icon-v7.png",
+      icon: [
+        { url: "/favicon.ico?v=11", type: "image/x-icon", sizes: "16x16" },
+        { url: "/aip-favicon-v11.png?v=11", type: "image/png", sizes: "16x16" },
+      ],
+      shortcut: "/favicon.ico?v=11",
+      apple: "/aip-favicon-v11.png?v=11",
     },
   };
 }
