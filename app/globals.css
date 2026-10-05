@@ -6838,12 +6838,10 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
   from{
     opacity:0;
     transform:translateY(34px) scale(.985);
-    filter:blur(3px);
   }
   to{
     opacity:1;
     transform:none;
-    filter:none;
   }
 }
 
