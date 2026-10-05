@@ -28,25 +28,43 @@ jobs:
           curl -fsSL https://atelierpotvin.ca/aip-hero.webp -o /tmp/aip-hero.webp
 
           convert /tmp/aip-hero.webp \
-            -resize '800x>' \
+            -resize '640x>' \
+            -strip \
+            -quality 68 \
+            -define webp:method=6 \
+            public/aip-hero-640.webp
+
+          convert /tmp/aip-hero.webp \
+            -resize '960x>' \
             -strip \
             -quality 72 \
             -define webp:method=6 \
-            public/aip-hero-800.webp
+            public/aip-hero-960.webp
 
           convert /tmp/aip-hero.webp \
-            -resize '1200x>' \
+            -resize '1280x>' \
             -strip \
-            -quality 78 \
+            -quality 76 \
             -define webp:method=6 \
-            public/aip-hero-1200.webp
+            public/aip-hero-1280.webp
 
-          ls -lh /tmp/aip-hero.webp public/aip-hero-800.webp public/aip-hero-1200.webp
+          python3 - <<'PY'
+          from pathlib import Path
+
+          p = Path("app/page.tsx")
+          s = p.read_text(encoding="utf-8")
+          old = '<img className="hero-clean-bg" src="/aip-hero.webp" alt="Atelier Informatique Potvin" width="1672" height="941" loading="eager" fetchPriority="high" decoding="async" />'
+          new = '<img className="hero-clean-bg" src="/aip-hero.webp" srcSet="/aip-hero-640.webp 640w, /aip-hero-960.webp 960w, /aip-hero-1280.webp 1280w, /aip-hero.webp 1672w" sizes="100vw" alt="Atelier Informatique Potvin" width="1672" height="941" loading="eager" fetchPriority="high" decoding="async" />'
+          if old in s:
+              s = s.replace(old, new)
+          p.write_text(s, encoding="utf-8")
+          PY
+
+          ls -lh /tmp/aip-hero.webp public/aip-hero-640.webp public/aip-hero-960.webp public/aip-hero-1280.webp
 
       - name: Commit optimized assets
         run: |
-          if [ -z "$(git status --porcelain -- public/aip-hero-800.webp public/aip-hero-1200.webp)" ] && \
-             [ -f public/aip-hero-800.webp ] && [ -f public/aip-hero-1200.webp ]; then
+          if [ -z "$(git status --porcelain -- public/aip-hero-640.webp public/aip-hero-960.webp public/aip-hero-1280.webp app/page.tsx)" ]; then
             echo "Responsive hero assets are already current"
             exit 0
           fi
@@ -54,6 +72,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main
-          git add public/aip-hero-800.webp public/aip-hero-1200.webp
-          git commit -m "Add responsive Atelier hero images"
+          git add public/aip-hero-640.webp public/aip-hero-960.webp public/aip-hero-1280.webp app/page.tsx
+          git commit -m "Serve responsive Atelier hero image"
           git push
