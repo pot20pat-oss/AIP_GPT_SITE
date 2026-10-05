@@ -8734,3 +8734,69 @@ html[data-site-mode="it"] .home-domain-it .hero-intent-choice > *{
 html[data-site-mode="it"] .home-domain-it .button:nth-of-type(2)::before{
   animation-delay:.9s;
 }
+
+
+/* AIP IT — final visual polish pass 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .domain-service-grid article,
+html[data-site-mode="it"] .home-domain-it .reviews-grid>article,
+html[data-site-mode="it"] .home-domain-it .contact-card{
+  border:1px solid #dbe4ef;
+  border-radius:14px;
+  box-shadow:
+    0 10px 28px rgba(23,36,69,.055),
+    inset 0 3px 0 rgba(53,126,165,.16);
+}
+
+html[data-site-mode="it"] .home-domain-it .domain-service-grid article{
+  background:linear-gradient(180deg,#fff 0%,#fcfdff 100%);
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews-grid>article{
+  background:linear-gradient(180deg,#fff 0%,#fbfcff 100%);
+}
+
+html[data-site-mode="it"] .home-domain-it .domain-service-grid h3{
+  margin-top:16px;
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews-grid blockquote{
+  color:#233451;
+}
+
+html[data-site-mode="it"] .home-domain-it .button,
+html[data-site-mode="it"] .home-domain-it .hero-intent-choice{
+  border-radius:9px;
+}
+
+html[data-site-mode="it"] .home-domain-it .contact-card .big-phone{
+  color:#172445;
+}
+
+html[data-site-mode="it"] .footer{
+  border-top:1px solid #e1e8f1;
+}
+
+html[data-site-mode="it"] .footer>p{
+  letter-spacing:.01em;
+}
+
+@media(hover:hover){
+  html[data-site-mode="it"] .home-domain-it .domain-service-grid article:hover,
+  html[data-site-mode="it"] .home-domain-it .reviews-grid>article:hover{
+    border-color:#cbd8e6;
+    box-shadow:
+      0 16px 34px rgba(23,36,69,.075),
+      inset 0 3px 0 rgba(53,126,165,.22);
+  }
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .home-domain-it .domain-service-grid article,
+  html[data-site-mode="it"] .home-domain-it .reviews-grid>article,
+  html[data-site-mode="it"] .home-domain-it .contact-card{
+    border-radius:12px;
+    box-shadow:
+      0 8px 22px rgba(23,36,69,.05),
+      inset 0 2px 0 rgba(53,126,165,.14);
+  }
+}
