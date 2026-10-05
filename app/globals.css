@@ -8226,6 +8226,7 @@ html[data-site-mode="it"] .header-it-cta:hover{
 
 
 /* BOIS MORPHÉE — PUBLIC PORTFOLIO MOCKUPS (ANONYMIZED) 2026-10-05 */
+.editorial-project-morphee .morphee-mockups,
 .portfolio-project-morphee .morphee-mockups{
   position:relative;
   display:block;
@@ -8385,6 +8386,7 @@ html[data-site-mode="it"] .header-it-cta:hover{
   }
 }
 @media(max-width:760px){
+  .editorial-project-morphee .morphee-mockups,
   .portfolio-project-morphee .morphee-mockups{
     min-height:310px;
     padding:24px 24px 28px 18px;
@@ -8402,5 +8404,50 @@ html[data-site-mode="it"] .header-it-cta:hover{
     left:16px;
     bottom:14px;
     font-size:7px;
+  }
+}
+
+
+/* LIVE AIP CREATION — Bois Morphée layout fix */
+.editorial-project-morphee{
+  align-items:stretch;
+}
+.editorial-project-morphee .morphee-mockups{
+  min-width:0;
+  width:100%;
+  min-height:430px;
+}
+.editorial-project-morphee .morphee-desktop{
+  width:100%;
+  max-width:none;
+  margin:8px 0 0;
+}
+.editorial-project-morphee .morphee-phone{
+  left:auto!important;
+  right:18px!important;
+  bottom:20px!important;
+  width:82px!important;
+}
+.editorial-project-morphee .morphee-privacy-note{
+  left:18px;
+  bottom:18px;
+}
+@media(max-width:900px){
+  .editorial-project-morphee .morphee-mockups{
+    min-height:360px;
+  }
+  .editorial-project-morphee .morphee-phone{
+    right:16px!important;
+    width:76px!important;
+  }
+}
+@media(max-width:760px){
+  .editorial-project-morphee .morphee-mockups{
+    min-height:300px;
+  }
+  .editorial-project-morphee .morphee-phone{
+    right:10px!important;
+    bottom:12px!important;
+    width:66px!important;
   }
 }
