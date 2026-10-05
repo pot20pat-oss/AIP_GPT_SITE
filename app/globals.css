@@ -8313,17 +8313,18 @@ html[data-site-mode="it"] .header-it-cta:hover{
   height:9%;
 }
 .morphee-private-mask-contact{
-  right:4%;
-  bottom:4%;
-  width:38%;
+  left:43%;
+  right:auto;
+  bottom:1.5%;
+  width:31%;
   height:8%;
 }
 .morphee-phone{
   position:absolute;
-  left:min(72%,590px);
-  right:auto;
+  left:auto!important;
+  right:22px!important;
   bottom:22px;
-  width:108px;
+  width:92px;
   padding:9px 7px 8px;
   border-radius:22px;
   background:#05090e;
@@ -8346,9 +8347,10 @@ html[data-site-mode="it"] .header-it-cta:hover{
   height:8%;
 }
 .morphee-phone-screen .morphee-private-mask-contact{
-  right:5%;
-  bottom:4%;
-  width:55%;
+  left:8%;
+  right:auto;
+  bottom:1.5%;
+  width:84%;
   height:7%;
 }
 .morphee-privacy-note{
@@ -8365,9 +8367,9 @@ html[data-site-mode="it"] .header-it-cta:hover{
 }
 @media(max-width:1100px){
   .morphee-phone{
-    left:auto;
-    right:18px;
-    width:96px;
+    left:auto!important;
+    right:14px!important;
+    width:84px;
   }
 }
 @media(max-width:760px){
@@ -8377,8 +8379,9 @@ html[data-site-mode="it"] .header-it-cta:hover{
   }
   .morphee-desktop{width:91%}
   .morphee-phone{
-    width:78px;
-    right:12px;
+    width:72px;
+    left:auto!important;
+    right:10px!important;
     bottom:14px;
     border-radius:17px;
   }
