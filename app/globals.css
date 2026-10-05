@@ -9332,3 +9332,48 @@ html[data-site-mode="it"] .back-to-top-orb img{
     font-size:16px;
   }
 }
+
+
+/* AIP IT — trust and content clarity pass 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .hero-owner{
+  margin:0 0 12px;
+  color:#315f83;
+  font-size:13px;
+  font-weight:760;
+  letter-spacing:.015em;
+}
+
+html[data-site-mode="it"] .home-domain-it .contact-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+html[data-site-mode="it"] .home-domain-it .contact-actions .button{
+  width:100%;
+  justify-content:center;
+}
+
+html[data-site-mode="it"] .home-domain-it .contact-email-button{
+  border:1px solid #b7c6d6;
+  background:#fff;
+  color:#174f79;
+}
+
+@media(hover:hover){
+  html[data-site-mode="it"] .home-domain-it .contact-email-button:hover{
+    border-color:#8faec4;
+    background:#f7fbfe;
+  }
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .home-domain-it .hero-owner{
+    margin-bottom:10px;
+    font-size:12px;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .contact-actions{
+    grid-template-columns:1fr;
+  }
+}
