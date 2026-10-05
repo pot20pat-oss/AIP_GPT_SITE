@@ -8591,3 +8591,9 @@ html[data-site-mode="it"] .back-to-top{
     will-change:auto!important;
   }
 }
+
+
+/* AIP IT — WCAG contrast for service index labels 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .domain-service-grid article>span{
+  color:#145f96!important;
+}
