@@ -8611,7 +8611,7 @@ html[data-site-mode="it"] .home-domain-it .contact-inner>div>p{
   html[data-site-mode="it"] .home-domain-it [data-reveal]{
     opacity:0!important;
     transform:none!important;
-    transition:opacity .42s ease!important;
+    transition:opacity .85s cubic-bezier(.22,1,.36,1)!important;
     will-change:opacity!important;
   }
   html[data-site-mode="it"] .home-domain-it [data-reveal].is-visible{
@@ -8620,6 +8620,19 @@ html[data-site-mode="it"] .home-domain-it .contact-inner>div>p{
   }
   html[data-site-mode="it"] .home-domain-it .domain-service-grid [data-reveal="feature"],
   html[data-site-mode="it"] .home-domain-it .reviews-grid [data-reveal="feature"]{
-    transition-duration:.38s!important;
+    transition-duration:.72s!important;
   }
+}
+
+
+/* AIP IT — slower, readable reveal timing 2026-10-05 */
+.motion-ready .home-domain-it [data-reveal]{
+  transition-duration:.8s;
+}
+.motion-ready .home-domain-it [data-reveal="hero"]{
+  transition-duration:.9s;
+}
+.motion-ready .home-domain-it .domain-service-grid [data-reveal="feature"],
+.motion-ready .home-domain-it .reviews-grid [data-reveal="feature"]{
+  transition-duration:.72s;
 }
