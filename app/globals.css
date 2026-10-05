@@ -8520,3 +8520,21 @@ html[data-site-mode="it"] .back-to-top:hover{
     0 0 18px rgba(43,143,206,.12),
     inset 0 1px 2px rgba(255,255,255,.98);
 }
+
+
+/* AIP IT — accessibility contrast pass 2026-10-05 */
+html[data-site-mode="it"] .footer-nap,
+html[data-site-mode="it"] .footer-nap span{
+  color:#46566f!important;
+}
+html[data-site-mode="it"] .footer-nap strong{
+  color:#172445!important;
+}
+html[data-site-mode="it"] .footer-nap a{
+  color:#145f96!important;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+html[data-site-mode="it"] .footer-nap a:hover{
+  color:#0d4d7d!important;
+}
