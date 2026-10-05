@@ -148,8 +148,8 @@ function WebHome() {
 
     <section className="editorial-project editorial-project-morphee shell holo-panel" data-reveal="section" aria-labelledby="morphee-project-title">
       <div className="morphee-mockups">
-        <span className="morphee-desktop" aria-hidden="true"><span className="morphee-browser-bar"><i></i><i></i><i></i></span><span className="morphee-screen"><img src="/projet-bois-morphee.webp" alt="" loading="lazy" decoding="async" /></span></span>
-        <span className="morphee-phone" aria-hidden="true"><span className="morphee-phone-notch"></span><span className="morphee-phone-screen"><img src="/projet-bois-morphee.webp" alt="" loading="lazy" decoding="async" /></span></span>
+        <span className="morphee-desktop" aria-hidden="true"><span className="morphee-browser-bar"><i></i><i></i><i></i></span><span className="morphee-screen"><img src="/projet-bois-morphee.webp" alt="" loading="lazy" decoding="async" /><span className="morphee-private-mask morphee-private-mask-header"></span><span className="morphee-private-mask morphee-private-mask-contact"></span></span></span>
+        <span className="morphee-phone" aria-hidden="true"><span className="morphee-phone-notch"></span><span className="morphee-phone-screen"><img src="/projet-bois-morphee.webp" alt="" loading="lazy" decoding="async" /><span className="morphee-private-mask morphee-private-mask-header"></span><span className="morphee-private-mask morphee-private-mask-contact"></span></span></span>
         <span className="morphee-privacy-note">APERÇU ANONYMISÉ</span>
       </div>
       <div className="editorial-project-copy">
