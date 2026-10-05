@@ -8800,3 +8800,109 @@ html[data-site-mode="it"] .footer>p{
       inset 0 2px 0 rgba(53,126,165,.14);
   }
 }
+
+
+/* AIP IT — hierarchy and spacing polish 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .metrics{
+  background:linear-gradient(180deg,#fff 0%,#fbfcff 100%);
+}
+
+html[data-site-mode="it"] .home-domain-it .metrics-grid>div{
+  position:relative;
+  padding:8px 26px;
+}
+
+html[data-site-mode="it"] .home-domain-it .metrics-grid>div:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:18%;
+  width:1px;
+  height:64%;
+  background:#e1e8f1;
+}
+
+html[data-site-mode="it"] .home-domain-it .metrics-grid strong{
+  color:#172445;
+  font-weight:760;
+}
+
+html[data-site-mode="it"] .home-domain-it .metrics-grid span{
+  color:#52627b;
+}
+
+html[data-site-mode="it"] .home-domain-it .section-heading{
+  gap:56px;
+}
+
+html[data-site-mode="it"] .home-domain-it .section-heading>div{
+  max-width:680px;
+}
+
+html[data-site-mode="it"] .home-domain-it .section-heading>p{
+  max-width:390px;
+  color:#52627b;
+}
+
+html[data-site-mode="it"] .home-domain-it .domain-service-grid .button{
+  width:100%;
+  min-height:50px;
+  justify-content:center;
+}
+
+html[data-site-mode="it"] .home-domain-it .domain-service-grid p{
+  color:#52627b;
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews-grid>article{
+  display:flex;
+  flex-direction:column;
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews-grid .stars{
+  margin-bottom:4px;
+  font-size:15px;
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews-grid blockquote{
+  flex:1;
+  margin-top:16px;
+  margin-bottom:22px;
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews-grid>article>span{
+  padding-top:14px;
+  border-top:1px solid #e6ebf2;
+  color:#52627b;
+  font-weight:650;
+}
+
+html[data-site-mode="it"] .home-domain-it .contact-card{
+  padding:38px;
+}
+
+html[data-site-mode="it"] .home-domain-it .contact-card .big-phone{
+  font-size:34px;
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .home-domain-it .metrics-grid>div{
+    padding:10px 14px;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .metrics-grid>div::after{
+    display:none;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .section-heading{
+    gap:0;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .contact-card{
+    padding:26px 22px;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .contact-card .big-phone{
+    font-size:30px;
+  }
+}
