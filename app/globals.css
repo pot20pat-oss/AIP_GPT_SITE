@@ -9010,3 +9010,126 @@ html[data-site-mode="it"] .home-domain-it .contact-card{
     height:26px;
   }
 }
+
+
+/* AIP IT — header and footer finishing pass 2026-10-05 */
+html[data-site-mode="it"] .header{
+  border-bottom:1px solid #e5ebf2;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.98),rgba(251,253,255,.96));
+}
+
+html[data-site-mode="it"] .header .brand-name-it small{
+  color:#315f83;
+  font-weight:760;
+  letter-spacing:.055em;
+}
+
+html[data-site-mode="it"] .header .brand-name-it>span{
+  color:#172445;
+}
+
+html[data-site-mode="it"] .header .brand-name-it em{
+  color:#61708a;
+}
+
+html[data-site-mode="it"] .nav-site-it a{
+  position:relative;
+  padding-block:8px;
+}
+
+html[data-site-mode="it"] .nav-site-it a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:1px;
+  height:2px;
+  border-radius:999px;
+  background:#2f86bd;
+  transform:scaleX(0);
+  transform-origin:center;
+  transition:transform .22s ease;
+}
+
+@media(hover:hover){
+  html[data-site-mode="it"] .nav-site-it a:hover::after{
+    transform:scaleX(1);
+  }
+}
+
+html[data-site-mode="it"] .header-phone{
+  color:#24415f;
+  font-weight:720;
+}
+
+html[data-site-mode="it"] .header-it-cta{
+  border:1px solid #173356;
+  border-radius:9px;
+  background:linear-gradient(180deg,#24466f 0%,#172f50 100%);
+  color:#fff;
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.14),
+    0 6px 16px rgba(23,52,95,.12);
+}
+
+@media(hover:hover){
+  html[data-site-mode="it"] .header-it-cta:hover{
+    background:linear-gradient(180deg,#2c5482 0%,#1d3a61 100%);
+  }
+}
+
+html[data-site-mode="it"] .footer-service-links{
+  border-top:1px solid #e5ebf2;
+}
+
+html[data-site-mode="it"] .footer-service-links strong{
+  color:#172445;
+  font-weight:760;
+  letter-spacing:.02em;
+}
+
+html[data-site-mode="it"] .footer-service-links a{
+  color:#52627b!important;
+  transition:color .18s ease,transform .18s ease;
+}
+
+@media(hover:hover){
+  html[data-site-mode="it"] .footer-service-links a:hover{
+    color:#145f96!important;
+    transform:translateX(2px);
+  }
+}
+
+html[data-site-mode="it"] .footer-nap{
+  border-top:1px solid #e5ebf2;
+  border-bottom:1px solid #e5ebf2;
+  background:linear-gradient(180deg,#fff 0%,#fbfcfe 100%);
+}
+
+html[data-site-mode="it"] .footer-nap strong{
+  font-weight:760;
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .header{
+    border-bottom-color:#e7edf4;
+  }
+
+  html[data-site-mode="it"] .nav-site-it a::after{
+    display:none;
+  }
+
+  html[data-site-mode="it"] .footer-service-links{
+    padding-top:24px!important;
+    padding-bottom:24px!important;
+  }
+
+  html[data-site-mode="it"] .footer-service-links a:hover{
+    transform:none;
+  }
+
+  html[data-site-mode="it"] .footer-nap{
+    gap:8px!important;
+  }
+}
