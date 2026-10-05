@@ -45,7 +45,7 @@ jobs:
 
       - name: Commit optimized assets
         run: |
-          if git diff --quiet -- public/aip-hero-800.webp public/aip-hero-1200.webp && \
+          if [ -z "$(git status --porcelain -- public/aip-hero-800.webp public/aip-hero-1200.webp)" ] && \
              [ -f public/aip-hero-800.webp ] && [ -f public/aip-hero-1200.webp ]; then
             echo "Responsive hero assets are already current"
             exit 0
