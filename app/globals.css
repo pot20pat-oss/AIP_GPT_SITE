@@ -8597,3 +8597,10 @@ html[data-site-mode="it"] .back-to-top{
 html[data-site-mode="it"] .home-domain-it .domain-service-grid article>span{
   color:#145f96!important;
 }
+
+
+/* AIP IT — WCAG contrast for contact section 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .contact .eyebrow,
+html[data-site-mode="it"] .home-domain-it .contact-inner>div>p{
+  color:#34445f!important;
+}
