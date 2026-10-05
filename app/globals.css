@@ -8451,3 +8451,17 @@ html[data-site-mode="it"] .header-it-cta:hover{
     width:66px!important;
   }
 }
+
+
+/* BOIS MORPHÉE — APPROVED PUBLIC PREVIEW 2026-10-05 */
+.editorial-project-morphee .morphee-private-mask,
+.portfolio-project-morphee .morphee-private-mask{
+  display:none!important;
+}
+.editorial-project-morphee .morphee-screen img,
+.editorial-project-morphee .morphee-phone-screen img,
+.portfolio-project-morphee .morphee-screen img,
+.portfolio-project-morphee .morphee-phone-screen img{
+  filter:none!important;
+  transform:none!important;
+}
