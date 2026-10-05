@@ -8662,3 +8662,66 @@ html[data-site-mode="it"] .home-domain-it .contact-inner>div>p{
     width:auto!important;
   }
 }
+
+
+/* AIP IT — animated reflections on buttons only 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .button,
+html[data-site-mode="it"] .home-domain-it .hero-intent-choice{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+
+html[data-site-mode="it"] .home-domain-it .button::before,
+html[data-site-mode="it"] .home-domain-it .hero-intent-choice::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  top:-45%;
+  bottom:-45%;
+  left:-50%;
+  width:34%;
+  pointer-events:none;
+  background:linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255,255,255,.02) 25%,
+    rgba(183,226,255,.18) 46%,
+    rgba(255,255,255,.32) 52%,
+    rgba(183,226,255,.10) 65%,
+    transparent 100%
+  );
+  transform:translate3d(-180%,0,0) skewX(-18deg);
+  animation:aipButtonReflection 11.5s cubic-bezier(.22,1,.36,1) infinite;
+  will-change:transform;
+}
+
+html[data-site-mode="it"] .home-domain-it .button:nth-of-type(2)::before{
+  animation-delay:1.6s;
+}
+
+html[data-site-mode="it"] .home-domain-it .button > *,
+html[data-site-mode="it"] .home-domain-it .hero-intent-choice > *{
+  position:relative;
+  z-index:1;
+}
+
+@keyframes aipButtonReflection{
+  0%,62%{
+    transform:translate3d(-180%,0,0) skewX(-18deg);
+  }
+  80%{
+    transform:translate3d(480%,0,0) skewX(-18deg);
+  }
+  100%{
+    transform:translate3d(480%,0,0) skewX(-18deg);
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  html[data-site-mode="it"] .home-domain-it .button::before,
+  html[data-site-mode="it"] .home-domain-it .hero-intent-choice::before{
+    animation:none!important;
+    display:none;
+  }
+}
