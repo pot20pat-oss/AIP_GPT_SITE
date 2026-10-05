@@ -9408,3 +9408,42 @@ html[data-site-mode="it"] .back-to-top-orb img{opacity:.34}
     font-size:16px;
   }
 }
+
+
+/* PRIVACY PAGE 2026-10-05 */
+.privacy-page .detail-hero{
+  padding-bottom:56px;
+}
+.privacy-content{
+  display:grid;
+  gap:18px;
+  max-width:920px;
+}
+.privacy-content article{
+  padding:28px 30px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+}
+.privacy-content h2{
+  margin:0 0 10px;
+  font-size:22px;
+  letter-spacing:-.5px;
+}
+.privacy-content p{
+  margin:0;
+  color:#46566f;
+  font-size:14px;
+  line-height:1.75;
+}
+.privacy-content a{
+  color:#145f96;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+@media(max-width:760px){
+  .privacy-page .detail-hero{padding-bottom:38px}
+  .privacy-content{gap:12px}
+  .privacy-content article{padding:22px 20px}
+  .privacy-content h2{font-size:20px}
+}
