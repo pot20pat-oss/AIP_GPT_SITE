@@ -8692,7 +8692,7 @@ html[data-site-mode="it"] .home-domain-it .hero-intent-choice::before{
     transparent 100%
   );
   transform:translate3d(-180%,0,0) skewX(-18deg);
-  animation:aipButtonReflection 7.5s cubic-bezier(.22,1,.36,1) infinite;
+  animation:aipButtonReflection 8.4s ease-in-out infinite;
   will-change:transform;
 }
 
@@ -8707,11 +8707,14 @@ html[data-site-mode="it"] .home-domain-it .hero-intent-choice > *{
 }
 
 @keyframes aipButtonReflection{
-  0%,15%{
+  0%,10%{
     transform:translate3d(-180%,0,0) skewX(-18deg);
   }
-  42%{
+  36%,46%{
     transform:translate3d(480%,0,0) skewX(-18deg);
+  }
+  72%,82%{
+    transform:translate3d(-180%,0,0) skewX(-18deg);
   }
   100%{
     transform:translate3d(480%,0,0) skewX(-18deg);
@@ -8724,4 +8727,10 @@ html[data-site-mode="it"] .home-domain-it .hero-intent-choice > *{
     animation:none!important;
     display:none;
   }
+}
+
+
+/* AIP IT — flip-flop button reflection cadence 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .button:nth-of-type(2)::before{
+  animation-delay:.9s;
 }
