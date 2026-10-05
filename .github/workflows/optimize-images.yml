@@ -71,7 +71,7 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main
           git add public/aip-hero-640.webp public/aip-hero-960.webp public/aip-hero-1280.webp app/page.tsx
           git commit -m "Serve responsive Atelier hero image"
+          git pull --rebase origin main
           git push
