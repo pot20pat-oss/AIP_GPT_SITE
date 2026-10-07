@@ -7374,16 +7374,25 @@ html[data-site-mode="web"] :is(.editorial-web,.web-service-page) .header-web-cta
   border-radius:50%;
   transform:translateZ(12px);
 }
-.back-to-top-orb img{
-  display:block;
-  width:46px;
-  height:auto;
-  object-fit:contain;
-  image-rendering:auto;
-  filter:
-    drop-shadow(0 0 3px rgba(103,232,255,.28))
-    drop-shadow(0 3px 3px rgba(0,0,0,.42));
+.back-to-top-arrow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:100%;
+  color:#eafcff;
+  font-size:30px;
+  font-weight:700;
+  line-height:1;
+  text-shadow:0 0 10px rgba(103,232,255,.55),0 2px 4px rgba(0,0,0,.45);
+  transform:translateY(-2px);
+  pointer-events:none;
 }
+html[data-site-mode="it"] .back-to-top-arrow{
+  color:#145f96;
+  text-shadow:0 0 8px rgba(43,143,206,.22);
+}
+
 .back-to-top.is-visible{
   opacity:1;
   visibility:visible;
@@ -7419,10 +7428,7 @@ html[data-site-mode="it"] .back-to-top{
     width:43px;
     height:43px;
   }
-  .back-to-top-orb img{
-    width:40px;
   }
-}
 @media(prefers-reduced-motion:reduce){
   .back-to-top{
     transition:opacity .2s ease,visibility .2s ease!important;
@@ -8213,13 +8219,6 @@ html[data-site-mode="it"] .header-it-cta:hover{
   align-items:center!important;
   justify-content:center!important;
 }
-.back-to-top-orb img{
-  margin:auto!important;
-  object-fit:contain!important;
-  object-position:center center!important;
-}
-
-
 /* BOIS MORPHÉE — PUBLIC PORTFOLIO MOCKUPS (ANONYMIZED) 2026-10-05 */
 .editorial-project-morphee .morphee-mockups,
 .portfolio-project-morphee .morphee-mockups{
@@ -8507,11 +8506,6 @@ html[data-site-mode="it"] .back-to-top::before{
 html[data-site-mode="it"] .back-to-top::after{
   background:rgba(31,60,88,.2);
   opacity:.42;
-}
-html[data-site-mode="it"] .back-to-top-orb img{
-  filter:
-    drop-shadow(0 0 2px rgba(25,126,200,.18))
-    drop-shadow(0 3px 3px rgba(22,54,86,.2));
 }
 html[data-site-mode="it"] .back-to-top:hover{
   border-color:rgba(15,126,216,.62);
@@ -9292,31 +9286,6 @@ html[data-site-mode="it"] .back-to-top-orb{
   position:relative;
 }
 
-html[data-site-mode="it"] .back-to-top-arrow{
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-54%);
-  z-index:3;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:24px;
-  height:24px;
-  border-radius:50%;
-  background:rgba(255,255,255,.9);
-  color:#145f96;
-  font-size:17px;
-  font-weight:900;
-  line-height:1;
-  box-shadow:0 2px 8px rgba(23,52,95,.12);
-  pointer-events:none;
-}
-
-html[data-site-mode="it"] .back-to-top-orb img{
-  opacity:.34;
-}
-
 @media(max-width:760px){
   html[data-site-mode="it"] .home-domain-it .reviews-actions{
     margin-top:22px;
@@ -9326,12 +9295,7 @@ html[data-site-mode="it"] .back-to-top-orb img{
     width:100%;
   }
 
-  html[data-site-mode="it"] .back-to-top-arrow{
-    width:22px;
-    height:22px;
-    font-size:16px;
   }
-}
 
 
 /* AIP IT — trust and content clarity pass 2026-10-05 */
@@ -9380,34 +9344,8 @@ html[data-site-mode="it"] .home-domain-it .contact-email-button{
 
 
 /* AIP IT — validation fixes 2026-10-05 */
-html[data-site-mode="it"] .back-to-top-arrow{
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-54%);
-  z-index:3;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:24px;
-  height:24px;
-  border-radius:50%;
-  background:rgba(255,255,255,.92);
-  color:#145f96;
-  font-size:17px;
-  font-weight:900;
-  line-height:1;
-  box-shadow:0 2px 8px rgba(23,52,95,.12);
-  pointer-events:none;
-}
-html[data-site-mode="it"] .back-to-top-orb img{opacity:.34}
 @media(max-width:760px){
-  html[data-site-mode="it"] .back-to-top-arrow{
-    width:22px;
-    height:22px;
-    font-size:16px;
   }
-}
 
 
 /* PRIVACY PAGE 2026-10-05 */
