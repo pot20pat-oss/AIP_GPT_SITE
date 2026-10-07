@@ -69,13 +69,7 @@ const worker = {
     if (url.hostname === primaryHost && webPaths.includes(url.pathname)) {
       const target = new URL(url.toString());
       target.hostname = webHost;
-      target.pathname = url.pathname === "/creation-sites-web" ? "/" : url.pathname;
-      return Response.redirect(target.toString(), 301);
-    }
-
-    if (url.hostname === webHost && url.pathname === "/creation-sites-web") {
-      const target = new URL(url.toString());
-      target.pathname = "/";
+      target.pathname = url.pathname;
       return Response.redirect(target.toString(), 301);
     }
 
