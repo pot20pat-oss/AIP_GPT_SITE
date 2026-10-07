@@ -28,11 +28,11 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: { card: "summary_large_image", title, description, images: [`${base}/aip-travail-03.webp`] },
     icons: {
       icon: [
-        { url: "/favicon.ico?v=11", type: "image/x-icon", sizes: "16x16" },
-        { url: "/aip-favicon-v11.png?v=11", type: "image/png", sizes: "16x16" },
+        { url: "/aip-icon-v7.png?v=12", type: "image/x-icon", sizes: "16x16" },
+        { url: "/aip-icon-v7.png?v=12", type: "image/png", sizes: "16x16" },
       ],
-      shortcut: "/favicon.ico?v=11",
-      apple: "/aip-favicon-v11.png?v=11",
+      shortcut: "/aip-icon-v7.png?v=12",
+      apple: "/aip-icon-v7.png?v=12",
     },
   };
 }
@@ -55,7 +55,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         url: siteUrl,
         telephone: "+1-819-380-2999",
         image,
-        logo: `${siteUrl}/aip-icon-v7.webp`,
+        logo: `${siteUrl}/aip-icon-v7.png`,
         founder: { "@type": "Person", name: "Patrick Potvin" },
         address: { "@type": "PostalAddress", streetAddress: "462 rue D. N. St-Cyr", addressLocality: "Nicolet", addressRegion: "QC", postalCode: "J3T 1H3", addressCountry: "CA" },
         areaServed: ["Nicolet", "Bécancour", "Trois-Rivières", "Saint-Célestin", "Centre-du-Québec"].map(name => ({ "@type": "Place", name })),
