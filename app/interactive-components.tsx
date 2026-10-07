@@ -64,5 +64,5 @@ export function BackToTopButton() {
     aria-label="Retour en haut"
     title="Retour en haut"
     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-  ><span className="back-to-top-orb" aria-hidden="true"><img src="/aip-icon-v7.png?v=13" alt="" width="46" height="46" decoding="async" /><span className="back-to-top-arrow">↑</span></span></button>;
+  ><span className="back-to-top-orb" aria-hidden="true"><span className="back-to-top-arrow">↑</span></span></button>;
 }
