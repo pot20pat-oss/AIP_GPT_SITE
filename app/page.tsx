@@ -92,6 +92,64 @@ function WebHome() {
       </aside>
     </section>
 
+    <section className="editorial-offers shell" aria-labelledby="web-offers-title" data-reveal="section">
+      <div className="editorial-offers-head">
+        <div>
+          <span className="editorial-kicker">3 FAÇONS DE COMMENCER</span>
+          <h2 id="web-offers-title">Du site essentiel à l’outil sur mesure.</h2>
+        </div>
+        <p>Pas besoin de commencer avec un gros projet. Choisissez une base claire aujourd’hui, puis faites-la évoluer avec votre entreprise.</p>
+      </div>
+      <div className="editorial-offers-grid">
+        <article className="editorial-offer-card editorial-offer-entry" data-reveal="feature">
+          <div className="editorial-offer-top"><span>01 · PRÉSENCE</span><strong>900 $ +</strong></div>
+          <h3>Être présent, trouvé et crédible.</h3>
+          <p>Une porte d’entrée simple pour une entreprise qui veut une présence professionnelle sans partir dans un gros projet.</p>
+          <ul>
+            <li>Site professionnel d’une page</li>
+            <li>Mobile, tablette et ordinateur</li>
+            <li>Présentation claire de vos services</li>
+            <li>SEO local de base</li>
+            <li>Liens vers Google Business et vos coordonnées</li>
+          </ul>
+          <Link href="/contact">Commencer simplement →</Link>
+        </article>
+
+        <article className="editorial-offer-card editorial-offer-featured" data-reveal="feature">
+          <div className="editorial-offer-badge">POUR UNE PME QUI VEUT GRANDIR</div>
+          <div className="editorial-offer-top"><span>02 · PME</span><strong>Sur estimation</strong></div>
+          <h3>Un vrai site qui travaille avec votre entreprise.</h3>
+          <p>Plus de contenu, plus de visibilité locale et la possibilité de faire évoluer le site sans repartir de zéro.</p>
+          <ul>
+            <li>3 à 5 pages ou plus</li>
+            <li>Pages dédiées à vos services</li>
+            <li>SEO local plus complet</li>
+            <li>Formulaires, réalisations et témoignages</li>
+            <li>CMS adapté si vous voulez modifier le contenu</li>
+          </ul>
+          <Link href="/contact">Parler de votre PME →</Link>
+        </article>
+
+        <article className="editorial-offer-card" data-reveal="feature">
+          <div className="editorial-offer-top"><span>03 · BOUTIQUE / OUTIL MÉTIER</span><strong>Sur devis</strong></div>
+          <h3>Quand un simple site ne suffit plus.</h3>
+          <p>Boutique, catalogue, administration, automatisations ou fonctions construites autour de votre façon de travailler.</p>
+          <ul>
+            <li>Boutique ou catalogue en ligne</li>
+            <li>Gestion de produits, prix et stock</li>
+            <li>CMS et administration sur mesure</li>
+            <li>Automatisations et intégrations</li>
+            <li>Fonctions métier personnalisées</li>
+          </ul>
+          <Link href="/realisation-envol-des-enfants">Voir l’exemple L’Envol des Enfants →</Link>
+        </article>
+      </div>
+      <div className="editorial-offers-foot">
+        <p><strong>Un seul interlocuteur du début à la fin.</strong> Vous m’expliquez votre besoin; je vous propose la portée qui a du sens, sans vous vendre ce dont vous n’avez pas besoin.</p>
+        <Link className="editorial-cta" href="/tarifs">Voir les tarifs et détails</Link>
+      </div>
+    </section>
+
     <section className="editorial-tech-proof shell" aria-labelledby="tech-proof-title">
       <div className="editorial-tech-proof-head">
         <div>
