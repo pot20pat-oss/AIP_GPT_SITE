@@ -11,7 +11,7 @@ const image = `${siteUrl}/aip-travail-03.webp`;
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
   const host = (requestHeaders.get("host") || "").split(":")[0].toLowerCase();
-  const isWebSite = host === "aipcreation.ca" || host === "www.aipcreation.ca";
+  const isWebSite = host === "aipcreation.ca" || host === "www.aipcreation.ca" || host === "aipconceptionweb.ca" || host === "www.aipconceptionweb.ca";
   const base = isWebSite ? webSiteUrl : siteUrl;
 
   return {
@@ -37,7 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const requestHeaders = await headers();
   const host = (requestHeaders.get("host") || "").split(":")[0].toLowerCase();
-  const isWebSite = host === "aipcreation.ca" || host === "www.aipcreation.ca";
+  const isWebSite = host === "aipcreation.ca" || host === "www.aipcreation.ca" || host === "aipconceptionweb.ca" || host === "www.aipconceptionweb.ca";
   const currentSiteUrl = isWebSite ? webSiteUrl : siteUrl;
   const currentSiteName = isWebSite ? "AIP Création Web" : businessName;
 
