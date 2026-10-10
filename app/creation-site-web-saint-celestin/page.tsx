@@ -3,7 +3,7 @@ import { DetailPage } from "../components";
 import { webPageMetadata } from "../seo";
 
 export const metadata: Metadata = webPageMetadata({
-  title: "Création de site web à Saint-Célestin | AIP Création",
+  title: "Création de site web à Saint-Célestin | AIP Conception Web",
   description: "Création de sites web à Saint-Célestin pour PME, commerces et travailleurs autonomes : site vitrine, boutique en ligne, CMS sur mesure et accompagnement direct.",
   path: "/creation-site-web-saint-celestin",
   image: "/aip-travail-07.webp",
@@ -16,7 +16,7 @@ export default function Page() {
     imageAlt="Création de site web pour une entreprise de Saint-Célestin"
     title="Création de site web à Saint-Célestin."
     accent="Une présence locale claire et crédible."
-    intro="AIP Création accompagne les petites entreprises, commerces, artisans et travailleurs autonomes de Saint-Célestin qui veulent un site professionnel sans passer par une grande agence. Le projet est conçu selon votre offre réelle, votre clientèle et la façon dont vous travaillez."
+    intro="AIP Conception Web accompagne les petites entreprises, commerces, artisans et travailleurs autonomes de Saint-Célestin qui veulent un site professionnel sans passer par une grande agence. Le projet est conçu selon votre offre réelle, votre clientèle et la façon dont vous travaillez."
     points={[
       { title: "Un site pensé pour une entreprise locale", text: "Vos services, votre territoire, vos coordonnées et vos appels à l’action sont organisés pour qu’un client de Saint-Célestin ou des environs comprenne rapidement ce que vous offrez." },
       { title: "Site vitrine simple et professionnel", text: "Une structure claire pour présenter votre entreprise, vos services, vos réalisations et vos moyens de contact sans surcharger le visiteur." },
@@ -41,10 +41,10 @@ export default function Page() {
     ]}
     priceLabel="Site vitrine à partir de 900 $"
     priceText="Le prix dépend du nombre de pages, du contenu, des intégrations et des fonctions nécessaires. Une estimation claire est préparée avant le développement."
-    areaText="AIP Création est établi à Nicolet et dessert Saint-Célestin ainsi que les municipalités voisines. Le suivi peut se faire localement ou entièrement à distance."
+    areaText="AIP Conception Web est établi à Nicolet et dessert Saint-Célestin ainsi que les municipalités voisines. Le suivi peut se faire localement ou entièrement à distance."
     areaServed={["Saint-Célestin", "Centre-du-Québec"]}
     faqs={[
-      { question: "Créez-vous des sites pour des entreprises de Saint-Célestin?", answer: "Oui. Saint-Célestin fait partie du territoire desservi par AIP Création pour les sites vitrines, boutiques en ligne et projets Web sur mesure." },
+      { question: "Créez-vous des sites pour des entreprises de Saint-Célestin?", answer: "Oui. Saint-Célestin fait partie du territoire desservi par AIP Conception Web pour les sites vitrines, boutiques en ligne et projets Web sur mesure." },
       { question: "Est-ce utile d’avoir un site si mon entreprise est petite?", answer: "Oui, surtout si vos clients recherchent vos services sur Google avant de vous contacter. Un site clair peut rassurer, expliquer votre offre et faciliter la prise de contact." },
       { question: "Pouvez-vous reprendre mon ancien site?", answer: "Oui. Les contenus encore utiles peuvent être conservés et réorganisés dans une structure plus actuelle, plus rapide et mieux adaptée au mobile." },
     ]}
