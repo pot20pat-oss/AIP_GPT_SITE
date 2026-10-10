@@ -40,7 +40,7 @@ export default function Page() {
       { title: "Votre site ne génère presque aucun contact", text: "On revoit le message, la hiérarchie et les appels à l’action pour rendre le parcours beaucoup plus évident." },
       { title: "Vous avez peu de temps pour gérer le Web", text: "Le site est conçu pour rester simple. Si vous avez besoin de gérer du contenu régulièrement, un CMS adapté peut être ajouté." },
     ]}
-    priceLabel="Site vitrine de base à partir de 900 $"
+    priceLabel="Site vitrine de base à partir de 1 500 $"
     priceText="Le prix dépend de la quantité de contenu, du nombre de pages et des fonctions. L’objectif est de construire ce dont votre PME a besoin, sans gonfler artificiellement le mandat."
     areaText="Service offert aux PME de Nicolet, Bécancour, Trois-Rivières et des environs, ainsi qu’aux entreprises qui souhaitent travailler entièrement à distance."
     faqs={[
