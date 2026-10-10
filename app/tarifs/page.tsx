@@ -12,7 +12,7 @@ async function isCreationDomain() {
 export async function generateMetadata(): Promise<Metadata> {
   const web = await isCreationDomain();
   const title = web ? "Tarifs création de sites Web | AIP Conception Web" : "Tarifs dépannage informatique | Atelier Informatique Potvin";
-  const description = web ? "Tarifs de création Web : site vitrine dès 900 $ et projets sur mesure selon les besoins." : "Tarifs informatiques AIP : diagnostic 60 $ et service informatique 60 $/h à Nicolet et dans les environs.";
+  const description = web ? "Tarifs de création Web : site vitrine dès 1 500 $ et projets sur mesure selon les besoins." : "Tarifs informatiques AIP : diagnostic 60 $ et service informatique 60 $/h à Nicolet et dans les environs.";
   const base = web ? webSiteUrl : siteUrl;
   return { title, description, alternates: { canonical: `${base}/tarifs` }, openGraph: { title, description, url: `${base}/tarifs`, type: "website", locale: "fr_CA" } };
 }
@@ -23,7 +23,7 @@ const itPrices = [
 ];
 
 const webPackages = [
-  { name: "Présence", price: "Dès 900 $", text: "Une porte d’entrée simple pour être présent, trouvé et crédible sans partir dans un gros projet.", includes: ["Site professionnel d’une page", "Design adapté à votre entreprise", "Version mobile", "Coordonnées et appels à l’action", "SEO local de base", "Lien avec votre présence Google Business"] },
+  { name: "Présence", price: "Dès 1 500 $", text: "Une porte d’entrée simple pour être présent, trouvé et crédible sans partir dans un gros projet.", includes: ["Site professionnel d’une page", "Design adapté à votre entreprise", "Version mobile", "Coordonnées et appels à l’action", "SEO local de base", "Lien avec votre présence Google Business"] },
   { name: "PME", price: "Sur estimation", text: "Un site plus complet pour présenter plusieurs services, travailler votre visibilité locale et évoluer avec votre entreprise.", includes: ["3 à 5 pages ou plus", "Pages dédiées à vos services", "SEO local plus complet", "Formulaires, réalisations et témoignages", "CMS adapté si nécessaire", "Structure conçue pour évoluer"] },
   { name: "Boutique / outil métier", price: "Sur devis", text: "Quand un simple site ne suffit plus : commerce en ligne, administration ou fonctions construites autour de votre travail.", includes: ["Boutique ou catalogue en ligne", "Gestion de produits, prix et stock", "CMS et administration sur mesure", "Automatisations et intégrations", "Fonctions métier personnalisées", "Accompagnement selon le projet"] },
 ];
@@ -33,7 +33,7 @@ export default async function Page() {
 
   return <main className={web ? "web-service-page web-pricing-page" : undefined}><SiteHeader />
     <section className="detail-hero detail-hero-photo shell" data-reveal={web ? "section" : undefined}>
-      <div className="detail-hero-copy"><div className="eyebrow"><span></span>{web ? "Tarifs création Web" : "Tarifs informatiques"}</div><h1 data-typewrite={web ? "title" : undefined}>{web ? <>Un site adapté.<br /><em>Un prix expliqué clairement.</em></> : <>Des tarifs simples.<br /><em>Sans surprise.</em></>}</h1><p>{web ? "Un site vitrine de base commence à 900 $. Le montant évolue ensuite selon les pages, le contenu et les fonctions réellement nécessaires." : "Diagnostic, dépannage, configuration et assistance à distance : le prix est expliqué avant d’aller plus loin."}</p></div>
+      <div className="detail-hero-copy"><div className="eyebrow"><span></span>{web ? "Tarifs création Web" : "Tarifs informatiques"}</div><h1 data-typewrite={web ? "title" : undefined}>{web ? <>Un site adapté.<br /><em>Un prix expliqué clairement.</em></> : <>Des tarifs simples.<br /><em>Sans surprise.</em></>}</h1><p>{web ? "Un site vitrine de base commence à 1 500 $. Le montant évolue ensuite selon les pages, le contenu et les fonctions réellement nécessaires." : "Diagnostic, dépannage, configuration et assistance à distance : le prix est expliqué avant d’aller plus loin."}</p></div>
       <figure className={`detail-photo${web ? " magic-photo" : ""}`}><img src={web ? "/projet-bois-morphee.webp" : "/aip-travail-03.webp"} alt={web ? "Exemple de création Web AIP" : "Dépannage informatique AIP"} /></figure>
     </section>
 
