@@ -39,7 +39,7 @@ const webPaths = [
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const requestHeaders = await headers();
   const host = (requestHeaders.get("host") || "").split(":")[0].toLowerCase();
-  const web = host === "aipcreation.ca" || host === "www.aipcreation.ca";
+  const web = host === "aipcreation.ca" || host === "www.aipcreation.ca" || host === "aipconceptionweb.ca" || host === "www.aipconceptionweb.ca";
   const base = web ? webSiteUrl : siteUrl;
   const paths = web ? webPaths : itPaths;
 
