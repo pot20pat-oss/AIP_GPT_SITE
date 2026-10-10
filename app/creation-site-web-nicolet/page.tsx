@@ -42,13 +42,13 @@ export default function Page() {
       { title: "Votre entreprise existe, mais votre site est dépassé", text: "On modernise la présentation et l’expérience mobile tout en conservant ce qui représente bien votre entreprise." },
       { title: "Vous voulez être mieux compris par Google", text: "On organise le contenu autour de vos services réels et de votre marché local plutôt que d’empiler des mots-clés sans valeur pour les visiteurs." },
     ]}
-    priceLabel="Site vitrine à Nicolet à partir de 900 $"
+    priceLabel="Site vitrine à Nicolet à partir de 1 500 $"
     priceText="Le tarif dépend du nombre de pages, du contenu, des intégrations et des fonctions nécessaires. Une estimation claire est préparée avant le développement."
     areaText="AIP est établi à Nicolet et dessert aussi Bécancour, Trois-Rivières, Saint-Célestin et les environs. Les projets Web peuvent également être réalisés à distance."
     areaServed={["Nicolet", "Centre-du-Québec"]}
     faqs={[
       { question: "Créez-vous des sites web directement à Nicolet?", answer: "Oui. Atelier Informatique Potvin est établi à Nicolet et accompagne directement les entreprises et travailleurs autonomes de la région pour leurs projets Web." },
-      { question: "Combien coûte un site web pour une petite entreprise?", answer: "Un site vitrine de base débute à 900 $. Le prix final dépend surtout du nombre de pages, du contenu, des intégrations et des fonctionnalités nécessaires." },
+      { question: "Combien coûte un site web pour une petite entreprise?", answer: "Un site vitrine de base débute à 1 500 $. Le prix final dépend surtout du nombre de pages, du contenu, des intégrations et des fonctionnalités nécessaires." },
       { question: "Pouvez-vous moderniser un site existant?", answer: "Oui. Une modernisation peut conserver les éléments utiles de votre présence actuelle tout en améliorant la présentation, la structure, l’affichage mobile et le contenu." },
       { question: "Le référencement local est-il inclus?", answer: "La structure technique, les titres, le contenu, les liens internes et les éléments essentiels au référencement local sont intégrés au projet. Le classement évolue ensuite selon la concurrence et l’autorité du site." },
     ]}
