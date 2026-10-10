@@ -6,12 +6,12 @@ import { siteUrl, webSiteUrl } from "../seo";
 async function isCreationDomain() {
   const requestHeaders = await headers();
   const host = (requestHeaders.get("host") || "").split(":")[0].toLowerCase();
-  return host === "aipcreation.ca" || host === "www.aipcreation.ca";
+  return host === "aipcreation.ca" || host === "www.aipcreation.ca" || host === "aipconceptionweb.ca" || host === "www.aipconceptionweb.ca";
 }
 
 export async function generateMetadata(): Promise<Metadata> {
   const web = await isCreationDomain();
-  const title = web ? "Tarifs création de sites Web | AIP Création Web" : "Tarifs dépannage informatique | Atelier Informatique Potvin";
+  const title = web ? "Tarifs création de sites Web | AIP Conception Web" : "Tarifs dépannage informatique | Atelier Informatique Potvin";
   const description = web ? "Tarifs de création Web : site vitrine dès 900 $ et projets sur mesure selon les besoins." : "Tarifs informatiques AIP : diagnostic 60 $ et service informatique 60 $/h à Nicolet et dans les environs.";
   const base = web ? webSiteUrl : siteUrl;
   return { title, description, alternates: { canonical: `${base}/tarifs` }, openGraph: { title, description, url: `${base}/tarifs`, type: "website", locale: "fr_CA" } };
