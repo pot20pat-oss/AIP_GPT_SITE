@@ -7,7 +7,7 @@ import { businessName, googleBusinessUrl, siteUrl, webSiteUrl } from "./seo";
 async function isCreationDomain() {
   const requestHeaders = await headers();
   const host = (requestHeaders.get("host") || "").split(":")[0].toLowerCase();
-  return host === "aipcreation.ca" || host === "www.aipcreation.ca";
+  return host === "aipcreation.ca" || host === "www.aipcreation.ca" || host === "aipconceptionweb.ca" || host === "www.aipconceptionweb.ca";
 }
 
 export async function generateMetadata(): Promise<Metadata> {
