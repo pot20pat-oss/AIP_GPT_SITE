@@ -24,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
       : ["dépannage informatique Nicolet", "réparation ordinateur Nicolet", "assistance informatique à distance", "Atelier Informatique Potvin"],
     authors: [{ name: "Patrick Potvin" }],
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
-    openGraph: { title, description, url: base, siteName: isWebSite ? "AIP Création Web" : businessName, images: [{ url: `${base}/aip-travail-03.webp`, alt: "Patrick Potvin, services informatiques à Nicolet" }], locale: "fr_CA", type: "website" },
+    openGraph: { title, description, url: base, siteName: isWebSite ? "AIP Conception Web" : businessName, images: [{ url: `${base}/aip-travail-03.webp`, alt: "Patrick Potvin, services informatiques à Nicolet" }], locale: "fr_CA", type: "website" },
     twitter: { card: "summary_large_image", title, description, images: [`${base}/aip-travail-03.webp`] },
     icons: {
       icon: [{ url: "/aip-icon-v7.png?v=13", type: "image/png" }],
@@ -39,7 +39,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   const host = (requestHeaders.get("host") || "").split(":")[0].toLowerCase();
   const isWebSite = host === "aipcreation.ca" || host === "www.aipcreation.ca" || host === "aipconceptionweb.ca" || host === "www.aipconceptionweb.ca";
   const currentSiteUrl = isWebSite ? webSiteUrl : siteUrl;
-  const currentSiteName = isWebSite ? "AIP Création Web" : businessName;
+  const currentSiteName = isWebSite ? "AIP Conception Web" : businessName;
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -69,7 +69,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       gtag('js', new Date());
       gtag('config', 'G-T0HN0N449R', {
         send_page_view: false,
-        linker: { domains: ['atelierpotvin.ca', 'aipcreation.ca'] }
+        linker: { domains: ['atelierpotvin.ca', 'aipcreation.ca', 'aipconceptionweb.ca'] }
       });
       (function(){
         var loaded = false;
