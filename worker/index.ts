@@ -30,6 +30,7 @@ const worker = {
     const url = new URL(request.url);
     const primaryHost = "atelierpotvin.ca";
     const webHost = "aipcreation.ca";
+    const webHosts = new Set([webHost, "aipconceptionweb.ca"]);
 
     if (url.hostname === "www.atelierpotvin.ca" || url.hostname === "atelierpotvin.tech" || url.hostname === "www.atelierpotvin.tech") {
       url.protocol = "https:";
@@ -38,9 +39,9 @@ const worker = {
       return Response.redirect(url.toString(), 301);
     }
 
-    if (url.hostname === "www.aipcreation.ca") {
+    if (url.hostname === "www.aipcreation.ca" || url.hostname === "www.aipconceptionweb.ca") {
       url.protocol = "https:";
-      url.hostname = webHost;
+      url.hostname = url.hostname === "www.aipconceptionweb.ca" ? "aipconceptionweb.ca" : webHost;
       url.port = "";
       return Response.redirect(url.toString(), 301);
     }
@@ -73,13 +74,13 @@ const worker = {
       return Response.redirect(target.toString(), 301);
     }
 
-    if (url.hostname === webHost && (itPrefixes.some(prefix => url.pathname.startsWith(prefix)) || ["/a-propos", "/avis-clients", "/faq", "/comment-ca-marche"].includes(url.pathname))) {
+    if (webHosts.has(url.hostname) && (itPrefixes.some(prefix => url.pathname.startsWith(prefix)) || ["/a-propos", "/avis-clients", "/faq", "/comment-ca-marche"].includes(url.pathname))) {
       const target = new URL(url.toString());
       target.hostname = primaryHost;
       return Response.redirect(target.toString(), 301);
     }
 
-    if (url.hostname === webHost && url.pathname === "/robots.txt") {
+    if (webHosts.has(url.hostname) && url.pathname === "/robots.txt") {
       return new Response(`User-agent: *
 Allow: /
 
@@ -88,7 +89,7 @@ Host: https://${webHost}
 `, { headers: { "content-type": "text/plain; charset=utf-8" } });
     }
 
-    if (url.hostname === webHost && url.pathname === "/sitemap.xml") {
+    if (webHosts.has(url.hostname) && url.pathname === "/sitemap.xml") {
       const paths = ["", "/creation-sites-web", "/creation-site-web-nicolet", "/creation-site-web-becancour", "/creation-site-web-trois-rivieres", "/site-web-pme", "/creation-boutique-en-ligne", "/developpement-cms-sur-mesure", "/realisation-envol-des-enfants", "/tarifs", "/contact"];
       const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${paths.map(path => `  <url><loc>https://${webHost}${path}</loc></url>`).join("\n")}\n</urlset>`;
       return new Response(body, { headers: { "content-type": "application/xml; charset=utf-8" } });
