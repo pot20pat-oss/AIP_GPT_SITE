@@ -3,7 +3,7 @@ import { DetailPage } from "../components";
 import { webPageMetadata } from "../seo";
 
 export const metadata: Metadata = webPageMetadata({
-  title: "Création de site web à Bécancour pour PME | AIP Création",
+  title: "Création de site web à Bécancour pour PME | AIP Conception Web",
   description: "Création de sites web à Bécancour pour PME, commerces et travailleurs autonomes : site vitrine, boutique en ligne, CMS sur mesure et accompagnement direct depuis Nicolet.",
   path: "/creation-site-web-becancour",
   image: "/aip-travail-07.webp",
@@ -46,7 +46,7 @@ export default function Page() {
     areaText="Service de création Web pour Bécancour et les environs depuis Nicolet. Les rencontres et le suivi peuvent se faire localement ou entièrement à distance."
     areaServed={["Bécancour", "Centre-du-Québec"]}
     faqs={[
-      { question: "Desserviez-vous les entreprises de Bécancour?", answer: "Oui. Bécancour fait partie du territoire local desservi par AIP Création. Le projet peut être réalisé avec des rencontres locales ou entièrement à distance selon vos préférences." },
+      { question: "Desserviez-vous les entreprises de Bécancour?", answer: "Oui. Bécancour fait partie du territoire local desservi par AIP Conception Web. Le projet peut être réalisé avec des rencontres locales ou entièrement à distance selon vos préférences." },
       { question: "Pouvez-vous créer un site pour une PME de services?", answer: "Oui. Les sites vitrines sont conçus pour présenter clairement les services, le territoire, les réalisations et les moyens de contact d’une PME." },
       { question: "Est-ce possible d’ajouter une boutique plus tard?", answer: "Oui, si l’architecture du projet le permet. Les besoins futurs peuvent être prévus dès le départ afin de faciliter l’évolution du site." },
     ]}
