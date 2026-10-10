@@ -102,7 +102,7 @@ function WebHome() {
       </div>
       <div className="editorial-offers-grid">
         <article className="editorial-offer-card editorial-offer-entry" data-reveal="feature">
-          <div className="editorial-offer-top"><span>01 · PRÉSENCE</span><strong>900 $ +</strong></div>
+          <div className="editorial-offer-top"><span>01 · PRÉSENCE</span><strong>1 500 $ +</strong></div>
           <h3>Être présent, trouvé et crédible.</h3>
           <p>Une porte d’entrée simple pour une entreprise qui veut une présence professionnelle sans partir dans un gros projet.</p>
           <ul>
@@ -175,7 +175,7 @@ function WebHome() {
     <section className="editorial-index holo-index" data-reveal="section">
       <div className="holo-data-stream" aria-hidden="true"><span>AIP CONCEPTION WEB · DESIGN · DÉVELOPPEMENT · BOUTIQUES · CMS · RÉFÉRENCEMENT LOCAL ·</span><span>AIP CONCEPTION WEB · DESIGN · DÉVELOPPEMENT · BOUTIQUES · CMS · RÉFÉRENCEMENT LOCAL ·</span></div>
       <div className="shell editorial-index-grid">
-        <div data-reveal="feature"><strong>900 $ +</strong><span>site vitrine de base</span><small>Boutique et CMS sur devis</small></div>
+        <div data-reveal="feature"><strong>1 500 $ +</strong><span>site vitrine de base</span><small>Boutique et CMS sur devis</small></div>
         <div data-reveal="feature"><strong>FR / EN</strong><span>boutique bilingue en production</span><small>Une même expérience dans les deux langues</small></div>
         <div data-reveal="feature"><strong>CMS métier</strong><span>produits, photos, prix et stock</span><small>Gestion pensée autour des opérations</small></div>
         <div data-reveal="feature"><strong>1 seul</strong><span>interlocuteur du début à la fin</span><small>Conception, code et déploiement</small></div>
