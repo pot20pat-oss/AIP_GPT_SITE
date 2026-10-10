@@ -13,13 +13,13 @@ async function isCreationDomain() {
 export async function generateMetadata(): Promise<Metadata> {
   const web = await isCreationDomain();
   if (web) {
-    const title = "Création de sites Web à Nicolet | AIP Création Web";
+    const title = "Création de sites Web à Nicolet | AIP Conception Web";
     const description = "Création de sites Web pour PME à Nicolet : sites vitrines, boutiques en ligne et outils de gestion sur mesure, avec un seul interlocuteur.";
     return {
       title,
       description,
       alternates: { canonical: webSiteUrl },
-      openGraph: { title, description, url: webSiteUrl, siteName: "AIP Création Web", locale: "fr_CA", type: "website", images: [{ url: `${webSiteUrl}/aip-travail-13.webp`, alt: title }] },
+      openGraph: { title, description, url: webSiteUrl, siteName: "AIP Conception Web", locale: "fr_CA", type: "website", images: [{ url: `${webSiteUrl}/aip-travail-13.webp`, alt: title }] },
       twitter: { card: "summary_large_image", title, description, images: [`${webSiteUrl}/aip-travail-13.webp`] },
     };
   }
@@ -45,7 +45,7 @@ function WebNeutralReview() {
 
 function ContactBlock({ web }: { web: boolean }) {
   if (web) {
-    return <section className="contact section web-contact" id="contact" data-reveal="section"><div className="shell contact-inner"><div data-reveal="feature"><div className="eyebrow"><span></span>Votre projet Web</div><h2>Une idée en tête?<br /><em>Parlons-en.</em></h2><p>Expliquez-moi votre entreprise, votre projet et ce que vous voulez accomplir. Je vous répondrai avec une première direction claire.</p><a className="contact-inline-phone" href="tel:+18193802999">819 380-2999</a></div><div className="contact-card contact-form-card" data-reveal="feature"><span>Écrivez-moi</span><form className="contact-mini-form" action="https://formsubmit.co/contact@atelierpotvin.ca" method="POST"><input type="hidden" name="_subject" value="Nouvelle demande — aipcreation.ca" /><input type="hidden" name="_template" value="table" /><input type="hidden" name="_next" value="https://aipcreation.ca/merci?site=web" /><input className="contact-honey" type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" /><label>Nom<input type="text" name="name" autoComplete="name" required /></label><label>Téléphone ou courriel<input type="text" name="coordonnees" required /></label><label>Parlez-moi du projet<textarea name="message" rows={4} required /></label><button className="button button-lime" type="submit">Envoyer ma demande</button></form><div className="response-note"><span></span>Réponse habituellement dans la journée</div></div></div></section>;
+    return <section className="contact section web-contact" id="contact" data-reveal="section"><div className="shell contact-inner"><div data-reveal="feature"><div className="eyebrow"><span></span>Votre projet Web</div><h2>Une idée en tête?<br /><em>Parlons-en.</em></h2><p>Expliquez-moi votre entreprise, votre projet et ce que vous voulez accomplir. Je vous répondrai avec une première direction claire.</p><a className="contact-inline-phone" href="tel:+18193802999">819 380-2999</a></div><div className="contact-card contact-form-card" data-reveal="feature"><span>Écrivez-moi</span><form className="contact-mini-form" action="https://formsubmit.co/contact@atelierpotvin.ca" method="POST"><input type="hidden" name="_subject" value="Nouvelle demande — aipcreation.ca" /><input type="hidden" name="_template" value="table" /><input type="hidden" name="_next" value="https://aipconceptionweb.ca/merci?site=web" /><input className="contact-honey" type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" /><label>Nom<input type="text" name="name" autoComplete="name" required /></label><label>Téléphone ou courriel<input type="text" name="coordonnees" required /></label><label>Parlez-moi du projet<textarea name="message" rows={4} required /></label><button className="button button-lime" type="submit">Envoyer ma demande</button></form><div className="response-note"><span></span>Réponse habituellement dans la journée</div></div></div></section>;
   }
   return <section className="contact section" id="contact" data-reveal="section"><div className="shell contact-inner"><div data-reveal="feature"><div className="eyebrow"><span></span>Besoin d’aide?</div><h2>Un problème informatique?<br /><em>On regarde ça ensemble.</em></h2><p>Expliquez-moi le problème dans vos mots. Je vous dirai si on peut le régler à distance ou s’il faut une intervention sur place.</p></div><div className="contact-card" data-reveal="feature"><span>Joignez-moi directement</span><a className="big-phone" href="tel:+18193802999">819 380-2999</a><p>462, rue D. N. St-Cyr<br />Nicolet (Québec) J3T 1H3</p><div className="response-note"><span></span>Réponse habituellement dans la journée</div><div className="contact-actions"><a className="button button-lime" href="tel:+18193802999">Appeler maintenant</a><a className="button button-outline contact-email-button" href="mailto:contact@atelierpotvin.ca">Écrire par courriel</a></div></div></div></section>;
 }
@@ -67,7 +67,7 @@ function WebHome() {
       <div className="holo-scanline" aria-hidden="true"></div>
       <div className="holo-orbit holo-orbit-a" aria-hidden="true"></div>
       <div className="holo-orbit holo-orbit-b" aria-hidden="true"></div>
-      <div className="editorial-masthead-top"><span>AIP CRÉATION · SITES WEB SUR MESURE</span><span>NICOLET · BÉCANCOUR · TROIS-RIVIÈRES · À DISTANCE</span></div>
+      <div className="editorial-masthead-top"><span>AIP CONCEPTION WEB · SITES WEB SUR MESURE</span><span>NICOLET · BÉCANCOUR · TROIS-RIVIÈRES · À DISTANCE</span></div>
       <div className="editorial-nameplate"><span>CRÉATION</span> <em>WEB</em></div>
       <div className="editorial-deck"><span>Sites Web</span><span>Boutiques en ligne</span><span>CMS sur mesure</span><span>Expériences numériques</span></div>
     </section>
@@ -173,7 +173,7 @@ function WebHome() {
     </section>
 
     <section className="editorial-index holo-index" data-reveal="section">
-      <div className="holo-data-stream" aria-hidden="true"><span>AIP CRÉATION · DESIGN · DÉVELOPPEMENT · BOUTIQUES · CMS · RÉFÉRENCEMENT LOCAL ·</span><span>AIP CRÉATION · DESIGN · DÉVELOPPEMENT · BOUTIQUES · CMS · RÉFÉRENCEMENT LOCAL ·</span></div>
+      <div className="holo-data-stream" aria-hidden="true"><span>AIP CONCEPTION WEB · DESIGN · DÉVELOPPEMENT · BOUTIQUES · CMS · RÉFÉRENCEMENT LOCAL ·</span><span>AIP CONCEPTION WEB · DESIGN · DÉVELOPPEMENT · BOUTIQUES · CMS · RÉFÉRENCEMENT LOCAL ·</span></div>
       <div className="shell editorial-index-grid">
         <div data-reveal="feature"><strong>900 $ +</strong><span>site vitrine de base</span><small>Boutique et CMS sur devis</small></div>
         <div data-reveal="feature"><strong>FR / EN</strong><span>boutique bilingue en production</span><small>Une même expérience dans les deux langues</small></div>
