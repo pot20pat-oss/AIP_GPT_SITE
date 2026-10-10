@@ -42,12 +42,12 @@ export default function Page() {
       { title: "Votre site actuel ne vous représente plus", text: "On modernise la présentation, le contenu et l’expérience mobile pour mieux refléter la qualité actuelle de votre entreprise." },
       { title: "Vous voulez vendre ou gérer du contenu en ligne", text: "On définit les fonctions réellement nécessaires avant de développer une boutique, un CMS ou un outil web adapté à vos opérations." },
     ]}
-    priceLabel="Site vitrine de base à partir de 900 $"
-    priceText="Un site vitrine de base débute à 900 $. Le prix varie ensuite selon le nombre de pages, le contenu, les intégrations et les fonctionnalités dont votre entreprise a réellement besoin."
+    priceLabel="Site vitrine de base à partir de 1 500 $"
+    priceText="Un site vitrine de base débute à 1 500 $. Le prix varie ensuite selon le nombre de pages, le contenu, les intégrations et les fonctionnalités dont votre entreprise a réellement besoin."
     areaText="Création, conception et développement de sites Web pour les entreprises de Nicolet, Bécancour, Trois-Rivières, Saint-Célestin et des environs. Les projets Web peuvent aussi être réalisés entièrement à distance."
     faqs={[
       { question: "Est-ce que vous êtes une agence Web?", answer: "AIP n’est pas une agence Web traditionnelle. Vous travaillez directement avec Patrick Potvin, à Nicolet, pour la conception, le développement, la mise en ligne et le suivi de votre projet. Cette approche permet de garder un seul interlocuteur du début à la fin." },
-      { question: "Combien coûte la création d’un site web?", answer: "Un site vitrine de base débute à 900 $. Le prix varie ensuite selon le nombre de pages, le contenu, les intégrations et les fonctionnalités nécessaires. Une estimation est préparée selon votre projet." },
+      { question: "Combien coûte la création d’un site web?", answer: "Un site vitrine de base débute à 1 500 $. Le prix varie ensuite selon le nombre de pages, le contenu, les intégrations et les fonctionnalités nécessaires. Une estimation est préparée selon votre projet." },
       { question: "Est-ce que mon site sera visible sur Google?", answer: "Le site est construit avec une structure technique et un contenu adaptés au référencement. Le positionnement dépend ensuite de la concurrence, de la pertinence du contenu et de l’autorité acquise avec le temps." },
       { question: "Travaillez-vous seulement avec des entreprises de Nicolet?", answer: "Non. Je travaille notamment avec des entreprises de Nicolet, Bécancour, Trois-Rivières et des environs, et un projet web peut aussi être réalisé entièrement à distance." },
       { question: "Pouvez-vous créer une boutique en ligne ou un CMS?", answer: "Oui. Selon le projet, je peux réaliser un site e-commerce, un catalogue ou une interface d’administration sur mesure pour gérer vos produits et votre contenu." },
