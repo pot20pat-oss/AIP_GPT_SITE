@@ -29,8 +29,9 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
     const primaryHost = "atelierpotvin.ca";
-    const webHost = "aipcreation.ca";
-    const webHosts = new Set([webHost, "aipconceptionweb.ca"]);
+    const webHost = "aipconceptionweb.ca";
+    const legacyWebHost = "aipcreation.ca";
+    const webHosts = new Set([webHost, legacyWebHost]);
 
     if (url.hostname === "www.atelierpotvin.ca" || url.hostname === "atelierpotvin.tech" || url.hostname === "www.atelierpotvin.tech") {
       url.protocol = "https:";
@@ -39,9 +40,9 @@ const worker = {
       return Response.redirect(url.toString(), 301);
     }
 
-    if (url.hostname === "www.aipcreation.ca" || url.hostname === "www.aipconceptionweb.ca") {
+    if (url.hostname === legacyWebHost || url.hostname === "www.aipcreation.ca" || url.hostname === "www.aipconceptionweb.ca") {
       url.protocol = "https:";
-      url.hostname = url.hostname === "www.aipconceptionweb.ca" ? "aipconceptionweb.ca" : webHost;
+      url.hostname = webHost;
       url.port = "";
       return Response.redirect(url.toString(), 301);
     }
