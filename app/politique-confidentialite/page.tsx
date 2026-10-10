@@ -6,13 +6,13 @@ import { siteUrl, webSiteUrl } from "../seo";
 async function isCreationDomain() {
   const requestHeaders = await headers();
   const host = (requestHeaders.get("host") || "").split(":")[0].toLowerCase();
-  return host === "aipcreation.ca" || host === "www.aipcreation.ca";
+  return host === "aipcreation.ca" || host === "www.aipcreation.ca" || host === "aipconceptionweb.ca" || host === "www.aipconceptionweb.ca";
 }
 
 export async function generateMetadata(): Promise<Metadata> {
   const web = await isCreationDomain();
   const base = web ? webSiteUrl : siteUrl;
-  const title = web ? "Politique de confidentialité | AIP Création" : "Politique de confidentialité | Atelier Informatique Potvin";
+  const title = web ? "Politique de confidentialité | AIP Conception Web" : "Politique de confidentialité | Atelier Informatique Potvin";
   const description = "Information sur les renseignements recueillis, leur utilisation et les services utilisés sur le site.";
   return {
     title,
@@ -30,7 +30,7 @@ export default async function Page() {
     <section className="detail-hero shell">
       <div className="eyebrow"><span></span>Confidentialité</div>
       <h1>Politique de confidentialité</h1>
-      <p>Cette page explique simplement quels renseignements peuvent être recueillis lorsque vous utilisez {web ? "aipcreation.ca" : "atelierpotvin.ca"} et à quoi ils servent.</p>
+      <p>Cette page explique simplement quels renseignements peuvent être recueillis lorsque vous utilisez {web ? "aipconceptionweb.ca" : "atelierpotvin.ca"} et à quoi ils servent.</p>
     </section>
 
     <section className="section shell privacy-content">
