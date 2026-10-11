@@ -6,11 +6,13 @@ import { businessAddress, businessName, googleBusinessUrl, jsonLd, siteUrl, webS
 
 export const phone = "819 380-2999";
 
-export function SiteHeader() {
+export async function SiteHeader() {
+  const host = ((await headers()).get("host") || "").split(":")[0].toLowerCase();
+  const isWebSite = ["aipconceptionweb.ca", "www.aipconceptionweb.ca", "aipcreation.ca", "www.aipcreation.ca"].includes(host);
   return <>
     <EditorialMotion />
     <header className="header shell header-simple">
-      <div className="brand"><Link className="brand-home-link" href="/" aria-label="Retour à l’accueil"><img className="brand-logo" src="/aip-icon-v7.png?v=13" alt="AIP Atelier Informatique Potvin" width="104" height="82" decoding="async" /></Link><span className="brand-name brand-name-it"><small>SERVICE INFORMATIQUE · NICOLET</small><span>ATELIER INFORMATIQUE POTVIN</span><em>Dépannage · Assistance · Réseau</em></span><span className="brand-name brand-name-web"><small>STUDIO WEB · NICOLET</small><span>AIP CONCEPTION WEB</span><em>Sites Web · Boutiques · CMS sur mesure</em></span></div>
+      <div className="brand"><Link className="brand-home-link" href="/" aria-label="Retour à l’accueil"><img className="brand-logo" src="/aip-icon-v7.png?v=13" alt={isWebSite ? "AIP Conception Web" : "AIP Atelier Informatique Potvin"} width="104" height="82" decoding="async" /></Link><span className="brand-name brand-name-it"><small>SERVICE INFORMATIQUE · NICOLET</small><span>ATELIER INFORMATIQUE POTVIN</span><em>Dépannage · Assistance · Réseau</em></span><span className="brand-name brand-name-web"><small>STUDIO WEB · NICOLET</small><span>AIP CONCEPTION WEB</span><em>Sites Web · Boutiques · CMS sur mesure</em></span></div>
       <nav className="nav-site nav-site-it" aria-label="Navigation principale informatique">
         <Link href="/depannage-informatique-nicolet">Informatique</Link>
         <Link href="/assistance-informatique-a-distance">Assistance</Link>
@@ -114,7 +116,7 @@ export function DetailPage({ eyebrow, title, accent, intro, points, asideTitle, 
   const serviceBaseUrl = isWebService ? webSiteUrl : siteUrl;
   const serviceUrl = isMainWebService ? webSiteUrl : servicePath ? `${serviceBaseUrl}${servicePath}` : serviceBaseUrl;
   const servedAreas = areaServed?.length ? areaServed : ["Nicolet", "Bécancour", "Trois-Rivières", "Centre-du-Québec"];
-  const graph: object[] = servicePath ? [{ "@type": "Service", "@id": `${serviceUrl}#service`, name: eyebrow, description: intro, url: serviceUrl, image: `${serviceBaseUrl}${image}`, provider: { "@id": `${siteUrl}/#entreprise`, name: businessName }, areaServed: servedAreas.map(name => ({ "@type": "Place", name })), serviceArea: { "@type": "GeoCircle", geoMidpoint: { "@type": "GeoCoordinates", latitude: 46.2268, longitude: -72.6141 }, geoRadius: "50000 m" } }, { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: serviceBaseUrl }, { "@type": "ListItem", position: 2, name: eyebrow, item: serviceUrl }] }] : [];
+  const graph: object[] = servicePath ? [{ "@type": "Service", "@id": `${serviceUrl}#service`, name: eyebrow, description: intro, url: serviceUrl, image: `${serviceBaseUrl}${image}`, provider: { "@id": `${serviceBaseUrl}/#entreprise`, name: isWebService ? "AIP Conception Web" : businessName }, areaServed: servedAreas.map(name => ({ "@type": "Place", name })), serviceArea: { "@type": "GeoCircle", geoMidpoint: { "@type": "GeoCoordinates", latitude: 46.2268, longitude: -72.6141 }, geoRadius: "50000 m" } }, { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: serviceBaseUrl }, { "@type": "ListItem", position: 2, name: eyebrow, item: serviceUrl }] }] : [];
   if (faqs?.length) graph.push({ "@type": "FAQPage", mainEntity: faqs.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) });
   const structuredData = graph.length ? { "@context": "https://schema.org", "@graph": graph } : null;
   return <main className={isRemoteService ? "remote-service-page" : isWebService ? `web-service-page${isMainWebService ? " web-main-service-page" : ""}` : undefined}><SiteHeader />
