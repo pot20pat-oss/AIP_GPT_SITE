@@ -3,7 +3,7 @@ import { DetailPage } from "../components";
 import { webPageMetadata } from "../seo";
 
 export const metadata: Metadata = webPageMetadata({
-  title: "Création de site web à Nicolet | AIP",
+  title: "Création de site Web à Nicolet | AIP Conception Web",
   description: "Création de sites web à Nicolet pour PME et travailleurs autonomes : site vitrine, boutique en ligne, CMS et accompagnement local.",
   path: "/creation-site-web-nicolet",
   image: "/aip-travail-13.webp",
@@ -13,10 +13,10 @@ export default function Page() {
   return <DetailPage
     eyebrow="Création de site web · Nicolet"
     image="/aip-travail-13.webp"
-    imageAlt="Création de site web à Nicolet par Atelier Informatique Potvin"
+    imageAlt="Création de site web à Nicolet par AIP Conception Web"
     title="Création de site web à Nicolet."
     accent="Un service local, du début à la fin."
-    intro="Vous cherchez un créateur de site web à Nicolet qui comprend les réalités d’une petite entreprise locale? Atelier Informatique Potvin conçoit des sites vitrines, boutiques en ligne et outils web sur mesure avec un accompagnement direct, sans intermédiaire."
+    intro="Vous cherchez un créateur de site web à Nicolet qui comprend les réalités d’une petite entreprise locale? AIP Conception Web conçoit des sites vitrines, boutiques en ligne et outils web sur mesure avec un accompagnement direct, sans intermédiaire."
     points={[
       { title: "Un créateur web réellement à Nicolet", text: "AIP est établi à Nicolet. Vous échangez directement avec Patrick Potvin pour définir le projet, valider le contenu, suivre le développement et préparer la mise en ligne." },
       { title: "Un site pensé pour vos clients locaux", text: "Les services, secteurs desservis, coordonnées et appels à l’action sont structurés pour que les visiteurs comprennent rapidement ce que votre entreprise offre et comment vous joindre." },
@@ -47,7 +47,7 @@ export default function Page() {
     areaText="AIP est établi à Nicolet et dessert aussi Bécancour, Trois-Rivières, Saint-Célestin et les environs. Les projets Web peuvent également être réalisés à distance."
     areaServed={["Nicolet", "Centre-du-Québec"]}
     faqs={[
-      { question: "Créez-vous des sites web directement à Nicolet?", answer: "Oui. Atelier Informatique Potvin est établi à Nicolet et accompagne directement les entreprises et travailleurs autonomes de la région pour leurs projets Web." },
+      { question: "Créez-vous des sites web directement à Nicolet?", answer: "Oui. AIP Conception Web est établi à Nicolet et accompagne directement les entreprises et travailleurs autonomes de la région pour leurs projets Web." },
       { question: "Combien coûte un site web pour une petite entreprise?", answer: "Un site vitrine de base débute à 1 500 $. Le prix final dépend surtout du nombre de pages, du contenu, des intégrations et des fonctionnalités nécessaires." },
       { question: "Pouvez-vous moderniser un site existant?", answer: "Oui. Une modernisation peut conserver les éléments utiles de votre présence actuelle tout en améliorant la présentation, la structure, l’affichage mobile et le contenu." },
       { question: "Le référencement local est-il inclus?", answer: "La structure technique, les titres, le contenu, les liens internes et les éléments essentiels au référencement local sont intégrés au projet. Le classement évolue ensuite selon la concurrence et l’autorité du site." },
