@@ -95,10 +95,37 @@ jobs:
           layout.write_text(text.replace(old, new), encoding="utf-8")
           PY
 
+      - name: Generate smaller Web case-study image
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps
+
+          source = Path("public/projet-envol-enfants.webp")
+          target = Path("public/projet-envol-enfants-800.webp")
+          page = Path("app/page.tsx")
+          if not source.is_file():
+              raise SystemExit(f"Missing original case-study image: {source}")
+          with Image.open(source) as original:
+              image = ImageOps.exif_transpose(original)
+              width = min(800, image.width)
+              height = round(image.height * width / image.width)
+              image = image.resize((width, height), Image.Resampling.LANCZOS)
+              image.save(target, "WEBP", quality=78, method=6)
+          text = page.read_text(encoding="utf-8")
+          old = '<img src="/projet-envol-enfants.webp" width="1400" height="760"'
+          new = '<img src="/projet-envol-enfants.webp" srcSet="/projet-envol-enfants-800.webp 800w, /projet-envol-enfants.webp 1400w" sizes="(max-width: 760px) 100vw, 50vw" width="1400" height="760"'
+          if old in text:
+              page.write_text(text.replace(old, new, 1), encoding="utf-8")
+          elif new not in text:
+              raise SystemExit("Case-study markup changed; refusing to modify")
+          print(f"Case-study responsive asset: {target.stat().st_size} bytes")
+          PY
+
       - name: Commit images and markup atomically
         run: |
           set -euo pipefail
-          git add app/page.tsx app/components.tsx app/layout.tsx public/aip-icon-header.webp public/aip-icon-small.png public/HERO/atelier-potvin-desktop-*.webp public/HERO/atelier-potvin-mobile-*.webp
+          git add app/page.tsx app/components.tsx app/layout.tsx public/projet-envol-enfants-800.webp public/aip-icon-header.webp public/aip-icon-small.png public/HERO/atelier-potvin-desktop-*.webp public/HERO/atelier-potvin-mobile-*.webp
           if git diff --cached --quiet; then
             echo "All current hero variants are already optimized"
             exit 0
