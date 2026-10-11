@@ -60,10 +60,45 @@ jobs:
               page.write_text(text, encoding="utf-8")
           PY
 
+      - name: Optimize shared branding assets without replacing originals
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps
+          source = Path("public/aip-icon-v7.png")
+          if not source.is_file():
+              raise SystemExit(f"Logo source missing: {source}")
+          with Image.open(source) as image:
+              logo = ImageOps.exif_transpose(image).convert("RGBA")
+              header = logo.copy()
+              header.thumbnail((320, 320), Image.Resampling.LANCZOS)
+              header.save("public/aip-icon-header.webp", "WEBP", quality=82, method=6)
+              icon = logo.copy()
+              icon.thumbnail((192, 192), Image.Resampling.LANCZOS)
+              icon.save("public/aip-icon-small.png", "PNG", optimize=True)
+              print("Original:", source.stat().st_size, "Header:", Path("public/aip-icon-header.webp").stat().st_size, "Icon:", Path("public/aip-icon-small.png").stat().st_size)
+
+          components = Path("app/components.tsx")
+          text = components.read_text(encoding="utf-8")
+          old = "/aip-icon-v7.png?v=13"
+          new = "/aip-icon-header.webp"
+          if old not in text and new not in text:
+              raise SystemExit("Header/footer icon URL changed; stop to avoid unintended modifications")
+          components.write_text(text.replace(old, new), encoding="utf-8")
+
+          layout = Path("app/layout.tsx")
+          text = layout.read_text(encoding="utf-8")
+          old = "/aip-icon-v7.png?v=13"
+          new = "/aip-icon-small.png?v=1"
+          if old not in text and new not in text:
+              raise SystemExit("Favicon URL changed; stop to avoid unintended modifications")
+          layout.write_text(text.replace(old, new), encoding="utf-8")
+          PY
+
       - name: Commit images and markup atomically
         run: |
           set -euo pipefail
-          git add app/page.tsx public/HERO/atelier-potvin-desktop-*.webp public/HERO/atelier-potvin-mobile-*.webp
+          git add app/page.tsx app/components.tsx app/layout.tsx public/aip-icon-header.webp public/aip-icon-small.png public/HERO/atelier-potvin-desktop-*.webp public/HERO/atelier-potvin-mobile-*.webp
           if git diff --cached --quiet; then
             echo "All current hero variants are already optimized"
             exit 0
