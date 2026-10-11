@@ -13,7 +13,7 @@ export default function Page() {
   return <DetailPage
     eyebrow="Création · Conception · Développement Web"
     image="/aip-travail-13.webp"
-    imageAlt="Aperçu d’un site web professionnel réalisé sur mesure par Atelier Informatique Potvin"
+    imageAlt="Aperçu d’un site web professionnel réalisé sur mesure par AIP Conception Web"
     title="Création et conception de sites web à Nicolet."
     accent="Un créateur Web local pour les entreprises d’ici."
     intro="Je crée des sites Web professionnels pour les PME de Nicolet et de la région : site vitrine, boutique en ligne ou outil sur mesure. Vous travaillez directement avec Patrick, de la conception jusqu’à la mise en ligne."
