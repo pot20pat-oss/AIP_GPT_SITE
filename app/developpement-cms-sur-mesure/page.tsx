@@ -13,7 +13,7 @@ export default function Page() {
   return <DetailPage
     eyebrow="Développement Web · CMS sur mesure"
     image="/envol-cms/dashboard.png"
-    imageAlt="Interface de CMS sur mesure développée par Atelier Informatique Potvin"
+    imageAlt="Interface de CMS sur mesure développée par AIP Conception Web"
     title="Développement de CMS sur mesure."
     accent="L’outil s’adapte à votre travail."
     intro="Quand un CMS générique impose trop de détours, une interface sur mesure peut simplifier les tâches quotidiennes. AIP développe des outils Web et des panneaux d’administration autour des données, actions et règles propres à votre entreprise."
