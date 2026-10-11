@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { headers } from "next/headers";
 import { EditorialMotion } from "./editorial-motion";
 import { BackToTopButton, EnvolCmsGallery } from "./interactive-components";
 import { businessAddress, businessName, googleBusinessUrl, jsonLd, siteUrl, webSiteUrl } from "./seo";
@@ -27,7 +28,9 @@ export function SiteHeader() {
   </>;
 }
 
-export function SiteFooter() {
+export async function SiteFooter() {
+  const host = ((await headers()).get("host") || "").split(":")[0].toLowerCase();
+  const isWebSite = ["aipconceptionweb.ca", "www.aipconceptionweb.ca", "aipcreation.ca", "www.aipcreation.ca"].includes(host);
   return <>
     <nav className="footer-service-links footer-simple footer-site footer-site-it shell" aria-label="Services informatiques et informations">
       <div><strong>Informatique</strong><Link href="/depannage-informatique-nicolet">Dépannage et réparation</Link><Link href="/assistance-informatique-a-distance">Assistance à distance</Link><Link href="/suppression-virus">Virus et sécurité</Link><Link href="/installation-ordinateur-transfert-donnees">Installation et transfert</Link><Link href="/configuration-wifi-sauvegarde">Wi-Fi et sauvegardes</Link></div>
@@ -41,8 +44,8 @@ export function SiteFooter() {
       <div className="footer-cross-site"><strong>Besoin informatique?</strong><a href="https://atelierpotvin.ca/">Atelier Informatique Potvin</a><a href="https://atelierpotvin.ca/assistance-informatique-a-distance">Assistance à distance</a></div>
     </nav>
 
-    <div className="footer-nap shell"><strong>{businessName}</strong><span>{businessAddress}</span><a href="tel:+18193802999">{phone}</a><a href={googleBusinessUrl} target="_blank" rel="noopener noreferrer">Nous trouver sur Google Maps</a></div>
-    <footer className="footer shell"><Link className="footer-brand footer-logo-only" href="/" aria-label="AIP Atelier Informatique Potvin, accueil"><img src="/aip-icon-v7.png?v=13" alt="AIP Atelier Informatique Potvin" width="88" height="88" /></Link><p>© 2026 AIP · <span className="footer-legal-name">AIP Atelier Informatique Potvin</span> · Nicolet, Québec</p></footer>
+    <div className="footer-nap shell">{isWebSite ? <><strong>AIP Conception Web</strong><span>Nicolet · Centre-du-Québec · rencontres sur rendez-vous et à distance</span><a href="tel:+18193802999">{phone}</a></> : <><strong>{businessName}</strong><span>Nicolet, Québec · dépannage sur place et à distance</span><a href="tel:+18193802999">{phone}</a><a href={googleBusinessUrl} target="_blank" rel="noopener noreferrer">Voir notre fiche Google</a></>}</div>
+    <footer className="footer shell"><Link className="footer-brand footer-logo-only" href="/" aria-label={isWebSite ? "AIP Conception Web, accueil" : "Atelier Informatique Potvin, accueil"}><img src="/aip-icon-v7.png?v=13" alt={isWebSite ? "AIP Conception Web" : "AIP Atelier Informatique Potvin"} width="88" height="88" /></Link><p>© 2026 AIP · <span className="footer-legal-name">{isWebSite ? "AIP Conception Web" : "AIP Atelier Informatique Potvin"}</span> · Nicolet, Québec</p></footer>
     <BackToTopButton />
   </>;
 }
