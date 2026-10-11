@@ -8783,6 +8783,7 @@ html[data-site-mode="it"] .back-to-top{
   html[data-site-mode="it"] .hero-clean.hero-split .hero-split-media picture{
     display:block;
     width:100%;
+    aspect-ratio:4 / 5;
   }
   html[data-site-mode="it"] .hero-clean.hero-split .hero-split-media .hero-clean-bg{
     position:relative!important;
@@ -8793,7 +8794,7 @@ html[data-site-mode="it"] .back-to-top{
     min-height:0!important;
     max-width:none!important;
     max-height:none!important;
-    aspect-ratio:auto!important;
+    aspect-ratio:4 / 5!important;
     object-fit:contain!important;
     object-position:center!important;
     transform:none!important;
