@@ -2796,7 +2796,7 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   width:min(1200px,calc(100% - 80px))!important;
   max-width:1200px!important;
   height:auto!important;
-  min-height:0!important;
+  min-height:400px!important;
   margin:0 auto!important;
   padding:42px 0 48px!important;
   display:block!important;
@@ -2829,6 +2829,7 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   .hero-split-media .hero-clean-bg{object-position:center 48%!important}
   .hero-clean.hero-split .hero-split-copy{
     width:calc(100% - 36px)!important;max-width:none!important;
+    min-height:0!important;
     padding:28px 0 34px!important;text-align:left!important;
   }
   .hero-clean.hero-split .hero-clean-brand{font-size:12px!important}
