@@ -16,16 +16,16 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: new URL(base),
-    title,
-    description,
+    title: isWebSite ? "Conception de sites Web à Nicolet | AIP Conception Web" : title,
+    description: isWebSite ? "Sites Web professionnels, boutiques en ligne et CMS sur mesure pour PME à Nicolet et au Centre-du-Québec." : description,
     alternates: { canonical: base },
     keywords: isWebSite
       ? ["création site web Nicolet", "conception site web Nicolet", "site web PME", "boutique en ligne", "CMS sur mesure"]
       : ["dépannage informatique Nicolet", "réparation ordinateur Nicolet", "assistance informatique à distance", "Atelier Informatique Potvin"],
     authors: [{ name: "Patrick Potvin" }],
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
-    openGraph: { title, description, url: base, siteName: isWebSite ? "AIP Conception Web" : businessName, images: [{ url: `${base}/aip-travail-03.webp`, alt: "Patrick Potvin, services informatiques à Nicolet" }], locale: "fr_CA", type: "website" },
-    twitter: { card: "summary_large_image", title, description, images: [`${base}/aip-travail-03.webp`] },
+    openGraph: { title: isWebSite ? "AIP Conception Web" : title, description: isWebSite ? "Conception de sites Web, boutiques en ligne et CMS sur mesure à Nicolet." : description, url: base, siteName: isWebSite ? "AIP Conception Web" : businessName, images: [{ url: `${base}/${isWebSite ? "aip-travail-13.webp" : "aip-travail-03.webp"}`, alt: isWebSite ? "AIP Conception Web à Nicolet" : "Patrick Potvin, services informatiques à Nicolet" }], locale: "fr_CA", type: "website" },
+    twitter: { card: "summary_large_image", title: isWebSite ? "AIP Conception Web" : title, description: isWebSite ? "Conception de sites Web à Nicolet." : description, images: [`${base}/${isWebSite ? "aip-travail-13.webp" : "aip-travail-03.webp"}`] },
     icons: {
       icon: [{ url: "/aip-icon-v7.png?v=13", type: "image/png" }],
       shortcut: "/aip-icon-v7.png?v=13",
@@ -41,24 +41,39 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   const currentSiteUrl = isWebSite ? webSiteUrl : siteUrl;
   const currentSiteName = isWebSite ? "AIP Conception Web" : businessName;
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
+  const businessIdentity = isWebSite
+    ? {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": `${webSiteUrl}/#entreprise`,
+        name: "AIP Conception Web",
+        description: "Conception de sites Web, boutiques en ligne et CMS sur mesure à Nicolet.",
+        url: webSiteUrl,
+        telephone: "+1-819-380-2999",
+        image: `${webSiteUrl}/aip-travail-13.webp`,
+        logo: `${webSiteUrl}/aip-icon-v7.png?v=13`,
+        founder: { "@type": "Person", name: "Patrick Potvin" },
+        areaServed: ["Nicolet", "Bécancour", "Trois-Rivières", "Centre-du-Québec"].map(name => ({ "@type": "Place", name })),
+        knowsLanguage: "fr-CA",
+      }
+    : {
         "@type": ["LocalBusiness", "ProfessionalService"],
         "@id": `${siteUrl}/#entreprise`,
         name: businessName,
-        description: "Services informatiques et création Web par Atelier Informatique Potvin à Nicolet.",
+        description: "Services informatiques à Nicolet, sur place et à distance.",
         url: siteUrl,
         telephone: "+1-819-380-2999",
         image,
         logo: `${siteUrl}/aip-icon-v7.png?v=13`,
         founder: { "@type": "Person", name: "Patrick Potvin" },
-        address: { "@type": "PostalAddress", streetAddress: "462 rue D. N. St-Cyr", addressLocality: "Nicolet", addressRegion: "QC", postalCode: "J3T 1H3", addressCountry: "CA" },
+        address: { "@type": "PostalAddress", addressLocality: "Nicolet", addressRegion: "QC", addressCountry: "CA" },
         areaServed: ["Nicolet", "Bécancour", "Trois-Rivières", "Saint-Célestin", "Centre-du-Québec"].map(name => ({ "@type": "Place", name })),
         knowsLanguage: "fr-CA",
-      },
-      { "@type": "WebSite", "@id": `${currentSiteUrl}/#site`, url: currentSiteUrl, name: currentSiteName, inLanguage: "fr-CA", publisher: { "@id": `${siteUrl}/#entreprise` } },
+      };
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      businessIdentity,
+      { "@type": "WebSite", "@id": `${currentSiteUrl}/#site`, url: currentSiteUrl, name: currentSiteName, inLanguage: "fr-CA", publisher: { "@id": businessIdentity["@id"] } },
     ],
   };
 
