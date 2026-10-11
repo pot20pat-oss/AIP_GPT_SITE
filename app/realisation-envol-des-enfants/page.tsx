@@ -87,7 +87,7 @@ export default function Page() {
         </div>
       </div>
       <figure className="detail-photo">
-        <img src="/projet-envol-enfants.webp" alt="Boutique en ligne L’Envol des Enfants développée par Atelier Informatique Potvin" />
+        <img src="/projet-envol-enfants.webp" alt="Boutique en ligne L’Envol des Enfants développée par AIP Conception Web" />
       </figure>
     </section>
 
