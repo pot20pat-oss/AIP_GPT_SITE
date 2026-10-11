@@ -2796,7 +2796,7 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   width:min(1200px,calc(100% - 80px))!important;
   max-width:1200px!important;
   height:auto!important;
-  min-height:400px!important;
+  min-height:0!important;
   margin:0 auto!important;
   padding:42px 0 48px!important;
   display:block!important;
@@ -2888,6 +2888,16 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
   .hero-clean.hero-split .hero-split-media .hero-clean-bg{height:auto!important;object-fit:contain!important}
 }
 
+
+/* Reserve the desktop hero image area before the responsive source loads.
+   The copy follows this media block in document flow. */
+@media (min-width:761px){
+  .hero-clean.hero-split .hero-split-media picture{
+    display:block;
+    width:100%;
+    aspect-ratio:1731 / 909;
+  }
+}
 
 /* 2026-09-29 — desktop hero: preserve the complete image at every resolution */
 @media (min-width:761px){
