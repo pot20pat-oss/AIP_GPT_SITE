@@ -1,10 +1,10 @@
-name: Optimize heavy site images
+name: Optimize current homepage hero images
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - ".github/workflows/optimize-images.yml"
-  workflow_dispatch:
 
 permissions:
   contents: write
@@ -13,65 +13,63 @@ jobs:
   optimize:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
-      - name: Install ImageMagick
+      - name: Install image conversion dependency
+        run: python3 -m pip install --user Pillow
+
+      - name: Convert current Atelier hero images and update responsive markup
         run: |
-          sudo apt-get update
-          sudo apt-get install -y imagemagick
-
-      - name: Build responsive Atelier hero assets
-        run: |
-          set -euo pipefail
-
-          curl -fsSL https://atelierpotvin.ca/aip-hero.webp -o /tmp/aip-hero.webp
-
-          convert /tmp/aip-hero.webp \
-            -resize '640x>' \
-            -strip \
-            -quality 68 \
-            -define webp:method=6 \
-            public/aip-hero-640.webp
-
-          convert /tmp/aip-hero.webp \
-            -resize '960x>' \
-            -strip \
-            -quality 72 \
-            -define webp:method=6 \
-            public/aip-hero-960.webp
-
-          convert /tmp/aip-hero.webp \
-            -resize '1280x>' \
-            -strip \
-            -quality 76 \
-            -define webp:method=6 \
-            public/aip-hero-1280.webp
-
           python3 - <<'PY'
           from pathlib import Path
+          from PIL import Image, ImageOps
+          import re
 
-          p = Path("app/page.tsx")
-          s = p.read_text(encoding="utf-8")
-          old = '<img className="hero-clean-bg" src="/aip-hero.webp" alt="Atelier Informatique Potvin" width="1672" height="941" loading="eager" fetchPriority="high" decoding="async" />'
-          new = '<img className="hero-clean-bg" src="/aip-hero.webp" srcSet="/aip-hero-640.webp 640w, /aip-hero-960.webp 960w, /aip-hero-1280.webp 1280w, /aip-hero.webp 1672w" sizes="100vw" alt="Atelier Informatique Potvin" width="1672" height="941" loading="eager" fetchPriority="high" decoding="async" />'
-          if old in s:
-              s = s.replace(old, new)
-          p.write_text(s, encoding="utf-8")
+          assets = Path("public/HERO")
+          page = Path("app/page.tsx")
+          text = page.read_text(encoding="utf-8")
+
+          originals = {
+              "desktop": assets / "atelier-potvin-desktop.png",
+              "mobile": assets / "atelier-potvin-mobile.png",
+          }
+          for name, source in originals.items():
+              if not source.is_file():
+                  raise SystemExit(f"Required current {name} hero missing: {source}")
+
+          variants = {"desktop": [640, 960, 1280, 1600], "mobile": [480, 768]}
+          for kind, widths in variants.items():
+              with Image.open(originals[kind]) as im:
+                  im = ImageOps.exif_transpose(im).convert("RGB")
+                  for requested_width in widths:
+                      width = min(im.width, requested_width)
+                      height = round(im.height * width / im.width)
+                      resized = im.resize((width, height), Image.Resampling.LANCZOS)
+                      destination = assets / f"atelier-potvin-{kind}-{requested_width}.webp"
+                      resized.save(destination, "WEBP", quality=78, method=6)
+                      print(f"{destination}: {destination.stat().st_size:,} bytes ({width}x{height})")
+
+          old = '<picture><source media="(max-width: 640px)" srcSet="/HERO/atelier-potvin-mobile.png" /><img className="hero-clean-bg" src="/HERO/atelier-potvin-desktop.png" alt="Patrick Potvin dans son atelier informatique à Nicolet" width="1731" height="909" loading="eager" fetchPriority="high" decoding="async" /></picture>'
+          new = '<picture><source media="(max-width: 640px)" srcSet="/HERO/atelier-potvin-mobile-480.webp 480w, /HERO/atelier-potvin-mobile-768.webp 768w" sizes="100vw" type="image/webp" /><source srcSet="/HERO/atelier-potvin-desktop-640.webp 640w, /HERO/atelier-potvin-desktop-960.webp 960w, /HERO/atelier-potvin-desktop-1280.webp 1280w, /HERO/atelier-potvin-desktop-1600.webp 1600w" sizes="100vw" type="image/webp" /><img className="hero-clean-bg" src="/HERO/atelier-potvin-desktop.png" alt="Patrick Potvin dans son atelier informatique à Nicolet" width="1731" height="909" loading="eager" fetchPriority="high" decoding="async" /></picture>'
+          if old not in text and new not in text:
+              raise SystemExit("Homepage hero markup differs from audited state; no modification made")
+          if old in text:
+              text = text.replace(old, new, 1)
+              page.write_text(text, encoding="utf-8")
           PY
 
-          ls -lh /tmp/aip-hero.webp public/aip-hero-640.webp public/aip-hero-960.webp public/aip-hero-1280.webp
-
-      - name: Commit optimized assets
+      - name: Commit images and markup atomically
         run: |
-          if [ -z "$(git status --porcelain -- public/aip-hero-640.webp public/aip-hero-960.webp public/aip-hero-1280.webp app/page.tsx)" ]; then
-            echo "Responsive hero assets are already current"
+          set -euo pipefail
+          git add app/page.tsx public/HERO/atelier-potvin-desktop-*.webp public/HERO/atelier-potvin-mobile-*.webp
+          if git diff --cached --quiet; then
+            echo "All current hero variants are already optimized"
             exit 0
           fi
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/aip-hero-640.webp public/aip-hero-960.webp public/aip-hero-1280.webp app/page.tsx
-          git commit -m "Serve responsive Atelier hero image"
+          git commit -m "Optimize current Atelier hero for responsive WebP loading"
           git pull --rebase origin main
-          git push
+          git push origin HEAD:main
