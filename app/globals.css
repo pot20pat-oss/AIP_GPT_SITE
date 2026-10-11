@@ -8776,7 +8776,7 @@ html[data-site-mode="it"] .back-to-top{
     height:auto!important;
     min-height:0!important;
     max-height:none!important;
-    aspect-ratio:1672 / 941!important;
+    aspect-ratio:4 / 3!important;
     overflow:hidden!important;
     background:#061b30!important;
   }
@@ -8791,7 +8791,7 @@ html[data-site-mode="it"] .back-to-top{
     max-height:none!important;
     aspect-ratio:auto!important;
     object-fit:cover!important;
-    object-position:61% 44%!important;
+    object-position:center 12%!important;
     transform:none!important;
   }
 }
@@ -9358,7 +9358,7 @@ html[data-site-mode="it"] .footer-nap strong{
   }
 
   html[data-site-mode="it"] .home-domain-it .hero-clean.hero-split h1{
-    font-size:42px!important;
+    font-size:38px!important;
     line-height:.98!important;
   }
 
