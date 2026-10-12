@@ -27,9 +27,9 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: { title: isWebSite ? "AIP Conception Web" : title, description: isWebSite ? "Conception de sites Web, boutiques en ligne et CMS sur mesure à Nicolet." : description, url: base, siteName: isWebSite ? "AIP Conception Web" : businessName, images: [{ url: `${base}/${isWebSite ? "aip-travail-13.webp" : "aip-travail-03.webp"}`, alt: isWebSite ? "AIP Conception Web à Nicolet" : "Patrick Potvin, services informatiques à Nicolet" }], locale: "fr_CA", type: "website" },
     twitter: { card: "summary_large_image", title: isWebSite ? "AIP Conception Web" : title, description: isWebSite ? "Conception de sites Web à Nicolet." : description, images: [`${base}/${isWebSite ? "aip-travail-13.webp" : "aip-travail-03.webp"}`] },
     icons: {
-      icon: [{ url: "/aip-icon-small.png?v=1", type: "image/png" }],
-      shortcut: "/aip-icon-small.png?v=1",
-      apple: "/aip-icon-small.png?v=1",
+      icon: [{ url: "/aip-icon-small.png?v=2", type: "image/png" }],
+      shortcut: "/aip-icon-small.png?v=2",
+      apple: "/aip-icon-small.png?v=2",
     },
   };
 }
@@ -50,7 +50,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         url: webSiteUrl,
         telephone: "+1-819-380-2999",
         image: `${webSiteUrl}/aip-travail-13.webp`,
-        logo: `${webSiteUrl}/aip-icon-small.png?v=1`,
+        logo: `${webSiteUrl}/aip-icon-small.png?v=2`,
         founder: { "@type": "Person", name: "Patrick Potvin" },
         areaServed: ["Nicolet", "Bécancour", "Trois-Rivières", "Centre-du-Québec"].map(name => ({ "@type": "Place", name })),
         knowsLanguage: "fr-CA",
@@ -63,7 +63,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         url: siteUrl,
         telephone: "+1-819-380-2999",
         image,
-        logo: `${siteUrl}/aip-icon-small.png?v=1`,
+        logo: `${siteUrl}/aip-icon-small.png?v=2`,
         founder: { "@type": "Person", name: "Patrick Potvin" },
         address: { "@type": "PostalAddress", addressLocality: "Nicolet", addressRegion: "QC", addressCountry: "CA" },
         areaServed: ["Nicolet", "Bécancour", "Trois-Rivières", "Saint-Célestin", "Centre-du-Québec"].map(name => ({ "@type": "Place", name })),

@@ -2980,10 +2980,10 @@ a > span.gold-arrow::before,a > span.gold-arrow::after{content:none!important;di
 }
 .header .brand-logo{
   display:block;
-  width:104px!important;
-  height:82px!important;
-  max-width:104px!important;
-  min-width:104px!important;
+  width:180px!important;
+  height:auto!important;
+  max-width:180px!important;
+  min-width:0!important;
   object-fit:contain;
 }
 .header .brand-name{
