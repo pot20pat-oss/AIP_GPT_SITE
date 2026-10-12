@@ -26,10 +26,16 @@ export async function generateMetadata(): Promise<Metadata> {
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
     openGraph: { title: isWebSite ? "AIP Conception Web" : title, description: isWebSite ? "Conception de sites Web, boutiques en ligne et CMS sur mesure à Nicolet." : description, url: base, siteName: isWebSite ? "AIP Conception Web" : businessName, images: [{ url: `${base}/${isWebSite ? "aip-travail-13.webp" : "aip-travail-03.webp"}`, alt: isWebSite ? "AIP Conception Web à Nicolet" : "Patrick Potvin, services informatiques à Nicolet" }], locale: "fr_CA", type: "website" },
     twitter: { card: "summary_large_image", title: isWebSite ? "AIP Conception Web" : title, description: isWebSite ? "Conception de sites Web à Nicolet." : description, images: [`${base}/${isWebSite ? "aip-travail-13.webp" : "aip-travail-03.webp"}`] },
+    manifest: "/site.webmanifest",
     icons: {
-      icon: [{ url: "/aip-icon-small.png?v=2", type: "image/png" }],
-      shortcut: "/aip-icon-small.png?v=2",
-      apple: "/aip-icon-small.png?v=2",
+      icon: [
+        { url: "/favicon.ico?v=3", sizes: "any" },
+        { url: "/favicon-16x16.png?v=3", sizes: "16x16", type: "image/png" },
+        { url: "/favicon-32x32.png?v=3", sizes: "32x32", type: "image/png" },
+        { url: "/favicon-48x48.png?v=3", sizes: "48x48", type: "image/png" },
+      ],
+      shortcut: "/favicon.ico?v=3",
+      apple: [{ url: "/apple-touch-icon.png?v=3", sizes: "180x180", type: "image/png" }],
     },
   };
 }
@@ -50,7 +56,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         url: webSiteUrl,
         telephone: "+1-819-380-2999",
         image: `${webSiteUrl}/aip-travail-13.webp`,
-        logo: `${webSiteUrl}/aip-icon-small.png?v=2`,
+        logo: `${webSiteUrl}/aip-icon-small.png?v=3`,
         founder: { "@type": "Person", name: "Patrick Potvin" },
         areaServed: ["Nicolet", "Bécancour", "Trois-Rivières", "Centre-du-Québec"].map(name => ({ "@type": "Place", name })),
         knowsLanguage: "fr-CA",
@@ -63,7 +69,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         url: siteUrl,
         telephone: "+1-819-380-2999",
         image,
-        logo: `${siteUrl}/aip-icon-small.png?v=2`,
+        logo: `${siteUrl}/aip-icon-small.png?v=3`,
         founder: { "@type": "Person", name: "Patrick Potvin" },
         address: { "@type": "PostalAddress", addressLocality: "Nicolet", addressRegion: "QC", addressCountry: "CA" },
         areaServed: ["Nicolet", "Bécancour", "Trois-Rivières", "Saint-Célestin", "Centre-du-Québec"].map(name => ({ "@type": "Place", name })),
