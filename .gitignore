@@ -40,3 +40,17 @@ next-env.d.ts
 /.sites-runtime/
 /outputs/
 /work/
+
+# sauvegardes locales et packs d'installation (archives conservees hors Git)
+/sauvegarde-*/
+/aip-logos-before-size-*/
+/AIP_V20_ASSETS/
+/assets/
+*.backup-*
+*.sauvegarde-*
+/PACK_INSTALLATION_LOGOS_AIP_V15.zip
+/AGRANDIR_ENTETE_ATELIER_DESKTOP_V2.ps1
+/CORRIGER_ENCODAGE_AIP_V1.ps1
+/IDENTITES_SHA256.json
+/LISEZ-MOI.txt
+/README.txt
