@@ -1,107 +1,119 @@
-# vinext-starter
+# Atelier Informatique Potvin — sites Web
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Code source des deux sites de l'entreprise, servis par une seule application :
 
-## Prerequisites
+| Domaine | Site | Contenu |
+| --- | --- | --- |
+| [atelierpotvin.ca](https://atelierpotvin.ca) | Atelier Informatique Potvin | Dépannage, assistance à distance, réparation, installation et réseau à Nicolet et dans les environs |
+| [aipconceptionweb.ca](https://aipconceptionweb.ca) | AIP Conception Web | Création de sites Web, boutiques en ligne et CMS sur mesure pour PME |
 
-- Node.js `>=22.13.0`
-- Linux with `flock`, `curl`, and GNU `timeout`
+Le mode actif est déterminé par l'en-tête `Host` de la requête
+([app/layout.tsx](app/layout.tsx), [app/components.tsx](app/components.tsx)) :
+même code, même déploiement, identité visuelle et contenus distincts.
+L'ancien domaine `aipcreation.ca` est redirigé vers `aipconceptionweb.ca`.
 
-## Sites Lifecycle
+## Stack technique
 
-The Sites lifecycle CLI runs the locked dependency install before returning this checkout. Edit the source under `app/`, then checkpoint when a coherent milestone is ready to inspect or share. The remote Sites builder runs `npm run build` against the pushed commit. Do not repeat install or build as a normal pre-checkpoint step.
+- Next.js 16.2 / React 19.2, rendus par [vinext](https://github.com/cloudflare/vinext) 0.0.50 et Vite 8
+- Cloudflare Workers (point d'entrée [worker/index.ts](worker/index.ts)) et plugin Cloudflare pour Vite
+- CSS écrit à la main (pas de classes Tailwind dans les pages), découpé en modules — voir plus bas
+- Drizzle ORM présent mais inutilisé pour l'instant : le schéma [db/schema.ts](db/schema.ts) est vide et aucun binding D1/R2 n'est déclaré dans [.openai/hosting.json](.openai/hosting.json). L'exemple [examples/d1/](examples/d1/) montre la marche à suivre le jour où une base sera nécessaire.
 
-This starter does not use `wrangler.jsonc`.
+## Prérequis
 
-`install:ci` is intentionally a single, non-retrying `npm ci`. It refuses a concurrent install for the same project, consumes a matching image-seeded npm cache with `--prefer-offline` while retaining registry fallback for a missing cache object, otherwise downloads and verifies the complete vinext tarball recorded in `package-lock.json`, limits npm to one socket, and terminates a stalled install. `build` applies a short timeout. These helpers target Linux and use GNU `timeout`; they are not native macOS scripts.
+- Node.js `>= 22.13.0`
+- Les scripts `lint` et `db:generate` passent par `bash` (`scripts/sites-env.sh`) : sous Windows, utilisez Git Bash ou WSL. `build` et `test` fonctionnent en PowerShell/cmd.
 
-Scripts that need writable project-scoped home, npm, XDG, and temporary paths use `scripts/sites-env.sh`. The `dev` and `start` scripts honor the caller's runtime environment and keep Wrangler logs inside the checkout. The generated `.sites-runtime/` directory is disposable and ignored by Git.
+## Commandes
 
-## Included Shape
+| Commande | Effet |
+| --- | --- |
+| `npm run dev` | Serveur de développement Vite/vinext |
+| `npm run build` | Build de production dans `dist/` (c'est ce que vérifie la CI) |
+| `npm run start` | Sert le build localement |
+| `npm test` | Build complet, puis les tests de rendu (`node --test`) |
+| `npm run install:ci` | Installation verrouillée (`npm ci`) utilisée par la plateforme Sites |
+| `npm run lint` | ESLint sur le projet (via bash) |
+| `npm run db:generate` | Génère une migration Drizzle après modification du schéma |
 
-- edit site code under `app/`
-- `app/chatgpt-auth.ts` provides optional dispatch-owned ChatGPT sign-in helpers
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/index.ts` reads the D1 binding from the Cloudflare Worker environment
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
+## Structure
 
-## Workspace Auth Headers
-
-OpenAI workspace sites can read the current user's email from
-`oai-authenticated-user-email`.
-
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
-
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
+```text
+app/                  Pages et composants (App Router)
+  layout.tsx          Métadonnées et identité selon le domaine
+  components.tsx      En-tête, pied de page, sections partagées
+  seo.ts              URL canoniques, helpers de métadonnées et JSON-LD
+  page.tsx            Page d'accueil (deux modes)
+  <30 dossiers>       Une page par service ou par ville desservie
+  styles/             Les six modules CSS, importés par globals.css
+  globals.css         Manifeste d'imports CSS (ne contient aucune règle)
+worker/index.ts       Redirections entre domaines, robots/sitemap du site Web, optimisation d'images
+public/
+  atelierpotvin/      Logos et favicons v20 du site informatique
+  aipconceptionweb/   Logos et favicons v20 du site Web
+  HERO/               Images principales des pages d'accueil
+tests/                Test de rendu des deux modes (titres, favicons, manifest)
+.github/workflows/    CI : build sur chaque push vers `main`
 ```
 
-## Optional Dispatch-Owned ChatGPT Sign-In
+## Styles : ordre de la cascade
 
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
+[app/globals.css](app/globals.css) importe les six modules de
+[app/styles/](app/styles/) dans un ordre précis, hérité de l'historique du
+fichier monolithique d'origine. **Ne réordonnez pas ces imports** : les
+modules postérieurs écrasent volontairement les antérieurs (surcharges
+successives, souvent en `!important`), et changer l'ordre change le rendu.
+Pour modifier un style, ajoutez la règle à la fin du module concerné :
 
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
+1. `01-base-et-accueil.css` — reset, variables, accueil et services d'origine
+2. `02-responsive-et-cta.css` — responsive global, boutons et appels à l'action
+3. `03-en-tete-et-parcours.css` — architecture de l'en-tête, assistance, parcours
+4. `04-deux-domaines.css` — bascule entre les deux modes de site
+5. `05-creation-editorial.css` — système éditorial d'AIP Conception Web
+6. `06-atelier-et-portfolio.css` — en-tête/héros Atelier, portfolio, finitions
 
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
+Le découpage est à rendu constant : le CSS compilé produit par le build est
+identique, octet pour octet, à celui du fichier monolithique d'origine.
 
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
+## Identité visuelle
 
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
+Chaque site a ses logos et favicons sous `public/<domaine>/`, référencés avec
+le suffixe `?v=20` dans le code. Incrémentez cette version lors d'un
+changement de logo pour forcer le rafraîchissement des caches. Les fichiers
+sources (originaux avant optimisation) et les anciennes versions sont
+conservés localement dans `AIP_V20_ASSETS/`, `assets/` et les dossiers
+`sauvegarde-*/` : ils sont exclus de Git par [.gitignore](.gitignore) et ne
+doivent pas être commités.
 
-## Diagnostic Commands
+## Routage entre domaines
 
-- `npm run install:ci`: perform the one bounded lockfile install
-- `npm run dev`: start the Vite/Vinext development server
-- `npm run build`: build the deployable Sites artifact
-- `npm run start`: start the built Vinext application
-- `npm test`: build and verify the rendered development-preview metadata
-- `npm run db:generate`: generate Drizzle migrations after schema changes
+[worker/index.ts](worker/index.ts) applique, avant de servir les pages :
 
-Use build commands for targeted diagnosis after a remote failure, not as part of the normal checkpoint path.
+- `www.` et `atelierpotvin.tech` → `atelierpotvin.ca` (301)
+- `aipcreation.ca` (et ses `www.`) → `aipconceptionweb.ca` (301)
+- les pages « création Web » demandées sur `atelierpotvin.ca` → même chemin sur `aipconceptionweb.ca`, et inversement pour les pages « informatique » (301)
+- `robots.txt` et `sitemap.xml` générés à la volée pour le site Web
+- optimisation d'images via `/_vinext/image`
 
-The timeout defaults can be overridden for a controlled canary with `SITES_INSTALL_TIMEOUT`, `SITES_INSTALL_KILL_AFTER`, `SITES_BUILD_TIMEOUT`, and `SITES_BUILD_KILL_AFTER`. A timeout fails the command; the helpers never retry an unchanged install or build.
+## Tests et CI
 
-## Learn More
+`npm test` reconstruit le site puis rend la page d'accueil dans les deux
+modes (simulation des hôtes `localhost` et `aipconceptionweb.ca`) et vérifie
+le statut 200, le titre et les références d'icônes v20.
+Le workflow [.github/workflows/build.yml](.github/workflows/build.yml)
+exécute `npm ci` puis `npm run build` sur Ubuntu/Node 22 à chaque push vers
+`main` et sur les pull requests.
 
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+## Déploiement
+
+Le déploiement est assuré par la plateforme Sites (vinext) à partir du
+commit poussé sur `main` : poussez, vérifiez que la CI est verte, puis que
+le build distant a bien pris le commit. Les dossiers `dist/`, `.wrangler/`
+et `.sites-runtime/` sont des artefacts locaux ignorés par Git.
+
+## Authentification (optionnel, non utilisé par les pages publiques)
+
+[app/chatgpt-auth.ts](app/chatgpt-auth.ts) fournit les helpers « Sign in
+with ChatGPT » de la plateforme Sites (`getChatGPTUser`,
+`requireChatGPTUser`, chemins de connexion/déconnexion). Aucune page
+actuelle ne les appelle : le site est entièrement public et anonyme.
