@@ -1,0 +1,1666 @@
+/* AIP IT — HEADER + HERO ALIGNMENT 2026-10-04 */
+.header-it-cta{display:none}
+
+html[data-site-mode="it"] .header{
+  width:min(1480px,calc(100% - 64px))!important;
+  max-width:1480px!important;
+  min-height:180px;
+  grid-template-columns:minmax(360px,1.1fr) minmax(420px,.9fr) auto;
+  column-gap:26px;
+  padding:10px 14px;
+  border:1px solid rgba(103,232,255,.12);
+  border-top:0;
+  background:
+    radial-gradient(circle at 8% 50%,rgba(44,161,255,.08),transparent 22%),
+    linear-gradient(180deg,#07111f 0%,#050c16 100%);
+  box-shadow:0 18px 45px rgba(0,0,0,.18),inset 0 -1px rgba(103,232,255,.05);
+}
+
+html[data-site-mode="it"] .header .brand{
+  grid-template-columns:calc(clamp(110px,16vw,190px) + 10px) minmax(0,1fr)!important;
+  column-gap:16px;
+}
+
+html[data-site-mode="it"] .header .brand-logo{
+  width:clamp(110px,16vw,190px)!important;
+  height:clamp(90px,14vw,165px)!important;
+  min-width:clamp(110px,16vw,190px)!important;
+  max-width:clamp(110px,16vw,190px)!important;
+  filter:
+    drop-shadow(0 0 8px rgba(103,232,255,.18))
+    drop-shadow(0 0 16px rgba(36,124,255,.08));
+}
+
+html[data-site-mode="it"] .brand-name-it{
+  display:flex!important;
+  flex-direction:column;
+  justify-content:center;
+  gap:6px;
+  min-width:0;
+}
+
+html[data-site-mode="it"] .brand-name-it small{
+  display:block;
+  color:#6fdef2;
+  font-family:Consolas,"SFMono-Regular",monospace;
+  font-size:8px;
+  line-height:1;
+  letter-spacing:.15em;
+  font-weight:700;
+  text-transform:uppercase;
+}
+
+html[data-site-mode="it"] .brand-name-it>span{
+  color:#f4f9ff!important;
+  font-size:18px!important;
+  line-height:1.05!important;
+  font-weight:780!important;
+  letter-spacing:-.35px;
+}
+
+html[data-site-mode="it"] .brand-name-it em{
+  display:block;
+  color:#89a3b8;
+  font-size:9px;
+  line-height:1.1;
+  font-style:normal;
+  letter-spacing:.03em;
+}
+
+html[data-site-mode="it"] .nav-site-it{
+  display:flex!important;
+  justify-content:center;
+  gap:28px;
+  color:#b8ccdc;
+  border:0;
+}
+
+html[data-site-mode="it"] .nav-site-it a{
+  position:relative;
+  color:#b8ccdc;
+  font-weight:650;
+  letter-spacing:.015em;
+}
+
+html[data-site-mode="it"] .nav-site-it a:hover{
+  color:#82e9fb;
+}
+
+html[data-site-mode="it"] .nav-site-it a::after{
+  content:"";
+  position:absolute;
+  left:12%;
+  right:12%;
+  bottom:-8px;
+  height:1px;
+  background:#67e8ff;
+  transform:scaleX(0);
+  transform-origin:center;
+  transition:transform .2s ease;
+}
+
+html[data-site-mode="it"] .nav-site-it a:hover::after{
+  transform:scaleX(1);
+}
+
+html[data-site-mode="it"] .header-contact{
+  gap:12px;
+}
+
+html[data-site-mode="it"] .header-phone{
+  color:#dff7ff!important;
+  padding:8px 11px;
+  border:1px solid rgba(103,232,255,.14);
+  background:rgba(103,232,255,.025);
+}
+
+html[data-site-mode="it"] .header-it-cta{
+  display:flex;
+  min-height:42px;
+  align-items:center;
+  justify-content:center;
+  padding:0 16px;
+  border:1px solid rgba(103,232,255,.32);
+  background:linear-gradient(180deg,rgba(16,40,66,.96),rgba(7,20,36,.96));
+  color:#f4fbff;
+  font-size:10px;
+  font-weight:760;
+  white-space:nowrap;
+}
+
+html[data-site-mode="it"] .header-web-cta{
+  display:none!important;
+}
+
+html[data-site-mode="it"] .hero-clean-bg{
+  object-fit:cover;
+  object-position:66% center;
+}
+
+@media (min-width:761px) and (max-width:1499px){
+  html[data-site-mode="it"] .header{
+    width:min(1200px,calc(100% - 56px))!important;
+    max-width:1200px!important;
+    min-height:170px;
+    grid-template-columns:minmax(0,1fr) auto;
+    grid-template-areas:
+      "brand contact"
+      "nav nav";
+    grid-template-rows:112px 42px;
+    row-gap:0;
+    padding:6px 12px 0;
+  }
+
+  html[data-site-mode="it"] .header .brand{
+    grid-area:brand;
+    grid-template-columns:calc(clamp(110px,16vw,190px) + 10px) minmax(0,1fr)!important;
+  }
+
+  html[data-site-mode="it"] .header .brand-logo{
+    width:clamp(110px,16vw,190px)!important;
+    height:clamp(90px,14vw,165px)!important;
+    min-width:clamp(110px,16vw,190px)!important;
+    max-width:clamp(110px,16vw,190px)!important;
+  }
+
+  html[data-site-mode="it"] .header-contact{
+    grid-area:contact;
+  }
+
+  html[data-site-mode="it"] .nav-site-it{
+    grid-area:nav;
+    width:100%;
+    justify-content:space-around;
+    padding:0 10px;
+    border-top:1px solid rgba(103,232,255,.095);
+  }
+
+  html[data-site-mode="it"] .brand-name-it>span{
+    font-size:17px!important;
+  }
+
+  html[data-site-mode="it"] .hero-clean-bg{
+    object-position:63% center;
+  }
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .header{
+    width:calc(100% - 24px)!important;
+    min-height:0;
+    grid-template-columns:1fr;
+    grid-template-areas:"brand" "contact" "nav";
+    row-gap:8px;
+    padding:8px 10px 0;
+  }
+
+  html[data-site-mode="it"] .header .brand{
+    grid-area:brand;
+    grid-template-columns:calc(clamp(110px,16vw,190px) + 10px) minmax(0,1fr)!important;
+    column-gap:10px;
+  }
+
+  html[data-site-mode="it"] .header .brand-logo{
+    width:clamp(110px,16vw,190px)!important;
+    height:clamp(90px,14vw,165px)!important;
+    min-width:clamp(110px,16vw,190px)!important;
+    max-width:clamp(110px,16vw,190px)!important;
+  }
+
+  html[data-site-mode="it"] .brand-name-it{
+    gap:4px;
+  }
+
+  html[data-site-mode="it"] .brand-name-it small{
+    font-size:6.5px;
+  }
+
+  html[data-site-mode="it"] .brand-name-it>span{
+    font-size:clamp(12px,3.3vw,15px)!important;
+    white-space:normal!important;
+    overflow-wrap:break-word;
+  }
+
+  html[data-site-mode="it"] .brand-name-it em{
+    display:none;
+  }
+
+  html[data-site-mode="it"] .header-contact{
+    grid-area:contact;
+    width:100%;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:8px;
+  }
+
+  html[data-site-mode="it"] .header-phone{
+    display:flex!important;
+    align-items:center;
+    justify-content:center;
+    min-height:40px;
+    padding:0 10px;
+    font-size:10px;
+  }
+
+  html[data-site-mode="it"] .header-it-cta{
+    min-height:40px;
+    width:100%;
+    padding:0 10px;
+    font-size:10px;
+  }
+
+  html[data-site-mode="it"] .nav-site-it{
+    grid-area:nav;
+    display:grid!important;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:0;
+    width:100%;
+    padding:5px 0 2px;
+    border-top:1px solid rgba(103,232,255,.095);
+  }
+
+  html[data-site-mode="it"] .nav-site-it a{
+    justify-content:center;
+    min-height:32px;
+    padding:6px 4px;
+    font-size:9px;
+    text-align:center;
+  }
+
+  html[data-site-mode="it"] .hero-clean-bg{
+    object-position:60% center;
+  }
+}
+
+
+/* AIP IT — DISTINCT LIGHT HEADER 2026-10-04
+   Same structural discipline as AIP Creation, but Atelier keeps its own
+   lighter service identity and blue/navy palette. */
+html[data-site-mode="it"] .header{
+  border:0;
+  border-bottom:1px solid #dbe6f1;
+  background:
+    radial-gradient(circle at 7% 45%,rgba(37,132,238,.08),transparent 24%),
+    linear-gradient(180deg,rgba(255,255,255,.98),rgba(247,250,254,.98));
+  box-shadow:0 10px 28px rgba(19,45,78,.08);
+}
+
+html[data-site-mode="it"] .header .brand-logo{
+  filter:
+    drop-shadow(0 4px 10px rgba(18,91,172,.12))
+    drop-shadow(0 0 7px rgba(24,135,237,.08));
+    width:clamp(110px,16vw,190px)!important;
+    min-width:clamp(110px,16vw,190px)!important;
+    max-width:clamp(110px,16vw,190px)!important;
+    height:clamp(90px,14vw,165px)!important;
+}
+
+html[data-site-mode="it"] .brand-name-it small{
+  color:#2f79aa;
+}
+
+html[data-site-mode="it"] .brand-name-it>span{
+  color:#17345f!important;
+}
+
+html[data-site-mode="it"] .brand-name-it em{
+  color:#71839a;
+}
+
+html[data-site-mode="it"] .nav-site-it{
+  color:#314966;
+}
+
+html[data-site-mode="it"] .nav-site-it a{
+  color:#314966;
+}
+
+html[data-site-mode="it"] .nav-site-it a:hover{
+  color:#0f7ed8;
+}
+
+html[data-site-mode="it"] .nav-site-it a::after{
+  background:#2b8fce;
+}
+
+html[data-site-mode="it"] .header-phone{
+  color:#17345f!important;
+  border-color:#d6e3ef;
+  background:#fff;
+}
+
+html[data-site-mode="it"] .header-it-cta{
+  border-color:#17345f;
+  background:#17345f;
+  color:#fff;
+  box-shadow:0 5px 16px rgba(23,52,95,.14);
+}
+
+html[data-site-mode="it"] .header-it-cta:hover{
+  border-color:#286da4;
+  background:#286da4;
+}
+
+@media (min-width:761px) and (max-width:1499px){
+  html[data-site-mode="it"] .nav-site-it{
+    border-top-color:#dbe6f1;
+  }
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .nav-site-it{
+    border-top-color:#dbe6f1;
+  }
+}
+
+
+/* AIP IT — HERO FACE CENTER FINAL 2026-10-04
+   Override the legacy >=1200px "show whole image" rule so the subject can
+   actually be centered inside the visible hero. */
+@media(min-width:1200px){
+  html[data-site-mode="it"] .hero-split-media{
+    height:clamp(620px,50vw,820px)!important;
+    aspect-ratio:auto!important;
+    overflow:hidden!important;
+  }
+
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:67% 46%!important;
+  }
+}
+
+@media(min-width:761px) and (max-width:1199px){
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    object-fit:cover!important;
+    object-position:64% 46%!important;
+  }
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    object-fit:cover!important;
+    object-position:61% 44%!important;
+  }
+}
+
+
+/* AIP IT — HERO FACE CENTER CROP 2026-10-04
+   The source image is wider than the visible subject placement; object-position
+   alone cannot recenter horizontally when the image already spans the viewport.
+   Crop from the left by scaling from the right edge so Patrick becomes the focal point. */
+@media(min-width:1200px){
+  html[data-site-mode="it"] .hero-split-media{
+    overflow:hidden!important;
+  }
+
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:center 46%!important;
+    transform:scale(1.22)!important;
+    transform-origin:100% 50%!important;
+  }
+}
+
+@media(min-width:761px) and (max-width:1199px){
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    transform:scale(1.12)!important;
+    transform-origin:100% 50%!important;
+  }
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    transform:none!important;
+  }
+}
+
+
+/* AIP IT — HERO FACE CENTER ABSOLUTE CROP 2026-10-04
+   Explicitly crop 22% from the left. This moves the face from ~61% of the
+   source frame to ~52% of the visible hero, instead of relying on object-position. */
+@media(min-width:1200px){
+  html[data-site-mode="it"] .hero-split-media{
+    position:relative!important;
+    overflow:hidden!important;
+  }
+
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    position:absolute!important;
+    top:0!important;
+    bottom:auto!important;
+    left:-22%!important;
+    right:auto!important;
+    width:122%!important;
+    max-width:none!important;
+    height:100%!important;
+    object-fit:cover!important;
+    object-position:center 46%!important;
+    transform:none!important;
+  }
+}
+
+@media(min-width:761px) and (max-width:1199px){
+  html[data-site-mode="it"] .hero-split-media .hero-clean-bg{
+    left:-14%!important;
+    width:114%!important;
+    max-width:none!important;
+    transform:none!important;
+  }
+}
+
+
+/* AIP MARK CENTERING FINAL 2026-10-04 */
+.header .brand-home-link{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  height:100%!important;
+  line-height:0!important;
+}
+.header .brand-logo{
+  margin:auto!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  transform:none!important;
+}
+.footer .footer-brand{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.footer .footer-brand img{
+  display:block!important;
+  margin-inline:auto!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+}
+.back-to-top-orb{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+/* BOIS MORPHÉE — PUBLIC PORTFOLIO MOCKUPS (ANONYMIZED) 2026-10-05 */
+.editorial-project-morphee .morphee-mockups,
+.portfolio-project-morphee .morphee-mockups{
+  position:relative;
+  display:block;
+  min-height:430px;
+  padding:34px 56px 34px 28px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 22% 18%,rgba(103,232,255,.11),transparent 32%),
+    linear-gradient(145deg,#07111d 0%,#0c1724 58%,#050b12 100%);
+  border:1px solid rgba(103,232,255,.12);
+  text-decoration:none;
+}
+.morphee-desktop{
+  position:relative;
+  display:block;
+  width:min(88%,760px);
+  margin:8px auto 0 0;
+  border:1px solid rgba(214,229,240,.22);
+  border-radius:16px 16px 10px 10px;
+  overflow:hidden;
+  background:#0b1118;
+  box-shadow:0 26px 65px rgba(0,0,0,.42);
+  transform:perspective(1100px) rotateY(2deg);
+}
+.morphee-browser-bar{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  height:30px;
+  padding:0 12px;
+  background:linear-gradient(180deg,#182330,#101923);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.morphee-browser-bar i{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:rgba(255,255,255,.25);
+}
+.morphee-screen,
+.morphee-phone-screen{
+  position:relative;
+  display:block;
+  overflow:hidden;
+  background:#111;
+}
+.morphee-screen{aspect-ratio:16/10}
+.morphee-phone-screen{
+  aspect-ratio:9/18;
+  border-radius:15px;
+}
+.morphee-screen::after,
+.morphee-phone-screen::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(3,8,13,.04),transparent 24%,rgba(3,8,13,.06) 100%);
+}
+.morphee-screen img,
+.morphee-phone-screen img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  filter:saturate(.96) contrast(1.03) brightness(.96);
+  transform:none;
+}
+.morphee-private-mask{
+  position:absolute;
+  z-index:2;
+  display:block;
+  pointer-events:none;
+  border-radius:5px;
+  background:rgba(5,10,16,.72);
+  border:1px solid rgba(118,231,255,.12);
+  box-shadow:0 0 0 1px rgba(0,0,0,.25);
+  backdrop-filter:blur(13px);
+  -webkit-backdrop-filter:blur(13px);
+}
+.morphee-private-mask-header{
+  top:2.2%;
+  right:3.5%;
+  width:58%;
+  height:9%;
+}
+.morphee-private-mask-contact{
+  left:39%;
+  right:auto;
+  bottom:0.2%;
+  width:38%;
+  height:10.5%;
+  border-radius:999px;
+  background:rgba(3,7,12,.96);
+  border-color:rgba(3,7,12,.96);
+  box-shadow:0 0 0 4px rgba(3,7,12,.72);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+.morphee-phone{
+  position:absolute;
+  left:auto!important;
+  right:86px!important;
+  bottom:22px;
+  width:84px;
+  padding:9px 7px 8px;
+  border-radius:22px;
+  background:#05090e;
+  border:1px solid rgba(222,238,249,.28);
+  box-shadow:0 18px 48px rgba(0,0,0,.5);
+}
+.morphee-phone-notch{
+  display:block;
+  width:34px;
+  height:5px;
+  margin:0 auto 7px;
+  border-radius:999px;
+  background:#222d38;
+}
+.morphee-phone-screen img{object-position:54% top}
+.morphee-phone-screen .morphee-private-mask-header{
+  top:2%;
+  right:4%;
+  width:72%;
+  height:8%;
+}
+.morphee-phone-screen .morphee-private-mask-contact{
+  left:4%;
+  right:auto;
+  bottom:.5%;
+  width:92%;
+  height:9%;
+  border-radius:999px;
+  background:rgba(3,7,12,.97);
+  border-color:rgba(3,7,12,.97);
+  box-shadow:0 0 0 2px rgba(3,7,12,.7);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+}
+.morphee-privacy-note{
+  position:absolute;
+  left:26px;
+  bottom:20px;
+  z-index:3;
+  padding:7px 10px;
+  border:1px solid rgba(103,232,255,.2);
+  background:rgba(4,12,20,.78);
+  color:#8fefff;
+  font:700 9px/1 Consolas,"SFMono-Regular",monospace;
+  letter-spacing:.13em;
+}
+@media(max-width:1100px){
+  .morphee-phone{
+    left:auto!important;
+    right:58px!important;
+    width:78px;
+  }
+}
+@media(max-width:760px){
+  .editorial-project-morphee .morphee-mockups,
+  .portfolio-project-morphee .morphee-mockups{
+    min-height:310px;
+    padding:24px 24px 28px 18px;
+  }
+  .morphee-desktop{width:91%}
+  .morphee-phone{
+    width:68px;
+    left:auto!important;
+    right:34px!important;
+    bottom:14px;
+    border-radius:17px;
+  }
+  .morphee-private-mask{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .morphee-privacy-note{
+    left:16px;
+    bottom:14px;
+    font-size:7px;
+  }
+}
+
+
+/* LIVE AIP CREATION — Bois Morphée layout fix */
+.editorial-project-morphee{
+  align-items:stretch;
+}
+.editorial-project-morphee .morphee-mockups{
+  min-width:0;
+  width:100%;
+  min-height:430px;
+}
+.editorial-project-morphee .morphee-desktop{
+  width:100%;
+  max-width:none;
+  margin:8px 0 0;
+}
+.editorial-project-morphee .morphee-phone{
+  left:auto!important;
+  right:18px!important;
+  bottom:20px!important;
+  width:82px!important;
+}
+.editorial-project-morphee .morphee-privacy-note{
+  left:18px;
+  bottom:18px;
+}
+@media(max-width:900px){
+  .editorial-project-morphee .morphee-mockups{
+    min-height:360px;
+  }
+  .editorial-project-morphee .morphee-phone{
+    right:16px!important;
+    width:76px!important;
+  }
+}
+@media(max-width:760px){
+  .editorial-project-morphee .morphee-mockups{
+    min-height:300px;
+  }
+  .editorial-project-morphee .morphee-phone{
+    right:10px!important;
+    bottom:12px!important;
+    width:66px!important;
+  }
+}
+
+
+/* BOIS MORPHÉE — APPROVED PUBLIC PREVIEW 2026-10-05 */
+.editorial-project-morphee .morphee-private-mask,
+.portfolio-project-morphee .morphee-private-mask{
+  display:none!important;
+}
+.editorial-project-morphee .morphee-screen img,
+.editorial-project-morphee .morphee-phone-screen img,
+.portfolio-project-morphee .morphee-screen img,
+.portfolio-project-morphee .morphee-phone-screen img{
+  filter:none!important;
+  transform:none!important;
+}
+
+
+/* MOBILE REALISATION IMAGE — keep the complete project preview visible */
+@media(max-width:760px){
+  .editorial-web .editorial-lead-image{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+  .editorial-web .editorial-lead-image img{
+    display:block;
+    width:100%!important;
+    height:auto!important;
+    max-width:100%!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center top!important;
+    margin:0 auto!important;
+  }
+}
+
+/* AIP IT — back-to-top orb, adapted to the light Atelier identity */
+html[data-site-mode="it"] .back-to-top{
+  display:flex;
+  border-color:rgba(39,111,164,.42);
+  background:
+    radial-gradient(circle at 34% 24%,rgba(255,255,255,.92),transparent 22%),
+    radial-gradient(circle at 50% 62%,rgba(55,139,205,.14),transparent 46%),
+    linear-gradient(145deg,#ffffff 0%,#eef5fb 58%,#dfeaf4 100%);
+  box-shadow:
+    0 12px 28px rgba(23,52,95,.18),
+    0 0 0 1px rgba(23,52,95,.06),
+    inset 0 1px 1px rgba(255,255,255,.95),
+    inset 0 -6px 12px rgba(50,95,135,.08);
+}
+html[data-site-mode="it"] .back-to-top::before{
+  border-color:rgba(39,111,164,.18);
+  background:
+    linear-gradient(155deg,rgba(255,255,255,.88),rgba(255,255,255,0) 48%),
+    radial-gradient(circle at 50% 72%,rgba(43,143,206,.08),transparent 44%);
+  box-shadow:inset 0 1px rgba(255,255,255,.9),inset 0 -4px 10px rgba(38,89,128,.06);
+}
+html[data-site-mode="it"] .back-to-top::after{
+  background:rgba(31,60,88,.2);
+  opacity:.42;
+}
+html[data-site-mode="it"] .back-to-top:hover{
+  border-color:rgba(15,126,216,.62);
+  box-shadow:
+    0 16px 32px rgba(23,52,95,.2),
+    0 0 18px rgba(43,143,206,.12),
+    inset 0 1px 2px rgba(255,255,255,.98);
+}
+
+
+/* AIP IT — accessibility contrast pass 2026-10-05 */
+html[data-site-mode="it"] .footer-nap,
+html[data-site-mode="it"] .footer-nap span{
+  color:#46566f!important;
+}
+html[data-site-mode="it"] .footer-nap strong{
+  color:#172445!important;
+}
+html[data-site-mode="it"] .footer-nap a{
+  color:#145f96!important;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+html[data-site-mode="it"] .footer-nap a:hover{
+  color:#0d4d7d!important;
+}
+
+
+/* AIP IT — keep back-to-top clear of footer contact details */
+html[data-site-mode="it"] .back-to-top{
+  right:24px!important;
+  bottom:96px!important;
+}
+@media(max-width:760px){
+  html[data-site-mode="it"] .back-to-top{
+    right:14px!important;
+    bottom:84px!important;
+  }
+}
+
+
+/* AIP IT — mobile hero: show the complete portrait without cropping */
+@media(max-width:760px){
+  html[data-site-mode="it"] .hero-clean.hero-split .hero-split-media{
+    position:relative!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    overflow:visible!important;
+    background:#061b30!important;
+  }
+  html[data-site-mode="it"] .hero-clean.hero-split .hero-split-media picture{
+    display:block;
+    width:100%;
+    aspect-ratio:4 / 5;
+  }
+  html[data-site-mode="it"] .hero-clean.hero-split .hero-split-media .hero-clean-bg{
+    position:relative!important;
+    inset:auto!important;
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-width:none!important;
+    max-height:none!important;
+    aspect-ratio:4 / 5!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    transform:none!important;
+  }
+}
+
+
+/* AIP IT — WCAG contrast for service index labels 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .domain-service-grid article>span{
+  color:#145f96!important;
+}
+
+
+/* AIP IT — WCAG contrast for contact section 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .contact .eyebrow,
+html[data-site-mode="it"] .home-domain-it .contact-inner>div>p{
+  color:#34445f!important;
+}
+
+
+/* AIP IT — MOBILE REVEALS WITHOUT LAYOUT SHIFT 2026-10-05 */
+@media(max-width:760px){
+  html[data-site-mode="it"] .home-domain-it [data-reveal]{
+    opacity:0!important;
+    transform:none!important;
+    transition:opacity 1.35s cubic-bezier(.22,1,.36,1)!important;
+    will-change:opacity!important;
+  }
+  html[data-site-mode="it"] .home-domain-it [data-reveal].is-visible{
+    opacity:1!important;
+    transform:none!important;
+  }
+  html[data-site-mode="it"] .home-domain-it .domain-service-grid [data-reveal="feature"],
+  html[data-site-mode="it"] .home-domain-it .reviews-grid [data-reveal="feature"]{
+    transition-duration:1.15s!important;
+  }
+}
+
+
+/* AIP IT — slower, readable reveal timing 2026-10-05 */
+.motion-ready .home-domain-it [data-reveal]{
+  transition-duration:1.25s;
+}
+.motion-ready .home-domain-it [data-reveal="hero"]{
+  transition-duration:1.45s;
+}
+.motion-ready .home-domain-it .domain-service-grid [data-reveal="feature"],
+.motion-ready .home-domain-it .reviews-grid [data-reveal="feature"]{
+  transition-duration:1.15s;
+}
+
+
+/* AIP IT — center footer legal/contact info 2026-10-05 */
+@media(min-width:761px){
+  html[data-site-mode="it"] .footer{
+    position:relative!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:28px!important;
+    min-height:118px!important;
+    text-align:center!important;
+  }
+  html[data-site-mode="it"] .footer .footer-brand{
+    position:absolute!important;
+    left:0!important;
+    top:50%!important;
+    transform:translateY(-50%)!important;
+    margin:0!important;
+  }
+  html[data-site-mode="it"] .footer>p,
+  html[data-site-mode="it"] .footer>a:last-child{
+    margin:0!important;
+    width:auto!important;
+  }
+}
+
+
+/* AIP IT — animated reflections on buttons only 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .button,
+html[data-site-mode="it"] .home-domain-it .hero-intent-choice{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+
+html[data-site-mode="it"] .home-domain-it .button::before,
+html[data-site-mode="it"] .home-domain-it .hero-intent-choice::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  top:-45%;
+  bottom:-45%;
+  left:-50%;
+  width:34%;
+  pointer-events:none;
+  background:linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255,255,255,.02) 25%,
+    rgba(183,226,255,.18) 46%,
+    rgba(255,255,255,.32) 52%,
+    rgba(183,226,255,.10) 65%,
+    transparent 100%
+  );
+  transform:translate3d(-180%,0,0) skewX(-18deg);
+  animation:aipButtonReflection 8.4s ease-in-out infinite;
+  will-change:transform;
+}
+
+html[data-site-mode="it"] .home-domain-it .button > *,
+html[data-site-mode="it"] .home-domain-it .hero-intent-choice > *{
+  position:relative;
+  z-index:1;
+}
+
+@keyframes aipButtonReflection{
+  0%,10%{
+    transform:translate3d(-180%,0,0) skewX(-18deg);
+  }
+  36%,46%{
+    transform:translate3d(480%,0,0) skewX(-18deg);
+  }
+  72%,82%{
+    transform:translate3d(-180%,0,0) skewX(-18deg);
+  }
+  100%{
+    transform:translate3d(480%,0,0) skewX(-18deg);
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  html[data-site-mode="it"] .home-domain-it .button::before,
+  html[data-site-mode="it"] .home-domain-it .hero-intent-choice::before{
+    animation:none!important;
+    display:none;
+  }
+}
+
+
+/* AIP IT — flip-flop button reflection cadence 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .button:nth-of-type(2)::before{
+  animation-delay:.9s;
+}
+
+
+/* AIP IT — final visual polish pass 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .domain-service-grid article,
+html[data-site-mode="it"] .home-domain-it .reviews-grid>article,
+html[data-site-mode="it"] .home-domain-it .contact-card{
+  border:1px solid #dbe4ef;
+  border-radius:14px;
+  box-shadow:
+    0 10px 28px rgba(23,36,69,.055),
+    inset 0 3px 0 rgba(53,126,165,.16);
+}
+
+html[data-site-mode="it"] .home-domain-it .domain-service-grid article{
+  background:linear-gradient(180deg,#fff 0%,#fcfdff 100%);
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews-grid>article{
+  background:linear-gradient(180deg,#fff 0%,#fbfcff 100%);
+}
+
+html[data-site-mode="it"] .home-domain-it .domain-service-grid h3{
+  margin-top:16px;
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews-grid blockquote{
+  color:#233451;
+}
+
+html[data-site-mode="it"] .home-domain-it .button,
+html[data-site-mode="it"] .home-domain-it .hero-intent-choice{
+  border-radius:9px;
+}
+
+html[data-site-mode="it"] .home-domain-it .contact-card .big-phone{
+  color:#172445;
+}
+
+html[data-site-mode="it"] .footer{
+  border-top:1px solid #e1e8f1;
+}
+
+html[data-site-mode="it"] .footer>p{
+  letter-spacing:.01em;
+}
+
+@media(hover:hover){
+  html[data-site-mode="it"] .home-domain-it .domain-service-grid article:hover,
+  html[data-site-mode="it"] .home-domain-it .reviews-grid>article:hover{
+    border-color:#cbd8e6;
+    box-shadow:
+      0 16px 34px rgba(23,36,69,.075),
+      inset 0 3px 0 rgba(53,126,165,.22);
+  }
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .home-domain-it .domain-service-grid article,
+  html[data-site-mode="it"] .home-domain-it .reviews-grid>article,
+  html[data-site-mode="it"] .home-domain-it .contact-card{
+    border-radius:12px;
+    box-shadow:
+      0 8px 22px rgba(23,36,69,.05),
+      inset 0 2px 0 rgba(53,126,165,.14);
+  }
+}
+
+
+/* AIP IT — hierarchy and spacing polish 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .metrics{
+  background:linear-gradient(180deg,#fff 0%,#fbfcff 100%);
+}
+
+html[data-site-mode="it"] .home-domain-it .metrics-grid>div{
+  position:relative;
+  padding:8px 26px;
+}
+
+html[data-site-mode="it"] .home-domain-it .metrics-grid>div:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:18%;
+  width:1px;
+  height:64%;
+  background:#e1e8f1;
+}
+
+html[data-site-mode="it"] .home-domain-it .metrics-grid strong{
+  color:#172445;
+  font-weight:760;
+}
+
+html[data-site-mode="it"] .home-domain-it .metrics-grid span{
+  color:#52627b;
+}
+
+html[data-site-mode="it"] .home-domain-it .section-heading{
+  gap:56px;
+}
+
+html[data-site-mode="it"] .home-domain-it .section-heading>div{
+  max-width:680px;
+}
+
+html[data-site-mode="it"] .home-domain-it .section-heading>p{
+  max-width:390px;
+  color:#52627b;
+}
+
+html[data-site-mode="it"] .home-domain-it .domain-service-grid .button{
+  width:100%;
+  min-height:50px;
+  justify-content:center;
+}
+
+html[data-site-mode="it"] .home-domain-it .domain-service-grid p{
+  color:#52627b;
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews-grid>article{
+  display:flex;
+  flex-direction:column;
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews-grid .stars{
+  margin-bottom:4px;
+  font-size:15px;
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews-grid blockquote{
+  flex:1;
+  margin-top:16px;
+  margin-bottom:22px;
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews-grid>article>span{
+  padding-top:14px;
+  border-top:1px solid #e6ebf2;
+  color:#52627b;
+  font-weight:650;
+}
+
+html[data-site-mode="it"] .home-domain-it .contact-card{
+  padding:38px;
+}
+
+html[data-site-mode="it"] .home-domain-it .contact-card .big-phone{
+  font-size:34px;
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .home-domain-it .metrics-grid>div{
+    padding:10px 14px;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .metrics-grid>div::after{
+    display:none;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .section-heading{
+    gap:0;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .contact-card{
+    padding:26px 22px;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .contact-card .big-phone{
+    font-size:30px;
+  }
+}
+
+
+/* AIP IT — premium section rhythm pass 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .domain-services{
+  position:relative;
+  background:
+    linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);
+}
+
+html[data-site-mode="it"] .home-domain-it .domain-services::before,
+html[data-site-mode="it"] .home-domain-it .reviews::before,
+html[data-site-mode="it"] .home-domain-it .contact::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  width:min(1180px,calc(100% - 80px));
+  height:1px;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,transparent,#dce5ef 15%,#dce5ef 85%,transparent);
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews,
+html[data-site-mode="it"] .home-domain-it .contact{
+  position:relative;
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews{
+  background:
+    radial-gradient(circle at 12% 10%,rgba(83,166,207,.07),transparent 28%),
+    linear-gradient(180deg,#f3f7fb 0%,#eef4f9 100%);
+}
+
+html[data-site-mode="it"] .home-domain-it .contact{
+  background:
+    radial-gradient(circle at 86% 18%,rgba(83,166,207,.09),transparent 26%),
+    linear-gradient(180deg,#e7eef6 0%,#dfe8f3 100%);
+}
+
+html[data-site-mode="it"] .home-domain-it .eyebrow{
+  color:#315f83;
+  font-weight:740;
+}
+
+html[data-site-mode="it"] .home-domain-it .eyebrow>span{
+  width:18px;
+  height:3px;
+  border-radius:999px;
+  background:#4f9fc7;
+}
+
+html[data-site-mode="it"] .home-domain-it .domain-service-grid article>span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:38px;
+  height:28px;
+  border-radius:999px;
+  background:#edf6fb;
+  border:1px solid #d4e8f3;
+  letter-spacing:.04em;
+}
+
+html[data-site-mode="it"] .home-domain-it .button-dark{
+  background:linear-gradient(180deg,#21365a 0%,#172445 100%);
+  border:1px solid #172445;
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.12),
+    0 6px 16px rgba(23,36,69,.12);
+}
+
+html[data-site-mode="it"] .home-domain-it .button-lime{
+  background:linear-gradient(180deg,#c9edf9 0%,#b9e4f7 100%);
+  border:1px solid #9fcfdf;
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.72),
+    0 6px 16px rgba(23,36,69,.08);
+}
+
+html[data-site-mode="it"] .home-domain-it .hero-intent-choice{
+  min-height:52px;
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.14),
+    0 8px 20px rgba(8,28,54,.14);
+}
+
+html[data-site-mode="it"] .home-domain-it .contact-card{
+  border-color:#cfdcea;
+  box-shadow:
+    0 16px 36px rgba(23,36,69,.08),
+    inset 0 3px 0 rgba(53,126,165,.18);
+}
+
+@media(hover:hover){
+  html[data-site-mode="it"] .home-domain-it .button-dark:hover{
+    background:linear-gradient(180deg,#29466f 0%,#1d3156 100%);
+  }
+
+  html[data-site-mode="it"] .home-domain-it .button-lime:hover{
+    background:linear-gradient(180deg,#d5f2fb 0%,#c0e8f7 100%);
+  }
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .home-domain-it .domain-services::before,
+  html[data-site-mode="it"] .home-domain-it .reviews::before,
+  html[data-site-mode="it"] .home-domain-it .contact::before{
+    width:calc(100% - 36px);
+  }
+
+  html[data-site-mode="it"] .home-domain-it .eyebrow>span{
+    width:14px;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .domain-service-grid article>span{
+    width:34px;
+    height:26px;
+  }
+}
+
+
+/* AIP IT — header and footer finishing pass 2026-10-05 */
+html[data-site-mode="it"] .header{
+  border-bottom:1px solid #e5ebf2;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.98),rgba(251,253,255,.96));
+}
+
+html[data-site-mode="it"] .header .brand-name-it small{
+  color:#315f83;
+  font-weight:760;
+  letter-spacing:.055em;
+}
+
+html[data-site-mode="it"] .header .brand-name-it>span{
+  color:#172445;
+}
+
+html[data-site-mode="it"] .header .brand-name-it em{
+  color:#61708a;
+}
+
+html[data-site-mode="it"] .nav-site-it a{
+  position:relative;
+  padding-block:8px;
+}
+
+html[data-site-mode="it"] .nav-site-it a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:1px;
+  height:2px;
+  border-radius:999px;
+  background:#2f86bd;
+  transform:scaleX(0);
+  transform-origin:center;
+  transition:transform .22s ease;
+}
+
+@media(hover:hover){
+  html[data-site-mode="it"] .nav-site-it a:hover::after{
+    transform:scaleX(1);
+  }
+}
+
+html[data-site-mode="it"] .header-phone{
+  color:#24415f;
+  font-weight:720;
+}
+
+html[data-site-mode="it"] .header-it-cta{
+  border:1px solid #173356;
+  border-radius:9px;
+  background:linear-gradient(180deg,#24466f 0%,#172f50 100%);
+  color:#fff;
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.14),
+    0 6px 16px rgba(23,52,95,.12);
+}
+
+@media(hover:hover){
+  html[data-site-mode="it"] .header-it-cta:hover{
+    background:linear-gradient(180deg,#2c5482 0%,#1d3a61 100%);
+  }
+}
+
+html[data-site-mode="it"] .footer-service-links{
+  border-top:1px solid #e5ebf2;
+}
+
+html[data-site-mode="it"] .footer-service-links strong{
+  color:#172445;
+  font-weight:760;
+  letter-spacing:.02em;
+}
+
+html[data-site-mode="it"] .footer-service-links a{
+  color:#52627b!important;
+  transition:color .18s ease,transform .18s ease;
+}
+
+@media(hover:hover){
+  html[data-site-mode="it"] .footer-service-links a:hover{
+    color:#145f96!important;
+    transform:translateX(2px);
+  }
+}
+
+html[data-site-mode="it"] .footer-nap{
+  border-top:1px solid #e5ebf2;
+  border-bottom:1px solid #e5ebf2;
+  background:linear-gradient(180deg,#fff 0%,#fbfcfe 100%);
+}
+
+html[data-site-mode="it"] .footer-nap strong{
+  font-weight:760;
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .header{
+    border-bottom-color:#e7edf4;
+  }
+
+  html[data-site-mode="it"] .nav-site-it a::after{
+    display:none;
+  }
+
+  html[data-site-mode="it"] .footer-service-links{
+    padding-top:24px!important;
+    padding-bottom:24px!important;
+  }
+
+  html[data-site-mode="it"] .footer-service-links a:hover{
+    transform:none;
+  }
+
+  html[data-site-mode="it"] .footer-nap{
+    gap:8px!important;
+  }
+}
+
+
+/* AIP IT — mobile finishing pass 2026-10-05 */
+@media(max-width:760px){
+  html[data-site-mode="it"] .home-domain-it .hero-clean.hero-split .hero-split-copy{
+    padding-top:30px!important;
+    padding-bottom:38px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .hero-clean.hero-split h1{
+    font-size:38px!important;
+    line-height:.98!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .hero-clean.hero-split h2{
+    font-size:36px!important;
+    line-height:1.02!important;
+    margin-top:6px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .hero-clean.hero-split p{
+    max-width:34rem!important;
+    font-size:14.5px!important;
+    line-height:1.58!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .hero-intent-actions{
+    width:100%!important;
+    max-width:none!important;
+    gap:10px!important;
+    margin-top:20px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .hero-intent-actions .hero-intent-choice{
+    min-height:48px!important;
+    padding:11px 15px!important;
+    font-size:12px!important;
+    letter-spacing:.01em;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .metrics-grid{
+    gap:0!important;
+    padding-block:18px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .metrics-grid>div{
+    min-height:82px;
+    justify-content:center;
+    border-bottom:1px solid #e8edf3;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .metrics-grid>div:nth-last-child(-n+2){
+    border-bottom:0;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .metrics-grid strong{
+    font-size:23px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .metrics-grid span{
+    font-size:11.5px!important;
+    line-height:1.35!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .section{
+    padding-top:64px!important;
+    padding-bottom:64px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .section-heading{
+    margin-bottom:30px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .section-heading h2,
+  html[data-site-mode="it"] .home-domain-it .contact h2{
+    font-size:43px!important;
+    line-height:1.03!important;
+    letter-spacing:-2.2px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .section-heading>p,
+  html[data-site-mode="it"] .home-domain-it .contact-inner>div>p{
+    font-size:14px!important;
+    line-height:1.65!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .domain-service-grid{
+    gap:14px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .domain-service-grid article{
+    padding:23px 21px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .reviews-grid{
+    gap:14px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .reviews-grid>article{
+    padding:22px!important;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .contact-inner{
+    gap:26px!important;
+  }
+
+  html[data-site-mode="it"] .footer{
+    min-height:118px!important;
+    justify-items:center!important;
+    text-align:center!important;
+    padding-bottom:24px!important;
+  }
+
+  html[data-site-mode="it"] .footer .footer-brand{
+    margin-inline:auto!important;
+  }
+
+  html[data-site-mode="it"] .footer>p{
+    width:100%!important;
+    text-align:center!important;
+  }
+}
+
+
+/* AIP IT — final readability and review CTA pass 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .domain-service-grid p,
+html[data-site-mode="it"] .home-domain-it .section-heading>p,
+html[data-site-mode="it"] .home-domain-it .reviews-grid>article>span,
+html[data-site-mode="it"] .home-domain-it .contact-card>p,
+html[data-site-mode="it"] .home-domain-it .metrics-grid span{
+  color:#46566f!important;
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews-actions{
+  display:flex;
+  justify-content:center;
+  margin-top:28px;
+}
+
+html[data-site-mode="it"] .home-domain-it .reviews-google-link{
+  min-height:48px;
+  padding-inline:22px;
+  border:1px solid #b8c8d9;
+  background:#fff;
+  color:#174f79;
+  box-shadow:0 6px 18px rgba(23,36,69,.06);
+}
+
+@media(hover:hover){
+  html[data-site-mode="it"] .home-domain-it .reviews-google-link:hover{
+    border-color:#8fb0c7;
+    background:#f7fbfe;
+  }
+}
+
+html[data-site-mode="it"] .back-to-top-orb{
+  position:relative;
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .home-domain-it .reviews-actions{
+    margin-top:22px;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .reviews-google-link{
+    width:100%;
+  }
+
+  }
+
+
+/* AIP IT — trust and content clarity pass 2026-10-05 */
+html[data-site-mode="it"] .home-domain-it .hero-owner{
+  margin:0 0 12px;
+  color:#e0eef9;
+  font-size:13px;
+  font-weight:760;
+  letter-spacing:.015em;
+}
+
+html[data-site-mode="it"] .home-domain-it .contact-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+html[data-site-mode="it"] .home-domain-it .contact-actions .button{
+  width:100%;
+  justify-content:center;
+}
+
+html[data-site-mode="it"] .home-domain-it .contact-email-button{
+  border:1px solid #b7c6d6;
+  background:#fff;
+  color:#174f79;
+}
+
+@media(hover:hover){
+  html[data-site-mode="it"] .home-domain-it .contact-email-button:hover{
+    border-color:#8faec4;
+    background:#f7fbfe;
+  }
+}
+
+@media(max-width:760px){
+  html[data-site-mode="it"] .home-domain-it .hero-owner{
+    margin-bottom:10px;
+    font-size:12px;
+  }
+
+  html[data-site-mode="it"] .home-domain-it .contact-actions{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* AIP IT — validation fixes 2026-10-05 */
+@media(max-width:760px){
+  }
+
+
+/* PRIVACY PAGE 2026-10-05 */
+.privacy-page .detail-hero{
+  padding-bottom:56px;
+}
+.privacy-content{
+  display:grid;
+  gap:18px;
+  max-width:920px;
+}
+.privacy-content article{
+  padding:28px 30px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+}
+.privacy-content h2{
+  margin:0 0 10px;
+  font-size:22px;
+  letter-spacing:-.5px;
+}
+.privacy-content p{
+  margin:0;
+  color:#46566f;
+  font-size:14px;
+  line-height:1.75;
+}
+.privacy-content a{
+  color:#145f96;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+@media(max-width:760px){
+  .privacy-page .detail-hero{padding-bottom:38px}
+  .privacy-content{gap:12px}
+  .privacy-content article{padding:22px 20px}
+  .privacy-content h2{font-size:20px}
+}
+
+/* FAQ: compact contact transition and prominent direct-call action */
+html[data-site-mode="it"] .faq-contact-section { padding-block: 64px; }
+html[data-site-mode="it"] .faq-contact-section .contact-card { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+html[data-site-mode="it"] .faq-contact-section .faq-call-button { display: inline-flex; align-items: center; justify-content: center; margin-top: 6px; min-height: 44px; padding: 12px 22px; text-decoration: none; }
+@media (max-width: 760px) { html[data-site-mode="it"] .faq-contact-section { padding-block: 48px; } html[data-site-mode="it"] .faq-contact-section .faq-call-button { width: 100%; } }
